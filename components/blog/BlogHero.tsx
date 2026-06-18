@@ -1,0 +1,78 @@
+import type { BlogPost } from "@/lib/blog/types";
+import Image from "next/image";
+import { Badge } from "@/components/blog/ui/Badge";
+import { Img } from "@/components/blog/ui/Img";
+import { ShareButtons } from "@/components/blog/ui/ShareButtons";
+import { resolveImage } from "@/lib/blog/images";
+import { SITE_URL, site } from "@/lib/site";
+
+function fmtDate(iso: string) {
+  try {
+    return new Date(iso).toLocaleDateString("en-US", {
+      month: "short",
+      year: "numeric",
+    });
+  } catch {
+    return "";
+  }
+}
+
+export function BlogHero({ post }: { post: BlogPost }) {
+  const url = post.seo.canonical || `${SITE_URL}/blog/${post.slug}`;
+  const heroSrc = resolveImage(post, post.hero.image.ref);
+  const pin = post.seo.social.pinterestImage
+    ? resolveImage(post, post.seo.social.pinterestImage.ref)
+    : heroSrc;
+  const dateLabel = fmtDate(post.dateModified || post.publishedAt);
+  const read = post.readTimeMinutes ? `${post.readTimeMinutes} min read` : "";
+
+  return (
+    <header className="hero">
+      <div className="wrap">
+        <div className="crumb">
+          Blog &nbsp;/&nbsp; {post.category}
+        </div>
+        <div className="hero-grid">
+          <div>
+            <Badge>{post.hero.badge || post.category}</Badge>
+            <h1>{post.title}</h1>
+            <p className="excerpt">{post.hero.excerpt}</p>
+            <div className="meta-row">
+              <div className="author">
+                <Image
+                  className="avatar-img"
+                  src="/brand/dd-circle.png"
+                  alt={site.shortName}
+                  width={40}
+                  height={40}
+                />
+                <div>
+                  <div className="author-name">{post.author}</div>
+                  <div className="author-sub">
+                    {dateLabel ? `Updated ${dateLabel}` : ""}
+                    {dateLabel && read ? " · " : ""}
+                    {read}
+                  </div>
+                </div>
+              </div>
+              <ShareButtons
+                url={url}
+                title={post.title}
+                pinterestImage={pin}
+                buttons={post.seo.social.shareButtons}
+              />
+            </div>
+          </div>
+          <Img
+            src={heroSrc}
+            alt={post.hero.image.alt}
+            ratio="r-54"
+            priority
+            placeholderLabel={post.hero.image.alt}
+            sizes="(max-width: 980px) 100vw, 540px"
+          />
+        </div>
+      </div>
+    </header>
+  );
+}

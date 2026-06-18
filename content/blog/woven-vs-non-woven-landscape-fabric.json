@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "woven-vs-non-woven-landscape-fabric",
+  "title": "Woven vs Non Woven Landscape Fabric: How to Choose the Right One",
+  "category": "Comparisons",
+  "postType": "comparison",
+  "primaryProduct": "MULTIPLE",
+  "focusKeyword": "woven vs non woven landscape fabric",
+  "status": "published",
+  "author": "DOTDAY Gardener",
+  "publishedAt": "2026-06-15T00:00:00Z",
+  "dateModified": "2026-06-15T00:00:00Z",
+  "readTimeMinutes": 7,
+  "wordCount": 950,
+  "seo": {
+    "metaTitle": "Woven vs Non Woven Landscape Fabric: How to Choose",
+    "metaDescription": "Woven vs non woven landscape fabric - which one your ground condition actually needs. DOTDAY breaks down when to use SHIELD, XBAR, or TERRA.",
+    "canonical": "https://www.thedotday.com/blog/woven-vs-non-woven-landscape-fabric",
+    "noindex": false,
+    "social": {
+      "excerpt": "Woven or non-woven landscape fabric? The right choice comes down entirely to your ground condition. DOTDAY breaks down exactly when to reach for SHIELD, XBAR, or TERRA. #DOTDAY #geotextile #landscaping #drainage #weedbarrier",
+      "hashtags": [
+        "#DOTDAY",
+        "#geotextile",
+        "#landscaping",
+        "#drainage",
+        "#weedbarrier"
+      ],
+      "ogImage": {
+        "ref": "og",
+        "alt": "DOTDAY SHIELD woven landscape fabric roll for the woven vs non woven landscape fabric comparison"
+      },
+      "pinterestImage": {
+        "ref": "woven-vs-nonwoven-pin.jpg",
+        "alt": "Woven vs non woven landscape fabric comparison pin"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "Comparison",
+    "excerpt": "They look similar on the roll and get used interchangeably on the job - but woven and non-woven landscape fabric are built for completely different ground conditions. Here's how pros tell them apart.",
+    "image": {
+      "ref": "Shield_02.png",
+      "alt": "DOTDAY SHIELD woven landscape fabric roll, the weed-barrier side of the woven vs non woven landscape fabric comparison",
+      "caption": "DOTDAY SHIELD - a 3.2 oz woven weed barrier, one of the two fabric types covered here."
+    }
+  },
+  "quickAnswer": {
+    "heading": "What you'll learn",
+    "items": [
+      "The real structural difference between woven and non-woven fabric",
+      "Which jobs woven fabric is built for (and which it isn't)",
+      "When non-woven geotextile is the right call",
+      "How SHIELD, XBAR, and TERRA map to each type",
+      "A side-by-side spec table to choose from",
+      "The mistake that ruins either fabric on site"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "eyebrow": "Start here",
+      "heading": "First, identify your ground condition",
+      "body": "Before you compare woven vs non woven landscape fabric, answer one question: what is the fabric actually doing in the ground? Suppressing weeds under mulch is a different job from filtering water in a French drain - and the fabric that's right for one is wrong for the other. This post is written for landscapers, hardscape crews, growers, and drainage contractors who need to spec the right material the first time. DOTDAY builds for the ground condition, not the marketing category, so the choice comes down to the job in front of you. Get the match right and an inexpensive roll outperforms a premium one used in the wrong place."
+    },
+    {
+      "_type": "prose",
+      "eyebrow": "Construction",
+      "heading": "What the weave is actually doing",
+      "body": "Woven fabric is made from flat polypropylene tapes crossed over and under each other, like a basket. That structure is strong in-plane and excellent at suppressing weeds while still letting water and air pass through the weave. It's the right call for weed control and for separation under load. Non-woven geotextile is a different animal. Its fibers are needle-punched into a dense, felt-like mat with no set grid. Instead of passing water through gaps in a weave, it lets water flow through the thickness of the fabric while holding back fine soil - exactly what drainage and filtration need. Same raw material, completely different build, completely different job - which is why the DOTDAY lineup splits cleanly along these two types."
+    },
+    {
+      "_type": "image",
+      "ref": "Terra_02.jpg",
+      "alt": "DOTDAY TERRA non-woven geotextile laid under gravel beneath a loader, with a close-up of the non-woven polypropylene fabric",
+      "caption": "DOTDAY TERRA - non-woven geotextile, built for drainage, filtration, and separation under heavy loads."
+    },
+    {
+      "_type": "prose",
+      "eyebrow": "The decision",
+      "heading": "Matching woven vs non woven landscape fabric to the job",
+      "body": "Here's how the two types break down across the three DOTDAY products. Choose by what's happening in the ground, then confirm the weight. Use woven when the job is weed control or load-bearing separation: [DOTDAY SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) (3.2 oz woven) for garden beds, mulch, farm rows, and nurseries; [XBAR](https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer) (5 oz woven dual-layer) for gravel, pavers, and hardscape that takes pressure and foot traffic. Use non-woven when the job is water movement: [TERRA](https://www.thedotday.com/product-page/dotday-terra-geotextile-fabric-4-oz-non-woven-landscape-fabric) (4, 6, or 8 oz non-woven geotextile) for French drains, retaining-wall backfill, driveways, and soil separation where water needs to flow and fines need to stay put."
+    },
+    {
+      "_type": "comparisonTable",
+      "heading": "Woven vs non-woven landscape fabric, side by side",
+      "columns": [
+        "",
+        "SHIELD (woven)",
+        "XBAR (woven hybrid)",
+        "TERRA (non-woven)"
+      ],
+      "featuredColumn": 0,
+      "rows": [
+        [
+          "Construction",
+          "Woven polypropylene",
+          "Woven dual-layer hybrid",
+          "Non-woven geotextile"
+        ],
+        [
+          "Primary job",
+          "Weed suppression",
+          "Load + separation",
+          "Drainage + filtration"
+        ],
+        [
+          "Weight",
+          "3.2 oz",
+          "5 oz",
+          "4 / 6 / 8 oz"
+        ],
+        [
+          "Best for",
+          "Garden beds, mulch, farm rows",
+          "Gravel, pavers, hardscape",
+          "French drains, walls, driveways"
+        ],
+        [
+          "Water behavior",
+          "Passes through the weave",
+          "Passes through, adds separation",
+          "Flows through, filters fines"
+        ]
+      ]
+    },
+    {
+      "_type": "image",
+      "ref": "XBar_02.png",
+      "alt": "DOTDAY XBAR 5oz woven dual-layer landscape fabric roll, the heavy-duty woven option in the comparison",
+      "caption": "DOTDAY XBAR - a 5 oz woven dual-layer fabric built for gravel, pavers, and high-traffic ground."
+    },
+    {
+      "_type": "warning",
+      "heading": "The mistake that ruins either fabric",
+      "body": "Don't put a lightweight woven weed barrier under gravel or pavers and expect it to hold - it isn't engineered for sustained load, and you'll get pumping, tearing, and aggregate mixing into the soil. And don't drop a non-woven geotextile into a planting bed expecting tight weed control. Each fabric works best under the condition it was built for. Match the fabric to the ground and both will last."
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Speccing fabric across a job or a whole site?",
+      "body": "Get volume pricing and help matching the right fabric to each ground condition.",
+      "cta": "Request a Quote",
+      "href": "https://www.thedotday.com/contact-us"
+    },
+    {
+      "_type": "prose",
+      "body": "Still weighing woven vs non woven landscape fabric for your project? Tell us the ground condition and we'll point you to SHIELD, XBAR, or TERRA - the right fabric for the right ground condition."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Find your fabric",
+      "heading": "Need help choosing the right fabric?",
+      "body": "Answer a few questions or run the numbers and get matched to SHIELD, XBAR, or TERRA for your exact ground condition.",
+      "cta": "Use the Fabric Calculator",
+      "href": "https://www.thedotday.com/landscape-fabric-calculator"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What is the difference between woven and non-woven landscape fabric?",
+        "a": "Woven landscape fabric is made from crossed polypropylene tapes and is built to suppress weeds while passing water through the weave. Non-woven geotextile is a needle-punched felt-like mat built to let water flow through its thickness and filter out fine soil. Different structure, different job."
+      },
+      {
+        "q": "Can I use non-woven fabric for weed control?",
+        "a": "Non-woven geotextile isn't designed primarily for weed control - it's built for drainage, filtration, and separation. For suppressing weeds under mulch or in garden beds, a woven barrier like DOTDAY SHIELD is the better fit. Use non-woven where water movement is the goal."
+      },
+      {
+        "q": "Which is better for a gravel driveway, woven or non-woven?",
+        "a": "For a gravel driveway you want load-bearing separation, so a heavy woven fabric like DOTDAY XBAR works best under the aggregate. Where drainage and soil separation are the priority, such as a French drain, non-woven TERRA geotextile is the right call. Many projects use both."
+      },
+      {
+        "q": "Does woven or non-woven fabric let water through?",
+        "a": "Both pass water, but differently. Woven fabric lets water through the gaps in the weave. Non-woven geotextile lets water flow through the thickness of the fabric while filtering out fines. That filtration behavior is why non-woven is the standard choice for drainage applications."
+      }
+    ]
+  },
+  "closingHashtags": [
+    "#DOTDAY",
+    "#geotextile",
+    "#landscaping",
+    "#drainage",
+    "#weedbarrier"
+  ],
+  "relatedPosts": [
+    {
+      "title": "3.2oz vs 5oz Weed Barrier: Which Weight Do You Need?",
+      "url": "https://www.thedotday.com/blog/3-2oz-vs-5oz-weed-barrier",
+      "category": "Comparisons"
+    },
+    {
+      "title": "How to Install Weed Barrier Fabric",
+      "url": "https://www.thedotday.com/blog/how-to-install-weed-barrier-fabric",
+      "category": "How-To & Installation"
+    },
+    {
+      "title": "Best Weed Barrier Fabric 2026",
+      "url": "https://www.thedotday.com/blog/best-weed-barrier-fabric",
+      "category": "Buying Guides"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DOTDAY SHIELD weed barrier",
+      "url": "https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY XBAR heavy-duty fabric",
+      "url": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
+    },
+    {
+      "label": "DOTDAY TERRA geotextile",
+      "url": "https://www.thedotday.com/product-page/dotday-terra-geotextile-fabric-4-oz-non-woven-landscape-fabric"
+    },
+    {
+      "label": "Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Contact / Bulk",
+      "url": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "images": {
+    "Shield_02.png": "15GArKJKDiY4fWddcEezFHjxtICnJxiC2",
+    "XBar_02.png": "1TDNtPttmNrcs_fmlvuo32G2uPyRaN4EM",
+    "Terra_02.jpg": "1Hq-PwcjuEkr55SdNPglIdJ5TfzaSsb4C"
+  }
+}

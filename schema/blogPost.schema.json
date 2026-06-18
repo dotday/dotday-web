@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/blogPost.schema.json",
+  "title": "DOTDAY Blog Post",
+  "description": "The frozen data contract for a DOTDAY blog post. Claude generates against this; the validator checks against this; the Next.js build reads files that pass this. One source of truth — change here, regenerate types, everything follows.",
+  "type": "object",
+  "required": ["schemaVersion", "slug", "title", "category", "focusKeyword", "status", "author", "publishedAt", "seo", "hero", "blocks", "faq", "relatedPosts", "internalLinks"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Schema version this file targets. Validator rejects mismatches."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 3,
+      "maxLength": 80,
+      "description": "Kebab-case URL slug. Must contain the focus keyword. Filename = <slug>.json."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 75,
+      "description": "The H1 / hero title. Must contain the exact focus keyword. No em/en dashes."
+    },
+    "category": {
+      "type": "string",
+      "enum": ["Buying Guides", "Comparisons", "How-To & Installation", "Product Focused", "Landscape Fabric"],
+      "description": "Exactly one primary category. 'All Posts' is the default view, never stored here."
+    },
+    "postType": {
+      "type": "string",
+      "enum": ["comparison", "how-to", "buying-guide", "product-feature", "use-case", "contractor", "drainage", "explainer"],
+      "description": "Editorial format. Drives category auto-assignment."
+    },
+    "primaryProduct": {
+      "type": "string",
+      "enum": ["SHIELD", "XBAR", "TERRA", "MULTIPLE", "NONE"],
+      "description": "The product the post centers on."
+    },
+    "focusKeyword": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 70,
+      "description": "Exactly ONE primary keyword. Must appear in: title, slug, >=1 H2, first 100 words, >=1 image alt, metaTitle, metaDescription."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "draft", "in-review", "published", "needs-update"],
+      "description": "Lifecycle state. 'draft'/'in-review' => noindex. 'needs-update' = flagged by audit mode."
+    },
+    "migrated": {
+      "type": "boolean",
+      "description": "True if this post was migrated from the old Wix blog. Relaxes the slug-keyword rule because the original URL must be preserved exactly for SEO. All other rules still apply."
+    },
+    "author": {
+      "type": "string",
+      "default": "DOTDAY Gardener"
+    },
+    "publishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "readTimeMinutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "wordCount": {
+      "type": "integer",
+      "minimum": 600,
+      "maximum": 2500,
+      "description": "Target 800-1200 for standard posts."
+    },
+
+    "seo": {
+      "type": "object",
+      "required": ["metaTitle", "metaDescription", "canonical", "social"],
+      "additionalProperties": false,
+      "properties": {
+        "metaTitle": { "type": "string", "minLength": 20, "maxLength": 60, "description": "<=60 chars, includes focus keyword." },
+        "metaDescription": { "type": "string", "minLength": 50, "maxLength": 160, "description": "50-160 chars, includes focus keyword." },
+        "canonical": { "type": "string", "format": "uri", "pattern": "^https://www\\.thedotday\\.com/" },
+        "noindex": { "type": "boolean", "default": true },
+        "social": {
+          "type": "object",
+          "required": ["excerpt", "hashtags", "ogImage", "shareButtons"],
+          "additionalProperties": false,
+          "properties": {
+            "excerpt": { "type": "string", "minLength": 60, "maxLength": 280, "description": "Share excerpt ending in hashtags. Contains focus keyword." },
+            "hashtags": { "type": "array", "items": { "type": "string", "pattern": "^#[A-Za-z0-9]+$" }, "minItems": 3, "maxItems": 6 },
+            "ogImage": { "$ref": "#/$defs/imageRef", "description": "1200x630 landscape, real product image." },
+            "pinterestImage": { "$ref": "#/$defs/imageRef", "description": "Vertical 2:3 (e.g. 1000x1500). Falls back to hero if absent — flag for a proper pin image." },
+            "shareButtons": {
+              "type": "array",
+              "items": { "type": "string", "enum": ["pinterest", "facebook", "x", "copy"] },
+              "default": ["pinterest", "facebook", "x", "copy"]
+            },
+            "ogType": { "type": "string", "const": "article" },
+            "twitterCard": { "type": "string", "const": "summary_large_image" }
+          }
+        }
+      }
+    },
+
+    "hero": {
+      "type": "object",
+      "required": ["badge", "image", "excerpt"],
+      "additionalProperties": false,
+      "properties": {
+        "badge": { "type": "string", "maxLength": 30, "description": "Usually the category." },
+        "excerpt": { "type": "string", "minLength": 40, "maxLength": 300, "description": "Hero subhead under the H1." },
+        "image": { "$ref": "#/$defs/imageRef" }
+      }
+    },
+
+    "quickAnswer": {
+      "type": "object",
+      "description": "'What you'll learn' — featured-snippet bait.",
+      "required": ["heading", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string", "default": "What you'll learn" },
+        "items": { "type": "array", "items": { "type": "string", "maxLength": 120 }, "minItems": 4, "maxItems": 6 }
+      }
+    },
+
+    "blocks": {
+      "type": "array",
+      "minItems": 3,
+      "description": "Ordered body content. Renderer maps each _type to a component.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "body"],
+            "properties": {
+              "_type": { "const": "prose" },
+              "eyebrow": { "type": "string", "maxLength": 40 },
+              "heading": { "type": "string", "maxLength": 90, "description": "H2." },
+              "body": { "type": "string", "minLength": 40, "description": "Markdown-lite. In-body links as [text](url). No em/en dashes." }
+            }
+          },
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "ref", "alt"],
+            "properties": {
+              "_type": { "const": "image" },
+              "ref": { "type": "string", "description": "images.json key / Drive ref." },
+              "alt": { "type": "string", "minLength": 8, "maxLength": 125 },
+              "caption": { "type": "string", "maxLength": 160 }
+            }
+          },
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "columns", "rows"],
+            "properties": {
+              "_type": { "const": "comparisonTable" },
+              "heading": { "type": "string", "maxLength": 90 },
+              "columns": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+              "featuredColumn": { "type": "integer", "minimum": 0 },
+              "rows": { "type": "array", "items": { "type": "array", "items": { "type": "string" } }, "minItems": 1 }
+            }
+          },
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "body"],
+            "properties": {
+              "_type": { "enum": ["proTip", "warning"] },
+              "heading": { "type": "string", "maxLength": 90 },
+              "body": { "type": "string", "minLength": 20 }
+            }
+          },
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "steps"],
+            "properties": {
+              "_type": { "const": "steps" },
+              "heading": { "type": "string", "maxLength": 90 },
+              "steps": {
+                "type": "array", "minItems": 2,
+                "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"],
+                  "properties": { "title": { "type": "string", "maxLength": 80 }, "body": { "type": "string" } } }
+              }
+            }
+          },
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "items"],
+            "properties": {
+              "_type": { "const": "statStrip" },
+              "items": { "type": "array", "minItems": 2, "maxItems": 6,
+                "items": { "type": "object", "additionalProperties": false, "required": ["value", "label"],
+                  "properties": { "value": { "type": "string" }, "label": { "type": "string" } } } }
+            }
+          },
+          {
+            "type": "object", "additionalProperties": false, "required": ["_type", "variant", "heading", "cta", "href"],
+            "properties": {
+              "_type": { "const": "cta" },
+              "variant": { "type": "string", "enum": ["calculator", "quiz", "contractor", "enquiry"] },
+              "eyebrow": { "type": "string", "maxLength": 40 },
+              "heading": { "type": "string", "maxLength": 90 },
+              "body": { "type": "string", "maxLength": 200 },
+              "cta": { "type": "string", "enum": ["Find Your Fabric", "Use the Fabric Calculator", "View Installation Guide", "Request a Quote", "Talk to Us", "Request Bulk Pricing", "Shop DOTDAY Products"] },
+              "href": { "type": "string", "format": "uri", "pattern": "^https://www\\.thedotday\\.com/" }
+            }
+          }
+        ]
+      }
+    },
+
+    "faq": {
+      "type": "object",
+      "required": ["heading", "items"],
+      "additionalProperties": false,
+      "description": "Required. Emits FAQPage JSON-LD.",
+      "properties": {
+        "heading": { "type": "string", "default": "Frequently asked questions" },
+        "items": {
+          "type": "array", "minItems": 2, "maxItems": 6,
+          "items": { "type": "object", "additionalProperties": false, "required": ["q", "a"],
+            "properties": {
+              "q": { "type": "string", "minLength": 8, "maxLength": 140, "description": "Phrased as searched." },
+              "a": { "type": "string", "minLength": 120, "maxLength": 400, "description": "~40-55 words, direct answer first." }
+            } }
+        }
+      }
+    },
+
+    "closingHashtags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^#[A-Za-z0-9]+$" },
+      "minItems": 3, "maxItems": 6,
+      "description": "Hashtags shown at the end of the post body (the second of the two required places)."
+    },
+
+    "relatedPosts": {
+      "type": "array",
+      "minItems": 2, "maxItems": 3,
+      "description": "Real existing posts only (from content-inventory). Never invented.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["title", "url", "category"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "category": { "type": "string", "enum": ["Buying Guides", "Comparisons", "How-To & Installation", "Product Focused", "Landscape Fabric"] }
+        }
+      }
+    },
+
+    "internalLinks": {
+      "type": "array",
+      "minItems": 3, "maxItems": 6,
+      "description": "All in-body links used in the post. >=1 product page + >=1 tool (calculator). Absolute thedotday.com URLs.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["label", "url"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.thedotday\\.com/" }
+        }
+      }
+    },
+
+    "images": {
+      "type": "object",
+      "description": "Map of image ref => source (Drive file ID or images.json key).",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "audit": {
+      "type": "object",
+      "description": "Populated by audit mode when status='needs-update'.",
+      "additionalProperties": false,
+      "properties": {
+        "lastAuditedAt": { "type": "string", "format": "date-time" },
+        "gscImpressions": { "type": "integer" },
+        "gscClicks": { "type": "integer" },
+        "gscCtr": { "type": "number" },
+        "gscPosition": { "type": "number" },
+        "issues": { "type": "array", "items": { "type": "string" } },
+        "priority": { "type": "string", "enum": ["high", "medium", "low"] }
+      }
+    }
+  },
+
+  "$defs": {
+    "imageRef": {
+      "type": "object",
+      "required": ["ref", "alt"],
+      "additionalProperties": false,
+      "properties": {
+        "ref": { "type": "string", "description": "images.json key / Drive file ID." },
+        "alt": { "type": "string", "minLength": 8, "maxLength": 125 },
+        "caption": { "type": "string", "maxLength": 160 }
+      }
+    }
+  }
+}

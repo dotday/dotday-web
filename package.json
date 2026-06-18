@@ -1,0 +1,28 @@
+{
+  "name": "dotday-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DOTDAY Landscape Fabrics - Next.js site. Shared shell + self-contained JSON content files.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run content:validate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "content:validate": "node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs",
+    "new:blog": "node scripts/new-blog.mjs"
+  },
+  "dependencies": {
+    "next": "^14.2.33",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
