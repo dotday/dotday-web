@@ -64,7 +64,7 @@ export default function HomePage() {
           </div>
           <div className="rgrid">
             {latest.map((p) => (
-              <Link className="rcard" href={`/blog/${p.slug}`} key={p.slug}>
+              <Link className="rcard" href={`/post/${p.slug}`} key={p.slug}>
                 <Img
                   src={resolveImage(p, p.hero.image.ref)}
                   alt={p.hero.image.alt}

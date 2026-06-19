@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const postPages = getPublicPosts().map((p) => ({
-    url: p.seo.canonical || `${SITE_URL}/blog/${p.slug}`,
+    url: p.seo.canonical || `${SITE_URL}/post/${p.slug}`,
     lastModified: new Date(p.dateModified || p.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.6,

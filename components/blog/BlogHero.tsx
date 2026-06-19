@@ -18,7 +18,7 @@ function fmtDate(iso: string) {
 }
 
 export function BlogHero({ post }: { post: BlogPost }) {
-  const url = post.seo.canonical || `${SITE_URL}/blog/${post.slug}`;
+  const url = post.seo.canonical || `${SITE_URL}/post/${post.slug}`;
   const heroSrc = resolveImage(post, post.hero.image.ref);
   const pin = post.seo.social.pinterestImage
     ? resolveImage(post, post.seo.social.pinterestImage.ref)

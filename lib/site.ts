@@ -103,7 +103,7 @@ export const footer = {
         { label: "FabricFinder\u2122", href: "/fabric-finder" },
         { label: "Install Guide", href: "/how-to-install-weed-barrier-fabric" },
         { label: "The Groundwork (Blog)", href: "/blog" },
-        { label: "Product Comparison", href: "/blog/woven-vs-non-woven-landscape-fabric" },
+        { label: "Product Comparison", href: "/post/woven-vs-non-woven-landscape-fabric" },
         { label: "Technical Data Sheets", href: "/contact-us" },
         { label: "FAQs", href: "/contact-us" },
       ],

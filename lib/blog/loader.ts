@@ -6,7 +6,7 @@ import type { BlogPost } from "@/lib/blog/types";
 /**
  * The content loader. This is what makes the system "drop-in":
  *
- *   content/blog/<slug>.json  ->  rendered at /blog/<slug>
+ *   content/blog/<slug>.json  ->  rendered at /post/<slug>
  *
  * Adding a post is literally adding one file here. Nothing else in the repo
  * changes - no index to edit, no import to register, no re-deploy of other

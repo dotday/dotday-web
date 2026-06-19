@@ -8,10 +8,16 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Legacy Wix blog path preservation: thedotday.com used /post/<slug>.
-      // We serve canonical posts at /blog/<slug> but keep /post/<slug> working.
-      // (Handled by the app/post/[slug] route, so no hard redirect is forced here.
-      //  Add explicit redirects here later if you decide to consolidate URLs.)
+      // Posts are canonical at /post/<slug> (the original Wix structure that
+      // carries the SEO equity). Any old /blog/<slug> link 301-redirects here.
+      // Done at the config level so /blog/<slug> is NOT built as a route at all.
+      // The /blog hub listing page (app/blog/page.tsx) is unaffected - only the
+      // per-post /blog/<slug> pattern redirects.
+      {
+        source: "/blog/:slug",
+        destination: "/post/:slug",
+        permanent: true,
+      },
     ];
   },
 };

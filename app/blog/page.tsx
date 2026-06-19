@@ -70,7 +70,7 @@ export default function BlogIndex({
       ) : (
         <div className="rgrid" style={{ marginTop: 8, marginBottom: 40 }}>
           {posts.map((p) => (
-            <Link className="rcard" href={`/blog/${p.slug}`} key={p.slug}>
+            <Link className="rcard" href={`/post/${p.slug}`} key={p.slug}>
               <Img
                 src={resolveImage(p, p.hero.image.ref)}
                 alt={p.hero.image.alt}

@@ -8,7 +8,7 @@
  * every required field stubbed (status: "draft", schemaVersion 1.0.0). You then
  * fill the copy (or have Claude generate it), drop images into
  * /public/blog/<slug>/, run `npm run content:validate`, preview at
- * localhost:3000/blog/<slug>, and ship via PR.
+ * localhost:3000/post/<slug>, and ship via PR.
  *
  * It will not overwrite an existing file.
  */
@@ -49,7 +49,7 @@ const skeleton = {
   seo: {
     metaTitle: `TODO <=60 chars with ${focus}`,
     metaDescription: `TODO 50-160 chars including ${focus}, written as a click-earning summary.`,
-    canonical: `https://www.thedotday.com/blog/${slug}`,
+    canonical: `https://www.thedotday.com/post/${slug}`,
     noindex: true,
     social: {
       excerpt: `TODO share excerpt about ${focus} ending in hashtags.`,

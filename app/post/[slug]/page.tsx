@@ -7,23 +7,22 @@ import { BlogLayout } from "@/components/blog/BlogLayout";
 import { SITE_URL } from "@/lib/site";
 
 /**
- * /post/[slug] - legacy Wix URL preservation.
+ * /post/[slug] - the CANONICAL post route.
  *
- * The old thedotday.com blog served posts at /post/<slug>. To keep that SEO
- * equity, this route renders the SAME post by the SAME slug as /blog/[slug].
+ * thedotday.com served blog posts at /post/<slug> on Wix, so this is the URL
+ * structure that carries the existing SEO equity. Every post is served here and
+ * canonicals here. /blog/<slug> 301-redirects to this route (see
+ * app/blog/[slug]/page.tsx); the blog hub listing stays at /blog.
  *
- * Canonical still points at /post/<slug> for migrated posts whose seo.canonical
- * preserves the original URL (so we don't split signals). New posts canonical
- * to /blog/<slug>; this route still resolves them but defers canonical to the
- * post's own seo.canonical value.
+ * generateStaticParams reads content/blog/*.json, so a new file ships as a new
+ * static page with zero other edits. generateMetadata builds the full SEO head
+ * (title, description, canonical, OG, Twitter, noindex for drafts) from the
+ * same JSON. JSON-LD (BlogPosting + FAQPage + BreadcrumbList) is injected here.
  */
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Only build /post/* pages for migrated posts (original URL = /post/<slug>).
-  // Non-migrated posts live at /blog/<slug>; building them here too would just
-  // duplicate routes. We still allow resolution if someone hits the URL.
   return getAllSlugs().map((slug) => ({ slug }));
 }
 

@@ -14,7 +14,7 @@ function absolute(url: string): string {
 }
 
 export function buildJsonLd(post: BlogPost) {
-  const canonical = post.seo.canonical || absolute(`/blog/${post.slug}`);
+  const canonical = post.seo.canonical || absolute(`/post/${post.slug}`);
   const heroImg = absolute(
     resolveImage(post, post.hero.image.ref) || "/brand/logo-neon.png"
   );

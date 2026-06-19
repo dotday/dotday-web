@@ -35,7 +35,7 @@ function readBlogPosts() {
         return {
           type: "blog",
           slug: p.slug,
-          url: `/blog/${p.slug}`,
+          url: `/post/${p.slug}`,
           title: p.title,
           focusKeyword: p.focusKeyword,
           category: p.category,
