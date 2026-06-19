@@ -1,6 +1,7 @@
 import type { Block, BlogPost } from "@/lib/blog/types";
 import { Prose } from "@/components/blog/blocks/Prose";
 import { StatStrip } from "@/components/blog/blocks/StatStrip";
+import { TrustStrip } from "@/components/blog/blocks/TrustStrip";
 import { ComparisonTable } from "@/components/blog/blocks/ComparisonTable";
 import { Callout } from "@/components/blog/blocks/Callout";
 import { Steps } from "@/components/blog/blocks/Steps";
@@ -28,6 +29,8 @@ export function BlockRenderer({
             return <Prose key={i} block={block} />;
           case "statStrip":
             return <StatStrip key={i} block={block} />;
+          case "trustStrip":
+            return <TrustStrip key={i} block={block} />;
           case "comparisonTable":
             return <ComparisonTable key={i} block={block} />;
           case "proTip":

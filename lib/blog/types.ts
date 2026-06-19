@@ -109,6 +109,12 @@ export interface StatStripBlock {
   items: Array<{ value: string; label: string }>;
 }
 
+export interface TrustStripBlock {
+  _type: "trustStrip";
+  heading?: string;
+  items: string[];
+}
+
 export interface CtaBlock {
   _type: "cta";
   variant: "calculator" | "quiz" | "contractor" | "enquiry";
@@ -133,6 +139,7 @@ export type Block =
   | CalloutBlock
   | StepsBlock
   | StatStripBlock
+  | TrustStripBlock
   | CtaBlock;
 
 export interface Faq {

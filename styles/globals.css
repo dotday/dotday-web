@@ -328,6 +328,49 @@ h1 {
   color: var(--ink);
 }
 
+/* Trust strip - credibility panel (Buying Guides / Comparisons) */
+.trust-strip {
+  background: #fbfbf9;
+  border: 1px solid var(--grey2);
+  border-left: 4px solid var(--neon);
+  border-radius: 12px;
+  padding: 26px 28px;
+  margin: 34px 0;
+}
+.trust-strip-h {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  margin: 0 0 18px;
+}
+.trust-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px 26px;
+}
+.trust-strip-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.trust-strip-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: var(--neon);
+  color: var(--ink);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+}
+.trust-strip-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
 /* body - single centered column */
 .body-single {
   padding: 10px 0 0;

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "weed-barrier-under-pavers",
+  "title": "Weed Barrier Under Pavers: What Actually Holds Up",
+  "category": "How-To & Installation",
+  "postType": "how-to",
+  "primaryProduct": "XBAR",
+  "focusKeyword": "weed barrier under pavers",
+  "status": "published",
+  "author": "DOTDAY Gardener",
+  "publishedAt": "2026-06-19T00:00:00.000Z",
+  "dateModified": "2026-06-19T00:00:00.000Z",
+  "readTimeMinutes": 8,
+  "wordCount": 1200,
+  "seo": {
+    "metaTitle": "Weed Barrier Under Pavers: What Holds Up",
+    "metaDescription": "Putting a weed barrier under pavers? Light fabric pumps and tears in the base. See where it belongs in the layer stack and which weight holds.",
+    "canonical": "https://www.thedotday.com/blog/weed-barrier-under-pavers",
+    "noindex": false,
+    "social": {
+      "excerpt": "Putting a weed barrier under pavers? A light garden cloth pumps and tears in the base. Here is where the fabric belongs in the stack and which weight actually holds. #DOTDAY #Pavers #Hardscape #WeedBarrier #LandscapeFabric",
+      "hashtags": ["#DOTDAY", "#Pavers", "#Hardscape", "#WeedBarrier", "#LandscapeFabric"],
+      "ogImage": {
+        "ref": "og",
+        "alt": "DOTDAY XBAR weed barrier under pavers, gravel, and hardscape applications"
+      },
+      "pinterestImage": {
+        "ref": "pin",
+        "alt": "Weed barrier under pavers layer stack and fabric weight pin"
+      },
+      "shareButtons": ["pinterest", "facebook", "x", "copy"],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "How-To & Installation",
+    "excerpt": "A light garden cloth under a paver base pumps and tears. Here is what the fabric is really doing, where it belongs in the stack, and the weight that holds up under load.",
+    "image": {
+      "ref": "xbar-applications",
+      "alt": "DOTDAY XBAR as a weed barrier under pavers, driveways, gravel, and hardscape installations"
+    }
+  },
+  "quickAnswer": {
+    "heading": "What you'll learn",
+    "items": [
+      "What a weed barrier under pavers is actually doing in the base",
+      "Why a thin garden fabric fails under a compacted paver base",
+      "Where the fabric belongs in the paver layer stack",
+      "Which fabric weight holds up under foot and vehicle traffic"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "eyebrow": "Start here",
+      "heading": "First, what is the fabric doing under a paver base?",
+      "body": "When people search for a weed barrier under pavers, they picture stopping weeds. That matters, but it is the secondary job. The primary job is separation: keeping the native soil and the compacted aggregate base from mixing under load. When those two layers blend, the base loses strength, develops soft spots, and the finished surface starts to dip and shift. The right fabric holds the line between soil and base for the life of the patio or driveway. This guide is for hardscape crews and serious DIYers speccing a build. If you want the short answer on product, it is [XBAR](https://www.thedotday.com/product-page/xbar-landscape-fabric), and you can size a job in the [fabric calculator](https://www.thedotday.com/landscape-fabric-calculator)."
+    },
+    {
+      "_type": "prose",
+      "heading": "Why a thin weed barrier under pavers fails",
+      "body": "A light garden weed cloth is built for one thing: sitting under mulch in a planting bed. Put it under a compacted base that carries foot and vehicle traffic and it cannot do the work. Under load, water and fines pump up and down through the fabric, the thin material abrades against the aggregate, and it tears. Once it tears, soil and base mix freely and the separation is gone. The fabric you reached for to protect the build becomes the weak layer in it. Load-bearing separation needs a fabric engineered for load, not a garden cloth."
+    },
+    {
+      "_type": "image",
+      "ref": "xbar-dual-layer",
+      "alt": "Close-up of DOTDAY XBAR 5 oz woven dual-layer construction used as a weed barrier under pavers",
+      "caption": "XBAR pairs a woven top with a non-woven backing, built for the separation a paver base demands."
+    },
+    {
+      "_type": "prose",
+      "heading": "Where the fabric belongs in a paver build",
+      "body": "Position is half the job. The fabric goes near the bottom of the stack, directly on the graded and compacted subgrade soil, and under the aggregate base. From there it separates soil from base so the two never mix, which is what keeps the surface flat and supported over time. Putting the fabric higher in the stack, between the base and the bedding sand, is a common mistake. There it does little for separation and can trap water in the base. Lay it on the soil, then build your base on top of it."
+    },
+    {
+      "_type": "comparisonTable",
+      "heading": "Choosing a weed barrier under pavers by ground condition",
+      "columns": ["Ground condition", "Right fabric", "Why"],
+      "featuredColumn": 1,
+      "rows": [
+        ["Firm, well-drained soil", "XBAR (5 oz woven)", "Load-bearing separation under the base"],
+        ["Soft or wet soil, water must move", "TERRA (non-woven)", "Separates and filters while letting water drain"],
+        ["Mixed or uncertain", "XBAR, or both layers", "Start with load separation, add drainage where needed"]
+      ]
+    },
+    {
+      "_type": "prose",
+      "eyebrow": "The product",
+      "heading": "Why XBAR is built for this",
+      "body": "XBAR is a 5 oz woven dual-layer fabric: a woven polypropylene top over a non-woven backing. The woven face carries load and resists puncture from angular aggregate, while the backing adds separation and stability against the soil. That combination is what a paver base needs, and it is what a light 3.2 oz garden barrier cannot give you. Use [SHIELD](https://www.thedotday.com/product-page/shield-landscape-fabric) in the planting beds around the patio, and keep XBAR for the load-bearing surface itself."
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Speccing fabric across a patio, driveway, or full site?",
+      "body": "Get volume pricing and help matching the right fabric to each ground condition on the job.",
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/bulk-pricing"
+    },
+    {
+      "_type": "steps",
+      "heading": "Installing a weed barrier under pavers, step by step",
+      "steps": [
+        { "title": "Excavate and grade", "body": "Dig to your base depth, then grade the subgrade soil so water sheds the way you want. A clean, even base is what the fabric and aggregate sit on." },
+        { "title": "Compact the soil", "body": "Compact the subgrade before any fabric goes down. The fabric separates soil from base, but the soil itself still needs to be firm." },
+        { "title": "Roll out the fabric", "body": "Lay XBAR directly on the compacted soil. Overlap adjacent runs 12 to 18 inches so nothing migrates through the seams under load." },
+        { "title": "Build the base on top", "body": "Add and compact your aggregate base in lifts over the fabric. The fabric stays at the soil line, doing separation, while you build up to bedding and pavers." }
+      ]
+    },
+    {
+      "_type": "warning",
+      "heading": "The mistake that ruins a paver base",
+      "body": "Do not drop a light 3 oz garden weed cloth under a paver base and expect it to hold. It is not engineered for sustained load, so it pumps, abrades, and tears, and once it tears the soil and base mix and the surface fails. Use a heavy woven fabric built for load-bearing separation, and lay it on the soil, not up in the base."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Talk to us",
+      "heading": "Need help choosing the right fabric?",
+      "body": "Tell us your ground condition and the surface above, and we will point you to the right fabric and weight for the build.",
+      "cta": "Request a Quote",
+      "href": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Do you need a weed barrier under pavers?",
+        "a": "Yes, but its main job is separation, not just weeds. Fabric between the soil and the compacted base keeps the two from mixing under load, which protects the base from soft spots and wash-out. A heavy woven fabric like DOTDAY XBAR is built for that."
+      },
+      {
+        "q": "What weight weed barrier is best under pavers?",
+        "a": "For a paver base you want a heavy woven fabric, not a light garden cloth. DOTDAY XBAR is a 5 oz woven dual-layer fabric built for the load and foot traffic a patio or driveway puts on the ground. A 3 oz weed cloth is not engineered for that and will pump and tear."
+      },
+      {
+        "q": "Where does the fabric go in a paver installation?",
+        "a": "The fabric goes near the bottom of the stack, directly on the graded and compacted soil and under the aggregate base. That position lets it separate the soil from the base so the two never mix, which is what keeps the finished surface flat and supported over time."
+      },
+      {
+        "q": "Woven or non-woven fabric under pavers?",
+        "a": "On firm, well-drained soil, a heavy woven fabric like XBAR gives the load-bearing separation a paver base needs. On soft or wet soil where water has to move, a non-woven geotextile like DOTDAY TERRA separates and filters while letting water drain. Some builds use both."
+      }
+    ]
+  },
+  "closingHashtags": ["#DOTDAY", "#Pavers", "#Hardscape", "#WeedBarrier", "#LandscapeFabric"],
+  "relatedPosts": [
+    {
+      "title": "Woven vs Non Woven Landscape Fabric: How to Choose the Right One",
+      "url": "https://www.thedotday.com/blog/woven-vs-non-woven-landscape-fabric",
+      "category": "Comparisons"
+    },
+    {
+      "title": "Landscape Fabric Thickness Chart: oz Weights by Job",
+      "url": "https://www.thedotday.com/blog/landscape-fabric-thickness-chart",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "How to Install Weed Barrier Fabric",
+      "url": "https://www.thedotday.com/how-to-install-weed-barrier-fabric",
+      "category": "How-To & Installation"
+    }
+  ],
+  "internalLinks": [
+    { "label": "XBAR", "url": "https://www.thedotday.com/product-page/xbar-landscape-fabric" },
+    { "label": "SHIELD", "url": "https://www.thedotday.com/product-page/shield-landscape-fabric" },
+    { "label": "TERRA", "url": "https://www.thedotday.com/product-page/terra-geotextile-fabric" },
+    { "label": "Fabric Calculator", "url": "https://www.thedotday.com/landscape-fabric-calculator" },
+    { "label": "Bulk Pricing", "url": "https://www.thedotday.com/bulk-pricing" }
+  ],
+  "images": {}
+}

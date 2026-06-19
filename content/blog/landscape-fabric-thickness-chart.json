@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "landscape-fabric-thickness-chart",
+  "title": "Landscape Fabric Thickness Chart: oz Weights by Job",
+  "category": "Buying Guides",
+  "postType": "buying-guide",
+  "primaryProduct": "MULTIPLE",
+  "focusKeyword": "landscape fabric thickness chart",
+  "status": "published",
+  "author": "DOTDAY Gardener",
+  "publishedAt": "2026-06-19T00:00:00.000Z",
+  "dateModified": "2026-06-19T00:00:00.000Z",
+  "readTimeMinutes": 7,
+  "wordCount": 1100,
+  "seo": {
+    "metaTitle": "Landscape Fabric Thickness Chart: oz by Job",
+    "metaDescription": "A landscape fabric thickness chart that matches oz weight to the job: garden beds, gravel, pavers, and drainage. See which weight to buy and why.",
+    "canonical": "https://www.thedotday.com/blog/landscape-fabric-thickness-chart",
+    "noindex": false,
+    "social": {
+      "excerpt": "How thick should weed barrier be? Use this landscape fabric thickness chart to match oz weight to the job, from 3.2 oz garden beds to 8 oz drainage. #DOTDAY #LandscapeFabric #WeedBarrier #Geotextile #Hardscape",
+      "hashtags": [
+        "#DOTDAY",
+        "#LandscapeFabric",
+        "#WeedBarrier",
+        "#Geotextile",
+        "#Hardscape"
+      ],
+      "ogImage": {
+        "ref": "og",
+        "alt": "DOTDAY XBAR 5 oz dual-layer landscape fabric, part of the landscape fabric thickness chart"
+      },
+      "pinterestImage": {
+        "ref": "pin",
+        "alt": "Landscape fabric thickness chart by oz weight and job pin"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "Buying Guide",
+    "excerpt": "Fabric is sold by weight in ounces per square yard, and that number is the whole decision. This chart matches each oz weight to the job it is built for, so you buy once and buy right.",
+    "image": {
+      "ref": "xbar",
+      "alt": "DOTDAY XBAR 5 oz woven dual-layer fabric, a key weight on the landscape fabric thickness chart"
+    }
+  },
+  "quickAnswer": {
+    "heading": "What you'll learn",
+    "items": [
+      "What the oz weight on a landscape fabric thickness chart actually measures",
+      "A clear chart matching 3.2, 4, 5, 6, and 8 oz to the right job",
+      "Why woven weight and non-woven weight are not the same thing",
+      "How to pick the right weight of SHIELD, XBAR, or TERRA for your ground"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "eyebrow": "Start here",
+      "heading": "What the oz weight on a landscape fabric thickness chart means",
+      "body": "This landscape fabric thickness chart starts from one fact: fabric is rated by weight in ounces per square yard, and that single number tells you more than any label. A higher oz weight generally means a denser, stronger fabric, but heavier is not automatically better. The right weight is the one that matches the job, whether that is weed control in a bed, load-bearing separation under pavers, or drainage behind a wall. This guide is for landscapers, hardscape crews, growers, and drainage contractors who need to spec the right weight the first time. If you want help fast, talk to us about [bulk pricing](https://www.thedotday.com/bulk-pricing) or run your numbers in the [fabric calculator](https://www.thedotday.com/landscape-fabric-calculator)."
+    },
+    {
+      "_type": "trustStrip",
+      "heading": "Why trust DOTDAY on fabric weight",
+      "items": [
+        "We make and sell these exact fabrics (SHIELD, XBAR, TERRA) to US pros, farms, and nurseries",
+        "Every weight and spec in this chart comes from real product data sheets, never invented numbers",
+        "We match the weight to the job in front of you, not to the most expensive option"
+      ]
+    },
+    {
+      "_type": "comparisonTable",
+      "heading": "Landscape fabric thickness chart by job",
+      "columns": [
+        "Weight (oz/yd2)",
+        "Type",
+        "Best job",
+        "DOTDAY product"
+      ],
+      "featuredColumn": 0,
+      "rows": [
+        [
+          "3.2 oz",
+          "Woven",
+          "Garden beds, mulch, farm rows, nurseries",
+          "SHIELD"
+        ],
+        [
+          "5 oz",
+          "Woven dual-layer",
+          "Gravel, pavers, hardscape, driveways (load)",
+          "XBAR"
+        ],
+        [
+          "4 oz",
+          "Non-woven",
+          "Light drainage, soil separation, French drains",
+          "TERRA 4 oz"
+        ],
+        [
+          "6 oz",
+          "Non-woven",
+          "Heavier drainage, retaining-wall backfill",
+          "TERRA 6 oz"
+        ],
+        [
+          "8 oz",
+          "Non-woven",
+          "Demanding drainage, road base, erosion control",
+          "TERRA 8 oz"
+        ]
+      ]
+    },
+    {
+      "_type": "image",
+      "ref": "shield",
+      "alt": "DOTDAY SHIELD 3.2 oz woven weed barrier, the garden-bed weight on the landscape fabric thickness chart",
+      "caption": "SHIELD, the 3.2 oz woven weight, is built for weed control in beds, mulch, and rows."
+    },
+    {
+      "_type": "prose",
+      "heading": "Woven weight and non-woven weight are not the same thing",
+      "body": "One trap with any thickness chart is comparing weights across fabric types as if they mean the same thing. They do not. In a woven fabric, the weight reflects tightly crossed polypropylene tapes built for weed suppression and load-bearing separation. In a non-woven geotextile, the weight reflects a felted mat of fibers built to filter and let water pass through. A 5 oz woven fabric and a 5 oz non-woven fabric are engineered for different jobs, so do not read across the two as if a number alone settles it. Read the weight inside the right type for the job in front of you.",
+      "eyebrow": "Read it right"
+    },
+    {
+      "_type": "prose",
+      "heading": "How to pick a weight from the chart",
+      "body": "Work the chart in two steps. First, name the job: weed control, load-bearing separation, or drainage. That picks the type, woven for weeds and load, non-woven for water. Second, pick the weight within that type by how demanding the job is. For weed control in beds and rows, 3.2 oz woven DOTDAY [SHIELD](https://www.thedotday.com/product-page/shield-landscape-fabric) is right. For gravel, pavers, and driveways that carry load, step up to 5 oz woven dual-layer [XBAR](https://www.thedotday.com/product-page/xbar-landscape-fabric). For drainage, choose non-woven [TERRA](https://www.thedotday.com/product-page/terra-geotextile-fabric) from 4 to 8 oz by how hard the water and soil are working the fabric."
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Speccing fabric weights across a whole site?",
+      "body": "Get volume pricing and help matching the right oz weight to each ground condition on the job.",
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/bulk-pricing"
+    },
+    {
+      "_type": "image",
+      "ref": "terra",
+      "alt": "DOTDAY TERRA non-woven geotextile, the 4, 6, and 8 oz drainage weights on the landscape fabric thickness chart",
+      "caption": "TERRA covers the 4, 6, and 8 oz non-woven weights, built for drainage and separation."
+    },
+    {
+      "_type": "prose",
+      "eyebrow": "The short version",
+      "heading": "Three fabrics, three ground conditions",
+      "body": "Recommended by the job in front of you, not the price on the shelf. **SHIELD** is built for garden beds, mulch, farm rows, and nurseries where the job is suppressing weeds. **XBAR** is the right call under pavers, gravel, and hardscape that takes foot and vehicle traffic. **TERRA** is built for French drains, retaining-wall backfill, and wet or soft soil where water has to move. Match the weight to the ground, and the fabric lasts."
+    },
+    {
+      "_type": "proTip",
+      "heading": "The one-minute rule",
+      "body": "If the fabric is under a plant, think 3.2 oz woven. If it is under something that carries weight, think 5 oz woven. If water has to move through it, think non-woven and pick the oz by how hard the drainage job is. That single rule resolves most jobs before you ever open a full chart."
+    },
+    {
+      "_type": "warning",
+      "heading": "Heavier is not a shortcut",
+      "body": "Do not reach for the heaviest fabric on the chart assuming it covers every job. An 8 oz non-woven geotextile is built for drainage, not tight weed control in a planting bed, and a heavy woven fabric is overkill under light mulch. Picking too heavy wastes money and can work against you. Match the weight to the job, both directions."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Talk to us",
+      "heading": "Need help choosing the right weight?",
+      "body": "Match your job to the right oz weight and get pointed to SHIELD, XBAR, or TERRA for your exact ground condition.",
+      "cta": "Request a Quote",
+      "href": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How thick should landscape fabric be?",
+        "a": "It depends on the job, not a single number. For garden beds and mulch, a 3.2 oz woven fabric is plenty. For gravel, pavers, and driveways that carry load, use a 5 oz woven fabric. For drainage, choose a non-woven geotextile from 4 to 8 oz by how demanding the job is."
+      },
+      {
+        "q": "What does oz mean on a landscape fabric thickness chart?",
+        "a": "The oz figure is the fabric weight in ounces per square yard, and it is the main spec on any landscape fabric thickness chart. A higher oz weight usually means a denser, stronger fabric, but the right weight is the one matched to the job, not simply the heaviest one available."
+      },
+      {
+        "q": "Is a higher oz weight always better for weed barrier?",
+        "a": "No. A heavier fabric is not automatically better. An 8 oz non-woven geotextile is built for drainage, not tight weed control, and a heavy woven fabric is overkill under light mulch. Pick the weight that matches the job. For most weed control, a 3.2 oz woven barrier is right."
+      },
+      {
+        "q": "What weight fabric goes under gravel or pavers?",
+        "a": "For gravel, pavers, and driveways you want a heavy woven fabric for load-bearing separation. DOTDAY XBAR is a 5 oz woven dual-layer fabric built for that. A light 3.2 oz garden barrier is not engineered for sustained load and will pump and tear under a compacted base."
+      }
+    ]
+  },
+  "closingHashtags": [
+    "#DOTDAY",
+    "#LandscapeFabric",
+    "#WeedBarrier",
+    "#Geotextile",
+    "#Hardscape"
+  ],
+  "relatedPosts": [
+    {
+      "title": "3.2oz vs 5oz Weed Barrier: Which Weight Do You Need?",
+      "url": "https://www.thedotday.com/post/32-oz-vs-5-oz-weed-barrier-fabric-which-option-suits-your-gardening-needs-best",
+      "category": "Comparisons"
+    },
+    {
+      "title": "Woven vs Non Woven Landscape Fabric: How to Choose the Right One",
+      "url": "https://www.thedotday.com/blog/woven-vs-non-woven-landscape-fabric",
+      "category": "Comparisons"
+    },
+    {
+      "title": "How to Install Weed Barrier Fabric",
+      "url": "https://www.thedotday.com/how-to-install-weed-barrier-fabric",
+      "category": "How-To & Installation"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "SHIELD",
+      "url": "https://www.thedotday.com/product-page/shield-landscape-fabric"
+    },
+    {
+      "label": "XBAR",
+      "url": "https://www.thedotday.com/product-page/xbar-landscape-fabric"
+    },
+    {
+      "label": "TERRA",
+      "url": "https://www.thedotday.com/product-page/terra-geotextile-fabric"
+    },
+    {
+      "label": "Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Bulk Pricing",
+      "url": "https://www.thedotday.com/bulk-pricing"
+    }
+  ],
+  "images": {}
+}

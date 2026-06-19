@@ -91,6 +91,7 @@ dropped:
 |---|---|---|
 | `prose` | A titled section of body copy | `eyebrow?`, `heading`, `body` (markdown-ish: links `[text](url)`, `**bold**`) |
 | `statStrip` | Row of stat numbers | `stats: [{ n, l }]` |
+| `trustStrip` | Credibility panel, checkmarked columns | `heading`, `items: string[]` (2-4). **Buying Guides + Comparisons ONLY** |
 | `comparisonTable` | Comparison grid | `heading?`, `columns: [...]`, `rows: [...]` |
 | `proTip` | Green tip callout | `heading`, `body` |
 | `warning` | Caution callout | `heading`, `body` |
