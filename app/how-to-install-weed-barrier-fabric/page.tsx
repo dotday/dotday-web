@@ -246,37 +246,127 @@ export default function InstallGuidePage() {
         </div>
       </div>
 
-      {/* Positioning band - oversized watermark + neon-highlighted statement */}
-      <section className="iband">
-        <div className="iband-wm" aria-hidden="true">
-          <span className="wm-install">install</span>
-          <span className="wm-dotday">dotday</span>
-          <span className="wm-green">green</span>
+      {/* Positioning band - oversized watermark + neon-highlighted statement.
+          Self-contained inline styles so it renders regardless of global CSS. */}
+      <section
+        aria-label="DOTDAY install positioning"
+        style={{
+          position: "relative",
+          background: "#f4f4f4",
+          overflow: "hidden",
+          padding: "clamp(72px, 9vw, 120px) 20px",
+          textAlign: "center",
+        }}
+      >
+        {/* faint oversized watermark words */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            inset: 0,
+            pointerEvents: "none",
+            zIndex: 0,
+            fontWeight: 800,
+            letterSpacing: "-0.04em",
+            lineHeight: 1,
+            color: "#1a1a1a",
+            opacity: 0.06,
+            userSelect: "none",
+          }}
+        >
+          <span
+            style={{
+              position: "absolute",
+              top: "clamp(8px, 4vw, 40px)",
+              left: "clamp(8px, 3vw, 64px)",
+              fontSize: "clamp(56px, 12vw, 168px)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            install
+          </span>
+          <span
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              fontSize: "clamp(56px, 12vw, 168px)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            dotday
+          </span>
+          <span
+            style={{
+              position: "absolute",
+              bottom: "clamp(8px, 4vw, 36px)",
+              right: "clamp(8px, 3vw, 64px)",
+              fontSize: "clamp(56px, 12vw, 168px)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            green
+          </span>
         </div>
-        <div className="iband-in">
+
+        {/* centered content */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: 760,
+            margin: "0 auto",
+          }}
+        >
           <svg
-            className="iband-leaf"
             viewBox="0 0 64 64"
             fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
+            stroke="#5b6e00"
+            strokeWidth={2.4}
             strokeLinecap="round"
             strokeLinejoin="round"
             role="img"
             aria-label="DOTDAY leaf mark"
+            style={{
+              display: "block",
+              width: "clamp(64px, 7vw, 88px)",
+              height: "auto",
+              margin: "0 auto clamp(18px, 2.4vw, 28px)",
+            }}
           >
-            <path d="M32 60c0-14 2-24 0-34C30 14 22 7 12 6c-1 11 2 20 9 27 6 6 11 9 11 27Z" />
-            <path d="M32 60c0-14-2-24 0-34C34 14 42 7 52 6c1 11-2 20-9 27-6 6-11 9-11 27Z" />
-            <line x1="32" y1="60" x2="32" y2="18" />
-            <path d="M32 30c-4-2-8-5-11-9" />
-            <path d="M32 30c4-2 8-5 11-9" />
-            <path d="M32 42c-4-2-7-4-10-8" />
-            <path d="M32 42c4-2 7-4 10-8" />
+            <path d="M31 41C20 41 9 33 7 13c20 1 26 12 26 26" />
+            <path d="M33 41c11 0 22-8 24-28-20 1-26 12-26 26" />
+            <path d="M32 39v15" />
+            <path d="M32 54c-1.5 2.5-4 4.5-7 5.5" />
+            <path d="M32 54c1.5 2.5 4 4.5 7 5.5" />
+            <path d="M31 41C26 39 22 35 19 30" />
+            <path d="M33 41c5-2 9-6 12-11" />
           </svg>
-          <p className="iband-statement">
+          <p
+            style={{
+              fontWeight: 700,
+              fontSize: "clamp(22px, 3.2vw, 38px)",
+              lineHeight: 1.22,
+              letterSpacing: "-0.02em",
+              color: "#101010",
+              margin: 0,
+            }}
+          >
             The right fabric, installed correctly, lasts years. DOTDAY makes it
             simple, so you can get back to growing your plants with ease.{" "}
-            <span className="iband-hl">Easy installs. Better growth.</span>
+            <span
+              style={{
+                background: "#d8ff00",
+                color: "#101010",
+                padding: "0.02em 0.16em",
+                borderRadius: 3,
+                WebkitBoxDecorationBreak: "clone",
+                boxDecorationBreak: "clone",
+              }}
+            >
+              Easy installs. Better growth.
+            </span>
           </p>
         </div>
       </section>
