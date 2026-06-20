@@ -746,7 +746,7 @@ tbody tr:nth-child(even) {
   color: var(--olive);
 }
 .pdesc {
-  font-size: 14px;
+  font-size: 15.5px;
   line-height: 1.55;
   color: var(--ink);
   margin: 0 0 14px;
@@ -1042,7 +1042,7 @@ tbody tr:nth-child(even) {
   align-items: center;
   gap: 18px;
   padding: 12px 20px;
-  max-width: 1240px;
+  max-width: var(--maxw);
   margin: 0 auto;
   transition: padding 0.18s ease;
 }
@@ -1199,7 +1199,7 @@ tbody tr:nth-child(even) {
   align-items: center;
   gap: 4px;
   padding: 0 20px;
-  max-width: 1240px;
+  max-width: var(--maxw);
   margin: 0 auto;
 }
 .hdr-shopall {
@@ -1359,7 +1359,7 @@ tbody tr:nth-child(even) {
   margin-top: 60px;
 }
 .ftr-inner {
-  max-width: 1240px;
+  max-width: var(--maxw);
   margin: 0 auto;
   padding: 34px 20px 30px;
 }
@@ -1639,7 +1639,7 @@ tbody tr:nth-child(even) {
   margin: 0 0 8px;
 }
 .feature p {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--ink2);
   margin: 0;
   line-height: 1.55;
@@ -1697,5 +1697,742 @@ tbody tr:nth-child(even) {
 @media (max-width: 980px) {
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================================
+   HOMEPAGE (marketing) - hero, stat strip, use-cases, job gallery, tools,
+   testimonials. Added for the redesigned app/page.tsx. Reuses the brand
+   tokens + .badge/.btn classes defined above.
+   ============================================================================ */
+
+/* --- Hero (Option C, white): copy + photo card with stat overlay --- */
+.chero {
+  background: var(--white);
+  padding: clamp(44px, 6vw, 84px) 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--grey2);
+}
+.chero::before {
+  content: "";
+  position: absolute;
+  top: -160px;
+  right: -140px;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(216, 255, 0, 0.28), transparent 64%);
+  z-index: 0;
+}
+.chero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(32px, 4vw, 56px);
+  align-items: center;
+}
+.chero-ey {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--olive);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.chero-ey::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--neon);
+}
+.chero-h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(40px, 6.8vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--charcoal);
+  margin: 18px 0 22px;
+}
+.chero-h1 mark {
+  background: var(--neon);
+  color: var(--charcoal);
+  padding: 0 0.1em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.chero-sub {
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.58;
+  color: var(--ink2);
+  max-width: 50ch;
+  margin: 0 0 30px;
+}
+.chero-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.chero-trust {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin: 30px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--grey2);
+}
+.chero-trust li {
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.chero-trust strong {
+  color: var(--charcoal);
+  font-weight: 700;
+}
+.chero-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--grey2);
+  box-shadow: 0 24px 50px rgba(16, 16, 16, 0.14);
+}
+.chero-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+.chero-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: var(--neon);
+  color: var(--charcoal);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 11px;
+  border-radius: 5px;
+}
+.chero-stat {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+.chero-statbox {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--grey2);
+  border-top: 3px solid var(--neon);
+  border-radius: 9px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 16px rgba(16, 16, 16, 0.12);
+}
+.chero-statn {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 1;
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.chero-star {
+  color: #aeae00;
+}
+.chero-statl {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 5px;
+}
+@media (max-width: 820px) {
+  .chero-grid {
+    grid-template-columns: 1fr;
+  }
+  .chero-h1 {
+    font-size: 44px;
+  }
+  .chero-card {
+    order: -1;
+  }
+}
+
+/* --- Stat strip --- */
+.hstats {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey2);
+}
+.hstats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.hstat {
+  padding: 30px 22px;
+  text-align: center;
+  border-right: 1px solid var(--grey2);
+}
+.hstat:last-child {
+  border-right: none;
+}
+.hstat-n {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.hstat-star {
+  color: var(--neon);
+  filter: drop-shadow(0 0 0.5px #aeae00);
+}
+.hstat-l {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  margin: 10px 0 6px;
+}
+.hstat-sub {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 24ch;
+  margin: 0 auto;
+}
+
+/* --- Use cases --- */
+.ucase-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 30px;
+}
+.ucase-head h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin: 16px 0 10px;
+}
+.ucase-head p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+.ucase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.ucard {
+  background: var(--white);
+  border: 1px solid var(--grey2);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ucard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+.ucard-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.ucard-eyebrow {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ucard-body h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 21px;
+  color: var(--ink);
+  margin: 8px 0 8px;
+}
+.ucard-body p {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 18px;
+  flex: 1;
+}
+.ucard-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--grey2);
+  padding-top: 16px;
+}
+.ucard-pick {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--charcoal);
+}
+.ucard-foot .btn {
+  padding: 10px 18px;
+  font-size: 12px;
+}
+
+/* --- Job gallery --- */
+.jobg {
+  background: var(--grey1);
+  border-top: 1px solid var(--grey2);
+  border-bottom: 1px solid var(--grey2);
+  padding: 56px 0;
+  margin-top: 8px;
+}
+.jobg-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+.jobg-head h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(24px, 3.6vw, 34px);
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin: 14px 0 0;
+}
+.jobg-head p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+  max-width: 36ch;
+  text-align: right;
+}
+.jobg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.jobg-item {
+  margin: 0;
+}
+.jobg-item figcaption {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink2);
+  margin-top: 10px;
+}
+.jobg-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--grey2);
+}
+.jobg-cta span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink2);
+}
+
+/* --- Tools band --- */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.tool-card {
+  text-decoration: none;
+  background: var(--neon-soft);
+  border: 1px solid var(--neon);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(143, 168, 0, 0.18);
+}
+.tool-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--charcoal);
+  color: var(--neon);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+.tool-kicker {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+.tool-card h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 6px 0 8px;
+}
+.tool-card p {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #2c3600;
+  margin: 0 0 18px;
+  flex: 1;
+}
+.tool-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+.tool-card:hover .tool-cta-arrow {
+  transform: translateX(3px);
+}
+.tool-cta-arrow {
+  transition: transform 0.15s ease;
+}
+
+/* --- Testimonials --- */
+.tmon-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.tmon-head h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(24px, 3.6vw, 34px);
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin: 14px 0 0;
+}
+.tmon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.tcard {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--grey2);
+  border-radius: 12px;
+  padding: 26px 24px 22px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.tcard-stars {
+  display: flex;
+  gap: 2px;
+  color: #c6e000;
+  margin-bottom: 14px;
+}
+.tcard blockquote {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 18px;
+  flex: 1;
+}
+.tcard figcaption {
+  display: flex;
+  flex-direction: column;
+}
+.tcard-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink);
+}
+.tcard-role {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.tcard-tag {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--olive);
+  background: var(--neon-soft);
+  border: 1px solid var(--neon);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* --- Homepage responsive --- */
+@media (max-width: 900px) {
+  .hstats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hstat:nth-child(2) {
+    border-right: none;
+  }
+  .hstat:nth-child(1),
+  .hstat:nth-child(2) {
+    border-bottom: 1px solid var(--grey2);
+  }
+  .jobg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jobg-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .jobg-head p {
+    text-align: left;
+  }
+}
+@media (max-width: 560px) {
+  .hhero {
+    min-height: 0;
+  }
+  .hhero-inner {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  .hhero-cta .btn {
+    width: 100%;
+  }
+  .jobg-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .jobg-item figcaption {
+    font-size: 12px;
+  }
+}
+
+/* ============================================================================
+   HOMEPAGE v2 - compare table, charcoal gallery moment, section rhythm.
+   ============================================================================ */
+
+/* --- Comparison table (tinted ground) --- */
+.cmp {
+  background: var(--grey1);
+  border-top: 1px solid var(--grey2);
+  border-bottom: 1px solid var(--grey2);
+  padding: clamp(48px, 6vw, 76px) 0;
+}
+.cmp-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 34px;
+}
+.cmp-head h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 40px);
+  letter-spacing: -0.03em;
+  color: var(--charcoal);
+  margin: 16px 0 10px;
+}
+.cmp-head p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+.cmp-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 14px;
+}
+.cmp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--white);
+  border: 1px solid var(--grey2);
+  border-radius: 14px;
+  overflow: hidden;
+  min-width: 680px;
+}
+.cmp-table th,
+.cmp-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 15.5px;
+  vertical-align: middle;
+}
+.cmp-table thead th {
+  background: var(--white);
+  border-bottom: 2px solid var(--grey2);
+  vertical-align: bottom;
+}
+.cmp-corner {
+  width: 22%;
+  background: var(--white) !important;
+}
+.cmp-pname {
+  display: block;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+}
+.cmp-psub {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 3px;
+}
+.cmp-pop {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--olive);
+  background: var(--neon-soft);
+  border: 1px solid var(--neon);
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+.cmp-table tbody th[scope="row"] {
+  font-weight: 700;
+  color: var(--ink2);
+  background: #fbfbfb;
+  border-right: 1px solid var(--grey2);
+  white-space: nowrap;
+}
+.cmp-table tbody td {
+  color: var(--ink);
+  border-bottom: 1px solid var(--grey2);
+}
+.cmp-table tbody th[scope="row"] {
+  border-bottom: 1px solid var(--grey2);
+}
+.cmp-col-feat {
+  background: rgba(216, 255, 0, 0.07);
+}
+.cmp-table thead th.cmp-col-feat {
+  background: rgba(216, 255, 0, 0.12);
+  border-bottom-color: var(--neon);
+}
+.cmp-cta-row td {
+  border-bottom: none !important;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.cmp-cta-row .btn {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 12px;
+}
+.cmp-foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  color: var(--ink2);
+}
+.cmp-foot > span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.cmp-foot svg {
+  color: var(--olive);
+}
+
+/* --- Charcoal gallery moment (overrides .jobg for the dark variant) --- */
+.jobg--dark {
+  background: var(--charcoal);
+  border-top: none;
+  border-bottom: none;
+}
+.jobg--dark .badge {
+  background: var(--neon);
+  color: var(--charcoal);
+}
+.jobg--dark .jobg-head h2 {
+  color: #fff;
+}
+.jobg--dark .jobg-head p {
+  color: rgba(255, 255, 255, 0.6);
+}
+.jobg--dark .jobg-item figcaption {
+  color: rgba(255, 255, 255, 0.72);
+}
+.jobg--dark .img-frame {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.jobg--dark .jobg-cta {
+  border-top-color: rgba(255, 255, 255, 0.14);
+}
+.jobg--dark .jobg-cta span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- Testimonials tinted ground for rhythm (full-bleed; inner .wrap centers) --- */
+.tmon {
+  background: var(--grey1);
+  border-top: 1px solid var(--grey2);
+  border-bottom: 1px solid var(--grey2);
+  padding: clamp(44px, 5vw, 64px) 0;
+}
+.tmon .tmon-head {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 560px) {
+  .cmp-table th,
+  .cmp-table td {
+    padding: 12px 12px;
+    font-size: 13.5px;
+  }
+  .cmp-pname {
+    font-size: 17px;
   }
 }
