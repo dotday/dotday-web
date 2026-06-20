@@ -630,7 +630,7 @@ tbody tr:nth-child(even) {
   line-height: 1.55;
 }
 .cta-quiz {
-  background: var(--neon-soft);
+  background: var(--neon);
   border: 1px solid var(--neon);
   border-radius: 10px;
   padding: 28px;
@@ -646,6 +646,33 @@ tbody tr:nth-child(even) {
   font-size: 22px;
   color: var(--ink);
   margin: 0 0 14px;
+}
+
+/* enquiry - solid-neon centered closing panel (Image-2 look, with body copy) */
+.cta-enquiry {
+  background: var(--neon);
+  border: 1px solid var(--neon);
+  border-radius: 10px;
+  padding: 28px;
+  margin: 34px 0;
+  text-align: center;
+}
+.cta-enquiry .cta-lbl {
+  color: var(--olive);
+  margin-bottom: 10px;
+}
+.cta-enquiry h3 {
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.cta-enquiry p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3a4a00;
+  margin: 0 auto 18px;
+  max-width: 520px;
 }
 
 /* bulk / contractor cta */

@@ -4,9 +4,9 @@ import { CTAButton } from "@/components/blog/ui/Badge";
 /**
  * InlineCTA - renders the four escalating CTA tiers from one block type:
  *   calculator -> light grey block (tier 1)
- *   quiz       -> soft-neon centered block (tier 2)
+ *   quiz       -> solid-neon centered block (tier 2)
  *   contractor -> outline bulk-pricing bar
- *   enquiry    -> outline bulk/talk bar (closing)
+ *   enquiry    -> solid-neon centered closing panel
  *
  * The variant drives the styling; the JSON supplies copy + href + button label.
  */
@@ -38,7 +38,21 @@ export function InlineCTA({ block }: { block: CtaBlock }) {
     );
   }
 
-  // contractor + enquiry share the outline "bulk" bar
+  if (block.variant === "enquiry") {
+    // Closing CTA - centered solid-neon panel (matches the quiz panel look).
+    return (
+      <div className="cta-enquiry">
+        <div className="cta-lbl">{block.eyebrow || "Find your fabric"}</div>
+        <h3>{block.heading}</h3>
+        {block.body && <p>{block.body}</p>}
+        <CTAButton href={block.href} variant="onneon">
+          {block.cta}
+        </CTAButton>
+      </div>
+    );
+  }
+
+  // contractor - outline "bulk" bar
   return (
     <div className="bulk">
       <div>
