@@ -246,6 +246,41 @@ export default function InstallGuidePage() {
         </div>
       </div>
 
+      {/* Positioning band - oversized watermark + neon-highlighted statement */}
+      <section className="iband">
+        <div className="iband-wm" aria-hidden="true">
+          <span className="wm-install">install</span>
+          <span className="wm-dotday">dotday</span>
+          <span className="wm-green">green</span>
+        </div>
+        <div className="iband-in">
+          <svg
+            className="iband-leaf"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            role="img"
+            aria-label="DOTDAY leaf mark"
+          >
+            <path d="M32 60c0-14 2-24 0-34C30 14 22 7 12 6c-1 11 2 20 9 27 6 6 11 9 11 27Z" />
+            <path d="M32 60c0-14-2-24 0-34C34 14 42 7 52 6c1 11-2 20-9 27-6 6-11 9-11 27Z" />
+            <line x1="32" y1="60" x2="32" y2="18" />
+            <path d="M32 30c-4-2-8-5-11-9" />
+            <path d="M32 30c4-2 8-5 11-9" />
+            <path d="M32 42c-4-2-7-4-10-8" />
+            <path d="M32 42c4-2 7-4 10-8" />
+          </svg>
+          <p className="iband-statement">
+            The right fabric, installed correctly, lasts years. DOTDAY makes it
+            simple, so you can get back to growing your plants with ease.{" "}
+            <span className="iband-hl">Easy installs. Better growth.</span>
+          </p>
+        </div>
+      </section>
+
       {/* Per-fabric Quick Tips */}
       <section className="wrap section ucase">
         <div className="ucase-head">
