@@ -8,7 +8,7 @@ import { marquee, nav, site } from "@/lib/site";
 /**
  * SiteHeader - matches the DOTDAY reference: a scrolling neon promo marquee, a
  * row with the stacked logo + search bar + center links + utility cluster
- * (USD / QRZone / account / cart), and a secondary row with a Shop All dropdown.
+ * (QRZone / account / cart), and a secondary row with a Shop All dropdown.
  *
  * Behavior: the marquee scrolls continuously; the bar compacts and the
  * secondary row tucks away on scroll; below 860px the desktop bits collapse
@@ -108,15 +108,6 @@ export function SiteHeader() {
         <div className="hdr-divider desk-only" />
 
         <div className="hdr-utility">
-          <button className="hdr-util desk-only" type="button" aria-label="Currency: US dollar">
-            <span className="us-flag" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </span>
-            {nav.utility.currency}
-            <Icon name="chevronDown" size={13} />
-          </button>
           <NavLink href={nav.utility.qrzone.href} className="hdr-util desk-only">
             <Icon name="qr" size={18} />
             {nav.utility.qrzone.label}

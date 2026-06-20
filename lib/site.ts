@@ -34,7 +34,7 @@ export const marquee = [
  * - centerLinks: text links beside the search bar
  * - shopAll: the "Shop All" dropdown in the secondary row
  * - secondary: the secondary nav row links
- * - utility: USD / QRZone / account / cart cluster
+ * - utility: QRZone / account / cart cluster
  */
 export const nav = {
   centerLinks: [
@@ -63,7 +63,6 @@ export const nav = {
     { label: "CONTACT", href: "/contact-us" },
   ],
   utility: {
-    currency: "USD",
     qrzone: { label: "My QRZone", href: STORE_URL },
     account: { href: STORE_URL },
     cart: { href: STORE_URL, count: 0 },

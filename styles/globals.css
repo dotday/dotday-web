@@ -1165,24 +1165,6 @@ tbody tr:nth-child(even) {
   place-items: center;
   border: 1.5px solid var(--white);
 }
-.us-flag {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-  overflow: hidden;
-  display: inline-grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  flex-shrink: 0;
-}
-.us-flag span:nth-child(1) {
-  background: #b22234;
-}
-.us-flag span:nth-child(2) {
-  background: #fff;
-}
-.us-flag span:nth-child(3) {
-  background: #3c3b6e;
-}
 
 /* Row 2 (Shop All + secondary nav) */
 .hdr-row2 {

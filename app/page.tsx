@@ -8,7 +8,6 @@ import { FinalCTA } from "@/components/blog/cta/FinalCTA";
 import { FAQ } from "@/components/blog/blocks/FAQ";
 import { SITE_URL, site } from "@/lib/site";
 import { HomeHero } from "@/components/site/home/HomeHero";
-import { CompareTable } from "@/components/site/home/CompareTable";
 import { UseCases } from "@/components/site/home/UseCases";
 import { JobGallery } from "@/components/site/home/JobGallery";
 import { ToolsBand } from "@/components/site/home/ToolsBand";
@@ -106,7 +105,6 @@ export default function HomePage() {
         <ProductBlock />
       </div>
 
-      <CompareTable />
       <UseCases />
       <JobGallery />
       <ToolsBand />
