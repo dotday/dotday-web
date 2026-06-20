@@ -2,8 +2,8 @@
    DOTDAY global stylesheet
    Ported 1:1 from the reference design (assets/blog-template-preview.html).
    Tokens here mirror lib/blog/tokens.ts. Components use these classes/vars so
-   the whole site shares one visual system. Wix Madefor Text is loaded via
-   next/font in app/layout.tsx and exposed as --font-madefor.
+   the whole site shares one visual system. Wix Madefor Text is self-hosted via
+   components/site/FontFace.tsx and exposed as --font-madefor.
    ============================================================================ */
 
 :root {
@@ -14,9 +14,14 @@
   --ink: #1a1a1a;
   --ink2: #333333;
   --muted: #6b6b6b;
-  --grey1: #f4f4f4;
+  --grey1: #ffffff;
   --grey2: #efefef;
   --white: #ffffff;
+  /* --grey1 is set to #FFFFFF to match the blog template's white-dominant look
+     (the reference HTML uses --grey1:#FFFFFF). This flattens the former grey
+     rhythm bands on the homepage/header/footer to white; section separation now
+     relies on the --grey2 hairline borders. --blog-surface stays white too. */
+  --blog-surface: #ffffff;
   --display: var(--font-madefor), "Wix Madefor Text", "Inter", system-ui, sans-serif;
   --text: var(--font-madefor), "Wix Madefor Text", "Inter", system-ui, sans-serif;
   --maxw: 1200px;
@@ -139,7 +144,7 @@ h3 {
 
 /* hero */
 .hero {
-  background: var(--grey1);
+  background: var(--blog-surface);
   border-bottom: 1px solid var(--grey2);
 }
 .crumb {
@@ -435,7 +440,7 @@ article li {
 
 /* callouts */
 .protip {
-  background: var(--grey1);
+  background: var(--blog-surface);
   border-left: 4px solid var(--neon);
   border-radius: 6px;
   padding: 18px 22px;
@@ -525,7 +530,7 @@ thead th {
   text-transform: uppercase;
   color: var(--charcoal);
   border-bottom: 2px solid var(--grey2);
-  background: var(--grey1);
+  background: var(--blog-surface);
 }
 thead th:first-child {
   background: var(--white);
@@ -545,7 +550,7 @@ tbody td:first-child {
   font-weight: 700;
 }
 tbody tr:nth-child(even) {
-  background: var(--grey1);
+  background: var(--blog-surface);
 }
 
 /* steps */
@@ -590,7 +595,7 @@ tbody tr:nth-child(even) {
 
 /* inline CTAs */
 .cta-calc {
-  background: var(--grey1);
+  background: var(--blog-surface);
   border: 1px solid var(--grey2);
   border-radius: 10px;
   padding: 26px 28px;
@@ -669,7 +674,7 @@ tbody tr:nth-child(even) {
 
 /* product block */
 .products {
-  background: var(--grey1);
+  background: var(--blog-surface);
   border: 1px solid var(--grey2);
   border-radius: 14px;
   padding: 40px 28px;

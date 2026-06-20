@@ -18,11 +18,12 @@ export const tokens = {
     ink2: "#333333", // subheadings
     muted: "#6B6B6B", // captions, metadata, footnotes
     white: "#FFFFFF", // dominant background
-    grey1: "#F4F4F4", // cards, section backgrounds
+    grey1: "#FFFFFF", // set to white to match the blog template (was #F4F4F4)
     grey2: "#EFEFEF", // hairline dividers / borders
   },
   font: {
-    // Wix Madefor Text for everything. Loaded via next/font/google in app/layout.
+    // Wix Madefor Text for everything. Self-hosted WOFF2 via FontFace.tsx,
+    // exposed as --font-madefor (falls back to system fonts if files absent).
     family: "var(--font-madefor), 'Wix Madefor Text', system-ui, sans-serif",
   },
   layout: {

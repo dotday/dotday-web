@@ -252,7 +252,7 @@ export default function InstallGuidePage() {
         aria-label="DOTDAY install positioning"
         style={{
           position: "relative",
-          background: "#f4f4f4",
+          background: "#ffffff",
           overflow: "hidden",
           padding: "clamp(72px, 9vw, 120px) 20px",
           textAlign: "center",
