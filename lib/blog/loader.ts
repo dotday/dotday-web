@@ -21,6 +21,14 @@ import type { BlogPost } from "@/lib/blog/types";
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 const isDev = process.env.NODE_ENV !== "production";
 
+// Memoize the parsed directory for the life of the build. During static
+// generation getAllPosts() is called many times - getAllSlugs() once, then
+// getPostBySlug() per page, plus getPublicPosts() for the hub and sitemap -
+// and without this cache each call re-reads and re-parses every JSON file on
+// disk (O(n^2) file I/O across the build). The cache lives exactly one build,
+// the correct lifetime for SSG, so a fresh `next build` always re-reads.
+let _cache: BlogPost[] | null = null;
+
 function readJson(file: string): BlogPost | null {
   try {
     const raw = fs.readFileSync(file, "utf8");
@@ -40,10 +48,11 @@ export function isPublic(post: BlogPost): boolean {
   return isDev;
 }
 
-/** All posts on disk (unfiltered). */
+/** All posts on disk (unfiltered), memoized for the build. */
 export function getAllPosts(): BlogPost[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
-  return fs
+  if (_cache) return _cache;
+  if (!fs.existsSync(BLOG_DIR)) return (_cache = []);
+  _cache = fs
     .readdirSync(BLOG_DIR)
     .filter((f) => f.endsWith(".json"))
     .map((f) => readJson(path.join(BLOG_DIR, f)))
@@ -52,6 +61,7 @@ export function getAllPosts(): BlogPost[] {
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
+  return _cache;
 }
 
 /** Posts that should appear in public listings, newest first. */
