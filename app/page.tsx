@@ -9,9 +9,14 @@ import { FAQ } from "@/components/blog/blocks/FAQ";
 import { SITE_URL, site } from "@/lib/site";
 import { HomeHero } from "@/components/site/home/HomeHero";
 import { UseCases } from "@/components/site/home/UseCases";
-import { JobGallery } from "@/components/site/home/JobGallery";
+import { ApplicationGallery } from "@/components/site/home/ApplicationGallery";
+import { RealJobs } from "@/components/site/home/RealJobs";
+import { VideoFeature } from "@/components/site/home/VideoFeature";
+import { InstallShowcase } from "@/components/site/home/InstallShowcase";
 import { ToolsBand } from "@/components/site/home/ToolsBand";
 import { Testimonials } from "@/components/site/home/Testimonials";
+import { InstagramFeed } from "@/components/site/home/InstagramFeed";
+import { QuoteBand } from "@/components/site/home/QuoteBand";
 
 export const metadata: Metadata = {
   title: "Landscape Fabric Built for the Job",
@@ -106,10 +111,28 @@ export default function HomePage() {
       </div>
 
       <UseCases />
-      <JobGallery />
+
+      {/* Built for every application - circular use-case gallery */}
+      <ApplicationGallery />
+
+      {/* Real jobs - horizontal media wall (photos + clips) */}
+      <RealJobs />
+
+      {/* Video feature - brief + embedded video */}
+      <VideoFeature />
+
+      {/* Real results - premium light showcase with linked product cards */}
+      <InstallShowcase />
+
       <ToolsBand />
 
       <Testimonials />
+
+      {/* Instagram - live official embeds + branded placeholders */}
+      <InstagramFeed />
+
+      {/* Neon conversion band + marquee */}
+      <QuoteBand />
 
       {/* FAQ */}
       <section className="wrap section">

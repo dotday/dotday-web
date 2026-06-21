@@ -12,18 +12,21 @@ const QUOTES = [
     name: "Brooklyn",
     role: "DIY Home Gardener, OH",
     product: "SHIELD",
+    avatar: "/brand/home/avatars/brooklyn.png",
   },
   {
     body: "Installed SHIELD across our lavender rows. Controls weeds well, water flows through easily, and it held up through a full growing season.",
     name: "Trevor M.",
     role: "Farm Owner, OR",
     product: "SHIELD",
+    avatar: "/brand/home/avatars/trevor.png",
   },
   {
     body: "Using XBAR 5oz for gravel driveways and pathways. Strong, installs clean, and the base hasn't shifted at all.",
     name: "Mike",
     role: "Contractor, TX",
     product: "XBAR",
+    avatar: "/brand/home/avatars/mike.png",
   },
 ];
 
@@ -45,8 +48,18 @@ export function Testimonials() {
               </div>
               <blockquote>{q.body}</blockquote>
               <figcaption>
-                <span className="tcard-name">{q.name}</span>
-                <span className="tcard-role">{q.role}</span>
+                <img
+                  className="tcard-avatar"
+                  src={q.avatar}
+                  alt={`${q.name} headshot`}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                />
+                <span className="tcard-meta">
+                  <span className="tcard-name">{q.name}</span>
+                  <span className="tcard-role">{q.role}</span>
+                </span>
               </figcaption>
               <span className="tcard-tag">{q.product}</span>
             </figure>
