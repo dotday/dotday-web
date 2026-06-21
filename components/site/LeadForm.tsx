@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 /**
  * LeadForm - the shared capture form for contact, bulk pricing, and project
@@ -8,6 +8,10 @@ import { useState } from "react";
  * The `formId` distinguishes which funnel a lead came from.
  *
  * No HTML <form> submit navigation - uses fetch so the user stays on-page.
+ *
+ * Spam defense paired with the API: a hidden honeypot field (company_url) that
+ * real users never see, plus renderedAt timing so the server can reject
+ * bot-speed submits.
  */
 export function LeadForm({
   formId,
@@ -21,6 +25,8 @@ export function LeadForm({
   showProject?: boolean;
 }) {
   const [state, setState] = useState<"idle" | "sending" | "ok" | "error">("idle");
+  const renderedAt = useRef<number>(Date.now());
+  const honeypot = useRef<string>("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -41,7 +47,12 @@ export function LeadForm({
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, formId }),
+        body: JSON.stringify({
+          ...form,
+          formId,
+          company_url: honeypot.current,
+          renderedAt: renderedAt.current,
+        }),
       });
       setState(res.ok ? "ok" : "error");
       if (res.ok) setForm({ name: "", email: "", company: "", message: "" });
@@ -64,6 +75,21 @@ export function LeadForm({
 
   return (
     <div className="form">
+      {/* Honeypot: hidden from humans + assistive tech; bots fill it and get
+          silently dropped server-side. */}
+      <div
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}
+      >
+        <label htmlFor={`cu-${formId}`}>Do not fill this field</label>
+        <input
+          id={`cu-${formId}`}
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          onChange={(e) => (honeypot.current = e.target.value)}
+        />
+      </div>
       <div className="field">
         <label>Name</label>
         <input value={form.name} onChange={set("name")} placeholder="Your name" />
