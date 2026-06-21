@@ -8,7 +8,7 @@
     "build": "npm run content:validate && next build",
     "start": "next start",
     "lint": "next lint",
-    "content:validate": "node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs",
+    "content:validate": "node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs && node scripts/validate-landing.mjs content/landing",
     "new:blog": "node scripts/new-blog.mjs"
   },
   "dependencies": {

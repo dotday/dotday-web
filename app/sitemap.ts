@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getPublicPosts } from "@/lib/blog/loader";
+import { getPublicLandingPages } from "@/lib/landing/loader";
 import { PRODUCTS } from "@/lib/content/products";
 import { SITE_URL } from "@/lib/site";
 
@@ -44,5 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...productPages, ...postPages];
+  const landingPages = getPublicLandingPages().map((p) => ({
+    url: p.seo.canonical || `${SITE_URL}/l/${p.slug}`,
+    lastModified: new Date(p.dateModified || p.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...productPages, ...postPages, ...landingPages];
 }
