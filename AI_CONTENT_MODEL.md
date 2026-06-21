@@ -27,14 +27,17 @@ adding one file. No index to edit, no import to register, no CMS.
 
 | What | Where / how |
 |---|---|
-| Blog content files | `content/blog/<slug>.json` (one per post) |
+| Blog content files | `content/blog/<slug>.json` (one per post) -> `/post/<slug>` |
+| Landing content files | `content/landing/<slug>.json` (one per page) -> `/l/<slug>` |
 | Per-post images | `public/blog/<slug>/<ref>.webp` |
-| Schema (the contract) | `schema/blogPost.schema.json` (schemaVersion **1.0.0**) |
-| Validator (the gate) | `node scripts/validate-post.mjs content/blog/<slug>.json` |
-| Validate ALL posts | `npm run content:validate` (runs in `npm run build` too) |
+| Blog schema (contract) | `schema/blogPost.schema.json` (schemaVersion **1.0.0**) |
+| Landing schema (contract) | `schema/landingPage.schema.json` (schemaVersion **1.0.0**) |
+| Blog validator (gate) | `node scripts/validate-post.mjs content/blog/<slug>.json` |
+| Landing validator (gate) | `node scripts/validate-landing.mjs content/landing/<slug>.json` |
+| Validate ALL content | `npm run content:validate` (posts + landing; runs in `npm run build` too) |
 | Existing-content index | `node scripts/list-content.mjs` (or `--json`) |
 | Scaffold a new post | `npm run new:blog -- <slug>` (writes a stub file) |
-| Local preview | `npm run dev` -> `http://localhost:3000/blog/<slug>` |
+| Local preview | `npm run dev` -> `/post/<slug>` or `/l/<slug>` |
 | Products (data) | `lib/content/products.ts` (SHIELD, XBAR, TERRA) |
 | Tools (code, fixed) | `/landscape-fabric-calculator`, `/fabric-finder` |
 
@@ -109,6 +112,38 @@ dropped:
 -> more `prose`/blocks as needed
 -> closing `cta` (variant `enquiry`)
 Then the top-level `faq` block (renders FAQPage schema automatically).
+
+---
+
+## 4b. Landing pages (the second content system)
+
+Buy-intent, use-case pages ("best landscape fabric for gravel"). Same data-as-code
+model as blogs, different shape: assembled from approved **sections** in any order.
+
+- **File:** `content/landing/<slug>.json` -> `/l/<slug>`
+- **Schema:** `schema/landingPage.schema.json` (schemaVersion **1.0.0**)
+- **Renderer:** `components/landing/SectionRenderer.tsx` (maps `section._type`)
+- **Validate:** `node scripts/validate-landing.mjs content/landing/<slug>.json`
+- **Status:** `"draft"` on generation; drafts excluded from sitemap + prerender.
+- **Seed/example:** `content/landing/landscape-fabric-for-gravel.json`
+
+Top-level: `schemaVersion, slug, title, focusKeyword, status, publishedAt, seo
+{metaTitle, metaDescription, canonical (absolute), ogImage{ref,alt}}, sections[]`.
+
+The ONLY sections that render (anything else is dropped):
+`hero`, `problem`, `solution` (has `product` SHIELD|XBAR|TERRA + `productHref`),
+`useCaseGrid`, `productComparison`, `calculatorEmbed`, `faq`, `reviews`, `cta`,
+`internalLinks`. Validator expects the first section to be `hero` and the page to
+include a `cta` and an `internalLinks` section. JSON-LD emitted: WebPage +
+FAQPage + BreadcrumbList.
+
+Recommended arc: `hero` -> `problem` -> `solution` -> `useCaseGrid` ->
+`productComparison` -> `calculatorEmbed`? -> `reviews`? -> `faq` -> `cta` ->
+`internalLinks`.
+
+**Cannibalization:** if a blog post already targets the same focusKeyword, pick
+which page should rank and point the other's internal links at it. The landing
+validator warns on keyword overlap (does not block).
 
 ---
 
