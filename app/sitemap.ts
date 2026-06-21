@@ -19,6 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/how-to-install-weed-barrier-fabric",
     "/contact-us",
     "/bulk-pricing",
+    "/shipping-policy",
+    "/returns-policy",
+    "/terms-of-service",
+    "/privacy-policy",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,

@@ -121,9 +121,9 @@ export const footer = {
       heading: "Customer Service",
       links: [
         { label: "Contact Us", href: "/contact-us" },
-        { label: "Shipping Policy", href: "/contact-us" },
-        { label: "Returns & Refunds", href: "/contact-us" },
-        { label: "Terms of Service", href: "/contact-us" },
+        { label: "Shipping Policy", href: "/shipping-policy" },
+        { label: "Returns & Refunds", href: "/returns-policy" },
+        { label: "Terms of Service", href: "/terms-of-service" },
         { label: "Track Your Order", href: STORE_URL },
       ],
     },
@@ -143,8 +143,8 @@ export const footer = {
     { icon: "flag", label: "Ships from USA" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/contact-us" },
-    { label: "Terms of Service", href: "/contact-us" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
     { label: "Sitemap", href: "/sitemap.xml" },
   ],
 };
