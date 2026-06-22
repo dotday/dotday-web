@@ -101,6 +101,10 @@
       "type": "string",
       "default": "DOTDAY Gardener"
     },
+    "authorRef": {
+      "type": "string",
+      "description": "Optional id into the author registry (lib/blog/authors.ts), e.g. 'marcus-halvorsen'. When present, the article byline, hub cards, and JSON-LD use the registered name/title/bio. The 'author' string stays as a fallback/display name. Only reference REAL DOTDAY authors; never invent credentials or testimonials."
+    },
     "publishedAt": {
       "type": "string",
       "format": "date-time"

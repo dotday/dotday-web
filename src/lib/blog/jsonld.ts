@@ -1,6 +1,7 @@
 import type { BlogPost } from "@/lib/blog/types";
 import { SITE_URL, site } from "@/lib/site";
 import { resolveImage } from "@/lib/blog/images";
+import { resolveAuthor } from "@/lib/blog/authors";
 
 /**
  * Structured data for a post. The SEO standard requires three blocks on every
@@ -19,6 +20,12 @@ export function buildJsonLd(post: BlogPost) {
     resolveImage(post, post.hero.image.ref) || "/brand/logo-neon.png"
   );
 
+  const a = resolveAuthor(post.authorRef, post.author);
+  const authorNode =
+    a.type === "Person"
+      ? { "@type": "Person", name: a.name, jobTitle: a.title, worksFor: { "@type": "Organization", name: site.name } }
+      : { "@type": "Organization", name: a.name };
+
   const blogPosting = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -27,7 +34,7 @@ export function buildJsonLd(post: BlogPost) {
     image: [heroImg],
     datePublished: post.publishedAt,
     dateModified: post.dateModified || post.publishedAt,
-    author: { "@type": "Organization", name: site.name },
+    author: authorNode,
     publisher: {
       "@type": "Organization",
       name: site.name,

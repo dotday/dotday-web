@@ -20,7 +20,7 @@ export function Img({
 }: {
   src?: string;
   alt: string;
-  ratio?: "r-54" | "r-43" | "r-169";
+  ratio?: "r-54" | "r-43" | "r-169" | "r-11";
   priority?: boolean;
   placeholderLabel?: string;
   sizes?: string;

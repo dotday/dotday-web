@@ -169,6 +169,7 @@ export interface BlogPost {
   status: Status;
   migrated?: boolean;
   author: string;
+  authorRef?: string;
   publishedAt: string;
   dateModified?: string;
   readTimeMinutes?: number;

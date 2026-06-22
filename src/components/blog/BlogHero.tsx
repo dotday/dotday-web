@@ -4,6 +4,7 @@ import { Badge } from "@/components/blog/ui/Badge";
 import { Img } from "@/components/blog/ui/Img";
 import { ShareButtons } from "@/components/blog/ui/ShareButtons";
 import { resolveImage } from "@/lib/blog/images";
+import { resolveAuthor } from "@/lib/blog/authors";
 import { SITE_URL, site } from "@/lib/site";
 
 function fmtDate(iso: string) {
@@ -25,6 +26,7 @@ export function BlogHero({ post }: { post: BlogPost }) {
     : heroSrc;
   const dateLabel = fmtDate(post.dateModified || post.publishedAt);
   const read = post.readTimeMinutes ? `${post.readTimeMinutes} min read` : "";
+  const author = resolveAuthor(post.authorRef, post.author);
 
   return (
     <header className="hero">
@@ -39,16 +41,24 @@ export function BlogHero({ post }: { post: BlogPost }) {
             <p className="excerpt">{post.hero.excerpt}</p>
             <div className="meta-row">
               <div className="author">
-                <Image
-                  className="avatar-img"
-                  src="/brand/dd-circle.png"
-                  alt={site.shortName}
-                  width={40}
-                  height={40}
-                />
+                {author.avatar ? (
+                  <Image
+                    className="avatar-img"
+                    src={author.avatar}
+                    alt={author.name}
+                    width={40}
+                    height={40}
+                  />
+                ) : (
+                  <span className="avatar-mono" aria-hidden="true">
+                    {author.monogram}
+                  </span>
+                )}
                 <div>
-                  <div className="author-name">{post.author}</div>
+                  <div className="author-name">{author.name}</div>
                   <div className="author-sub">
+                    {author.title}
+                    {(dateLabel || read) ? " · " : ""}
                     {dateLabel ? `Updated ${dateLabel}` : ""}
                     {dateLabel && read ? " · " : ""}
                     {read}

@@ -6,6 +6,7 @@ import { BlockRenderer } from "@/components/blog/BlockRenderer";
 import { ProductBlock } from "@/components/blog/blocks/ProductBlock";
 import { FAQ } from "@/components/blog/blocks/FAQ";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
+import { AuthorBio } from "@/components/blog/AuthorBio";
 import { FinalCTA } from "@/components/blog/cta/FinalCTA";
 
 /**
@@ -40,6 +41,8 @@ export function BlogLayout({ post }: { post: BlogPost }) {
             {closing?.length > 0 && (
               <div className="hashrow">{closing.join("  ")}</div>
             )}
+
+            <AuthorBio post={post} />
           </article>
         </div>
       </div>
