@@ -4,85 +4,25 @@ import {
   Problem,
   Solution,
   UseCaseGrid,
-  ProductComparison,
   CalculatorEmbed,
   Reviews,
   InternalLinks,
 } from "@/components/landing/sections";
-import { Badge, CTAButton } from "@/components/blog/ui/Badge";
+// Shared, cross-surface sections come from the GLOBAL layer so blogs and
+// landing pages render the identical FAQ / comparison / CTA implementation.
+import { SharedFAQ } from "@/components/global/sections/SharedFAQ";
+import { SharedComparisonTable } from "@/components/global/sections/SharedComparisonTable";
+import { SharedCTA } from "@/components/global/sections/SharedCTA";
 
 /**
  * SectionRenderer - the landing-page dispatcher, mirroring the blog
- * BlockRenderer. Maps each section's `_type` to its component. The page hands
- * it page.sections; this is the only place that knows the mapping.
+ * BlockRenderer. Maps each section's `_type` to its component. The page hands it
+ * page.sections; this is the only place that knows the mapping.
  *
- * FAQ and CTA are rendered inline here (landing-local) for now; the later global
- * refactor will swap these for shared components used by blogs too.
+ * FAQ, productComparison, and cta delegate to the GLOBAL shared components, so
+ * they are byte-identical to what blog posts render. Improve a shared component
+ * once and every blog AND landing page updates.
  */
-
-function LandingFaq({
-  heading,
-  items,
-}: {
-  heading?: string;
-  items: Array<{ q: string; a: string }>;
-}) {
-  return (
-    <div className="wrap sec">
-      <h2 id="faq">{heading || "Frequently asked questions"}</h2>
-      <div style={{ marginTop: 8 }}>
-        {items.map((it, i) => (
-          <details key={i} className="faq-item" style={{ padding: "14px 0", borderBottom: "1px solid var(--grey2)" }}>
-            <summary style={{ cursor: "pointer", fontWeight: 600 }}>{it.q}</summary>
-            <p style={{ marginTop: 8 }}>{it.a}</p>
-          </details>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function LandingCta({
-  eyebrow = "Find your fabric",
-  heading = "Need help choosing the right fabric?",
-  body = "Match your ground condition to the fabric built for it.",
-  primaryCta,
-  secondaryCta,
-}: {
-  eyebrow?: string;
-  heading?: string;
-  body?: string;
-  primaryCta?: { label: string; href: string };
-  secondaryCta?: { label: string; href: string };
-}) {
-  return (
-    <section className="final">
-      <div className="final-inner">
-        <div className="final-glow" />
-        <div className="final-c">
-          <Badge white>{eyebrow}</Badge>
-          <h2>{heading}</h2>
-          <p>{body}</p>
-          <div className="final-btns" style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-            <CTAButton
-              href={primaryCta?.href || "/landscape-fabric-calculator"}
-              variant="onneon"
-            >
-              {primaryCta?.label || "Use the Fabric Calculator"}
-            </CTAButton>
-            <CTAButton
-              href={secondaryCta?.href || "/fabric-finder"}
-              variant="onneon-ghost"
-            >
-              {secondaryCta?.label || "Find Your Fabric"}
-            </CTAButton>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
   return (
     <>
@@ -97,22 +37,39 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
           case "useCaseGrid":
             return <UseCaseGrid key={i} data={section} />;
           case "productComparison":
-            return <ProductComparison key={i} data={section} />;
+            return (
+              <div className="wrap" key={i}>
+                <SharedComparisonTable
+                  data={{
+                    heading: section.heading,
+                    columns: section.columns,
+                    featuredColumn: section.featuredColumn,
+                    rows: section.rows,
+                  }}
+                />
+              </div>
+            );
           case "calculatorEmbed":
             return <CalculatorEmbed key={i} data={section} />;
           case "faq":
-            return <LandingFaq key={i} heading={section.heading} items={section.items} />;
+            return (
+              <div className="wrap" key={i}>
+                <SharedFAQ heading={section.heading} items={section.items} />
+              </div>
+            );
           case "reviews":
             return <Reviews key={i} data={section} />;
           case "cta":
             return (
-              <LandingCta
+              <SharedCTA
                 key={i}
                 eyebrow={section.eyebrow}
                 heading={section.heading}
                 body={section.body}
-                primaryCta={section.primaryCta}
-                secondaryCta={section.secondaryCta}
+                primaryHref={section.primaryCta?.href}
+                primaryLabel={section.primaryCta?.label}
+                secondaryHref={section.secondaryCta?.href}
+                secondaryLabel={section.secondaryCta?.label}
               />
             );
           case "internalLinks":

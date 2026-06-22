@@ -1,31 +1,20 @@
 import type { ComparisonTableBlock } from "@/lib/blog/types";
+import { SharedComparisonTable } from "@/components/global/sections/SharedComparisonTable";
 
+/**
+ * ComparisonTable (blog block) - thin adapter over the GLOBAL
+ * SharedComparisonTable so blogs and landing pages render one identical table.
+ * Restyle the shared component, every surface updates.
+ */
 export function ComparisonTable({ block }: { block: ComparisonTableBlock }) {
   return (
-    <div className="sec">
-      {block.heading && <h2>{block.heading}</h2>}
-      <div className="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              {block.columns.map((c, i) => (
-                <th key={i} className={block.featuredColumn === i ? "feat" : undefined}>
-                  {c}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {block.rows.map((row, ri) => (
-              <tr key={ri}>
-                {row.map((cell, ci) => (
-                  <td key={ci}>{cell}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <SharedComparisonTable
+      data={{
+        heading: block.heading,
+        columns: block.columns,
+        featuredColumn: block.featuredColumn,
+        rows: block.rows,
+      }}
+    />
   );
 }
