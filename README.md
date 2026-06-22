@@ -3,7 +3,8 @@
 The DOTDAY Landscape Fabrics website. Next.js 14 (App Router) + Vercel, with a
 **shared shell** (header, footer, design system) and **self-contained content
 files** so new blog posts and landing pages drop in without touching anything
-else.
+else. Application code lives under `src/` (the `@/*` alias maps to `src/*`);
+content, schema, scripts, and public assets stay at the repo root.
 
 > **Brand:** Use the right fabric for the right ground condition.
 > SHIELD (3.2 oz woven weed barrier) · XBAR (5 oz woven-hybrid hardscape) ·
@@ -27,7 +28,7 @@ file becomes a new static page automatically. **No index to edit, no import to
 register, no other page touched.** You add a file, open a PR, Vercel builds a
 preview, you merge. Publishing never disturbs the pages already live.
 
-The same pattern drives products (`lib/content/products.ts`) - fixed template,
+The same pattern drives products (`src/lib/content/products.ts`) - fixed template,
 data-driven content.
 
 **Blog vs landing:** blog posts are ~80% uniform (a fixed hero + blocks + FAQ
@@ -87,42 +88,52 @@ production and render `noindex`, so you can stage work safely on `main`.
 
 ## Project structure
 
+All application code lives under `src/`; the `@/*` import alias maps to `src/*`.
+Data (`content/`), the data contracts (`schema/`), build tooling (`scripts/`),
+and assets (`public/`) stay at the repo root - they are read by the loaders and
+build scripts via the filesystem (`process.cwd()`), not the import alias.
+
 ```
-app/
-  layout.tsx                     # shared shell: header + footer + font, base metadata
-  page.tsx                       # homepage
-  blog/page.tsx                  # blog hub (category filter + pagination, 12/page)
-  post/[slug]/page.tsx           # canonical blog post route (/post/<slug>)
-  l/[slug]/page.tsx              # landing page route (/l/<slug>)
-  product-page/[slug]/page.tsx   # product pages (data-driven)
-  landscape-fabric-calculator/   # the calculator tool page
-  fabric-finder/                 # the product-quiz tool page
-  how-to-install-weed-barrier-fabric/  # install guide
-  contact-us/ , bulk-pricing/    # lead-capture pages
-  privacy-policy/ , terms-of-service/ , shipping-policy/ , returns-policy/  # legal
-  api/lead/route.ts              # form submission endpoint (Supabase + spam defense)
-  sitemap.ts , robots.ts , not-found.tsx
+src/
+  app/
+    layout.tsx                     # shared shell: header + footer + font, base metadata
+    page.tsx                       # homepage
+    blog/page.tsx                  # blog hub (category filter + pagination, 12/page)
+    post/[slug]/page.tsx           # canonical blog post route (/post/<slug>)
+    l/[slug]/page.tsx              # landing page route (/l/<slug>)
+    product-page/[slug]/page.tsx   # product pages (data-driven)
+    landscape-fabric-calculator/   # the calculator tool page
+    fabric-finder/                 # the product-quiz tool page
+    how-to-install-weed-barrier-fabric/  # install guide
+    contact-us/ , bulk-pricing/    # lead-capture pages
+    privacy-policy/ , terms-of-service/  # legal
+    api/lead/route.ts              # form submission endpoint (Supabase + spam defense)
+    sitemap.ts , robots.ts , not-found.tsx
 
-components/
-  site/        SiteHeader · SiteFooter · FontFace · LeadForm · ProListForm · LegalPage · Icon
-    home/      HomeHero · CompareTable · UseCases · ToolsBand · JobGallery · Testimonials · StatStrip
-  blog/        BlogLayout · BlogHero · QuickAnswer · BlockRenderer · RelatedArticles
-    blocks/    Prose · StatStrip · ComparisonTable · TrustStrip · Callout · Steps · ImageBlock · ProductBlock · FAQ
-    cta/       InlineCTA · FinalCTA
-    ui/        Img · Badge/CTAButton · ReadingProgress · ShareButtons · RichText
-  landing/     SectionRenderer · sections (hero, problem, solution, useCaseGrid,
-               productComparison, calculatorEmbed, faq, reviews, cta, internalLinks)
-  tools/       FabricCalculator · FabricFinder
+  components/
+    site/        SiteHeader · SiteFooter · FontFace · LeadForm · ProListForm · LegalPage · Icon
+      home/      HomeHero · CompareTable · UseCases · ToolsBand · JobGallery · Testimonials · StatStrip
+    blog/        BlogLayout · BlogHero · QuickAnswer · BlockRenderer · RelatedArticles
+      blocks/    Prose · StatStrip · ComparisonTable · TrustStrip · Callout · Steps · ImageBlock · ProductBlock · FAQ
+      cta/       InlineCTA · FinalCTA
+      ui/        Img · Badge/CTAButton · ReadingProgress · ShareButtons · RichText
+    global/      sections (SharedFAQ · SharedComparisonTable · SharedCTA - shared by blog + landing)
+    landing/     SectionRenderer · sections (hero, problem, solution, useCaseGrid,
+                 productComparison, calculatorEmbed, faq, reviews, cta, internalLinks)
+    tools/       FabricCalculator · FabricFinder
 
-content/
-  blog/        <slug>.json        # one file per post     -> /post/<slug>
-  landing/     <slug>.json        # one file per landing  -> /l/<slug>
+  lib/
+    blog/        types · loader (memoized) · images · jsonld · tokens
+    landing/     types · loader (memoized) · jsonld
+    content/     products · drive-images
+    site.ts                        # origin, nav, footer links
 
-lib/
-  blog/        types · loader (memoized) · images · jsonld · tokens
-  landing/     types · loader (memoized) · jsonld
-  content/     products · drive-images
-  site.ts                          # origin, nav, footer links
+  styles/
+    globals.css                    # the full brand design system (CSS vars + classes)
+
+content/                           # data-as-code (read at build via process.cwd())
+  blog/        <slug>.json          # one file per post     -> /post/<slug>
+  landing/     <slug>.json          # one file per landing  -> /l/<slug>
 
 schema/
   blogPost.schema.json             # blog data contract (schemaVersion 1.0.0)
@@ -138,28 +149,26 @@ scripts/
 public/
   brand/       logo-neon.png · dd-circle.png · fonts/   # brand assets
   blog/<slug>/ hero.webp · og.webp · ...                # per-post images
-styles/
-  globals.css                      # the full brand design system (CSS vars + classes)
 ```
 
 ---
 
 ## Design system
 
-Tokens live in `lib/blog/tokens.ts` and are mirrored as CSS variables in
-`styles/globals.css`. Palette: white-dominant, neon `#D8FF00` accent, soft-neon
+Tokens live in `src/lib/blog/tokens.ts` and are mirrored as CSS variables in
+`src/styles/globals.css`. Palette: white-dominant, neon `#D8FF00` accent, soft-neon
 `#DFFF6A` panels, minimal charcoal `#101010`. Type is **Wix Madefor Text**
 (Apple-light headings: 400-500; CTAs + small labels bold).
 
 **Font:** self-hosted - real WOFF2 files in `public/brand/fonts/` (weights
-400-800), loaded by `components/site/FontFace.tsx`. No network call at build;
+400-800), loaded by `src/components/site/FontFace.tsx`. No network call at build;
 identical on Vercel. Replace the WOFF2 files (same names) to update.
 
 ## Images come from Google Drive
 
 Page imagery is sourced from the DOTDAY brand Google Drive, optimized to WebP,
 and committed into `/public`. The folder + file IDs are mapped in
-`lib/content/drive-images.ts`; the full download -> convert workflow is in
+`src/lib/content/drive-images.ts`; the full download -> convert workflow is in
 `scripts/fetch-drive-images.md`. Missing images fall back to branded
 placeholders, so the build never breaks while imagery is being sourced.
 
