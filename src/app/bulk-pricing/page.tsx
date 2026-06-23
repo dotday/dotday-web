@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/blog/ui/Badge";
 import { LeadForm } from "@/components/site/LeadForm";
 
 export const metadata: Metadata = {
@@ -12,15 +11,14 @@ export const metadata: Metadata = {
 export default function BulkPricingPage() {
   return (
     <div className="wrap page">
-      <Badge>For job sites</Badge>
-      <h1 style={{ marginTop: 14 }}>Request bulk pricing</h1>
-      <p className="lead">
-        Volume pricing for contractors, hardscape crews, farms, and nurseries.
-        Tell us the product and quantity and we will put together a quote.
-      </p>
-      <div className="section">
-        <LeadForm formId="bulk-pricing" submitLabel="Request Bulk Pricing" />
-      </div>
+      <LeadForm
+        formId="bulk-pricing"
+        submitLabel="Request Wholesale Pricing"
+        eyebrow="America's #1 Landscape Fabric"
+        headline="Professional grade. Direct to you."
+        lead="Stop weeds forever or scale your landscape business with the industry's strongest fabric. In stock and ready to ship from Miami Gardens, FL."
+        formTitle="Get started"
+      />
     </div>
   );
 }
