@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "composting-101-easy-steps-to-master-the-kitchen-to-compost-method-for-your-garden",
+  "migrated": true,
+  "title": "Composting 101: Easy Steps to Master the Kitchen-to-Compost Method",
+  "category": "Landscape Fabric",
+  "postType": "explainer",
+  "primaryProduct": "SHIELD",
+  "focusKeyword": "kitchen-to-compost method",
+  "status": "published",
+  "author": "Marcus Halvorsen",
+  "authorRef": "marcus-halvorsen",
+  "publishedAt": "2025-09-18T13:30:25.572Z",
+  "dateModified": "2026-06-23T00:00:00.000Z",
+  "readTimeMinutes": 6,
+  "wordCount": 950,
+  "seo": {
+    "metaTitle": "Composting 101: The Kitchen-to-Compost Method | DOTDAY",
+    "metaDescription": "Turn food scraps into garden gold with the kitchen-to-compost method. Follow easy, eco-friendly steps to enrich your soil and cut everyday kitchen waste.",
+    "canonical": "https://www.thedotday.com/post/composting-101-easy-steps-to-master-the-kitchen-to-compost-method-for-your-garden",
+    "noindex": false,
+    "social": {
+      "excerpt": "Turn food scraps into garden gold with the kitchen-to-compost method. Easy, eco-friendly steps to enrich your soil and reduce everyday kitchen waste. #DOTDAY #composting #gardentips #sustainablegardening #soilhealth",
+      "hashtags": [
+        "#DOTDAY",
+        "#composting",
+        "#gardentips",
+        "#sustainablegardening",
+        "#soilhealth"
+      ],
+      "ogImage": {
+        "ref": "garden-weed-free",
+        "alt": "A healthy garden enriched by the kitchen-to-compost method, with DOTDAY fabric paths"
+      },
+      "pinterestImage": {
+        "ref": "garden-weed-free",
+        "alt": "Composting 101: the kitchen-to-compost method"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "Gardening Tips",
+    "excerpt": "If you are serious about reducing food waste and building healthier soil, the kitchen-to-compost method is the perfect starting point. Here is how to turn scraps into garden gold.",
+    "image": {
+      "ref": "garden-weed-free",
+      "alt": "A healthy garden enriched by the kitchen-to-compost method, with DOTDAY fabric paths",
+      "caption": "Compost builds the soil; clean fabric paths keep the beds around it tidy."
+    }
+  },
+  "quickAnswer": {
+    "heading": "The short version",
+    "items": [
+      "The kitchen-to-compost method turns scraps into nutrient-rich soil",
+      "Mix green nitrogen scraps with brown carbon material like dry leaves",
+      "Compost fruit and veg scraps, coffee, and eggshells; skip meat, dairy, and oily food",
+      "You can start with no equipment, just a shaded spot and a routine",
+      "Keep paths between beds clean with a woven fabric like SHIELD"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "heading": "The kitchen-to-compost method, explained",
+      "body": "If you are serious about reducing food waste and building healthier soil, the kitchen-to-compost method is a perfect starting point. Composting is one of the most efficient ways to turn unwanted kitchen scraps into nutrient-rich soil that benefits your whole garden. Whether you are a seasoned gardener or just starting out, learning to compost turns waste into garden gold, and pairs naturally with tidy, low-maintenance beds. Keep the paths around those beds clean with a [DOTDAY](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) woven fabric, sized with the [Fabric Calculator](https://www.thedotday.com/landscape-fabric-calculator)."
+    },
+    {
+      "_type": "prose",
+      "heading": "What composting is and why it matters",
+      "body": "Composting is the natural process of recycling organic material, like kitchen scraps and yard waste, into a valuable amendment for your garden. It reduces what you send to landfill while creating a sustainable resource that enriches soil health, improves structure, retains moisture, and promotes healthy root development. Diverting organic waste from landfill also cuts greenhouse gas emissions, so a compost pile is a small climate win as well as a garden one."
+    },
+    {
+      "_type": "prose",
+      "heading": "The science behind it",
+      "body": "At its core, composting creates ideal conditions for microorganisms, worms, and other decomposers to break down organic material. The process balances green materials rich in nitrogen, like fruit and vegetable scraps, with brown materials rich in carbon, like dried leaves and cardboard. When these come together they generate heat, which speeds decomposition, and the result is dark, crumbly compost packed with nutrients and ready for your beds."
+    },
+    {
+      "_type": "comparisonTable",
+      "heading": "What to compost and what to skip",
+      "columns": [
+        "Compost these",
+        "Skip these"
+      ],
+      "rows": [
+        [
+          "Fruit and vegetable scraps",
+          "Meat and dairy products"
+        ],
+        [
+          "Coffee grounds and filters",
+          "Oily foods"
+        ],
+        [
+          "Eggshells",
+          "Cooked foods"
+        ],
+        [
+          "Grains and bread",
+          "Processed foods with additives"
+        ],
+        [
+          "Dry leaves and grass clippings",
+          "Pet waste"
+        ]
+      ]
+    },
+    {
+      "_type": "steps",
+      "heading": "How to start with no equipment",
+      "steps": [
+        {
+          "title": "Choose a location",
+          "body": "Find a small, shaded spot in your yard or on a balcony for the pile or bin."
+        },
+        {
+          "title": "Layer greens and browns",
+          "body": "Alternate nitrogen-rich scraps with carbon-rich dry material to keep the balance right."
+        },
+        {
+          "title": "Keep it moist and turned",
+          "body": "Aim for damp-not-soggy, and turn the pile occasionally to add air and speed things up."
+        },
+        {
+          "title": "Harvest the finished compost",
+          "body": "When it is dark and crumbly, work it into your beds to feed the soil."
+        }
+      ]
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Running production beds or a market garden?",
+      "body": "DOTDAY supplies SHIELD to growers and nurseries direct. Request bulk and pro pricing for clean, weed-free production rows.",
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/contact-us"
+    },
+    {
+      "_type": "proTip",
+      "heading": "Keep the beds around your compost tidy",
+      "body": "Rich compost grows great plants, and great plants deserve weed-free beds. A woven barrier like [SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) 3.2oz under mulch keeps weeds out of the beds and paths you are feeding with compost, while still letting water and air through. For gravel paths between beds, [XBAR](https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer) 5oz handles the traffic. See [do weed barriers actually work](https://www.thedotday.com/post/do-weed-barriers-actually-work)."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Talk to us",
+      "heading": "Building healthier, lower-maintenance beds?",
+      "body": "Tell the DOTDAY team about your garden and we will recommend the right fabric to keep your composted beds weed-free.",
+      "cta": "Talk to the DOTDAY Team",
+      "href": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What can you compost with the kitchen-to-compost method?",
+        "a": "Compost fruit and vegetable scraps, coffee grounds and filters, eggshells, grains and bread, and yard waste like dry leaves and grass clippings. Avoid meat and dairy, oily and cooked foods, processed foods with additives, and pet waste, which cause odors and attract pests. Sticking to plant-based scraps and dry browns keeps the pile healthy and breaking down cleanly."
+      },
+      {
+        "q": "Do you need a bin to start composting?",
+        "a": "No. You can start the kitchen-to-compost method with just a small, shaded spot in your yard or on a balcony. Layer nitrogen-rich scraps with carbon-rich dry material like leaves or cardboard, keep it damp but not soggy, and turn it occasionally for air. A bin tidies things up and speeds the process, but an open pile works fine to get going."
+      },
+      {
+        "q": "How does composting help a weed-free garden?",
+        "a": "Compost improves soil structure and feeds strong plants, and healthy, vigorous plants crowd out weeds more effectively. Pair that with a woven weed barrier under mulch in your beds and you tackle weeds from both sides: better-growing plants above and a fabric blocking weed seeds below. Together, rich compost and a quality barrier make for productive beds with far less weeding."
+      }
+    ]
+  },
+  "closingHashtags": [
+    "#DOTDAY",
+    "#composting",
+    "#gardentips",
+    "#sustainablegardening",
+    "#soilhealth"
+  ],
+  "relatedPosts": [
+    {
+      "title": "Do Weed Barriers Actually Work?",
+      "url": "https://www.thedotday.com/post/do-weed-barriers-actually-work",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "Drip Irrigation and Weed Fabric for Water-Saving Gardens",
+      "url": "https://www.thedotday.com/post/maximize-your-garden-with-drip-irrigation-and-weed-fabric-for-sustainable-water-use",
+      "category": "Landscape Fabric"
+    },
+    {
+      "title": "5 Common Gardening Myths You Should Stop Believing",
+      "url": "https://www.thedotday.com/post/5-common-gardening-myths-you-should-stop-believing",
+      "category": "Landscape Fabric"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DOTDAY SHIELD weed barrier",
+      "url": "https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY XBAR heavy-duty fabric",
+      "url": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
+    },
+    {
+      "label": "DOTDAY Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Talk to the DOTDAY team",
+      "url": "https://www.thedotday.com/contact-us"
+    }
+  ]
+}

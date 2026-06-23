@@ -76,9 +76,23 @@ export function getAllSlugs(): string[] {
     .map((p) => p.slug);
 }
 
-/** A single post by slug, or null. */
+/** A single post by slug, or null.
+ *
+ * Slugs may contain non-ASCII characters (e.g. the "é" in a migrated Wix URL).
+ * Next.js percent-encodes the incoming `params.slug`, so the request arrives as
+ * "...-d%C3%A9cor-..." while the JSON stores the literal "é". Decode both sides
+ * before comparing so the encoded request path and the literal slug both match.
+ */
 export function getPostBySlug(slug: string): BlogPost | null {
-  return getAllPosts().find((p) => p.slug === slug) ?? null;
+  const decode = (s: string) => {
+    try {
+      return decodeURIComponent(s);
+    } catch {
+      return s;
+    }
+  };
+  const target = decode(slug);
+  return getAllPosts().find((p) => decode(p.slug) === target) ?? null;
 }
 
 /** Posts in a given category (public only). */

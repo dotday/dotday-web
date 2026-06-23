@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "attract-pollinators-without-weeds-tips-for-a-bee-friendly-native-garden",
+  "migrated": true,
+  "title": "Attract Pollinators Without Weeds: Tips for a Bee-Friendly Native Garden",
+  "category": "Landscape Fabric",
+  "postType": "use-case",
+  "primaryProduct": "SHIELD",
+  "focusKeyword": "attract pollinators without weeds",
+  "status": "published",
+  "author": "Marcus Halvorsen",
+  "authorRef": "marcus-halvorsen",
+  "publishedAt": "2025-10-09T13:30:12.983Z",
+  "dateModified": "2026-06-23T00:00:00.000Z",
+  "readTimeMinutes": 6,
+  "wordCount": 1000,
+  "seo": {
+    "metaTitle": "Attract Pollinators Without Weeds: Bee-Friendly Garden Tips",
+    "metaDescription": "Want to attract pollinators without weeds? Use native plants, smart layout, and a weed barrier to welcome bees and butterflies while keeping weeds away.",
+    "canonical": "https://www.thedotday.com/post/attract-pollinators-without-weeds-tips-for-a-bee-friendly-native-garden",
+    "noindex": false,
+    "social": {
+      "excerpt": "Attract pollinators without the weeds using native plants, smart layout, and a weed barrier to welcome bees and butterflies while keeping weeds away. #DOTDAY #pollinators #beefriendly #nativegarden #weedbarrier",
+      "hashtags": [
+        "#DOTDAY",
+        "#pollinators",
+        "#beefriendly",
+        "#nativegarden",
+        "#weedbarrier"
+      ],
+      "ogImage": {
+        "ref": "garden-weed-free",
+        "alt": "A bee-friendly native garden that attracts pollinators without weeds, with DOTDAY fabric"
+      },
+      "pinterestImage": {
+        "ref": "garden-weed-free",
+        "alt": "Attract pollinators without weeds: bee-friendly native garden tips"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "Gardening Tips",
+    "excerpt": "Creating a garden that attracts pollinators while minimizing weeding is a dream for many eco-gardeners. The secret is native plants, smart layout, and a weed barrier doing the quiet work.",
+    "image": {
+      "ref": "garden-weed-free",
+      "alt": "A bee-friendly native garden that attracts pollinators without weeds, with DOTDAY fabric",
+      "caption": "Native plants in clean, weed-free beds give pollinators what they need with less upkeep."
+    }
+  },
+  "quickAnswer": {
+    "heading": "The short version",
+    "items": [
+      "Native plants attract native pollinators and need fewer resources",
+      "Plant in clusters so bees and butterflies find food easily",
+      "Stagger bloom times so something is always flowering",
+      "Use a weed barrier under mulch to attract pollinators without weeds",
+      "Keep chemicals out; let fabric and mulch handle weed control"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "heading": "Attract pollinators without weeds, the approach",
+      "body": "Creating a beautiful garden that attracts pollinators while minimizing the hassle of weeding is a dream for many eco-gardeners. The secret is to attract pollinators without weeds by combining native plants, a smart layout, and a quality weed barrier that does the quiet work below the surface. Pollinators like bees and butterflies are essential for healthy ecosystems, and a pollinator garden supports local populations, but you do not have to trade that for constant weeding. A woven barrier like [DOTDAY SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) under mulch keeps beds clean, and the [Fabric Calculator](https://www.thedotday.com/landscape-fabric-calculator) sizes it fast."
+    },
+    {
+      "_type": "prose",
+      "heading": "Why pollinators matter",
+      "body": "Pollinators play a crucial role in the reproduction of many flowering plants, which supports the wider food chain, and they add diversity and life to gardens and landscapes. These creatures face real challenges from habitat loss, pesticide use, and climate change, so a pollinator-friendly garden is a genuine way to help. The good news is that a thoughtful, weed-free design makes the garden both better for pollinators and easier for you to maintain."
+    },
+    {
+      "_type": "steps",
+      "heading": "Weed-free native planting strategies",
+      "steps": [
+        {
+          "title": "Select native species",
+          "body": "Choose native flowering plants that bloom at different times so there is always food. Coneflowers, milkweed, and black-eyed Susans are strong options."
+        },
+        {
+          "title": "Plant in clusters",
+          "body": "Group plants in sections rather than scattering them, which creates recognizable feeding areas pollinators find easily."
+        },
+        {
+          "title": "Maintain healthy soil",
+          "body": "Healthy, nutrient-rich soil helps natives establish and resist being overrun by weeds. Add organic matter and compost."
+        },
+        {
+          "title": "Lay a weed barrier under mulch",
+          "body": "A woven barrier under mulch blocks weed seeds while letting water and air through, so beds stay clean without chemicals."
+        }
+      ]
+    },
+    {
+      "_type": "image",
+      "ref": "shield-before-after",
+      "alt": "Before and after planting beds with a DOTDAY weed barrier, helping attract pollinators without weeds",
+      "caption": "Clean, weed-free beds let native blooms, and the pollinators they attract, take center stage."
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Installing pollinator and native beds for clients?",
+      "body": "DOTDAY supplies SHIELD to landscapers and growers direct. Request bulk and pro pricing for clean, low-maintenance native plantings.",
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/contact-us"
+    },
+    {
+      "_type": "prose",
+      "heading": "Skip the chemicals, let fabric do the work",
+      "body": "Pollinator gardens and pesticides do not mix, which is exactly why a physical weed barrier is the right tool. A woven fabric like [SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) 3.2oz under mulch blocks the sunlight weeds need without spraying anything near your bees and butterflies. It keeps the beds tidy so your natives, not weeds, get the water and nutrients. For more on where fabric earns its place, read [do weed barriers actually work](https://www.thedotday.com/post/do-weed-barriers-actually-work)."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Talk to us",
+      "heading": "Planning a bee-friendly garden?",
+      "body": "Tell the DOTDAY team about your beds and we will recommend the right fabric to keep them weed-free without chemicals.",
+      "cta": "Talk to the DOTDAY Team",
+      "href": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How do you attract pollinators without weeds taking over?",
+        "a": "Combine native plants, cluster planting, and a physical weed barrier. Native flowering plants that bloom at staggered times keep pollinators fed, while a woven fabric under mulch blocks weed seeds from below without chemicals. Grouping plants in clusters helps bees and butterflies find food and leaves less bare soil for weeds. Together these give you a lively pollinator garden with far less weeding."
+      },
+      {
+        "q": "Is landscape fabric safe for a pollinator garden?",
+        "a": "Yes, and it is a better choice than herbicides near pollinators. A woven weed barrier physically blocks the sunlight weeds need while letting water and air reach the soil, so there is nothing sprayed near your bees and butterflies. Lay it under mulch around your native plants, cutting openings for each one. It keeps beds clean and lets your pollinator plants get the moisture and nutrients."
+      },
+      {
+        "q": "What native plants attract pollinators?",
+        "a": "Coneflowers, milkweed, and black-eyed Susans are reliable native choices that draw bees and butterflies, and milkweed in particular supports monarchs. Pick a mix that blooms at different times through the season so there is always something flowering. Plant them in clusters rather than scattered, and keep the beds weed-free with mulch over a woven barrier so the natives establish strongly."
+      }
+    ]
+  },
+  "closingHashtags": [
+    "#DOTDAY",
+    "#pollinators",
+    "#beefriendly",
+    "#nativegarden",
+    "#weedbarrier"
+  ],
+  "relatedPosts": [
+    {
+      "title": "Do Weed Barriers Actually Work?",
+      "url": "https://www.thedotday.com/post/do-weed-barriers-actually-work",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "5 Common Gardening Myths You Should Stop Believing",
+      "url": "https://www.thedotday.com/post/5-common-gardening-myths-you-should-stop-believing",
+      "category": "Landscape Fabric"
+    },
+    {
+      "title": "Drip Irrigation and Weed Fabric for Water-Saving Gardens",
+      "url": "https://www.thedotday.com/post/maximize-your-garden-with-drip-irrigation-and-weed-fabric-for-sustainable-water-use",
+      "category": "Landscape Fabric"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DOTDAY SHIELD weed barrier",
+      "url": "https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY XBAR heavy-duty fabric",
+      "url": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
+    },
+    {
+      "label": "DOTDAY Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Talk to the DOTDAY team",
+      "url": "https://www.thedotday.com/contact-us"
+    }
+  ]
+}

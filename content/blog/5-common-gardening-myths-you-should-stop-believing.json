@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "5-common-gardening-myths-you-should-stop-believing",
+  "migrated": true,
+  "title": "5 Common Gardening Myths You Should Stop Believing",
+  "category": "Landscape Fabric",
+  "postType": "explainer",
+  "primaryProduct": "SHIELD",
+  "focusKeyword": "common gardening myths",
+  "status": "published",
+  "author": "Marcus Halvorsen",
+  "authorRef": "marcus-halvorsen",
+  "publishedAt": "2025-07-10T06:04:42.722Z",
+  "dateModified": "2026-06-23T00:00:00.000Z",
+  "readTimeMinutes": 6,
+  "wordCount": 950,
+  "seo": {
+    "metaTitle": "5 Common Gardening Myths You Should Stop Believing",
+    "metaDescription": "Tired of common gardening myths? We debunk 5 of them with practical truths so you can grow healthier plants and avoid the mistakes that hold gardens back.",
+    "canonical": "https://www.thedotday.com/post/5-common-gardening-myths-you-should-stop-believing",
+    "noindex": false,
+    "social": {
+      "excerpt": "Many gardeners unknowingly follow outdated advice. We debunk 5 common gardening myths with practical truths so you can grow healthier plants. #DOTDAY #gardeningmyths #gardentips #weedbarrier #gardening",
+      "hashtags": [
+        "#DOTDAY",
+        "#gardeningmyths",
+        "#gardentips",
+        "#weedbarrier",
+        "#gardening"
+      ],
+      "ogImage": {
+        "ref": "garden-weed-free",
+        "alt": "A healthy weed-free garden that avoids common gardening myths, with DOTDAY fabric"
+      },
+      "pinterestImage": {
+        "ref": "garden-weed-free",
+        "alt": "5 common gardening myths you should stop believing"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "Gardening Tips",
+    "excerpt": "Many gardeners unknowingly follow outdated or false advice. Whether you are just starting out or have years of experience, it is time to rethink some commonly accepted gardening beliefs.",
+    "image": {
+      "ref": "garden-weed-free",
+      "alt": "A healthy weed-free garden that avoids common gardening myths, with DOTDAY fabric",
+      "caption": "A healthy garden comes from good practice, not garden-center folklore."
+    }
+  },
+  "quickAnswer": {
+    "heading": "The 5 myths",
+    "items": [
+      "Myth: plants need daily watering. Truth: deep, less frequent watering is better",
+      "Myth: more fertilizer means more growth. Truth: excess burns roots",
+      "Myth: every plant needs full sun. Truth: many prefer partial shade",
+      "Myth: landscape fabric does not work. Truth: the right woven fabric, installed right, does",
+      "Myth: weeding is endless. Truth: a weed barrier cuts it dramatically"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "heading": "Common gardening myths, debunked",
+      "body": "Many gardeners unknowingly follow outdated or false advice. Whether you are just starting out or have years of experience, it is worth rethinking some commonly accepted beliefs, because a few common gardening myths quietly hold plants back. Below are five worth dropping, including one about weed control that costs people hours every season. Where fabric comes up, the [DOTDAY Fabric Calculator](https://www.thedotday.com/landscape-fabric-calculator) can size a job in seconds."
+    },
+    {
+      "_type": "prose",
+      "heading": "Myth 1: plants need water every day",
+      "body": "Keeping soil constantly wet seems caring, but overwatering is a leading cause of root rot. Proper watering depends on plant type, soil, and weather. Check first: push a finger an inch into the soil, and water only if it feels dry. Most plants prefer a deep soak once or twice a week rather than a daily sprinkle, which encourages deeper roots and a tougher, healthier plant."
+    },
+    {
+      "_type": "prose",
+      "heading": "Myth 2: more fertilizer means more growth",
+      "body": "Excess fertilizer burns roots and does more harm than good. Most plants thrive on a balanced supply of nitrogen, phosphorus, and potassium in modest amounts, and a slow-release feed gives a steady trickle of nutrients without the risk of scorching. More is not better here; the right amount at the right time is."
+    },
+    {
+      "_type": "prose",
+      "heading": "Myth 3: every plant needs full sun",
+      "body": "Many favorites flourish in bright sun, but plenty prefer partial shade, including ferns, hostas, and astilbes, which bloom beautifully out of harsh midday rays. Research each plant's light needs rather than assuming, and you will find that planning around shade lets you fill more of the garden with healthy growth."
+    },
+    {
+      "_type": "image",
+      "ref": "shield-before-after",
+      "alt": "Before and after planting beds with a DOTDAY weed barrier, debunking the gardening myth that fabric does not work",
+      "caption": "Myth 4 in action: the right woven fabric, fully covered, clearly suppresses weeds."
+    },
+    {
+      "_type": "prose",
+      "heading": "Myth 4: landscape fabric does not work",
+      "body": "You will hear that landscape fabric is a waste of money, but that is usually light perforated fabric, poorly installed, in the wrong place. A quality woven barrier like [SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) 3.2oz blocks the sunlight weeds need while letting water and air through, and it lasts for years when kept covered. The honest version is here: [do weed barriers actually work](https://www.thedotday.com/post/do-weed-barriers-actually-work)."
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Maintaining gardens across client sites?",
+      "body": "DOTDAY supplies SHIELD to landscapers and growers direct. Request bulk and pro pricing for multi-site weed control.",
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/contact-us"
+    },
+    {
+      "_type": "prose",
+      "heading": "Myth 5: weeding is just endless",
+      "body": "It does not have to be. Most weeding comes from bare soil and weed seeds germinating in sunlight. Cover beds with a woven barrier and mulch, keep the surface clean, and the constant battle largely ends. The fabric does the boring work so you can spend time on the plants. To compare how long fabrics last, read [what landscape fabric lasts the longest](https://www.thedotday.com/post/what-landscape-fabric-lasts-the-longest)."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Talk to us",
+      "heading": "Want less weeding this season?",
+      "body": "Tell the DOTDAY team about your beds and we will recommend the right fabric to cut the weeding down for good.",
+      "cta": "Talk to the DOTDAY Team",
+      "href": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How often should you really water a garden?",
+        "a": "Most plants do best with a deep soak once or twice a week rather than a little water every day. Daily watering keeps soil constantly wet, which encourages shallow roots and risks root rot. Check the soil first by pushing a finger about an inch down, and water only when it feels dry. Deep, less frequent watering builds tougher, healthier plants."
+      },
+      {
+        "q": "Does landscape fabric actually stop weeds?",
+        "a": "Yes, when it is the right fabric installed correctly. A quality woven barrier blocks the sunlight weed seeds need to grow while letting water and air through. The failures people blame on fabric usually come from light perforated material, skipped seam overlap, or sun exposure. Pair a woven barrier like SHIELD with full coverage and mulch and weeding drops dramatically."
+      },
+      {
+        "q": "Can too much fertilizer hurt plants?",
+        "a": "Yes. Excess fertilizer burns roots and can stunt or kill plants rather than boosting them. Most plants thrive on a balanced, modest supply of nitrogen, phosphorus, and potassium. Slow-release feeds are safer because they release nutrients gradually instead of all at once. When it comes to fertilizer, matching the amount to the plant beats simply adding more."
+      }
+    ]
+  },
+  "closingHashtags": [
+    "#DOTDAY",
+    "#gardeningmyths",
+    "#gardentips",
+    "#weedbarrier",
+    "#gardening"
+  ],
+  "relatedPosts": [
+    {
+      "title": "Do Weed Barriers Actually Work?",
+      "url": "https://www.thedotday.com/post/do-weed-barriers-actually-work",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "What Landscape Fabric Lasts the Longest?",
+      "url": "https://www.thedotday.com/post/what-landscape-fabric-lasts-the-longest",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "Drip Irrigation and Weed Fabric for Water-Saving Gardens",
+      "url": "https://www.thedotday.com/post/maximize-your-garden-with-drip-irrigation-and-weed-fabric-for-sustainable-water-use",
+      "category": "Landscape Fabric"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DOTDAY SHIELD weed barrier",
+      "url": "https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY XBAR heavy-duty fabric",
+      "url": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
+    },
+    {
+      "label": "DOTDAY Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Talk to the DOTDAY team",
+      "url": "https://www.thedotday.com/contact-us"
+    }
+  ]
+}

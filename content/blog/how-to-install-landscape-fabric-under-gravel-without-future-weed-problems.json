@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "how-to-install-landscape-fabric-under-gravel-without-future-weed-problems",
+  "migrated": true,
+  "title": "How to Install Landscape Fabric Under Gravel (Without Future Weed Problems)",
+  "category": "How-To & Installation",
+  "postType": "how-to",
+  "primaryProduct": "MULTIPLE",
+  "focusKeyword": "install landscape fabric under gravel",
+  "status": "published",
+  "author": "Marcus Halvorsen",
+  "authorRef": "marcus-halvorsen",
+  "publishedAt": "2026-05-25T18:30:00Z",
+  "dateModified": "2026-06-23T00:00:00.000Z",
+  "readTimeMinutes": 9,
+  "wordCount": 1400,
+  "seo": {
+    "metaTitle": "How to Install Landscape Fabric Under Gravel | DOTDAY",
+    "metaDescription": "How to install landscape fabric under gravel: the right weight, overlap, and staple spacing for gravel that lasts 10+ years. Avoid the 5 common mistakes.",
+    "canonical": "https://www.thedotday.com/post/how-to-install-landscape-fabric-under-gravel-without-future-weed-problems",
+    "noindex": false,
+    "social": {
+      "excerpt": "Installing landscape fabric under gravel is the decision that separates a surface lasting 10 years from one that fails in two. Here is how to do it right. #DOTDAY #XBAR #gravel #landscapefabric #installation",
+      "hashtags": [
+        "#DOTDAY",
+        "#XBAR",
+        "#gravel",
+        "#landscapefabric",
+        "#installation"
+      ],
+      "ogImage": {
+        "ref": "xbar-hero",
+        "alt": "How to install landscape fabric under gravel with DOTDAY XBAR 5oz dual-layer fabric"
+      },
+      "pinterestImage": {
+        "ref": "xbar-hero",
+        "alt": "How to install landscape fabric under gravel without future weed problems"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
+      "ogType": "article",
+      "twitterCard": "summary_large_image"
+    }
+  },
+  "hero": {
+    "badge": "How-To & Installation",
+    "excerpt": "Installing landscape fabric under gravel is the single decision that separates a surface that lasts 10 years from one that fails in two. Here is the right weight, overlap, and depth, plus the five mistakes that ruin installs.",
+    "image": {
+      "ref": "xbar-hero",
+      "alt": "How to install landscape fabric under gravel with DOTDAY XBAR 5oz dual-layer fabric",
+      "caption": "DOTDAY XBAR 5oz, the dual-layer woven fabric built for gravel and traffic."
+    }
+  },
+  "quickAnswer": {
+    "heading": "What you'll learn",
+    "items": [
+      "Which fabric weight actually works under gravel, and what fails fast",
+      "Correct overlap distance and staple spacing for paths vs driveways",
+      "How much gravel depth you need by project type",
+      "The 5 mistakes that ruin installations, and how to avoid each",
+      "Which DOTDAY fabric is right for your specific project"
+    ]
+  },
+  "blocks": [
+    {
+      "_type": "prose",
+      "heading": "How to install landscape fabric under gravel, the short version",
+      "body": "Every gravel driveway or path that looks tired within two years has the same story: no fabric underneath, or the wrong fabric installed in a rush. Every gravel surface that stays firm, weed-free, and sharp-edged for a decade has one thing in common: the right woven fabric, laid correctly, before a single stone went down. To install landscape fabric under gravel properly you choose the correct weight, prep and compact the base, roll out the fabric, overlap the seams, and cover with gravel in lifts. Size your order first with the [DOTDAY Fabric Calculator](https://www.thedotday.com/landscape-fabric-calculator)."
+    },
+    {
+      "_type": "prose",
+      "heading": "Do you really need fabric under gravel?",
+      "body": "Yes, and here is what happens when you skip it. Gravel sinks into the soil within two to three seasons, weeds push through from below, and soil and gravel mix into a muddy layer that is expensive to fix. You end up adding fresh stone every year and still fighting weeds. With the right woven fabric correctly installed, a gravel surface can last 10 to 15 years with almost zero upkeep. That is the difference one decision makes on day one."
+    },
+    {
+      "_type": "comparisonTable",
+      "heading": "What happens if you skip fabric under gravel",
+      "columns": [
+        "What happens",
+        "Without fabric",
+        "With correct fabric"
+      ],
+      "rows": [
+        [
+          "Weed growth",
+          "Heavy, weeds push constantly from the soil below",
+          "Minimal, sub-soil weed pressure blocked"
+        ],
+        [
+          "Gravel migration",
+          "Gravel sinks and mixes into the subgrade",
+          "Gravel stays separated and stable"
+        ],
+        [
+          "Soil contamination",
+          "Soil works up through the gravel after rain",
+          "Permanent separation maintained"
+        ],
+        [
+          "Surface life",
+          "1 to 3 seasons before major topping-up",
+          "10 to 15 years with minimal maintenance"
+        ]
+      ]
+    },
+    {
+      "_type": "prose",
+      "heading": "Step 0: choose the right fabric weight",
+      "body": "This is where most projects fail before they begin. Standard light weed barrier sold at garden centers is designed for mulched flower beds, not gravel. Under aggregate load and traffic it compresses, tears, and fails fast. For gravel sub-base separation and aggregate stabilization you need woven fabric, and weight is critical: a decorative bed or border and a foot-traffic path can use [SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) 3.2oz, while a high-traffic path, a gravel driveway for cars, or heavy and commercial use needs [XBAR](https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer) 5oz for dual-layer puncture resistance. XBAR uses dual-layer woven construction, a woven layer bonded to a non-woven needle-punched backing, engineered for aggregate."
+    },
+    {
+      "_type": "image",
+      "ref": "xbar-dual-layer",
+      "alt": "DOTDAY XBAR dual-layer cross-section, the fabric weight you install under gravel for vehicle load",
+      "caption": "For driveways and traffic, XBAR's dual-layer build resists punctures that tear lighter fabric."
+    },
+    {
+      "_type": "steps",
+      "heading": "How to install landscape fabric under gravel, step by step",
+      "steps": [
+        {
+          "title": "Excavate and grade",
+          "body": "Dig to your design depth, remove organic material and roots, and grade for drainage so water sheds off the finished surface."
+        },
+        {
+          "title": "Compact the subgrade",
+          "body": "A firm, compacted base under the fabric carries the load. Skipping compaction is the top cause of early rutting and sinking."
+        },
+        {
+          "title": "Roll out the fabric",
+          "body": "Lay the woven fabric flat across the prepared base, smoothing wrinkles as you go so it sits flush to the ground."
+        },
+        {
+          "title": "Overlap seams 6 to 12 inches",
+          "body": "Generous overlaps stop weeds and soil from finding the seam. Lean toward 12 inches on driveways and high-traffic areas."
+        },
+        {
+          "title": "Pin, then add gravel in lifts",
+          "body": "Staple along seams and edges, then place and compact your base aggregate in layers. Keep the fabric fully covered, with no sun exposure."
+        }
+      ]
+    },
+    {
+      "_type": "cta",
+      "variant": "contractor",
+      "eyebrow": "For pros",
+      "heading": "Laying gravel across multiple sites?",
+      "body": "DOTDAY supplies XBAR to contractors direct, by the roll or in bulk, with help matching weight to each ground condition.",
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/contact-us"
+    },
+    {
+      "_type": "warning",
+      "heading": "The 5 mistakes that ruin gravel installs",
+      "body": "In order of how often they cause failure: using light garden fabric under load, skipping subgrade compaction, under-sizing seam overlap, leaving fabric exposed to sun before covering, and under-filling gravel depth. Each one opens the door to sinking, weeds, or tearing. Get all five right and the surface lasts a decade."
+    },
+    {
+      "_type": "proTip",
+      "heading": "Match the fabric to the job",
+      "body": "For beds, paths, and weed control, [SHIELD](https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric) 3.2oz is the right call. For gravel driveways, high-traffic paths, and paver bases, step up to [XBAR](https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer). For a drainage trench or French drain beside the gravel, use [TERRA](https://www.thedotday.com/product-page/dotday-terra-geotextile-fabric-4-oz-non-woven-landscape-fabric) non-woven geotextile. To compare how long each holds up, read [what landscape fabric lasts the longest](https://www.thedotday.com/post/what-landscape-fabric-lasts-the-longest)."
+    },
+    {
+      "_type": "cta",
+      "variant": "enquiry",
+      "eyebrow": "Talk to us",
+      "heading": "Want your gravel spec checked before you order?",
+      "body": "Tell the DOTDAY team the ground condition, traffic, and square footage, and we will recommend the right fabric and quantity.",
+      "cta": "Talk to the DOTDAY Team",
+      "href": "https://www.thedotday.com/contact-us"
+    }
+  ],
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What weight landscape fabric do I need under gravel?",
+        "a": "For decorative beds and foot-traffic paths, a 3.2oz woven fabric like SHIELD is enough. For gravel driveways, high-traffic paths, and anywhere vehicles or heavy equipment travel, step up to a 5oz dual-layer fabric like XBAR. The extra weight and non-woven backing resist the punctures and tearing that destroy lighter fabric under aggregate load."
+      },
+      {
+        "q": "How much should landscape fabric overlap under gravel?",
+        "a": "Overlap every seam by at least 6 inches, and lean toward 12 inches on driveways and high-traffic surfaces. Seams are the most common place weeds and soil break through, so generous overlap is smart insurance. Pin along the overlap and edges with staples before placing gravel so nothing shifts during compaction."
+      },
+      {
+        "q": "Can you put gravel directly on soil without fabric?",
+        "a": "You can, but it rarely lasts. Within two to three seasons the gravel sinks into the soil, the two mix into mud, and weeds push through from below. You then top up stone every year and still fight weeds. A woven fabric separator keeps the gravel and soil apart so the surface stays firm and weed-free for 10 to 15 years."
+      }
+    ]
+  },
+  "closingHashtags": [
+    "#DOTDAY",
+    "#XBAR",
+    "#gravel",
+    "#landscapefabric",
+    "#installation"
+  ],
+  "relatedPosts": [
+    {
+      "title": "Best Landscape Fabric for Gravel Driveways",
+      "url": "https://www.thedotday.com/post/best-landscape-fabric-for-gravel-driveways",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "What Landscape Fabric Lasts the Longest?",
+      "url": "https://www.thedotday.com/post/what-landscape-fabric-lasts-the-longest",
+      "category": "Buying Guides"
+    },
+    {
+      "title": "Woven vs Non-Woven Landscape Fabric",
+      "url": "https://www.thedotday.com/post/woven-vs-non-woven-landscape-fabric",
+      "category": "Comparisons"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DOTDAY XBAR heavy-duty fabric",
+      "url": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
+    },
+    {
+      "label": "DOTDAY SHIELD weed barrier",
+      "url": "https://www.thedotday.com/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY TERRA geotextile",
+      "url": "https://www.thedotday.com/product-page/dotday-terra-geotextile-fabric-4-oz-non-woven-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    }
+  ]
+}
