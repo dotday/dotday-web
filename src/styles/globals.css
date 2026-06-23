@@ -4538,22 +4538,118 @@ tbody tr:nth-child(even) {
     max-width: none;
   }
 }
-@media (max-width: 560px) {
+
+/* Mobile: switch to a flex column so we can REORDER. The form card moves to
+   the top (so it lands in the first fold), the headline/lead sit above it as a
+   compact intro, and the trust badges drop below the form in a tight 2-up grid
+   instead of a tall stack. */
+@media (max-width: 760px) {
+  /* trim the page's top padding so the intro + form start higher */
+  .page {
+    padding-top: 24px;
+  }
+  .leadsplit {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 0;
+  }
+
+  /* Pull the intro (eyebrow + headline + lead) out of the rail to the very top,
+     keep it short; push the trust badges to the bottom. The rail's two jobs are
+     split by source order in markup, so we lean on the card order here. */
+  .leadsplit-rail {
+    display: contents; /* let rail children participate in the flex ordering */
+  }
+  .leadsplit-eyebrow {
+    order: 1;
+  }
+  .leadsplit-headline {
+    order: 2;
+    font-size: clamp(28px, 8vw, 36px);
+    margin: 14px 0 0;
+  }
+  .leadsplit-lead {
+    order: 3;
+    font-size: 15.5px;
+    line-height: 1.55;
+    margin: 14px 0 0;
+    padding-left: 14px;
+  }
   .leadcard {
-    padding: 26px 20px 24px;
+    order: 4; /* form card sits right under the short intro = first fold */
+    margin-top: 4px;
+  }
+  .leadsplit-trust {
+    order: 5; /* badges below the form */
+    margin-top: 6px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  /* edge breathing room: the wrap gives 20px, add a touch inside the card */
+  .leadcard {
+    padding: 24px 18px 22px;
+  }
+  .leadcard-title {
+    font-size: 23px;
+    margin-bottom: 18px;
   }
   .lf-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
   .lf-row .lf-field {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
+  .lf-field {
+    margin-bottom: 14px;
+  }
+  .lf-field input,
+  .lf-field textarea,
+  .lf-field select {
+    padding: 12px 13px;
+    font-size: 16px; /* >=16px stops iOS Safari from zooming the field on focus */
+  }
+  .lf-field textarea {
+    min-height: 92px;
+  }
+  .lf-submit {
+    padding: 16px 22px;
+  }
+
+  /* compact 2-up trust grid: smaller icons + text so all four fit in a short
+     band instead of a long scroll */
   .leadsplit-trust {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 14px;
   }
+  .leadsplit-badge {
+    gap: 9px;
+  }
+  .leadsplit-badge-ic {
+    width: 32px;
+    height: 32px;
+  }
+  .leadsplit-badge-ic svg {
+    width: 17px;
+    height: 17px;
+  }
+  .leadsplit-badge-txt strong {
+    font-size: 12.5px;
+    line-height: 1.2;
+  }
+  .leadsplit-badge-txt em {
+    font-size: 11.5px;
+    line-height: 1.2;
+  }
+}
+
+/* very narrow phones: keep the 2-up trust grid but allow the headline to shrink
+   a bit more so it never wraps to four lines */
+@media (max-width: 380px) {
   .leadsplit-headline {
-    font-size: clamp(30px, 9vw, 40px);
+    font-size: 26px;
   }
 }
