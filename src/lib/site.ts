@@ -63,7 +63,7 @@ export const nav = {
     { label: "CONTACT", href: "/contact-us" },
   ],
   utility: {
-    qrzone: { label: "My QRZone", href: STORE_URL },
+    qrzone: { label: "My QRZone", href: "/my-qrzone" },
     account: { href: STORE_URL },
     cart: { href: STORE_URL, count: 0 },
   },
@@ -111,7 +111,7 @@ export const footer = {
       heading: "Account",
       links: [
         { label: "My Account", href: STORE_URL },
-        { label: "My QRZone", href: STORE_URL },
+        { label: "My QRZone", href: "/my-qrzone" },
         { label: "Order History", href: STORE_URL },
         { label: "Track Your Order", href: STORE_URL },
         { label: "Made for Pros", href: "/bulk-pricing" },
