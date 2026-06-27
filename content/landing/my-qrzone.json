@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "my-qrzone",
+  "title": "My QR Zone - DOTDAY Owner's Hub",
+  "focusKeyword": "dotday qr zone",
+  "status": "draft",
+  "author": "DOTDAY",
+  "publishedAt": "2026-06-27",
+  "seo": {
+    "metaTitle": "My QR Zone | DOTDAY Owner's Hub",
+    "metaDescription": "You scanned it, let's grow. Your DOTDAY owner's hub: install your fabric in three steps, identify your roll, check the specs, and reorder the right size.",
+    "canonical": "https://www.thedotday.com/my-qrzone",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogImage": {
+      "ref": "og-qr-zone",
+      "alt": "DOTDAY landscape fabric being installed over prepared ground"
+    }
+  },
+  "sections": [
+    {
+      "_type": "hero",
+      "eyebrow": "Welcome to your QR Zone",
+      "heading": "You scanned it. Let's grow.",
+      "subheading": "This is your DOTDAY owner's hub. Everything you need to install your fabric the right way, identify your exact roll, check the technical specs, and size your next order.",
+      "primaryCta": { "label": "Install in three steps", "href": "#install" },
+      "secondaryCta": { "label": "Which roll do I have?", "href": "#find" }
+    },
+    {
+      "_type": "problem",
+      "eyebrow": "Engineered to last",
+      "heading": "Built for people who love growing green",
+      "body": "Every DOTDAY roll is engineering-grade fabric made to do one job exceptionally well on your ground. The right fabric on the right surface means fewer weeds, better drainage, and a base that stays put for years instead of seasons.",
+      "bullets": [
+        "Lab-tested specs you can verify, not marketing claims",
+        "Three fabrics, each matched to a specific ground condition",
+        "Real support from the people who make it"
+      ]
+    },
+    {
+      "_type": "useCaseGrid",
+      "heading": "Install your fabric in three steps",
+      "cards": [
+        { "title": "1. Prep the ground", "body": "Clear weeds, roots, and large debris, then level and lightly compact the surface so the fabric lies flat with full contact." },
+        { "title": "2. Roll out and overlap", "body": "Lay the fabric over the prepared area. Overlap seams by 4 to 6 inches and pin every few feet so nothing shifts under load." },
+        { "title": "3. Cover and finish", "body": "Top with gravel, mulch, soil, or your chosen cover. Trim the edges clean and keep the cover topped up so no fabric is exposed." }
+      ]
+    },
+    {
+      "_type": "solution",
+      "eyebrow": "Watch it done",
+      "heading": "See professional installation start to finish",
+      "body": "Prefer to watch before you start? Our install videos walk through ground prep, rolling and seaming, cutting around obstacles, and finishing for each fabric, so you can match the technique to the roll you have. Pair the video with the three steps above and your install will hold up for the long run.",
+      "product": "SHIELD",
+      "productHref": "/how-to-install-weed-barrier-fabric",
+      "cta": { "label": "Open the full install guide", "href": "/how-to-install-weed-barrier-fabric" }
+    },
+    {
+      "_type": "useCaseGrid",
+      "heading": "Which DOTDAY fabric do you have?",
+      "cards": [
+        { "title": "SHIELD - 3.2oz woven", "body": "Woven weed barrier for garden beds, rows, and under mulch. Blocks weeds while water and nutrients pass through.", "href": "/product-page/shield-landscape-fabric" },
+        { "title": "XBAR - 5oz dual-layer", "body": "Woven top with non-woven backing for gravel, pavers, and high-traffic ground that takes real load.", "href": "/product-page/xbar-landscape-fabric" },
+        { "title": "TERRA - 4 to 8oz non-woven", "body": "Needle-punched geotextile for French drains, retaining walls, road base, and soil separation.", "href": "/product-page/terra-geotextile-fabric" }
+      ]
+    },
+    {
+      "_type": "useCaseGrid",
+      "heading": "Where each fabric performs best",
+      "cards": [
+        { "title": "Garden beds & rows", "body": "SHIELD 3.2oz blocks weeds while letting water and nutrients reach the soil below.", "href": "/product-page/shield-landscape-fabric" },
+        { "title": "Gravel driveways", "body": "XBAR 5oz handles vehicle load and keeps stone from working down into the soil.", "href": "/product-page/xbar-landscape-fabric" },
+        { "title": "Walkways & pavers", "body": "XBAR gives a stable base under stone and pavers that resists rutting and pumping.", "href": "/product-page/xbar-landscape-fabric" },
+        { "title": "French drains", "body": "TERRA non-woven geotextile filters and drains while blocking soil migration.", "href": "/product-page/terra-geotextile-fabric" },
+        { "title": "Retaining walls & road base", "body": "TERRA separates and stabilizes under structural and load-bearing groundwork.", "href": "/product-page/terra-geotextile-fabric" },
+        { "title": "Raised beds & nurseries", "body": "SHIELD keeps rows clean and protects soil quality in raised beds and nursery rows.", "href": "/product-page/shield-landscape-fabric" }
+      ]
+    },
+    {
+      "_type": "productComparison",
+      "heading": "DOTDAY fabric specs at a glance",
+      "columns": ["Property", "SHIELD 3.2oz", "XBAR 5oz", "TERRA 4 to 8oz"],
+      "featuredColumn": 4,
+      "rows": [
+        ["Construction", "Woven polypropylene", "Woven dual-layer (woven top, non-woven backing)", "Non-woven needle-punched geotextile"],
+        ["Best for", "Garden beds, rows, under mulch", "Gravel, pavers, high-traffic hardscape", "French drains, retaining walls, road base"],
+        ["Traffic rating", "Light", "High", "Heavy and load-bearing"],
+        ["Primary job", "Weed suppression", "Strength and separation under load", "Drainage, filtration, soil separation"],
+        ["Which side down", "Either side", "Fuzzy side face down", "Orientation does not matter"]
+      ]
+    },
+    {
+      "_type": "calculatorEmbed",
+      "heading": "Need more fabric? Size it before you reorder",
+      "intro": "Topping up a bigger area or starting the next project? Enter your dimensions to size the right roll before you order."
+    },
+    {
+      "_type": "reviews",
+      "heading": "Reviews",
+      "items": [
+        { "quote": "Put XBAR under a gravel drive last fall. No rutting, no weeds, no top-up this spring.", "author": "Marcus T.", "role": "Hardscape contractor", "rating": 5 },
+        { "quote": "SHIELD keeps my rows clean and water still gets through. Exactly what I needed in the beds.", "author": "Patrick Q.", "role": "Verified buyer", "rating": 5 },
+        { "quote": "Finally a fabric that holds up under stone. The backing makes a real difference.", "author": "Dana R.", "role": "Landscaper", "rating": 5 }
+      ]
+    },
+    {
+      "_type": "faq",
+      "heading": "Install and usage questions",
+      "items": [
+        { "q": "How much should I overlap the seams?", "a": "Overlap adjoining pieces by 4 to 6 inches and pin along the seam every few feet. Overlapping in the direction of water flow keeps fines and weeds from finding the gap." },
+        { "q": "Which side faces down?", "a": "SHIELD works either side up. XBAR goes fuzzy (non-woven) side face down so the backing separates the soil. TERRA is non-woven through and through, so orientation does not matter." },
+        { "q": "Do I need to pin the fabric?", "a": "Yes. Pin every few feet and at all seams and edges so the fabric does not shift while you place the cover. Pinning matters most on slopes and under gravel that carries load." },
+        { "q": "What do I cover the fabric with?", "a": "Top SHIELD with mulch or soil, XBAR with gravel or pavers, and TERRA with your drainage stone or backfill. Keep the cover topped up so no fabric is left exposed to UV." },
+        { "q": "Can I reuse a roll on a different surface?", "a": "Use the right fabric for the ground condition. SHIELD is for growing surfaces, XBAR for load-bearing hardscape, and TERRA for drainage and separation. Swapping fabric across jobs is the most common cause of early failure." }
+      ]
+    },
+    {
+      "_type": "cta",
+      "eyebrow": "Talk to us",
+      "heading": "Buying for a crew or a big job?",
+      "body": "Questions about your roll, a quote, or a bulk order? Reach out and the DOTDAY team will get you the right fabric and the right pricing for the job.",
+      "primaryCta": { "label": "Request a quote", "href": "/contact-us" },
+      "secondaryCta": { "label": "Get bulk pricing", "href": "/bulk-pricing" }
+    },
+    {
+      "_type": "internalLinks",
+      "heading": "Keep exploring",
+      "links": [
+        { "label": "SHIELD weed barrier fabric", "href": "/product-page/shield-landscape-fabric", "note": "3.2oz woven for beds and rows" },
+        { "label": "XBAR hardscape fabric", "href": "/product-page/xbar-landscape-fabric", "note": "5oz dual-layer for gravel and pavers" },
+        { "label": "TERRA geotextile fabric", "href": "/product-page/terra-geotextile-fabric", "note": "Non-woven for drainage and separation" },
+        { "label": "How to install weed barrier fabric", "href": "/how-to-install-weed-barrier-fabric", "note": "Full install guide" },
+        { "label": "Fabric Calculator", "href": "/landscape-fabric-calculator", "note": "Size your next roll" },
+        { "label": "FabricFinder quiz", "href": "/fabric-finder", "note": "Match fabric to your job" }
+      ]
+    }
+  ]
+}

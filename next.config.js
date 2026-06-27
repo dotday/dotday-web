@@ -18,6 +18,15 @@ const nextConfig = {
         destination: "/post/:slug",
         permanent: true,
       },
+      // The QR Zone owner's hub is canonical at the root /my-qrzone (the original
+      // Wix path that carries its equity), served by app/my-qrzone/page.tsx. The
+      // /l/my-qrzone twin that the landing engine would otherwise expose
+      // 301-redirects here so there is exactly one canonical URL for the page.
+      {
+        source: "/l/my-qrzone",
+        destination: "/my-qrzone",
+        permanent: true,
+      },
     ];
   },
 };
