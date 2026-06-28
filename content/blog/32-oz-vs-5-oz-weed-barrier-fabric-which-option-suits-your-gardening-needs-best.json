@@ -214,11 +214,11 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Crew or commercial project?",
-      "heading": "Buying for a crew or commercial project? Talk to us",
-      "body": "Need SHIELD for planting rows, XBAR for hardscape, or a mix across a development? Get in touch directly. We confirm specs, advise on roll sizes, and provide volume pricing for pro crews across the US.",
-      "cta": "Request a Quote",
-      "href": "https://www.thedotday.com/contact-us"
+      "eyebrow": "Not sure yet?",
+      "heading": "Find the right fabric in two minutes",
+      "body": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA for the job.",
+      "cta": "Find Your Fabric",
+      "href": "https://www.thedotday.com/fabric-finder"
     }
   ],
   "faq": {

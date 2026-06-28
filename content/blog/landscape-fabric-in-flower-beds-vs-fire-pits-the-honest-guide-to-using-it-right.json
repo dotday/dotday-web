@@ -116,7 +116,7 @@
       "heading": "Building fire pits and hardscape across jobs?",
       "body": "DOTDAY supplies XBAR to contractors direct, by the roll or in bulk, with help matching weight to each ground condition.",
       "cta": "Request Bulk Pricing",
-      "href": "https://www.thedotday.com/contact-us"
+      "href": "https://www.thedotday.com/bulk-pricing"
     },
     {
       "_type": "prose",
@@ -131,11 +131,11 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Talk to us",
-      "heading": "Not sure which zone needs what?",
-      "body": "Tell the DOTDAY team your layout, fire pit, beds, and paths, and we will recommend the right fabric for each part of the project.",
-      "cta": "Talk to the DOTDAY Team",
-      "href": "https://www.thedotday.com/contact-us"
+      "eyebrow": "Not sure yet?",
+      "heading": "Find the right fabric in two minutes",
+      "body": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA for the job.",
+      "cta": "Find Your Fabric",
+      "href": "https://www.thedotday.com/fabric-finder"
     }
   ],
   "faq": {

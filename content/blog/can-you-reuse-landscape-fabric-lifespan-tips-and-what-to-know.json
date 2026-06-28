@@ -115,7 +115,7 @@
       "heading": "Re-fabricating multiple sites this season?",
       "body": "DOTDAY supplies woven fabric to landscapers and growers direct. Request bulk and pro pricing for fresh coverage across jobs.",
       "cta": "Request Bulk Pricing",
-      "href": "https://www.thedotday.com/contact-us"
+      "href": "https://www.thedotday.com/bulk-pricing"
     },
     {
       "_type": "steps",
@@ -147,11 +147,11 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Talk to us",
-      "heading": "Not sure if yours is worth reusing?",
-      "body": "Tell the DOTDAY team what you have and the new project, and we will advise whether to reuse or start fresh, and with which fabric.",
-      "cta": "Talk to the DOTDAY Team",
-      "href": "https://www.thedotday.com/contact-us"
+      "eyebrow": "Not sure yet?",
+      "heading": "Find the right fabric in two minutes",
+      "body": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA for the job.",
+      "cta": "Find Your Fabric",
+      "href": "https://www.thedotday.com/fabric-finder"
     }
   ],
   "faq": {

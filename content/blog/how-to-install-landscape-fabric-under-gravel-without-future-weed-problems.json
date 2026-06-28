@@ -150,8 +150,8 @@
       "eyebrow": "For pros",
       "heading": "Laying gravel across multiple sites?",
       "body": "DOTDAY supplies XBAR to contractors direct, by the roll or in bulk, with help matching weight to each ground condition.",
-      "cta": "Request Bulk Pricing",
-      "href": "https://www.thedotday.com/contact-us"
+      "cta": "Use the Fabric Calculator",
+      "href": "https://www.thedotday.com/landscape-fabric-calculator"
     },
     {
       "_type": "warning",
@@ -166,11 +166,11 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Talk to us",
-      "heading": "Want your gravel spec checked before you order?",
-      "body": "Tell the DOTDAY team the ground condition, traffic, and square footage, and we will recommend the right fabric and quantity.",
-      "cta": "Talk to the DOTDAY Team",
-      "href": "https://www.thedotday.com/contact-us"
+      "eyebrow": "Not sure yet?",
+      "heading": "Find the right fabric in two minutes",
+      "body": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA for the job.",
+      "cta": "Find Your Fabric",
+      "href": "https://www.thedotday.com/fabric-finder"
     }
   ],
   "faq": {

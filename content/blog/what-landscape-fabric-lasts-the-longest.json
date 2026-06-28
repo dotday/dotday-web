@@ -21,12 +21,23 @@
     "noindex": false,
     "social": {
       "excerpt": "What landscape fabric lasts the longest? It comes down to weight, construction, and coverage. DOTDAY breaks down SHIELD, XBAR, and TERRA by lifespan. #DOTDAY #landscapefabric #weedbarrier #hardscape #geotextile",
-      "hashtags": ["#DOTDAY", "#landscapefabric", "#weedbarrier", "#hardscape", "#geotextile"],
+      "hashtags": [
+        "#DOTDAY",
+        "#landscapefabric",
+        "#weedbarrier",
+        "#hardscape",
+        "#geotextile"
+      ],
       "ogImage": {
         "ref": "og",
         "alt": "DOTDAY XBAR 5oz dual-layer landscape fabric cross-section, the longest lasting landscape fabric under load"
       },
-      "shareButtons": ["pinterest", "facebook", "x", "copy"],
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
       "ogType": "article",
       "twitterCard": "summary_large_image"
     }
@@ -78,7 +89,7 @@
       "heading": "Speccing fabric across multiple sites?",
       "body": "DOTDAY supplies contractors and growers direct. Tell us the ground condition and we'll match the right weight to each part of your project.",
       "cta": "Request Bulk Pricing",
-      "href": "https://www.thedotday.com/contact-us"
+      "href": "https://www.thedotday.com/bulk-pricing"
     },
     {
       "_type": "prose",
@@ -94,12 +105,32 @@
     {
       "_type": "comparisonTable",
       "heading": "What oz landscape fabric do I need?",
-      "columns": ["Weight", "DOTDAY product", "Best for", "Typical lifespan*"],
+      "columns": [
+        "Weight",
+        "DOTDAY product",
+        "Best for",
+        "Typical lifespan*"
+      ],
       "featuredColumn": 1,
       "rows": [
-        ["3.2oz woven", "SHIELD", "Garden beds, mulch, farms, nurseries", "5 to 10 yrs covered"],
-        ["5oz dual-layer", "XBAR", "Gravel, rock, pavers, high-traffic", "10 to 20 yrs covered"],
-        ["4 to 8oz non-woven", "TERRA", "Drainage, French drains, retaining walls", "Decades when buried"]
+        [
+          "3.2oz woven",
+          "SHIELD",
+          "Garden beds, mulch, farms, nurseries",
+          "5 to 10 yrs covered"
+        ],
+        [
+          "5oz dual-layer",
+          "XBAR",
+          "Gravel, rock, pavers, high-traffic",
+          "10 to 20 yrs covered"
+        ],
+        [
+          "4 to 8oz non-woven",
+          "TERRA",
+          "Drainage, French drains, retaining walls",
+          "Decades when buried"
+        ]
       ]
     },
     {
@@ -124,10 +155,10 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Talk to a pro",
-      "heading": "Not sure which weight to spec?",
-      "body": "Tell the DOTDAY team your ground condition and what's going on top, and we'll point you to the right fabric and the quantity you'll need.",
-      "cta": "Talk to Us",
+      "eyebrow": "Want a second opinion?",
+      "heading": "Talk to a DOTDAY fabric expert",
+      "body": "Tell us your ground condition and what is going on top, and we will point you to the right fabric and quantity.",
+      "cta": "Talk to an Expert",
       "href": "https://www.thedotday.com/contact-us"
     }
   ],
@@ -148,7 +179,13 @@
       }
     ]
   },
-  "closingHashtags": ["#DOTDAY", "#landscapefabric", "#weedbarrier", "#hardscape", "#geotextile"],
+  "closingHashtags": [
+    "#DOTDAY",
+    "#landscapefabric",
+    "#weedbarrier",
+    "#hardscape",
+    "#geotextile"
+  ],
   "relatedPosts": [
     {
       "title": "Woven vs Non Woven Landscape Fabric: How to Choose the Right One",

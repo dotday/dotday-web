@@ -20,7 +20,13 @@
     "noindex": false,
     "social": {
       "excerpt": "Putting a weed barrier under pavers? A light garden cloth pumps and tears in the base. Here is where the fabric belongs in the stack and which weight actually holds. #DOTDAY #Pavers #Hardscape #WeedBarrier #LandscapeFabric",
-      "hashtags": ["#DOTDAY", "#Pavers", "#Hardscape", "#WeedBarrier", "#LandscapeFabric"],
+      "hashtags": [
+        "#DOTDAY",
+        "#Pavers",
+        "#Hardscape",
+        "#WeedBarrier",
+        "#LandscapeFabric"
+      ],
       "ogImage": {
         "ref": "og",
         "alt": "DOTDAY XBAR weed barrier under pavers, gravel, and hardscape applications"
@@ -29,7 +35,12 @@
         "ref": "pin",
         "alt": "Weed barrier under pavers layer stack and fabric weight pin"
       },
-      "shareButtons": ["pinterest", "facebook", "x", "copy"],
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
       "ogType": "article",
       "twitterCard": "summary_large_image"
     }
@@ -77,12 +88,28 @@
     {
       "_type": "comparisonTable",
       "heading": "Choosing a weed barrier under pavers by ground condition",
-      "columns": ["Ground condition", "Right fabric", "Why"],
+      "columns": [
+        "Ground condition",
+        "Right fabric",
+        "Why"
+      ],
       "featuredColumn": 1,
       "rows": [
-        ["Firm, well-drained soil", "XBAR (5 oz woven)", "Load-bearing separation under the base"],
-        ["Soft or wet soil, water must move", "TERRA (non-woven)", "Separates and filters while letting water drain"],
-        ["Mixed or uncertain", "XBAR, or both layers", "Start with load separation, add drainage where needed"]
+        [
+          "Firm, well-drained soil",
+          "XBAR (5 oz woven)",
+          "Load-bearing separation under the base"
+        ],
+        [
+          "Soft or wet soil, water must move",
+          "TERRA (non-woven)",
+          "Separates and filters while letting water drain"
+        ],
+        [
+          "Mixed or uncertain",
+          "XBAR, or both layers",
+          "Start with load separation, add drainage where needed"
+        ]
       ]
     },
     {
@@ -104,10 +131,22 @@
       "_type": "steps",
       "heading": "Installing a weed barrier under pavers, step by step",
       "steps": [
-        { "title": "Excavate and grade", "body": "Dig to your base depth, then grade the subgrade soil so water sheds the way you want. A clean, even base is what the fabric and aggregate sit on." },
-        { "title": "Compact the soil", "body": "Compact the subgrade before any fabric goes down. The fabric separates soil from base, but the soil itself still needs to be firm." },
-        { "title": "Roll out the fabric", "body": "Lay XBAR directly on the compacted soil. Overlap adjacent runs 12 to 18 inches so nothing migrates through the seams under load." },
-        { "title": "Build the base on top", "body": "Add and compact your aggregate base in lifts over the fabric. The fabric stays at the soil line, doing separation, while you build up to bedding and pavers." }
+        {
+          "title": "Excavate and grade",
+          "body": "Dig to your base depth, then grade the subgrade soil so water sheds the way you want. A clean, even base is what the fabric and aggregate sit on."
+        },
+        {
+          "title": "Compact the soil",
+          "body": "Compact the subgrade before any fabric goes down. The fabric separates soil from base, but the soil itself still needs to be firm."
+        },
+        {
+          "title": "Roll out the fabric",
+          "body": "Lay XBAR directly on the compacted soil. Overlap adjacent runs 12 to 18 inches so nothing migrates through the seams under load."
+        },
+        {
+          "title": "Build the base on top",
+          "body": "Add and compact your aggregate base in lifts over the fabric. The fabric stays at the soil line, doing separation, while you build up to bedding and pavers."
+        }
       ]
     },
     {
@@ -118,11 +157,11 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Talk to us",
-      "heading": "Need help choosing the right fabric?",
-      "body": "Tell us your ground condition and the surface above, and we will point you to the right fabric and weight for the build.",
-      "cta": "Request a Quote",
-      "href": "https://www.thedotday.com/contact-us"
+      "eyebrow": "Ready to build",
+      "heading": "Get XBAR for the job",
+      "body": "XBAR 5 oz dual-layer fabric is built for gravel, pavers, and hardscape that takes real traffic. Shipped fast from US warehouses.",
+      "cta": "Shop XBAR",
+      "href": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
     }
   ],
   "faq": {
@@ -146,7 +185,13 @@
       }
     ]
   },
-  "closingHashtags": ["#DOTDAY", "#Pavers", "#Hardscape", "#WeedBarrier", "#LandscapeFabric"],
+  "closingHashtags": [
+    "#DOTDAY",
+    "#Pavers",
+    "#Hardscape",
+    "#WeedBarrier",
+    "#LandscapeFabric"
+  ],
   "relatedPosts": [
     {
       "title": "Woven vs Non Woven Landscape Fabric: How to Choose the Right One",
@@ -165,11 +210,26 @@
     }
   ],
   "internalLinks": [
-    { "label": "XBAR", "url": "https://www.thedotday.com/product-page/xbar-landscape-fabric" },
-    { "label": "SHIELD", "url": "https://www.thedotday.com/product-page/shield-landscape-fabric" },
-    { "label": "TERRA", "url": "https://www.thedotday.com/product-page/terra-geotextile-fabric" },
-    { "label": "Fabric Calculator", "url": "https://www.thedotday.com/landscape-fabric-calculator" },
-    { "label": "Bulk Pricing", "url": "https://www.thedotday.com/bulk-pricing" }
+    {
+      "label": "XBAR",
+      "url": "https://www.thedotday.com/product-page/xbar-landscape-fabric"
+    },
+    {
+      "label": "SHIELD",
+      "url": "https://www.thedotday.com/product-page/shield-landscape-fabric"
+    },
+    {
+      "label": "TERRA",
+      "url": "https://www.thedotday.com/product-page/terra-geotextile-fabric"
+    },
+    {
+      "label": "Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Bulk Pricing",
+      "url": "https://www.thedotday.com/bulk-pricing"
+    }
   ],
   "images": {}
 }

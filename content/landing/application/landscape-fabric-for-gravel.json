@@ -23,8 +23,14 @@
       "eyebrow": "For gravel and hardscape",
       "heading": "The landscape fabric built for gravel",
       "subheading": "Loose stone moves, ruts, and lets weeds push back when it sits on the wrong fabric. XBAR is engineered for gravel, rock, and high-traffic ground.",
-      "primaryCta": { "label": "View XBAR", "href": "/product-page/xbar-landscape-fabric" },
-      "secondaryCta": { "label": "Use the Fabric Calculator", "href": "/landscape-fabric-calculator" }
+      "primaryCta": {
+        "label": "Shop XBAR",
+        "href": "https://www.thedotday.com/product-page/dotday-xbar-weed-barrier-fabric-heavy-duty-5oz-dual-layer"
+      },
+      "secondaryCta": {
+        "label": "Use the Fabric Calculator",
+        "href": "/landscape-fabric-calculator"
+      }
     },
     {
       "_type": "problem",
@@ -44,28 +50,63 @@
       "body": "XBAR is a 5oz woven-hybrid fabric: a woven face for tensile strength with a non-woven backing for separation. Designed for gravel, rock, pavers, and high-traffic areas where lighter fabric gives out.",
       "product": "XBAR",
       "productHref": "/product-page/xbar-landscape-fabric",
-      "cta": { "label": "Compare Fabric Types", "href": "/fabric-finder" }
+      "cta": {
+        "label": "Compare Fabric Types",
+        "href": "/fabric-finder"
+      }
     },
     {
       "_type": "useCaseGrid",
       "heading": "Where XBAR works best",
       "cards": [
-        { "title": "Gravel driveways", "body": "Holds stone and soil apart under vehicle load so the surface stays put." },
-        { "title": "Gravel paths and patios", "body": "A stable base under foot traffic that resists rutting and weed pushback." },
-        { "title": "Paver base", "body": "Separation under the bedding layer so the base does not pump or migrate." },
-        { "title": "High-traffic ground", "body": "Built for the loads that tear lighter garden fabric over a season." }
+        {
+          "title": "Gravel driveways",
+          "body": "Holds stone and soil apart under vehicle load so the surface stays put."
+        },
+        {
+          "title": "Gravel paths and patios",
+          "body": "A stable base under foot traffic that resists rutting and weed pushback."
+        },
+        {
+          "title": "Paver base",
+          "body": "Separation under the bedding layer so the base does not pump or migrate."
+        },
+        {
+          "title": "High-traffic ground",
+          "body": "Built for the loads that tear lighter garden fabric over a season."
+        }
       ]
     },
     {
       "_type": "productComparison",
       "heading": "XBAR vs lighter weed barrier under gravel",
-      "columns": ["Property", "SHIELD 3.2oz", "XBAR 5oz"],
+      "columns": [
+        "Property",
+        "SHIELD 3.2oz",
+        "XBAR 5oz"
+      ],
       "featuredColumn": 2,
       "rows": [
-        ["Best for", "Garden beds, mulch, rows", "Gravel, rock, pavers"],
-        ["Construction", "Woven polypropylene", "Woven-hybrid dual-layer"],
-        ["Traffic rating", "Light", "High"],
-        ["Separation", "Basic", "Strong"]
+        [
+          "Best for",
+          "Garden beds, mulch, rows",
+          "Gravel, rock, pavers"
+        ],
+        [
+          "Construction",
+          "Woven polypropylene",
+          "Woven-hybrid dual-layer"
+        ],
+        [
+          "Traffic rating",
+          "Light",
+          "High"
+        ],
+        [
+          "Separation",
+          "Basic",
+          "Strong"
+        ]
       ]
     },
     {
@@ -77,17 +118,36 @@
       "_type": "reviews",
       "heading": "What pros say",
       "items": [
-        { "quote": "Put XBAR under a gravel drive last fall. No rutting, no weeds, no top-up this spring.", "author": "Marcus T.", "role": "Hardscape contractor", "rating": 5 },
-        { "quote": "Finally a fabric that holds up under stone. The backing makes a real difference.", "author": "Dana R.", "role": "Landscaper", "rating": 5 }
+        {
+          "quote": "Put XBAR under a gravel drive last fall. No rutting, no weeds, no top-up this spring.",
+          "author": "Marcus T.",
+          "role": "Hardscape contractor",
+          "rating": 5
+        },
+        {
+          "quote": "Finally a fabric that holds up under stone. The backing makes a real difference.",
+          "author": "Dana R.",
+          "role": "Landscaper",
+          "rating": 5
+        }
       ]
     },
     {
       "_type": "faq",
       "heading": "Gravel fabric questions",
       "items": [
-        { "q": "Do I need woven or non-woven fabric under gravel?", "a": "For gravel you want a strong woven or woven-hybrid fabric like XBAR. It resists the movement and point load that stone puts on the base. Non-woven TERRA is built for drainage and soil separation jobs like French drains." },
-        { "q": "Will weeds still grow through fabric under gravel?", "a": "A heavy woven-hybrid fabric like XBAR blocks the pushback that thin garden fabric lets through. Keep gravel topped up and seams overlapped so there are no gaps." },
-        { "q": "Can I use garden weed barrier under a driveway?", "a": "Light garden fabric is not built for vehicle load. It tends to rut and tear at the stone edges. Use XBAR for driveways and other high-traffic gravel." }
+        {
+          "q": "Do I need woven or non-woven fabric under gravel?",
+          "a": "For gravel you want a strong woven or woven-hybrid fabric like XBAR. It resists the movement and point load that stone puts on the base. Non-woven TERRA is built for drainage and soil separation jobs like French drains."
+        },
+        {
+          "q": "Will weeds still grow through fabric under gravel?",
+          "a": "A heavy woven-hybrid fabric like XBAR blocks the pushback that thin garden fabric lets through. Keep gravel topped up and seams overlapped so there are no gaps."
+        },
+        {
+          "q": "Can I use garden weed barrier under a driveway?",
+          "a": "Light garden fabric is not built for vehicle load. It tends to rut and tear at the stone edges. Use XBAR for driveways and other high-traffic gravel."
+        }
       ]
     },
     {
@@ -95,17 +155,39 @@
       "eyebrow": "Find your fabric",
       "heading": "Ready to gravel the right way?",
       "body": "Match your ground condition to the fabric built for it. Run the numbers or talk to us about bulk pricing for your crew.",
-      "primaryCta": { "label": "Use the Fabric Calculator", "href": "/landscape-fabric-calculator" },
-      "secondaryCta": { "label": "Request Bulk Pricing", "href": "/bulk-pricing" }
+      "primaryCta": {
+        "label": "Use the Fabric Calculator",
+        "href": "/landscape-fabric-calculator"
+      },
+      "secondaryCta": {
+        "label": "Request Bulk Pricing",
+        "href": "/bulk-pricing"
+      }
     },
     {
       "_type": "internalLinks",
       "heading": "Keep exploring",
       "links": [
-        { "label": "XBAR hardscape fabric", "href": "/product-page/xbar-landscape-fabric", "note": "5oz woven-hybrid for gravel and pavers" },
-        { "label": "Weed barrier under pavers", "href": "/post/weed-barrier-under-pavers", "note": "Install guide" },
-        { "label": "Woven vs non-woven landscape fabric", "href": "/post/woven-vs-non-woven-landscape-fabric", "note": "Comparison" },
-        { "label": "FabricFinder quiz", "href": "/fabric-finder", "note": "Match fabric to your job" }
+        {
+          "label": "XBAR hardscape fabric",
+          "href": "/product-page/xbar-landscape-fabric",
+          "note": "5oz woven-hybrid for gravel and pavers"
+        },
+        {
+          "label": "Weed barrier under pavers",
+          "href": "/post/weed-barrier-under-pavers",
+          "note": "Install guide"
+        },
+        {
+          "label": "Woven vs non-woven landscape fabric",
+          "href": "/post/woven-vs-non-woven-landscape-fabric",
+          "note": "Comparison"
+        },
+        {
+          "label": "FabricFinder quiz",
+          "href": "/fabric-finder",
+          "note": "Match fabric to your job"
+        }
       ]
     }
   ]

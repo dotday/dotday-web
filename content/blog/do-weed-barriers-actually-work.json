@@ -89,7 +89,7 @@
       "heading": "Running weed control across properties or a farm?",
       "body": "DOTDAY supplies SHIELD to landscapers and growers direct. Request bulk and pro pricing for multi-site coverage.",
       "cta": "Request Bulk Pricing",
-      "href": "https://www.thedotday.com/contact-us"
+      "href": "https://www.thedotday.com/bulk-pricing"
     },
     {
       "_type": "prose",
@@ -104,10 +104,10 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Talk to us",
-      "heading": "Not sure which fabric your job needs?",
-      "body": "Tell the DOTDAY team your application and ground condition, and we will recommend the right fabric so the barrier actually works.",
-      "cta": "Talk to the DOTDAY Team",
+      "eyebrow": "Want a second opinion?",
+      "heading": "Talk to a DOTDAY fabric expert",
+      "body": "Tell us your ground condition and what is going on top, and we will point you to the right fabric and quantity.",
+      "cta": "Talk to an Expert",
       "href": "https://www.thedotday.com/contact-us"
     }
   ],

@@ -531,12 +531,13 @@
                 "enum": [
                   "Find Your Fabric",
                   "Use the Fabric Calculator",
+                  "Compare Fabric Types",
                   "View Installation Guide",
-                  "Request a Quote",
-                  "Talk to Us",
+                  "Shop SHIELD",
+                  "Shop XBAR",
+                  "Shop TERRA",
                   "Request Bulk Pricing",
-                  "Shop DOTDAY Products",
-                  "Talk to the DOTDAY Team"
+                  "Talk to an Expert"
                 ]
               },
               "href": {

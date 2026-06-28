@@ -150,8 +150,8 @@
       "eyebrow": "For pros",
       "heading": "Speccing fabric across a job or a whole site?",
       "body": "Get volume pricing and help matching the right fabric to each ground condition.",
-      "cta": "Request a Quote",
-      "href": "https://www.thedotday.com/contact-us"
+      "cta": "Request Bulk Pricing",
+      "href": "https://www.thedotday.com/bulk-pricing"
     },
     {
       "_type": "prose",
@@ -160,11 +160,11 @@
     {
       "_type": "cta",
       "variant": "enquiry",
-      "eyebrow": "Find your fabric",
-      "heading": "Need help choosing the right fabric?",
-      "body": "Answer a few questions or run the numbers and get matched to SHIELD, XBAR, or TERRA for your exact ground condition.",
-      "cta": "Use the Fabric Calculator",
-      "href": "https://www.thedotday.com/landscape-fabric-calculator"
+      "eyebrow": "Not sure yet?",
+      "heading": "Find the right fabric in two minutes",
+      "body": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA for the job.",
+      "cta": "Find Your Fabric",
+      "href": "https://www.thedotday.com/fabric-finder"
     }
   ],
   "faq": {
