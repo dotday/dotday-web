@@ -12,21 +12,21 @@ const QUOTES = [
     name: "Brooklyn",
     role: "DIY Home Gardener, OH",
     product: "SHIELD",
-    avatar: "/brand/home/avatars/brooklyn.png",
+    avatar: "/home/avatars/brooklyn.png",
   },
   {
     body: "Installed SHIELD across our lavender rows. Controls weeds well, water flows through easily, and it held up through a full growing season.",
     name: "Trevor M.",
     role: "Farm Owner, OR",
     product: "SHIELD",
-    avatar: "/brand/home/avatars/trevor.png",
+    avatar: "/home/avatars/trevor.png",
   },
   {
     body: "Using XBAR 5oz for gravel driveways and pathways. Strong, installs clean, and the base hasn't shifted at all.",
     name: "Mike",
     role: "Contractor, TX",
     product: "XBAR",
-    avatar: "/brand/home/avatars/mike.png",
+    avatar: "/home/avatars/mike.png",
   },
 ];
 

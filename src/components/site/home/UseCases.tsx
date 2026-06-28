@@ -15,7 +15,7 @@ const CASES = [
     body: "Stabilize gravel and stop sinking, shifting, and weed growth under driveways, paths, and high-traffic hardscape.",
     pick: "Use XBAR 5oz",
     href: "/product-page/xbar-landscape-fabric",
-    image: "/brand/home/xbar-card.webp",
+    image: "/home/xbar-card.webp",
     alt: "DOTDAY XBAR 5oz dual-layer fabric for gravel driveways and hardscape",
   },
   {
@@ -24,7 +24,7 @@ const CASES = [
     body: "Control weeds while water, air, and nutrients reach the soil. Built for beds, raised planters, farm rows, and nurseries.",
     pick: "Use SHIELD 3.2oz",
     href: "/product-page/shield-landscape-fabric",
-    image: "/brand/home/shield-card.webp",
+    image: "/home/shield-card.webp",
     alt: "DOTDAY SHIELD 3.2oz woven weed barrier fabric for garden beds and farm rows",
   },
   {
@@ -33,7 +33,7 @@ const CASES = [
     body: "Improve drainage and limit soil erosion with high-permeability geotextile for French drains, retaining walls, and wet ground.",
     pick: "Use TERRA 4 / 6 / 8oz",
     href: "/product-page/terra-geotextile-fabric",
-    image: "/brand/home/terra-card.webp",
+    image: "/home/terra-card.webp",
     alt: "DOTDAY TERRA non-woven geotextile fabric for drainage and erosion control",
   },
 ];

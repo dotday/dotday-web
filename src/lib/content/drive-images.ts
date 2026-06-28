@@ -3,7 +3,7 @@
  *
  * When Claude (or you) creates a page, images come from Drive: pick the right
  * file from the right product folder, download it, optimize to WebP, and place
- * it under /public/blog/<slug>/ (posts) or /public/brand/products/ (products).
+ * it under /public/blog/<slug>/ (posts) or /public/products/ (products).
  *
  * This manifest records the real folder IDs and notable files so image sourcing
  * is consistent and never guesses. IDs are from the DOTDAY brand Drive
@@ -65,10 +65,10 @@ export const DRIVE_FOLDERS = {
  * pull more. These are the safe defaults to reach for per product.
  */
 export const DRIVE_FILES = {
-  // Product card images currently shipped in /public/brand/products/
-  shieldProduct: { id: "1uDQV-OJY3VlwMyn1DcdfFeYSm0qSJU-M", title: "Shield_06.png", out: "/brand/products/shield.webp" },
-  xbarProduct: { id: "1Lxr6xM0MVOE70H5l00k7Xr91aQBpQxGz", title: "XBar_06.png", out: "/brand/products/xbar.webp" },
-  terraProduct: { id: "19pxLEPmal86hoV7ENHS9LefIiLv9Qeal", title: "Terra_05.jpg", out: "/brand/products/terra.webp" },
+  // Product card images currently shipped in /public/products/
+  shieldProduct: { id: "1uDQV-OJY3VlwMyn1DcdfFeYSm0qSJU-M", title: "Shield_06.png", out: "/products/shield.webp" },
+  xbarProduct: { id: "1Lxr6xM0MVOE70H5l00k7Xr91aQBpQxGz", title: "XBar_06.png", out: "/products/xbar.webp" },
+  terraProduct: { id: "19pxLEPmal86hoV7ENHS9LefIiLv9Qeal", title: "Terra_05.jpg", out: "/products/terra.webp" },
 
   // Other notable branded assets (good for blog heroes / sections)
   terraApplications: { id: "19pxLEPmal86hoV7ENHS9LefIiLv9Qeal", title: "Terra_05.jpg (applications grid)", out: "" },

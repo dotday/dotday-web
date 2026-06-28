@@ -21,7 +21,7 @@ export interface ProductData {
   bestFor: string[];
   features: { title: string; body: string }[];
   shopHref: string; // Wix store
-  image: string; // /public/brand/products/<slug>.webp
+  image: string; // /public/products/<slug>.webp
   faq: { q: string; a: string }[];
 }
 
@@ -45,7 +45,7 @@ export const PRODUCTS: ProductData[] = [
       { title: "Strong in-plane", body: "Flat-tape weave resists tearing during install across beds and rows." },
     ],
     shopHref: "https://store.thedotday.com",
-    image: "/brand/products/shield.webp",
+    image: "/products/shield.webp",
     faq: [
       {
         q: "Can I use SHIELD under gravel?",
@@ -76,7 +76,7 @@ export const PRODUCTS: ProductData[] = [
       { title: "Most popular", body: "The go-to for hardscape crews where the surface above carries weight." },
     ],
     shopHref: "https://store.thedotday.com",
-    image: "/brand/products/xbar.webp",
+    image: "/products/xbar.webp",
     faq: [
       {
         q: "Is XBAR the same as a weed barrier?",
@@ -107,7 +107,7 @@ export const PRODUCTS: ProductData[] = [
       { title: "Built for water", body: "The right structure for French drains and wall backfill where water needs to move." },
     ],
     shopHref: "https://store.thedotday.com",
-    image: "/brand/products/terra.webp",
+    image: "/products/terra.webp",
     faq: [
       {
         q: "What weight of TERRA do I need?",

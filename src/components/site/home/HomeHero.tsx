@@ -8,13 +8,13 @@ import { Icon } from "@/components/site/Icon";
  * "Right ground.", paired with a tall photo card carrying a stat overlay.
  *
  * VIDEO SLOT: the card shows a still by default. To make the card loop a
- * video, set CARD_VIDEO_MP4 to a real path (e.g. "/brand/home/hero.mp4").
+ * video, set CARD_VIDEO_MP4 to a real path (e.g. "/home/hero.mp4").
  * The still (CARD_IMAGE) stays as the poster + permanent fallback, so the
  * hero is never blank before the MP4 exists.
  */
 
-const CARD_IMAGE = "/brand/home/gal-rollout.webp";
-const CARD_VIDEO_MP4 = ""; // e.g. "/brand/home/hero.mp4" to activate video
+const CARD_IMAGE = "/home/gal-rollout.webp";
+const CARD_VIDEO_MP4 = ""; // e.g. "/home/hero.mp4" to activate video
 const CARD_VIDEO_WEBM = "";
 
 const STATS: { n: string; star?: boolean; l: string }[] = [

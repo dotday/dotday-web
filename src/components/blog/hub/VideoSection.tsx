@@ -34,7 +34,7 @@ const VIDEOS: VideoItem[] = [
     title: "Professional installation, start to finish",
     blurb:
       "The prep, the overlap, the staple spacing, and the finish that makes a landscape fabric install last. The same build pros rely on for beds, hardscape, and drainage.",
-    poster: "/brand/home/installs/xbar-walkway.webp",
+    poster: "/home/installs/xbar-walkway.webp",
     posterAlt: "DOTDAY landscape fabric professional installation",
     href: "/how-to-install-weed-barrier-fabric",
   },
@@ -43,7 +43,7 @@ const VIDEOS: VideoItem[] = [
     title: "Weed barrier under pavers and gravel",
     blurb:
       "Why a light garden cloth pumps and tears under a paver base, and the dual-layer build that holds up under load.",
-    poster: "/brand/home/realjobs/tile-gravel.webp",
+    poster: "/home/realjobs/tile-gravel.webp",
     posterAlt: "XBAR weed barrier under gravel and pavers",
     href: "/post/weed-barrier-under-pavers",
   },
@@ -52,7 +52,7 @@ const VIDEOS: VideoItem[] = [
     title: "SHIELD in garden beds and rows",
     blurb:
       "Laying 3.2oz woven SHIELD across beds and farm rows: clean cuts, plant openings, and weed control that lets water through.",
-    poster: "/brand/home/installs/shield-beds.webp",
+    poster: "/home/installs/shield-beds.webp",
     posterAlt: "DOTDAY SHIELD woven fabric in garden beds",
     href: "/post/woven-vs-non-woven-landscape-fabric",
   },
@@ -61,7 +61,7 @@ const VIDEOS: VideoItem[] = [
     title: "TERRA for drainage and separation",
     blurb:
       "Where a non-woven geotextile belongs: French drains, retaining walls, and keeping soil and aggregate from mixing.",
-    poster: "/brand/home/installs/terra-separation.webp",
+    poster: "/home/installs/terra-separation.webp",
     posterAlt: "DOTDAY TERRA geotextile for drainage and separation",
     href: "/post/landscape-fabric-thickness-chart",
   },
@@ -70,7 +70,7 @@ const VIDEOS: VideoItem[] = [
     title: "Cutting and seaming fabric the right way",
     blurb:
       "Overlap seams, secure spacing, and how to cut around obstacles so the barrier stays put and weeds stay out.",
-    poster: "/brand/home/gal-cutting.webp",
+    poster: "/home/gal-cutting.webp",
     posterAlt: "Cutting and seaming DOTDAY landscape fabric",
     href: "/how-to-install-weed-barrier-fabric",
   },

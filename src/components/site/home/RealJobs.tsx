@@ -15,7 +15,7 @@ import { Icon } from "@/components/site/Icon";
  * block) with a poster as the permanent fallback. Swap the MEDIA entries for
  * the real assets later - the layout is content-driven and needs no code edits.
  *
- * Placeholder assets live in public/brand/home/realjobs/.
+ * Placeholder assets live in public/home/realjobs/.
  */
 
 type Tile =
@@ -40,15 +40,15 @@ type Tile =
 const MEDIA: Tile[] = [
   {
     kind: "image",
-    src: "/brand/home/realjobs/tile-gravel.webp",
+    src: "/home/realjobs/tile-gravel.webp",
     alt: "DOTDAY XBAR fabric laid under gravel along a side-yard path",
     tag: "XBAR",
     caption: "Gravel path, AZ",
   },
   {
     kind: "video",
-    src: "/brand/home/realjobs/clip-1.mp4",
-    poster: "/brand/home/realjobs/poster-1.webp",
+    src: "/home/realjobs/clip-1.mp4",
+    poster: "/home/realjobs/poster-1.webp",
     alt: "Watering seedlings planted through DOTDAY SHIELD weed barrier",
     span: "tall",
     tag: "SHIELD",
@@ -56,14 +56,14 @@ const MEDIA: Tile[] = [
   },
   {
     kind: "image",
-    src: "/brand/home/realjobs/tile-beds.webp",
+    src: "/home/realjobs/tile-beds.webp",
     alt: "Seedlings planted in even rows through DOTDAY SHIELD fabric",
     tag: "SHIELD",
     caption: "Farm rows, OR",
   },
   {
     kind: "image",
-    src: "/brand/home/realjobs/tile-water.webp",
+    src: "/home/realjobs/tile-water.webp",
     alt: "Water draining through permeable DOTDAY SHIELD woven fabric",
     span: "wide",
     tag: "SHIELD",
@@ -71,8 +71,8 @@ const MEDIA: Tile[] = [
   },
   {
     kind: "video",
-    src: "/brand/home/realjobs/clip-2.mp4",
-    poster: "/brand/home/realjobs/poster-2.webp",
+    src: "/home/realjobs/clip-2.mp4",
+    poster: "/home/realjobs/poster-2.webp",
     alt: "Rolling out DOTDAY woven fabric across a planting plot",
     span: "tall",
     tag: "XBAR",
@@ -80,7 +80,7 @@ const MEDIA: Tile[] = [
   },
   {
     kind: "image",
-    src: "/brand/home/realjobs/tile-terra.webp",
+    src: "/home/realjobs/tile-terra.webp",
     alt: "Worker unrolling DOTDAY TERRA non-woven geotextile on a slope",
     tag: "TERRA",
     caption: "Slope separation",

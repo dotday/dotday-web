@@ -9,7 +9,7 @@ import { Icon } from "@/components/site/Icon";
  * each linking to its product page. A three-up stat row sits below.
  *
  * Imagery is real install photography from the brand Drive (committed under
- * public/brand/home/installs/). Honest product fit is preserved: gravel/
+ * public/home/installs/). Honest product fit is preserved: gravel/
  * hardscape -> XBAR, beds -> SHIELD, drainage/separation -> TERRA.
  */
 
@@ -18,7 +18,7 @@ const FEATURE = {
   title: "Pristine Walkways",
   body: "XBAR 5oz dual-layer fabric keeps gravel and hardscape weed-free and stable. The woven face with a non-woven backing resists punctures and handles high-traffic installs.",
   href: "/product-page/xbar-landscape-fabric",
-  image: "/brand/home/installs/xbar-walkway.webp",
+  image: "/home/installs/xbar-walkway.webp",
   alt: "Finished gravel pathway stabilized with DOTDAY XBAR hardscape fabric",
 };
 
@@ -28,7 +28,7 @@ const SIDE = [
     title: "Organized Beds",
     body: "SHIELD woven fabric blocks weeds while water, air, and nutrients reach the soil. Built for beds, raised planters, and farm rows.",
     href: "/product-page/shield-landscape-fabric",
-    image: "/brand/home/installs/shield-beds.webp",
+    image: "/home/installs/shield-beds.webp",
     alt: "Seedlings planted in even rows through DOTDAY SHIELD woven weed barrier",
   },
   {
@@ -36,7 +36,7 @@ const SIDE = [
     title: "Soil Separation",
     body: "TERRA non-woven geotextile separates soil from aggregate and lets water through. Engineered for French drains, retaining walls, and base stabilization.",
     href: "/product-page/terra-geotextile-fabric",
-    image: "/brand/home/installs/terra-separation.webp",
+    image: "/home/installs/terra-separation.webp",
     alt: "Worker rolling out DOTDAY TERRA non-woven geotextile fabric on a graded slope",
   },
 ];

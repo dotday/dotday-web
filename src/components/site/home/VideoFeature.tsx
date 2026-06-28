@@ -5,7 +5,7 @@
  * right. The video box supports two modes via VIDEO below:
  *   - kind: "youtube"  -> privacy-friendly youtube-nocookie embed by id
  *   - kind: "mp4"      -> self-hosted <video> (poster + controls), file under
- *                          public/brand/home/video/
+ *                          public/home/video/
  * Swap the VIDEO block to switch sources later; no other change needed.
  *
  * Light surface to match the rest of the page. The frame keeps a 16:9 ratio
@@ -17,8 +17,8 @@ type VideoConfig =
   | { kind: "mp4"; src: string; poster?: string; title: string };
 
 // Default: the provided YouTube video. To self-host instead, replace with:
-// { kind: "mp4", src: "/brand/home/video/dotday-install.mp4",
-//   poster: "/brand/home/video/dotday-install-poster.webp", title: "..." }
+// { kind: "mp4", src: "/home/video/dotday-install.mp4",
+//   poster: "/home/video/dotday-install-poster.webp", title: "..." }
 const VIDEO: VideoConfig = {
   kind: "youtube",
   id: "sIYhfyyYJaA",

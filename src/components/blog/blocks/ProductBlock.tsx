@@ -19,7 +19,7 @@ const PRODUCTS = [
       "Woven polypropylene weed barrier built to suppress weeds while letting water and air through.",
     uses: ["Garden beds", "Mulch & soil", "Farm rows", "Nurseries"],
     href: "/product-page/shield-landscape-fabric",
-    image: "/brand/products/shield.webp",
+    image: "/products/shield.webp",
     featured: false,
   },
   {
@@ -30,7 +30,7 @@ const PRODUCTS = [
       "Heavy-duty woven hybrid engineered for load and separation under hard surfaces.",
     uses: ["Gravel & rock", "Pavers", "Hardscape", "High traffic"],
     href: "/product-page/xbar-landscape-fabric",
-    image: "/brand/products/xbar.webp",
+    image: "/products/xbar.webp",
     featured: true,
   },
   {
@@ -41,7 +41,7 @@ const PRODUCTS = [
       "Non-woven geotextile designed for drainage, filtration, and soil separation.",
     uses: ["French drains", "Retaining walls", "Driveways", "Erosion control"],
     href: "/product-page/terra-geotextile-fabric",
-    image: "/brand/products/terra.webp",
+    image: "/products/terra.webp",
     featured: false,
   },
 ];

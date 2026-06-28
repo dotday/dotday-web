@@ -13,7 +13,7 @@ import { Icon } from "@/components/site/Icon";
  * gravel/hardscape -> XBAR, drainage -> TERRA). Arrow controls + native scroll.
  *
  * Images are real install photography from the brand Drive, committed under
- * public/brand/home/apps/. Some scenes repeat across related categories until
+ * public/home/apps/. Some scenes repeat across related categories until
  * dedicated photos exist; swap any file in that folder to refine.
  */
 
@@ -33,7 +33,7 @@ const APPS: App[] = [
     title: "Garden Beds",
     product: "SHIELD 3.2 oz",
     body: "Weed control with water and nutrient flow.",
-    image: "/brand/home/apps/garden-beds.webp",
+    image: "/home/apps/garden-beds.webp",
     alt: "Seedlings planted through DOTDAY SHIELD fabric in a garden bed",
     href: "/product-page/shield-landscape-fabric",
   },
@@ -42,7 +42,7 @@ const APPS: App[] = [
     title: "Raised Beds",
     product: "SHIELD 3.2 oz",
     body: "Protects soil quality and reduces weeds.",
-    image: "/brand/home/apps/raised-beds.webp",
+    image: "/home/apps/raised-beds.webp",
     alt: "DOTDAY SHIELD weed barrier lining a raised planting bed",
     href: "/product-page/shield-landscape-fabric",
   },
@@ -51,7 +51,7 @@ const APPS: App[] = [
     title: "Nurseries",
     product: "SHIELD 3.2 oz",
     body: "Ideal for plant rows and greenhouse floors.",
-    image: "/brand/home/apps/nurseries.webp",
+    image: "/home/apps/nurseries.webp",
     alt: "DOTDAY SHIELD fabric laid across nursery plant rows",
     href: "/product-page/shield-landscape-fabric",
   },
@@ -60,7 +60,7 @@ const APPS: App[] = [
     title: "Driveways & Gravel",
     product: "XBAR 5 oz",
     body: "High strength for gravel, traffic, and stability.",
-    image: "/brand/home/apps/driveways.webp",
+    image: "/home/apps/driveways.webp",
     alt: "Gravel driveway stabilized over DOTDAY XBAR fabric",
     href: "/product-page/xbar-landscape-fabric",
   },
@@ -69,7 +69,7 @@ const APPS: App[] = [
     title: "Walkways & Pathways",
     product: "XBAR 5 oz",
     body: "Stable base under pavers, stone, or mulch.",
-    image: "/brand/home/apps/walkways.webp",
+    image: "/home/apps/walkways.webp",
     alt: "DOTDAY XBAR fabric under a gravel walkway",
     href: "/product-page/xbar-landscape-fabric",
   },
@@ -78,7 +78,7 @@ const APPS: App[] = [
     title: "Drainage & Erosion",
     product: "TERRA 8 oz",
     body: "Allows water to flow while preventing soil washout.",
-    image: "/brand/home/apps/drainage.webp",
+    image: "/home/apps/drainage.webp",
     alt: "DOTDAY TERRA non-woven geotextile installed for drainage",
     href: "/product-page/terra-geotextile-fabric",
   },

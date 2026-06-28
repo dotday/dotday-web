@@ -47,7 +47,7 @@
           "href": "/product-page/shield-landscape-fabric",
           "ctaLabel": "View Fabric",
           "image": {
-            "ref": "/brand/products/shield.webp",
+            "ref": "/products/shield.webp",
             "alt": "How to install weed barrier fabric: DOTDAY SHIELD 3.2oz woven fabric for garden beds"
           }
         },
@@ -58,7 +58,7 @@
           "href": "/product-page/xbar-landscape-fabric",
           "ctaLabel": "View Fabric",
           "image": {
-            "ref": "/brand/products/xbar.webp",
+            "ref": "/products/xbar.webp",
             "alt": "Installing DOTDAY XBAR 5oz dual-layer fabric under gravel and hardscape"
           }
         },
@@ -69,7 +69,7 @@
           "href": "/product-page/terra-geotextile-fabric",
           "ctaLabel": "View Fabric",
           "image": {
-            "ref": "/brand/products/terra.webp",
+            "ref": "/products/terra.webp",
             "alt": "Installing DOTDAY TERRA non-woven geotextile for French drains and drainage"
           }
         }

@@ -17,7 +17,7 @@ import type { BlogPost, Category } from "@/lib/blog/types";
  * product-PACKAGING crops with baked-in marketing text ("DUAL LAYER 5oz",
  * tomato BEFORE/AFTER, "Thicker. Tougher."). Those look like ad creative when
  * dropped into editorial cards. The hub instead shows clean, text-free install
- * photography from public/brand/home/* (real DOTDAY jobs), and assigns each
+ * photography from public/home/* (real DOTDAY jobs), and assigns each
  * post a UNIQUE image so no two cards repeat. We never invent content - these
  * are existing brand photos already in the repo.
  */
@@ -35,21 +35,21 @@ function exists(p: string): boolean {
 // preferred. Each post claims the first unclaimed image whose "theme" matches
 // its product/topic; this guarantees uniqueness across the visible set.
 const PHOTO_POOL: { src: string; themes: string[] }[] = [
-  { src: "/brand/home/hero-panel.webp", themes: ["multiple", "hero", "any"] },
-  { src: "/brand/home/installs/shield-beds.webp", themes: ["shield", "beds", "any"] },
-  { src: "/brand/home/installs/xbar-walkway.webp", themes: ["xbar", "pavers", "hardscape", "any"] },
-  { src: "/brand/home/installs/terra-separation.webp", themes: ["terra", "drainage", "any"] },
-  { src: "/brand/home/gal-rollout.webp", themes: ["multiple", "comparison", "any"] },
-  { src: "/brand/home/gal-cutting.webp", themes: ["howto", "install", "any"] },
-  { src: "/brand/home/gal-planting.webp", themes: ["shield", "beds", "any"] },
-  { src: "/brand/home/gal-guideline.webp", themes: ["buying", "thickness", "any"] },
-  { src: "/brand/home/realjobs/tile-gravel.webp", themes: ["xbar", "gravel", "any"] },
-  { src: "/brand/home/realjobs/poster-1.webp", themes: ["any"] },
-  { src: "/brand/home/realjobs/poster-2.webp", themes: ["buying", "any"] },
-  { src: "/brand/home/apps/driveways.webp", themes: ["xbar", "driveway", "any"] },
-  { src: "/brand/home/apps/drainage.webp", themes: ["terra", "drainage", "any"] },
-  { src: "/brand/home/apps/raised-beds.webp", themes: ["shield", "beds", "any"] },
-  { src: "/brand/home/apps/garden-beds.webp", themes: ["shield", "beds", "any"] },
+  { src: "/home/hero-panel.webp", themes: ["multiple", "hero", "any"] },
+  { src: "/home/installs/shield-beds.webp", themes: ["shield", "beds", "any"] },
+  { src: "/home/installs/xbar-walkway.webp", themes: ["xbar", "pavers", "hardscape", "any"] },
+  { src: "/home/installs/terra-separation.webp", themes: ["terra", "drainage", "any"] },
+  { src: "/home/gal-rollout.webp", themes: ["multiple", "comparison", "any"] },
+  { src: "/home/gal-cutting.webp", themes: ["howto", "install", "any"] },
+  { src: "/home/gal-planting.webp", themes: ["shield", "beds", "any"] },
+  { src: "/home/gal-guideline.webp", themes: ["buying", "thickness", "any"] },
+  { src: "/home/realjobs/tile-gravel.webp", themes: ["xbar", "gravel", "any"] },
+  { src: "/home/realjobs/poster-1.webp", themes: ["any"] },
+  { src: "/home/realjobs/poster-2.webp", themes: ["buying", "any"] },
+  { src: "/home/apps/driveways.webp", themes: ["xbar", "driveway", "any"] },
+  { src: "/home/apps/drainage.webp", themes: ["terra", "drainage", "any"] },
+  { src: "/home/apps/raised-beds.webp", themes: ["shield", "beds", "any"] },
+  { src: "/home/apps/garden-beds.webp", themes: ["shield", "beds", "any"] },
 ].filter((p) => exists(p.src));
 
 /** Themes a post cares about, most specific first. */

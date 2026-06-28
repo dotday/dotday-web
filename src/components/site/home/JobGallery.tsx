@@ -9,10 +9,10 @@ import { CTAButton } from "@/components/blog/ui/Badge";
  */
 
 const SHOTS = [
-  { src: "/brand/home/gal-rollout.webp", alt: "SHIELD landscape fabric rolled out across a planting plot on site", cap: "Roll out" },
-  { src: "/brand/home/gal-cutting.webp", alt: "Cutting DOTDAY fabric to the 12-inch planting guide lines", cap: "Cut to the guide lines" },
-  { src: "/brand/home/gal-planting.webp", alt: "Seedlings planted through DOTDAY weed barrier fabric in even rows", cap: "Plant through" },
-  { src: "/brand/home/gal-guideline.webp", alt: "Close-up of DOTDAY woven fabric showing high-visibility planting guide lines", cap: "Guide lines for clean rows" },
+  { src: "/home/gal-rollout.webp", alt: "SHIELD landscape fabric rolled out across a planting plot on site", cap: "Roll out" },
+  { src: "/home/gal-cutting.webp", alt: "Cutting DOTDAY fabric to the 12-inch planting guide lines", cap: "Cut to the guide lines" },
+  { src: "/home/gal-planting.webp", alt: "Seedlings planted through DOTDAY weed barrier fabric in even rows", cap: "Plant through" },
+  { src: "/home/gal-guideline.webp", alt: "Close-up of DOTDAY woven fabric showing high-visibility planting guide lines", cap: "Guide lines for clean rows" },
 ];
 
 export function JobGallery() {
