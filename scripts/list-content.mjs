@@ -24,34 +24,64 @@ import { join } from "node:path";
 const ROOT = process.cwd();
 const asJson = process.argv.includes("--json");
 
-function readBlogPosts() {
-  const dir = join(ROOT, "content", "blog");
+/** Recursively collect *.json under a directory. */
+function collectJson(dir) {
   if (!existsSync(dir)) return [];
-  return readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => {
-      try {
-        const p = JSON.parse(readFileSync(join(dir, f), "utf8"));
-        return {
-          type: "blog",
-          slug: p.slug,
-          url: `/post/${p.slug}`,
-          title: p.title,
-          focusKeyword: p.focusKeyword,
-          category: p.category,
-          status: p.status,
-          primaryProduct: p.primaryProduct,
-          publishedAt: p.publishedAt,
-        };
-      } catch (e) {
-        return { type: "blog", file: f, error: String(e) };
-      }
-    });
+  const out = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...collectJson(full));
+    else if (entry.isFile() && entry.name.endsWith(".json")) out.push(full);
+  }
+  return out;
+}
+
+function readBlogPosts() {
+  return collectJson(join(ROOT, "content", "blog")).map((file) => {
+    try {
+      const p = JSON.parse(readFileSync(file, "utf8"));
+      return {
+        type: "blog",
+        slug: p.slug,
+        url: `/post/${p.slug}`,
+        title: p.title,
+        focusKeyword: p.focusKeyword,
+        category: p.category,
+        status: p.status,
+        primaryProduct: p.primaryProduct,
+        publishedAt: p.publishedAt,
+      };
+    } catch (e) {
+      return { type: "blog", file, error: String(e) };
+    }
+  });
+}
+
+function readLandingPages() {
+  return collectJson(join(ROOT, "content", "landing")).map((file) => {
+    try {
+      const p = JSON.parse(readFileSync(file, "utf8"));
+      // custom-folder pages are bound to a root URL; application pages live at /l/<slug>.
+      const isCustom = file.includes(`${join("landing", "custom")}`);
+      return {
+        type: "landing",
+        slug: p.slug,
+        url: isCustom ? `/${p.slug}` : `/l/${p.slug}`,
+        kind: isCustom ? "custom (root-bound)" : "application (/l)",
+        title: p.title,
+        focusKeyword: p.focusKeyword,
+        status: p.status,
+        publishedAt: p.publishedAt,
+      };
+    } catch (e) {
+      return { type: "landing", file, error: String(e) };
+    }
+  });
 }
 
 function readProducts() {
-  // products are data in lib/content/products.ts - parse the slugs/names out
-  const f = join(ROOT, "lib", "content", "products.ts");
+  // products are data in src/lib/content/products.ts - parse the slugs/names out
+  const f = join(ROOT, "src", "lib", "content", "products.ts");
   if (!existsSync(f)) return [];
   const src = readFileSync(f, "utf8");
   const slugs = [...src.matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
@@ -69,14 +99,16 @@ const staticRoutes = [
   { type: "page", url: "/blog", title: "Blog hub" },
   { type: "tool", url: "/landscape-fabric-calculator", title: "Fabric Calculator" },
   { type: "tool", url: "/fabric-finder", title: "Fabric Finder" },
-  { type: "page", url: "/how-to-install-weed-barrier-fabric", title: "Install Guide" },
   { type: "page", url: "/contact-us", title: "Contact" },
   { type: "page", url: "/bulk-pricing", title: "Bulk Pricing" },
+  { type: "page", url: "/privacy-policy", title: "Privacy Policy" },
+  { type: "page", url: "/terms-of-service", title: "Terms of Service" },
 ];
 
 const inventory = {
   generatedAt: new Date().toISOString(),
   blogPosts: readBlogPosts(),
+  landingPages: readLandingPages(),
   products: readProducts(),
   staticRoutes,
 };
@@ -91,6 +123,13 @@ if (asJson) {
     console.log(`  [${p.status}] ${p.url}`);
     console.log(`      title:   ${p.title}`);
     console.log(`      keyword: ${p.focusKeyword}   category: ${p.category}`);
+  }
+  console.log("\nLANDING PAGES");
+  if (inventory.landingPages.length === 0) console.log("  (none yet)");
+  for (const p of inventory.landingPages) {
+    console.log(`  [${p.status}] ${p.url}   (${p.kind})`);
+    console.log(`      title:   ${p.title}`);
+    console.log(`      keyword: ${p.focusKeyword}`);
   }
   console.log("\nPRODUCTS");
   for (const p of inventory.products) console.log(`  ${p.url}  (${p.title})`);

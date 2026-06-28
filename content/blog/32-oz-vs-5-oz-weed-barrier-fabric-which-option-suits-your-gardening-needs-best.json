@@ -21,10 +21,27 @@
     "noindex": false,
     "social": {
       "excerpt": "Comparing 3.2 oz vs 5 oz weed barrier? 3.2 oz is right for garden beds, mulch, and farm rows. 5 oz is built for gravel, pavers, and anywhere people walk. Here is how to match the weight to your ground. #landscapefabric #weedbarrier #gardening #hardscape",
-      "hashtags": ["#landscapefabric", "#weedbarrier", "#gardening", "#hardscape", "#DOTDAY"],
-      "ogImage": { "ref": "og", "alt": "3.2 oz vs 5 oz weed barrier fabric compared side by side, SHIELD and XBAR" },
-      "pinterestImage": { "ref": "32-oz-vs-5-oz-pin", "alt": "3.2 oz vs 5 oz weed barrier fabric weight comparison guide" },
-      "shareButtons": ["pinterest", "facebook", "x", "copy"],
+      "hashtags": [
+        "#landscapefabric",
+        "#weedbarrier",
+        "#gardening",
+        "#hardscape",
+        "#DOTDAY"
+      ],
+      "ogImage": {
+        "ref": "og",
+        "alt": "3.2 oz vs 5 oz weed barrier fabric compared side by side, SHIELD and XBAR"
+      },
+      "pinterestImage": {
+        "ref": "32-oz-vs-5-oz-pin",
+        "alt": "3.2 oz vs 5 oz weed barrier fabric weight comparison guide"
+      },
+      "shareButtons": [
+        "pinterest",
+        "facebook",
+        "x",
+        "copy"
+      ],
       "ogType": "article",
       "twitterCard": "summary_large_image"
     }
@@ -32,7 +49,11 @@
   "hero": {
     "badge": "Comparisons",
     "excerpt": "The weight gap sounds small. The performance gap is not. Here is exactly which weed barrier fabric fits which ground condition, with a side-by-side chart and honest product fit.",
-    "image": { "ref": "shield-3-2oz-woven", "alt": "DOTDAY SHIELD 3.2 oz woven weed barrier fabric, the lighter option in the 3.2 oz vs 5 oz weed barrier comparison", "caption": "DOTDAY SHIELD, a 3.2 oz woven weed barrier built for garden beds, mulch, and farm rows." }
+    "image": {
+      "ref": "shield-3-2oz-woven",
+      "alt": "DOTDAY SHIELD 3.2 oz woven weed barrier fabric, the lighter option in the 3.2 oz vs 5 oz weed barrier comparison",
+      "caption": "DOTDAY SHIELD, a 3.2 oz woven weed barrier built for garden beds, mulch, and farm rows."
+    }
   },
   "quickAnswer": {
     "heading": "The short answer",
@@ -53,17 +74,53 @@
     {
       "_type": "comparisonTable",
       "heading": "Quick comparison: 3.2 oz vs 5 oz weed barrier fabric",
-      "columns": ["Feature", "3.2 oz (SHIELD)", "5 oz (XBAR)"],
+      "columns": [
+        "Feature",
+        "3.2 oz (SHIELD)",
+        "5 oz (XBAR)"
+      ],
       "featuredColumn": 2,
       "rows": [
-        ["Fabric weight", "3.2 oz per sq yard", "5 oz per sq yard"],
-        ["Construction", "Single-layer woven polypropylene", "Dual-layer: woven top, non-woven backing"],
-        ["Best use", "Garden beds, mulch, farm rows, nurseries", "Gravel, pavers, driveways, hardscape"],
-        ["Weed block", "Strong", "Heavy-duty"],
-        ["Water and air flow", "Yes", "Yes"],
-        ["Foot traffic", "Low to moderate", "High"],
-        ["UV resistance", "Good", "Superior"],
-        ["Who uses it", "DIY gardeners, growers, landscapers", "Hardscape contractors, commercial crews"]
+        [
+          "Fabric weight",
+          "3.2 oz per sq yard",
+          "5 oz per sq yard"
+        ],
+        [
+          "Construction",
+          "Single-layer woven polypropylene",
+          "Dual-layer: woven top, non-woven backing"
+        ],
+        [
+          "Best use",
+          "Garden beds, mulch, farm rows, nurseries",
+          "Gravel, pavers, driveways, hardscape"
+        ],
+        [
+          "Weed block",
+          "Strong",
+          "Heavy-duty"
+        ],
+        [
+          "Water and air flow",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "Foot traffic",
+          "Low to moderate",
+          "High"
+        ],
+        [
+          "UV resistance",
+          "Good",
+          "Superior"
+        ],
+        [
+          "Who uses it",
+          "DIY gardeners, growers, landscapers",
+          "Hardscape contractors, commercial crews"
+        ]
       ]
     },
     {
@@ -79,7 +136,7 @@
     {
       "_type": "image",
       "ref": "shield-planting-bed",
-      "alt": "DOTDAY SHIELD 3.2 oz woven weed barrier installed in a planting bed with seedlings through pre-cut holes and water beading on top",
+      "alt": "DOTDAY SHIELD 3.2 oz woven weed barrier installed in a planting bed with seedlings coming through pre-cut holes",
       "caption": "SHIELD in a planting bed: seedlings come through pre-cut holes while water beads and passes through the permeable weave."
     },
     {
@@ -117,7 +174,7 @@
       "variant": "contractor",
       "eyebrow": "Buying by the pallet?",
       "heading": "Speccing fabric for a job site or multiple properties?",
-      "body": "For crews and property managers, the 3.2 oz vs 5 oz choice scales fast across a project. The DOTDAY Pro team confirms the right weight per ground condition, recommends the most efficient roll configuration, and quotes bulk pricing direct.",
+      "body": "For crews and property managers, the 3.2 oz vs 5 oz choice scales fast. The DOTDAY Pro team confirms the right weight per ground condition and quotes efficient roll sizes and bulk pricing direct.",
       "cta": "Request Bulk Pricing",
       "href": "https://www.thedotday.com/bulk-pricing"
     },
@@ -159,7 +216,7 @@
       "variant": "enquiry",
       "eyebrow": "Crew or commercial project?",
       "heading": "Buying for a crew or commercial project? Talk to us",
-      "body": "Whether you need SHIELD for planting rows, XBAR for hardscape, or a mix across a development, get in touch directly. We confirm specifications, advise on roll sizes, and provide volume pricing. DOTDAY supplies professional crews across the US.",
+      "body": "Need SHIELD for planting rows, XBAR for hardscape, or a mix across a development? Get in touch directly. We confirm specs, advise on roll sizes, and provide volume pricing for pro crews across the US.",
       "cta": "Request a Quote",
       "href": "https://www.thedotday.com/contact-us"
     }
@@ -185,7 +242,13 @@
       }
     ]
   },
-  "closingHashtags": ["#landscapefabric", "#weedbarrier", "#gardening", "#hardscape", "#DOTDAY"],
+  "closingHashtags": [
+    "#landscapefabric",
+    "#weedbarrier",
+    "#gardening",
+    "#hardscape",
+    "#DOTDAY"
+  ],
   "relatedPosts": [
     {
       "title": "Landscape Fabric Thickness Chart: oz Weights by Job",
@@ -204,12 +267,30 @@
     }
   ],
   "internalLinks": [
-    { "label": "SHIELD 3.2 oz woven weed barrier", "url": "https://www.thedotday.com/product-page/shield-landscape-fabric" },
-    { "label": "XBAR 5 oz dual-layer fabric", "url": "https://www.thedotday.com/product-page/xbar-landscape-fabric" },
-    { "label": "DOTDAY Fabric Calculator", "url": "https://www.thedotday.com/landscape-fabric-calculator" },
-    { "label": "Woven vs non woven landscape fabric", "url": "https://www.thedotday.com/post/woven-vs-non-woven-landscape-fabric" },
-    { "label": "Weed barrier under pavers", "url": "https://www.thedotday.com/post/weed-barrier-under-pavers" },
-    { "label": "Landscape fabric thickness chart", "url": "https://www.thedotday.com/post/landscape-fabric-thickness-chart" }
+    {
+      "label": "SHIELD 3.2 oz woven weed barrier",
+      "url": "https://www.thedotday.com/product-page/shield-landscape-fabric"
+    },
+    {
+      "label": "XBAR 5 oz dual-layer fabric",
+      "url": "https://www.thedotday.com/product-page/xbar-landscape-fabric"
+    },
+    {
+      "label": "DOTDAY Fabric Calculator",
+      "url": "https://www.thedotday.com/landscape-fabric-calculator"
+    },
+    {
+      "label": "Woven vs non woven landscape fabric",
+      "url": "https://www.thedotday.com/post/woven-vs-non-woven-landscape-fabric"
+    },
+    {
+      "label": "Weed barrier under pavers",
+      "url": "https://www.thedotday.com/post/weed-barrier-under-pavers"
+    },
+    {
+      "label": "Landscape fabric thickness chart",
+      "url": "https://www.thedotday.com/post/landscape-fabric-thickness-chart"
+    }
   ],
   "images": {
     "shield-3-2oz-woven": "1uDQV-OJY3VlwMyn1DcdfFeYSm0qSJU-M",

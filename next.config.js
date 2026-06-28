@@ -36,6 +36,15 @@ const nextConfig = {
         destination: "/how-to-install-weed-barrier-fabric",
         permanent: true,
       },
+      // The holiday-garden post originally shipped with a non-ASCII slug
+      // (".../holiday-garden-décor-...") which percent-encodes awkwardly and
+      // caused Unicode-normalization issues. Its slug is now ASCII ("decor").
+      // Redirect the old encoded URL so the original link keeps its SEO equity.
+      {
+        source: "/post/holiday-garden-d%C3%A9cor-ideas-natural-easy-beautiful",
+        destination: "/post/holiday-garden-decor-ideas-natural-easy-beautiful",
+        permanent: true,
+      },
     ];
   },
 };

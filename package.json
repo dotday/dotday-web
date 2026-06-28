@@ -8,7 +8,8 @@
     "build": "npm run content:validate && next build",
     "start": "next start",
     "lint": "next lint",
-    "content:validate": "node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs && node scripts/validate-landing.mjs content/landing",
+    "content:schema": "node scripts/validate-schema.mjs",
+    "content:validate": "node scripts/validate-schema.mjs && node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs && node scripts/validate-landing.mjs content/landing",
     "new:blog": "node scripts/new-blog.mjs"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
     "@types/node": "20.14.10",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "typescript": "5.5.3"
   },
   "engines": {

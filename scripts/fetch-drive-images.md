@@ -2,7 +2,7 @@
 
 Every DOTDAY page uses **real images from the brand Google Drive**, optimized to
 WebP and committed into the repo. This doc is the repeatable process. The folder
-+ file IDs live in `lib/content/drive-images.ts`.
++ file IDs live in `src/lib/content/drive-images.ts`.
 
 ## The convention
 
@@ -11,11 +11,14 @@ public/blog/<slug>/hero.webp      # post hero (5:4)
 public/blog/<slug>/og.webp        # 1200x630 share image
 public/blog/<slug>/pin.webp       # 1000x1500 Pinterest (2:3)
 public/blog/<slug>/<ref>.webp     # any in-body image ref from the JSON
-public/brand/products/<name>.webp # product card images (shield/xbar/terra)
+public/landing/<slug>/images/     # landing-page images (same per-page model)
+public/products/<name>.webp       # product card images (shield/xbar/terra)
+public/home/                      # homepage photography (hero, galleries, team)
+public/brand/                     # brand identity ONLY: fonts, logos, dd-circle
 ```
 
 The post JSON references images by **ref** (e.g. `"hero"`, `"og"`), and
-`lib/blog/images.ts` resolves `ref -> /blog/<slug>/<ref>.webp` if the file
+`src/lib/blog/images.ts` resolves `ref -> /blog/<slug>/<ref>.webp` if the file
 exists (else a branded placeholder shows, so the build never breaks).
 
 ## How Claude sources images (in-session)
@@ -23,7 +26,7 @@ exists (else a branded placeholder shows, so the build never breaks).
 When Claude builds a page it has the Google Drive connector. The loop is:
 
 1. **Pick the folder** for the product (`PRODUCT_FOLDER` in
-   `lib/content/drive-images.ts`): SHIELD -> shield folders, XBAR -> xbar
+   `src/lib/content/drive-images.ts`): SHIELD -> shield folders, XBAR -> xbar
    folders, TERRA -> terra folder, multi/none -> parent brand folder.
 2. **List candidates**: `Google Drive: search_files`
    `query: parentId = '<FOLDER_ID>' and mimeType contains 'image/'`.
@@ -81,9 +84,9 @@ not "image1".
 
 ## Currently shipped real images
 
-- `public/brand/products/shield.webp` <- Drive `Shield_06.png`
-- `public/brand/products/xbar.webp`   <- Drive `XBar_06.png`
-- `public/brand/products/terra.webp`  <- Drive `Terra_05.jpg`
+- `public/products/shield.webp` <- Drive `Shield_06.png`
+- `public/products/xbar.webp`   <- Drive `XBar_06.png`
+- `public/products/terra.webp`  <- Drive `Terra_05.jpg`
 - `public/brand/logo-neon.png`, `public/brand/dd-circle.png` (brand marks)
 - `public/brand/fonts/*.woff2` (Wix Madefor Text, self-hosted)
 
@@ -91,5 +94,5 @@ not "image1".
 
 If you want to pull images without Claude, use `rclone` or the `gdrive` CLI
 authenticated to the DOTDAY Google account, download from the folder IDs in
-`lib/content/drive-images.ts`, then run the Pillow snippet above. There is no
+`src/lib/content/drive-images.ts`, then run the Pillow snippet above. There is no
 API key in the repo - auth stays in your local tool.

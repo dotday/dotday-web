@@ -21,9 +21,18 @@ if (!arg) {
   process.exit(1);
 }
 
-const files = statSync(arg).isDirectory()
-  ? readdirSync(arg).filter((f) => f.endsWith(".json")).map((f) => join(arg, f))
-  : [arg];
+/** Recursively collect *.json under a directory (blog posts may be foldered). */
+function collectJson(dir) {
+  const out = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...collectJson(full));
+    else if (entry.isFile() && entry.name.endsWith(".json")) out.push(full);
+  }
+  return out;
+}
+
+const files = statSync(arg).isDirectory() ? collectJson(arg) : [arg];
 
 let anyFail = false;
 
@@ -141,7 +150,8 @@ for (const file of files) {
   }
   warn.forEach((w) => console.log(`   ⚠ ${w}`));
 
-  // helpers (closure over errors/warn)
+  // helpers — declared here but hoisted, so the checks above can call them.
+  // They close over this iteration's `errors`/`warn`, so they stay in the loop.
   function must(cond, msg) { if (!cond) errors.push(msg); }
   function lenRange(s, min, max, name) { const n = (s || "").length; if (n < min || n > max) errors.push(`${name} length ${n} not in ${min}-${max}`); }
   function inRange(n, min, max, name) { if (n < min || n > max) errors.push(`${name}: ${n} not in ${min}-${max}`); }

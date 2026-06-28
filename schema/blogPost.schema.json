@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://thedotday.com/schema/blogPost.schema.json",
   "title": "DOTDAY Blog Post",
-  "description": "The frozen data contract for a DOTDAY blog post. Claude generates against this; the validator checks against this; the Next.js build reads files that pass this. One source of truth \u2014 change here, regenerate types, everything follows.",
+  "description": "The frozen data contract for a DOTDAY blog post. Claude generates against this; the validator checks against this; the Next.js build reads files that pass this. One source of truth — change here, regenerate types, everything follows.",
   "type": "object",
   "required": [
     "schemaVersion",
@@ -31,13 +31,13 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
       "minLength": 3,
-      "maxLength": 80,
+      "maxLength": 100,
       "description": "Kebab-case URL slug. Must contain the focus keyword. Filename = <slug>.json."
     },
     "title": {
       "type": "string",
       "minLength": 10,
-      "maxLength": 75,
+      "maxLength": 95,
       "description": "The H1 / hero title. Must contain the exact focus keyword. No em/en dashes."
     },
     "category": {
@@ -186,7 +186,7 @@
             },
             "pinterestImage": {
               "$ref": "#/$defs/imageRef",
-              "description": "Vertical 2:3 (e.g. 1000x1500). Falls back to hero if absent \u2014 flag for a proper pin image."
+              "description": "Vertical 2:3 (e.g. 1000x1500). Falls back to hero if absent — flag for a proper pin image."
             },
             "shareButtons": {
               "type": "array",
@@ -245,7 +245,7 @@
     },
     "quickAnswer": {
       "type": "object",
-      "description": "'What you'll learn' \u2014 featured-snippet bait.",
+      "description": "'What you'll learn' — featured-snippet bait.",
       "required": [
         "heading",
         "items"
@@ -535,7 +535,8 @@
                   "Request a Quote",
                   "Talk to Us",
                   "Request Bulk Pricing",
-                  "Shop DOTDAY Products"
+                  "Shop DOTDAY Products",
+                  "Talk to the DOTDAY Team"
                 ]
               },
               "href": {
@@ -582,7 +583,7 @@
               "a": {
                 "type": "string",
                 "minLength": 120,
-                "maxLength": 400,
+                "maxLength": 450,
                 "description": "~40-55 words, direct answer first."
               }
             }
