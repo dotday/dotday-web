@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "landscape-fabric-blocks-demo",
+  "title": "Landscape Fabric Guides and Install Videos",
+  "focusKeyword": "landscape fabric guides",
+  "status": "draft",
+  "author": "DOTDAY",
+  "publishedAt": "2026-06-28",
+  "seo": {
+    "metaTitle": "Landscape Fabric Guides | DOTDAY",
+    "metaDescription": "Field-tested landscape fabric guides and professional install videos for SHIELD, XBAR and TERRA. Use the right fabric for the right ground condition.",
+    "canonical": "https://www.thedotday.com/l/landscape-fabric-blocks-demo",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogImage": {
+      "ref": "/home/installs/xbar-walkway.webp",
+      "alt": "DOTDAY landscape fabric professional installation under gravel"
+    }
+  },
+  "sections": [
+    {
+      "_type": "hero",
+      "eyebrow": "The Groundwork",
+      "heading": "Guides and install videos",
+      "subheading": "Everything you need to choose and install the right landscape fabric, from the people who make it.",
+      "primaryCta": {
+        "label": "Find Your Fabric",
+        "href": "/fabric-finder"
+      },
+      "secondaryCta": {
+        "label": "Use the Fabric Calculator",
+        "href": "/landscape-fabric-calculator"
+      }
+    },
+    {
+      "_type": "editorialCards",
+      "eyebrow": "Recommended reading",
+      "heading": "Guides for this job",
+      "cards": [
+        {
+          "title": "Landscape Fabric Thickness Chart: oz Weights by Job",
+          "href": "/post/landscape-fabric-thickness-chart",
+          "excerpt": "Fabric is sold by weight in ounces per square yard, and that number is the whole decision. This chart matches each oz weight to the job it is built for.",
+          "image": {
+            "ref": "/home/installs/shield-beds.webp",
+            "alt": "DOTDAY SHIELD woven fabric in garden beds, oz weights by job"
+          },
+          "category": "Buying Guide",
+          "level": "Intermediate",
+          "author": "DOTDAY Field Team",
+          "authorMonogram": "DD",
+          "readTime": "7 min"
+        },
+        {
+          "title": "Woven vs Non Woven Landscape Fabric: How to Choose",
+          "href": "/post/woven-vs-non-woven-landscape-fabric",
+          "excerpt": "They look similar on the roll and get used interchangeably, but woven and non-woven are built for completely different ground conditions.",
+          "image": {
+            "ref": "/home/installs/terra-separation.webp",
+            "alt": "DOTDAY TERRA geotextile for drainage and separation"
+          },
+          "category": "Comparison",
+          "level": "Intermediate",
+          "author": "DOTDAY Field Team",
+          "authorMonogram": "DD",
+          "readTime": "7 min"
+        },
+        {
+          "title": "Weed Barrier Under Pavers: What Actually Holds Up",
+          "href": "/post/weed-barrier-under-pavers",
+          "excerpt": "A light garden cloth under a paver base pumps and tears. Here is what the fabric is really doing, and the weight that holds up under load.",
+          "image": {
+            "ref": "/home/realjobs/tile-gravel.webp",
+            "alt": "DOTDAY XBAR weed barrier under gravel and pavers"
+          },
+          "category": "Installation",
+          "level": "Beginner",
+          "author": "Marcus Halvorsen",
+          "authorMonogram": "MH",
+          "readTime": "8 min"
+        }
+      ]
+    },
+    {
+      "_type": "videoFeature"
+    },
+    {
+      "_type": "cta",
+      "eyebrow": "Get started",
+      "heading": "Not sure which fabric fits your ground?",
+      "body": "Answer a few questions and we will match SHIELD, XBAR, or TERRA to your job.",
+      "primaryCta": {
+        "label": "Find Your Fabric",
+        "href": "/fabric-finder"
+      }
+    },
+    {
+      "_type": "internalLinks",
+      "heading": "Keep exploring",
+      "links": [
+        { "label": "SHIELD 3.2oz woven weed barrier", "href": "/product-page/shield-landscape-fabric" },
+        { "label": "XBAR 5oz dual-layer for gravel and hardscape", "href": "/product-page/xbar-landscape-fabric" },
+        { "label": "TERRA non-woven geotextile for drainage", "href": "/product-page/terra-geotextile-fabric" },
+        { "label": "Fabric Calculator", "href": "/landscape-fabric-calculator" },
+        { "label": "The Groundwork blog hub", "href": "/blog" }
+      ]
+    }
+  ]
+}

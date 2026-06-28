@@ -11,6 +11,8 @@ import {
   BigTypeFeatures,
   SpecSheet,
   ProjectSpotlight,
+  EditorialCards,
+  VideoFeature,
 } from "@/components/landing/sections";
 // Shared, cross-surface sections come from the GLOBAL layer so blogs and
 // landing pages render the identical FAQ / comparison / CTA implementation.
@@ -123,6 +125,10 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
             return <SpecSheet key={i} data={section} />;
           case "projectSpotlight":
             return <ProjectSpotlight key={i} data={section} />;
+          case "editorialCards":
+            return <EditorialCards key={i} data={section} />;
+          case "videoFeature":
+            return <VideoFeature key={i} data={section} />;
           default:
             return null;
         }

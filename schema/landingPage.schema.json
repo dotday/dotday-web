@@ -187,6 +187,12 @@
         },
         {
           "$ref": "#/$defs/projectSpotlight"
+        },
+        {
+          "$ref": "#/$defs/editorialCards"
+        },
+        {
+          "$ref": "#/$defs/videoFeature"
         }
       ]
     },
@@ -829,6 +835,94 @@
         },
         "secondaryCta": {
           "$ref": "#/$defs/cta"
+        }
+      }
+    },
+    "editorialCards": {
+      "type": "object",
+      "required": [
+        "_type",
+        "cards"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_type": {
+          "const": "editorialCards"
+        },
+        "eyebrow": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "href",
+              "excerpt",
+              "image",
+              "category",
+              "author",
+              "authorMonogram"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "href": {
+                "type": "string"
+              },
+              "excerpt": {
+                "type": "string"
+              },
+              "image": {
+                "$ref": "#/$defs/imageRef"
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "level": {
+                "type": "string"
+              },
+              "author": {
+                "type": "string"
+              },
+              "authorMonogram": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 3
+              },
+              "readTime": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "videoFeature": {
+      "type": "object",
+      "required": [
+        "_type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_type": {
+          "const": "videoFeature"
+        },
+        "eyebrow": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
         }
       }
     }

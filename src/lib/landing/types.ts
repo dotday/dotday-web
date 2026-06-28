@@ -231,6 +231,50 @@ export interface ProjectSpotlightSection {
   secondaryCta?: CtaLink;
 }
 
+// --- Hub-derived sections (lifted from the blog hub so landing pages reuse the
+//     identical magazine-grade shells: editorial card row and video feature).
+//     Same b* classes, so zero new styling. ---
+
+/**
+ * editorialCards - the "Editor's picks" 3-up card row, made content-driven.
+ * On the blog hub these cards come from real posts; on a landing page they are
+ * authored here so any page can surface the most relevant guides for its
+ * audience. Each card carries its own category/level/author so the neon
+ * category pill, level pill, and author chip render exactly as on the hub.
+ */
+export interface EditorialCardsSection {
+  _type: "editorialCards";
+  eyebrow?: string;
+  heading?: string;
+  cards: Array<{
+    title: string;
+    href: string;
+    excerpt: string;
+    image: ImageRef;
+    /** Display label for the neon category pill, e.g. "Buying Guide". */
+    category: string;
+    /** Difficulty pill, e.g. "Beginner" | "Intermediate". */
+    level?: string;
+    author: string;
+    /** 2-letter avatar monogram, e.g. "DD" or "MH". */
+    authorMonogram: string;
+    readTime?: string;
+  }>;
+}
+
+/**
+ * videoFeature - the "What to watch now" player + "Watch more" rail. Reuses the
+ * shared hub VideoSection verbatim (same 5 videos, same click-to-load facade),
+ * so a landing page gets the identical video experience with zero authoring.
+ * Optional eyebrow/heading are reserved for a future authorable variant; the
+ * current implementation renders the hub section as-is.
+ */
+export interface VideoFeatureSection {
+  _type: "videoFeature";
+  eyebrow?: string;
+  heading?: string;
+}
+
 export type LandingSection =
   | LandingHeroSection
   | ProblemSection
@@ -247,7 +291,9 @@ export type LandingSection =
   | StatementBandSection
   | BigTypeFeaturesSection
   | SpecSheetSection
-  | ProjectSpotlightSection;
+  | ProjectSpotlightSection
+  | EditorialCardsSection
+  | VideoFeatureSection;
 
 export interface LandingPage {
   schemaVersion: "1.0.0";

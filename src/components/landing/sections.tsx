@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { Img } from "@/components/blog/ui/Img";
 import { Badge, CTAButton } from "@/components/blog/ui/Badge";
+import { Icon } from "@/components/site/Icon";
 import { FabricCalculator } from "@/components/tools/FabricCalculator";
+// Hub-derived sections reuse the SAME components/classes the blog hub uses, so
+// the landing render is identical. VideoFeature re-exports the shared hub
+// VideoSection verbatim.
+import { VideoSection } from "@/components/blog/hub/VideoSection";
 import type {
   LandingHeroSection,
   ProblemSection,
@@ -18,7 +23,15 @@ import type {
   SpecSheetSection,
   ProjectSpotlightSection,
   FeatureIcon,
+  EditorialCardsSection,
+  VideoFeatureSection,
 } from "@/lib/landing/types";
+
+/** Mirror of the blog hub's categorySlug: maps a category label to its kicker
+ *  modifier class (kicker--comparisons, kicker--buyingguides, ...). */
+function categorySlug(category: string): string {
+  return category.replace(/[^a-z]/gi, "").toLowerCase();
+}
 
 /**
  * Landing section components. These reuse the existing globals.css classes and
@@ -813,4 +826,71 @@ export function ProjectSpotlight({ data }: { data: ProjectSpotlightSection }) {
       </div>
     </section>
   );
+}
+
+/**
+ * EditorialCards - the blog hub "Editor's picks" row, authored from JSON. Markup
+ * and classes are identical to EditorsPicks in HubSections.tsx (bsection /
+ * bsec-head / bpick-grid / bpick), so it inherits the hub's exact look: neon
+ * on-media category pill, charcoal level pill, neon author monogram, 2-line
+ * clamped excerpt, and the neon-underlined "Read article" arrow.
+ */
+export function EditorialCards({ data }: { data: EditorialCardsSection }) {
+  if (!data.cards || data.cards.length === 0) return null;
+  return (
+    <section className="wrap bsection" aria-label={data.heading || "Editor's picks"}>
+      <div className="bsec-head">
+        <span className="bsec-kicker">{data.eyebrow || "Hand-picked"}</span>
+        <h2 className="bsec-title">{data.heading || "Editor\u2019s picks"}</h2>
+      </div>
+      <div className="bpick-grid">
+        {data.cards.map((c, i) => (
+          <article className="bpick" key={i}>
+            <Link href={c.href} className="bpick-media">
+              <Img
+                src={c.image.ref}
+                alt={c.image.alt}
+                ratio="r-43"
+                placeholderLabel={c.category}
+                sizes="(max-width: 920px) 100vw, 380px"
+              />
+              <span className={`kicker kicker--onmedia kicker--${categorySlug(c.category)}`}>
+                {c.category}
+              </span>
+              {c.level && (
+                <span className="pill pill--level pill--onmedia pill--right">{c.level}</span>
+              )}
+            </Link>
+            <div className="bpick-body">
+              <span className="bpick-author">
+                <span className="bpick-avatar" aria-hidden="true">
+                  {c.authorMonogram}
+                </span>
+                <span className="bpick-author-meta">
+                  <span className="bpick-author-name">{c.author}</span>
+                  {c.readTime && <span className="meta">{c.readTime} read</span>}
+                </span>
+              </span>
+              <Link href={c.href}>
+                <h3>{c.title}</h3>
+              </Link>
+              <p>{c.excerpt}</p>
+              <Link href={c.href} className="link-arrow">
+                Read article <Icon name="arrowRight" size={14} />
+              </Link>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/**
+ * VideoFeature - reuses the shared hub VideoSection verbatim. Same 5 videos,
+ * same "What to watch now" + "Watch more" rail, same click-to-load YouTube
+ * facade. Authoring is zero: drop { "_type": "videoFeature" } into a page.
+ */
+export function VideoFeature(_props: { data: VideoFeatureSection }) {
+  return <VideoSection />;
 }
