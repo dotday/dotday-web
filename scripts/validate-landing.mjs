@@ -22,13 +22,23 @@ if (!existsSync(arg)) {
   process.exit(0);
 }
 
-const files = statSync(arg).isDirectory()
-  ? readdirSync(arg).filter((f) => f.endsWith(".json")).map((f) => join(arg, f))
-  : [arg];
+/** Recursively collect *.json under a directory (content/landing has subfolders). */
+function collectJson(dir) {
+  const out = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...collectJson(full));
+    else if (entry.isFile() && entry.name.endsWith(".json")) out.push(full);
+  }
+  return out;
+}
+
+const files = statSync(arg).isDirectory() ? collectJson(arg) : [arg];
 
 const APPROVED = new Set([
   "hero", "problem", "solution", "useCaseGrid", "productComparison",
   "calculatorEmbed", "faq", "reviews", "cta", "internalLinks",
+  "steps", "callout", "statementBand",
 ]);
 
 // Gather blog focus keywords to detect overlap.

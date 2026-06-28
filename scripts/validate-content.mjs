@@ -16,11 +16,21 @@ import { join } from "node:path";
 
 let failed = false;
 
+/** Recursively collect *.json paths under a directory. */
+function collectJson(dir) {
+  const out = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...collectJson(full));
+    else if (entry.isFile() && entry.name.endsWith(".json")) out.push(full);
+  }
+  return out;
+}
+
 function checkDir(dir, label) {
   if (!existsSync(dir)) return;
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
-  for (const f of files) {
-    const p = join(dir, f);
+  const files = collectJson(dir);
+  for (const p of files) {
     try {
       JSON.parse(readFileSync(p, "utf8"));
     } catch (e) {

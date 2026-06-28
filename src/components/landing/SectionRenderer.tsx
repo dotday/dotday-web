@@ -7,12 +7,17 @@ import {
   CalculatorEmbed,
   Reviews,
   InternalLinks,
+  StatementBand,
 } from "@/components/landing/sections";
 // Shared, cross-surface sections come from the GLOBAL layer so blogs and
 // landing pages render the identical FAQ / comparison / CTA implementation.
 import { SharedFAQ } from "@/components/global/sections/SharedFAQ";
 import { SharedComparisonTable } from "@/components/global/sections/SharedComparisonTable";
 import { SharedCTA } from "@/components/global/sections/SharedCTA";
+// Step lists and callouts reuse the BLOG block components so a how-to renders
+// the identical numbered steps / neon-bordered callout on a landing page.
+import { Steps } from "@/components/blog/blocks/Steps";
+import { Callout } from "@/components/blog/blocks/Callout";
 
 /**
  * SectionRenderer - the landing-page dispatcher, mirroring the blog
@@ -74,6 +79,40 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
             );
           case "internalLinks":
             return <InternalLinks key={i} data={section} />;
+          case "steps":
+            return (
+              <div className="wrap page" key={i}>
+                <div className="body-single">
+                  <article>
+                    <Steps
+                      block={{
+                        _type: "steps",
+                        heading: section.heading,
+                        steps: section.steps,
+                      }}
+                    />
+                  </article>
+                </div>
+              </div>
+            );
+          case "callout":
+            return (
+              <div className="wrap page" key={i}>
+                <div className="body-single">
+                  <article>
+                    <Callout
+                      block={{
+                        _type: section.variant,
+                        heading: section.heading,
+                        body: section.body,
+                      }}
+                    />
+                  </article>
+                </div>
+              </div>
+            );
+          case "statementBand":
+            return <StatementBand key={i} data={section} />;
           default:
             return null;
         }

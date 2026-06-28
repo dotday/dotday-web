@@ -27,6 +27,15 @@ const nextConfig = {
         destination: "/my-qrzone",
         permanent: true,
       },
+      // The install guide is canonical at the root /how-to-install-weed-barrier-fabric
+      // (served by app/how-to-install-weed-barrier-fabric/page.tsx, bound to the
+      // same JSON the landing engine uses). Redirect the /l/<slug> twin so there
+      // is one canonical URL, exactly as with /my-qrzone.
+      {
+        source: "/l/how-to-install-weed-barrier-fabric",
+        destination: "/how-to-install-weed-barrier-fabric",
+        permanent: true,
+      },
     ];
   },
 };

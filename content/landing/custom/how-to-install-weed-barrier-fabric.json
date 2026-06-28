@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "how-to-install-weed-barrier-fabric",
+  "title": "How to Install Weed Barrier Fabric",
+  "focusKeyword": "how to install weed barrier fabric",
+  "status": "published",
+  "author": "DOTDAY",
+  "publishedAt": "2025-06-18",
+  "dateModified": "2026-06-28",
+  "seo": {
+    "metaTitle": "How to Install Weed Barrier Fabric | DOTDAY Guide",
+    "metaDescription": "Step-by-step guide to installing weed barrier fabric correctly. Laying, overlap, anchoring, cutting, and mulching best practices from DOTDAY.",
+    "canonical": "https://www.thedotday.com/how-to-install-weed-barrier-fabric",
+    "ogImage": {
+      "ref": "/brand/logo-neon.png",
+      "alt": "DOTDAY guide to installing weed barrier fabric"
+    },
+    "ogType": "website",
+    "twitterCard": "summary_large_image"
+  },
+  "sections": [
+    {
+      "_type": "hero",
+      "eyebrow": "How-To & Installation",
+      "heading": "How to install weed barrier fabric",
+      "subheading": "The product matters, but a clean install is what makes it last. This sequence works across all three DOTDAY fabrics, SHIELD, XBAR, and TERRA, only the surface on top changes. Follow it and get results that hold.",
+      "primaryCta": { "label": "Find Your Fabric", "href": "/fabric-finder" },
+      "secondaryCta": { "label": "Use the Fabric Calculator", "href": "/landscape-fabric-calculator" }
+    },
+    {
+      "_type": "statementBand",
+      "watermark": ["install", "dotday", "green"],
+      "statement": "The right fabric, installed correctly, lasts years. DOTDAY makes it simple, so you can get back to growing your plants with ease.",
+      "highlight": "Easy installs. Better growth.",
+      "leafMark": true
+    },
+    {
+      "_type": "useCaseGrid",
+      "eyebrow": "Quick tips for your installs",
+      "heading": "The right fabric, installed correctly, lasts years.",
+      "intro": "Each fabric has its own overlap, pinning, and cover routine. Match the tips below to the fabric you are laying, then follow the full steps underneath.",
+      "cards": [
+        {
+          "eyebrow": "SHIELD 3.2oz - Weed Control",
+          "title": "SHIELD 3.2oz",
+          "body": "Overlap seams 6 inches. Pin every 12 to 18 inches along edges and seams. Cover with mulch or soil right away to protect from UV.",
+          "href": "/product-page/shield-landscape-fabric",
+          "ctaLabel": "View Fabric",
+          "image": {
+            "ref": "/brand/products/shield.webp",
+            "alt": "How to install weed barrier fabric: DOTDAY SHIELD 3.2oz woven fabric for garden beds"
+          }
+        },
+        {
+          "eyebrow": "XBAR 5oz - Gravel & Hardscape",
+          "title": "XBAR 5oz",
+          "body": "Lay the non-woven side down. Overlap seams 12 inches. Pin on 12-inch spacing with heavy-gauge staples. Cover with gravel or rock to lock it in place.",
+          "href": "/product-page/xbar-landscape-fabric",
+          "ctaLabel": "View Fabric",
+          "image": {
+            "ref": "/brand/products/xbar.webp",
+            "alt": "Installing DOTDAY XBAR 5oz dual-layer fabric under gravel and hardscape"
+          }
+        },
+        {
+          "eyebrow": "TERRA 4 to 8oz - Drainage & Filtration",
+          "title": "TERRA 4 to 8oz",
+          "body": "Orient with the water flow direction. Overlap seams a minimum of 12 inches. Backfill with drain rock, then fold the fabric over the top.",
+          "href": "/product-page/terra-geotextile-fabric",
+          "ctaLabel": "View Fabric",
+          "image": {
+            "ref": "/brand/products/terra.webp",
+            "alt": "Installing DOTDAY TERRA non-woven geotextile for French drains and drainage"
+          }
+        }
+      ]
+    },
+    {
+      "_type": "steps",
+      "heading": "Installation, step by step",
+      "steps": [
+        {
+          "title": "Clear and prepare the area",
+          "body": "Remove weeds, grass, and debris from the install area. You do not have to dig out every root, the fabric suppresses regrowth from below."
+        },
+        {
+          "title": "Roll out the fabric",
+          "body": "Unroll across the prepared ground, keeping it as straight as possible. Work from one end to the other and smooth out wrinkles or bunching as you go."
+        },
+        {
+          "title": "Cut to length",
+          "body": "Cut each run to length at the edge of the bed or path. Leave a little extra at the ends so you can square it up and tuck the edges."
+        },
+        {
+          "title": "Make planting holes on the guidelines",
+          "body": "Cut X-shaped holes on the printed guidelines, just large enough for the plant stem. Start smaller than you think you need, then open them up gradually."
+        },
+        {
+          "title": "Overlap to avoid gaps",
+          "body": "Overlap fabric edges by at least 6 inches so weeds cannot push through the seams. Use 12-inch overlaps for hardscape and drainage runs."
+        },
+        {
+          "title": "Pin it down with staples",
+          "body": "Place landscape pins every 12 inches along edges and seams, and every 36 inches across open field areas. Push each pin flush with the fabric surface."
+        },
+        {
+          "title": "Cover promptly",
+          "body": "Add your finish layer right away: mulch or soil over SHIELD, gravel or rock over XBAR, drain rock over TERRA. Exposed fabric degrades in UV, so do not leave it bare."
+        },
+        {
+          "title": "Plant and grow, weed-free",
+          "body": "Set your plants into each hole and water them in. The barrier blocks weeds around the plant while water, air, and nutrients still reach the soil."
+        }
+      ]
+    },
+    {
+      "_type": "callout",
+      "variant": "warning",
+      "heading": "⚠ Watch out",
+      "body": "Do not put a lightweight woven weed barrier under gravel or pavers and expect it to hold. Use a 5 oz dual-layer fabric like XBAR for load-bearing surfaces, and a non-woven geotextile like TERRA where the job is drainage."
+    },
+    {
+      "_type": "useCaseGrid",
+      "heading": "Resources",
+      "intro": "Pick the right fabric and weight before you install.",
+      "cards": [
+        {
+          "title": "Woven vs Non-Woven Landscape Fabric: Which to Use",
+          "body": "Comparisons - the difference between woven and non-woven, and which job each one is built for.",
+          "href": "/post/woven-vs-non-woven-landscape-fabric"
+        },
+        {
+          "title": "Weed Barrier Under Pavers: How to Do It Right",
+          "body": "How-To & Installation - the correct fabric and method for a paver base that stays put.",
+          "href": "/post/weed-barrier-under-pavers"
+        },
+        {
+          "title": "Landscape Fabric Thickness Chart (oz by Use Case)",
+          "body": "Buying Guides - match fabric weight to the job, from garden beds to driveways.",
+          "href": "/post/landscape-fabric-thickness-chart"
+        }
+      ]
+    },
+    {
+      "_type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How much overlap should I leave when installing landscape fabric?",
+          "a": "Overlap fabric strips by at least 6 inches to keep weeds from pushing through the seams. For high weed pressure beds use 8 to 12 inches, and for gravel or drainage runs use a minimum of 12 inches. The DOTDAY Fabric Calculator adds a buffer to your roll count to account for overlaps automatically."
+        },
+        {
+          "q": "Which side of the fabric goes down?",
+          "a": "For SHIELD and TERRA, either face can go down, just keep the printed guidelines up if your roll has them. For XBAR, lay the non-woven (fuzzy) side down against the soil and the woven face up, so the backing separates the ground while the woven top takes the load."
+        },
+        {
+          "q": "How far apart should landscape staples go?",
+          "a": "Pin every 12 to 18 inches along edges and seams, and every 36 inches across open field areas. On hardscape and high-traffic ground, tighten edge spacing to 12 inches with heavy-gauge staples so wind and traffic cannot shift the fabric."
+        },
+        {
+          "q": "Do I need to cover the fabric after installing it?",
+          "a": "Yes. Cover promptly with mulch or soil over SHIELD, gravel or rock over XBAR, and drain rock over TERRA. The finish layer protects the fabric from UV and is what lets it last for years rather than breaking down exposed."
+        },
+        {
+          "q": "Which landscape fabric weight should I use, 3oz, 5oz, or 8oz?",
+          "a": "Match it to the job. Use SHIELD 3.2oz for garden beds, farm rows, and under mulch. Use XBAR 5oz for gravel driveways, paths, and hardscape. Use TERRA 4, 6, or 8oz for drainage, French drains, and retaining walls. The Fabric Finder recommends the right weight from your ground condition."
+        },
+        {
+          "q": "How long does landscape fabric last once installed?",
+          "a": "DOTDAY fabrics are UV-stabilized for long-term outdoor use, and covering them with mulch or gravel significantly extends their life. A clean install (clear, overlap, pin, cover promptly) is what keeps any fabric performing for years instead of failing early at the seams."
+        }
+      ]
+    },
+    {
+      "_type": "internalLinks",
+      "heading": "Keep exploring",
+      "links": [
+        { "label": "SHIELD 3.2oz weed barrier", "href": "/product-page/shield-landscape-fabric", "note": "for garden beds, farms, and nurseries" },
+        { "label": "XBAR 5oz heavy-duty fabric", "href": "/product-page/xbar-landscape-fabric", "note": "for gravel, pavers, and hardscape" },
+        { "label": "TERRA non-woven geotextile", "href": "/product-page/terra-geotextile-fabric", "note": "for drainage and French drains" },
+        { "label": "Fabric Calculator", "href": "/landscape-fabric-calculator", "note": "estimate rolls with overlap built in" },
+        { "label": "Fabric Finder Quiz", "href": "/fabric-finder", "note": "match a fabric to your ground condition" },
+        { "label": "Request Bulk Pricing", "href": "/bulk-pricing", "note": "volume pricing for job sites" }
+      ]
+    },
+    {
+      "_type": "cta",
+      "heading": "Need help choosing the right fabric?",
+      "primaryCta": { "label": "Find Your Fabric", "href": "/fabric-finder" },
+      "secondaryCta": { "label": "Use the Fabric Calculator", "href": "/landscape-fabric-calculator" }
+    }
+  ]
+}

@@ -1,4 +1,8 @@
-import type { LandingPage, FaqSection } from "@/lib/landing/types";
+import type {
+  LandingPage,
+  FaqSection,
+  StepsSection,
+} from "@/lib/landing/types";
 import { SITE_URL, site } from "@/lib/site";
 
 /**
@@ -34,6 +38,27 @@ export function buildLandingJsonLd(page: LandingPage): object[] {
         "@type": "Question",
         name: it.q,
         acceptedAnswer: { "@type": "Answer", text: it.a },
+      })),
+    });
+  }
+
+  // If the page has a step sequence, emit HowTo so install/how-to pages keep
+  // their rich-result eligibility after migrating from a hand-coded route.
+  const steps = page.sections.find(
+    (s): s is StepsSection => s._type === "steps"
+  );
+  if (steps && steps.steps.length > 0) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: steps.heading || page.title,
+      description: page.seo.metaDescription,
+      step: steps.steps.map((st, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: st.title,
+        text: st.body,
+        url: `${url}#step-${i + 1}`,
       })),
     });
   }

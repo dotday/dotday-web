@@ -76,7 +76,16 @@ export interface SolutionSection {
 export interface UseCaseGridSection {
   _type: "useCaseGrid";
   heading?: string;
-  cards: Array<{ title: string; body: string; href?: string }>;
+  eyebrow?: string;
+  intro?: string;
+  cards: Array<{
+    title: string;
+    body: string;
+    href?: string;
+    eyebrow?: string;
+    image?: ImageRef;
+    ctaLabel?: string;
+  }>;
 }
 
 export interface ProductComparisonSection {
@@ -120,6 +129,43 @@ export interface InternalLinksSection {
   links: Array<{ label: string; href: string; note?: string }>;
 }
 
+// --- Custom-page sections (used by bespoke-layout pages in content/landing/custom) ---
+
+/**
+ * Step-by-step list. Reuses the blog Steps component so a how-to renders the
+ * identical numbered sequence on a landing page as it would in a post.
+ */
+export interface StepsSection {
+  _type: "steps";
+  heading?: string;
+  steps: Array<{ title: string; body: string }>;
+}
+
+/**
+ * Callout box - a warning or a pro tip. Reuses the blog Callout component, so
+ * the neon-bordered "Watch out" / "Pro Tip" treatment is byte-identical to blog.
+ */
+export interface CalloutSection {
+  _type: "callout";
+  variant: "warning" | "proTip";
+  heading?: string;
+  body: string;
+}
+
+/**
+ * statementBand - the oversized-watermark positioning band: three faint
+ * background words, an optional olive leaf mark, a charcoal statement, and a
+ * neon-highlighted tail phrase. Bespoke brand moment, reusable across custom
+ * pages (install, press, PR).
+ */
+export interface StatementBandSection {
+  _type: "statementBand";
+  watermark: [string, string, string];
+  statement: string;
+  highlight?: string;
+  leafMark?: boolean;
+}
+
 export type LandingSection =
   | LandingHeroSection
   | ProblemSection
@@ -130,7 +176,10 @@ export type LandingSection =
   | FaqSection
   | ReviewSection
   | CtaSection
-  | InternalLinksSection;
+  | InternalLinksSection
+  | StepsSection
+  | CalloutSection
+  | StatementBandSection;
 
 export interface LandingPage {
   schemaVersion: "1.0.0";
