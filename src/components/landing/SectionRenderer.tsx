@@ -8,6 +8,9 @@ import {
   Reviews,
   InternalLinks,
   StatementBand,
+  BigTypeFeatures,
+  SpecSheet,
+  ProjectSpotlight,
 } from "@/components/landing/sections";
 // Shared, cross-surface sections come from the GLOBAL layer so blogs and
 // landing pages render the identical FAQ / comparison / CTA implementation.
@@ -75,6 +78,7 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
                 primaryLabel={section.primaryCta?.label}
                 secondaryHref={section.secondaryCta?.href}
                 secondaryLabel={section.secondaryCta?.label}
+                tone={section.tone}
               />
             );
           case "internalLinks":
@@ -113,6 +117,12 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
             );
           case "statementBand":
             return <StatementBand key={i} data={section} />;
+          case "bigTypeFeatures":
+            return <BigTypeFeatures key={i} data={section} />;
+          case "specSheet":
+            return <SpecSheet key={i} data={section} />;
+          case "projectSpotlight":
+            return <ProjectSpotlight key={i} data={section} />;
           default:
             return null;
         }

@@ -14,6 +14,10 @@ import type {
   CtaSection,
   InternalLinksSection,
   StatementBandSection,
+  BigTypeFeaturesSection,
+  SpecSheetSection,
+  ProjectSpotlightSection,
+  FeatureIcon,
 } from "@/lib/landing/types";
 
 /**
@@ -370,5 +374,443 @@ export function InternalLinks({ data }: { data: InternalLinksSection }) {
         ))}
       </div>
     </div>
+  );
+}
+
+/**
+ * FeatureGlyph - the fixed inline-SVG set used by bigTypeFeatures. Content picks
+ * an icon by name; no arbitrary SVG markup ever lives in a content file. Stroke
+ * inherits currentColor so the neon-on-charcoal chip styling applies for free.
+ */
+function FeatureGlyph({ name }: { name: FeatureIcon }) {
+  const common = {
+    width: 22,
+    height: 22,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+  switch (name) {
+    case "drop":
+      return (
+        <svg {...common}>
+          <path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" />
+        </svg>
+      );
+    case "pin":
+      return (
+        <svg {...common}>
+          <path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" />
+          <circle cx="12" cy="10" r="2.5" />
+        </svg>
+      );
+    case "layers":
+      return (
+        <svg {...common}>
+          <path d="M12 3 2 9l10 6 10-6-10-6z" />
+          <path d="M2 15l10 6 10-6" />
+        </svg>
+      );
+    case "sun":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19" />
+        </svg>
+      );
+    case "check":
+      return (
+        <svg {...common}>
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+      );
+    case "shield":
+    default:
+      return (
+        <svg {...common}>
+          <path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z" />
+        </svg>
+      );
+  }
+}
+
+/**
+ * BigTypeFeatures - oversized uppercase statement + a stack of feature cards.
+ * Self-contained inline styles using brand CSS vars (mirrors the StatementBand
+ * approach) so it renders identically regardless of global CSS load order.
+ */
+export function BigTypeFeatures({ data }: { data: BigTypeFeaturesSection }) {
+  return (
+    <section className="wrap sec" aria-label={data.heading}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "minmax(0, 0.92fr) minmax(0, 1.08fr)",
+          gap: "clamp(28px, 4vw, 54px)",
+          alignItems: "center",
+        }}
+        className="bigfeat-grid"
+      >
+        <div>
+          <h2
+            style={{
+              fontWeight: 800,
+              letterSpacing: "-0.03em",
+              lineHeight: 0.96,
+              fontSize: "clamp(36px, 6.4vw, 82px)",
+              color: "var(--charcoal)",
+              textTransform: "uppercase",
+              margin: 0,
+            }}
+          >
+            {data.heading}
+          </h2>
+          {data.cta && (
+            <div style={{ marginTop: 28 }}>
+              <CTAButton href={data.cta.href}>{data.cta.label}</CTAButton>
+            </div>
+          )}
+        </div>
+        <div style={{ display: "grid", gap: 20 }}>
+          {data.cards.slice(0, 4).map((c, i) => (
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                gap: 18,
+                alignItems: "flex-start",
+                background: "var(--white)",
+                border: "1px solid var(--grey2)",
+                borderRadius: 14,
+                padding: "22px 24px",
+              }}
+            >
+              <span
+                style={{
+                  flex: "none",
+                  width: 44,
+                  height: 44,
+                  borderRadius: 11,
+                  background: "var(--neon)",
+                  color: "var(--charcoal)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <FeatureGlyph name={c.icon || "check"} />
+              </span>
+              <div>
+                <h3
+                  style={{
+                    fontSize: 18,
+                    fontWeight: 700,
+                    letterSpacing: "-0.01em",
+                    margin: "0 0 5px",
+                    color: "var(--charcoal)",
+                  }}
+                >
+                  {c.title}
+                </h3>
+                <p style={{ fontSize: 14.5, color: "var(--ink2)", lineHeight: 1.5, margin: 0 }}>
+                  {c.body}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * SpecSheet - a published technical data sheet. Value chips paired to a label +
+ * optional standard, plus an optional figure image. Every value is content;
+ * nothing is invented here.
+ */
+export function SpecSheet({ data }: { data: SpecSheetSection }) {
+  return (
+    <section className="wrap sec" aria-label={data.heading}>
+      <div
+        style={{
+          border: "1px solid var(--grey2)",
+          borderRadius: 18,
+          padding: "clamp(28px, 4vw, 52px)",
+          background: "var(--white)",
+        }}
+      >
+        {data.tag && (
+          <span
+            style={{
+              display: "inline-block",
+              background: "var(--neon)",
+              color: "var(--charcoal)",
+              fontWeight: 800,
+              fontSize: 12,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              padding: "7px 14px",
+              borderRadius: 100,
+              marginBottom: 20,
+            }}
+          >
+            {data.tag}
+          </span>
+        )}
+        <h2 style={{ marginBottom: 12 }}>{data.heading}</h2>
+        {data.intro && (
+          <p style={{ color: "var(--muted)", maxWidth: 520, marginBottom: 34, lineHeight: 1.55 }}>
+            {data.intro}
+          </p>
+        )}
+        <div
+          className="spec-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: data.image ? "1fr 1fr" : "1fr",
+            gap: "clamp(28px, 4vw, 48px)",
+            alignItems: "start",
+          }}
+        >
+          <div style={{ display: "grid", gap: 14 }}>
+            {data.rows.map((r, i) => {
+              const neon = r.emphasis !== "plain";
+              return (
+                <div
+                  key={i}
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "auto 1fr",
+                    gap: 14,
+                    alignItems: "stretch",
+                  }}
+                >
+                  <div
+                    style={{
+                      minWidth: 120,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontWeight: 800,
+                      fontSize: "clamp(20px, 2.6vw, 28px)",
+                      letterSpacing: "-0.02em",
+                      borderRadius: 12,
+                      padding: "0 18px",
+                      color: "var(--charcoal)",
+                      background: neon ? "var(--neon)" : "transparent",
+                    }}
+                  >
+                    {r.value}
+                  </div>
+                  <div
+                    style={{
+                      borderRadius: 12,
+                      padding: "14px 18px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      background: neon ? "var(--charcoal)" : "var(--grey2)",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: 13.5,
+                        fontWeight: 800,
+                        letterSpacing: "0.04em",
+                        textTransform: "uppercase",
+                        lineHeight: 1.25,
+                        color: neon ? "var(--white)" : "var(--charcoal)",
+                      }}
+                    >
+                      {r.label}
+                    </span>
+                    {r.standard && (
+                      <span
+                        style={{
+                          fontSize: 12.5,
+                          fontWeight: 600,
+                          marginTop: 3,
+                          letterSpacing: "0.02em",
+                          color: neon ? "var(--neon)" : "var(--muted)",
+                        }}
+                      >
+                        {r.standard}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          {data.image && (
+            <div
+              style={{
+                border: "1px solid var(--grey2)",
+                borderRadius: 14,
+                overflow: "hidden",
+              }}
+            >
+              <Img src={data.image.ref} alt={data.image.alt} ratio="r-169" />
+            </div>
+          )}
+        </div>
+        {data.footnote && (
+          <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.6, marginTop: 34, maxWidth: 760 }}>
+            {data.footnote}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+/**
+ * ProjectSpotlight - a real UGC install card: media frame with a location badge,
+ * a pull quote, spec chips, optional checkmark benefits, an author, and up to
+ * two CTAs. Reuses the brand card look via CSS vars.
+ */
+export function ProjectSpotlight({ data }: { data: ProjectSpotlightSection }) {
+  const badgeText = [data.location, data.badge].filter(Boolean).join("  \u00b7  ");
+  return (
+    <section className="wrap sec">
+      {data.heading && <h2 style={{ marginBottom: 16 }}>{data.heading}</h2>}
+      <div
+        className="spotlight-grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1.1fr",
+          border: "1px solid var(--grey2)",
+          borderRadius: 14,
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "relative", background: "#0c0c0c", minHeight: 240 }}>
+          {badgeText && (
+            <span
+              style={{
+                position: "absolute",
+                top: 14,
+                left: 14,
+                zIndex: 2,
+                background: "var(--charcoal)",
+                color: "var(--neon)",
+                fontSize: 11,
+                fontWeight: 800,
+                letterSpacing: "0.08em",
+                padding: "5px 11px",
+                borderRadius: 100,
+                textTransform: "uppercase",
+              }}
+            >
+              {badgeText}
+            </span>
+          )}
+          {data.image ? (
+            <Img src={data.image.ref} alt={data.image.alt} ratio="r-43" />
+          ) : (
+            <div style={{ aspectRatio: "4 / 3" }} />
+          )}
+        </div>
+        <div style={{ padding: "30px 34px" }}>
+          <p
+            style={{
+              fontSize: 15,
+              color: "var(--ink2)",
+              fontStyle: "italic",
+              borderLeft: "3px solid var(--neon)",
+              paddingLeft: 14,
+              marginBottom: 18,
+              lineHeight: 1.55,
+            }}
+          >
+            {data.quote}
+          </p>
+          {data.specs && data.specs.length > 0 && (
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+              {data.specs.map((s, i) => (
+                <span
+                  key={i}
+                  style={{
+                    background: "var(--grey2)",
+                    border: "1px solid var(--grey2)",
+                    borderRadius: 100,
+                    padding: "6px 13px",
+                    fontSize: 12.5,
+                    color: "var(--ink2)",
+                  }}
+                >
+                  <b style={{ color: "var(--charcoal)" }}>{s.label}:</b> {s.value}
+                </span>
+              ))}
+            </div>
+          )}
+          {data.benefits && data.benefits.length > 0 && (
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+              {data.benefits.map((b, i) => (
+                <span
+                  key={i}
+                  style={{
+                    background: "var(--grey2)",
+                    borderRadius: 100,
+                    padding: "6px 13px",
+                    fontSize: 12.5,
+                    color: "var(--ink2)",
+                  }}
+                >
+                  {"\u2713"} {b}
+                </span>
+              ))}
+            </div>
+          )}
+          {data.author && (
+            <div style={{ display: "flex", alignItems: "center", gap: 11, margin: "16px 0 18px" }}>
+              {data.author.initials && (
+                <div
+                  style={{
+                    width: 38,
+                    height: 38,
+                    borderRadius: "50%",
+                    background: "var(--charcoal)",
+                    color: "var(--neon)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontWeight: 700,
+                    fontSize: 13,
+                  }}
+                >
+                  {data.author.initials}
+                </div>
+              )}
+              <div>
+                <div style={{ fontSize: 14, fontWeight: 600, color: "var(--charcoal)" }}>
+                  {data.author.name}
+                </div>
+                {data.author.role && (
+                  <div style={{ fontSize: 12.5, color: "var(--muted)" }}>{data.author.role}</div>
+                )}
+              </div>
+            </div>
+          )}
+          {(data.primaryCta || data.secondaryCta) && (
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              {data.primaryCta && (
+                <CTAButton href={data.primaryCta.href}>{data.primaryCta.label}</CTAButton>
+              )}
+              {data.secondaryCta && (
+                <CTAButton href={data.secondaryCta.href} variant="ghost">
+                  {data.secondaryCta.label}
+                </CTAButton>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }

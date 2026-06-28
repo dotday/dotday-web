@@ -923,6 +923,12 @@ tbody tr:nth-child(even) {
   position: relative;
   overflow: hidden;
 }
+/* Hardscape / XBAR landing variant: brighter diagonal neon gradient.
+   Opt-in via SharedCTA tone="hardscape"; the default flat-neon CTA above
+   is unchanged for every existing blog + landing page. */
+.final-inner--hardscape {
+  background: linear-gradient(125deg, #cdf000 0%, var(--neon) 42%, var(--neon-soft) 100%);
+}
 .final-glow {
   position: absolute;
   inset: 0;

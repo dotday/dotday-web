@@ -178,6 +178,15 @@
         },
         {
           "$ref": "#/$defs/statementBand"
+        },
+        {
+          "$ref": "#/$defs/bigTypeFeatures"
+        },
+        {
+          "$ref": "#/$defs/specSheet"
+        },
+        {
+          "$ref": "#/$defs/projectSpotlight"
         }
       ]
     },
@@ -493,6 +502,12 @@
         },
         "secondaryCta": {
           "$ref": "#/$defs/cta"
+        },
+        "tone": {
+          "enum": [
+            "default",
+            "hardscape"
+          ]
         }
       }
     },
@@ -625,6 +640,195 @@
         },
         "leafMark": {
           "type": "boolean"
+        }
+      }
+    },
+    "bigTypeFeatures": {
+      "type": "object",
+      "required": [
+        "_type",
+        "heading",
+        "cards"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_type": {
+          "const": "bigTypeFeatures"
+        },
+        "heading": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cta": {
+          "$ref": "#/$defs/cta"
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "body"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "icon": {
+                "enum": [
+                  "shield",
+                  "drop",
+                  "pin",
+                  "layers",
+                  "sun",
+                  "check"
+                ]
+              },
+              "title": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "specSheet": {
+      "type": "object",
+      "required": [
+        "_type",
+        "heading",
+        "rows"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_type": {
+          "const": "specSheet"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intro": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "value",
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "standard": {
+                "type": "string"
+              },
+              "emphasis": {
+                "enum": [
+                  "neon",
+                  "plain"
+                ]
+              }
+            }
+          }
+        },
+        "image": {
+          "$ref": "#/$defs/imageRef"
+        },
+        "footnote": {
+          "type": "string"
+        }
+      }
+    },
+    "projectSpotlight": {
+      "type": "object",
+      "required": [
+        "_type",
+        "quote"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_type": {
+          "const": "projectSpotlight"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "badge": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "image": {
+          "$ref": "#/$defs/imageRef"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "specs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "benefits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "author": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "initials": {
+              "type": "string"
+            }
+          }
+        },
+        "primaryCta": {
+          "$ref": "#/$defs/cta"
+        },
+        "secondaryCta": {
+          "$ref": "#/$defs/cta"
         }
       }
     }

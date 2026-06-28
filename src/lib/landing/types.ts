@@ -121,6 +121,9 @@ export interface CtaSection {
   body?: string;
   primaryCta?: CtaLink;
   secondaryCta?: CtaLink;
+  /** "hardscape" selects the brighter diagonal-gradient panel (XBAR / hardscape
+   *  pages). Omit or "default" keeps the original flat-neon CTA. */
+  tone?: "default" | "hardscape";
 }
 
 export interface InternalLinksSection {
@@ -166,6 +169,68 @@ export interface StatementBandSection {
   leafMark?: boolean;
 }
 
+/**
+ * bigTypeFeatures - oversized uppercase statement on the left, a stack of up to
+ * four feature cards (neon icon + title + body) on the right. The positioning /
+ * benefits moment on hardscape and product landing pages. Generic: drive it from
+ * JSON for SHIELD, XBAR, or TERRA. `icon` picks one of a small fixed set of
+ * inline SVGs (no arbitrary markup in content).
+ */
+export type FeatureIcon = "shield" | "drop" | "pin" | "layers" | "sun" | "check";
+
+export interface BigTypeFeaturesSection {
+  _type: "bigTypeFeatures";
+  heading: string;
+  cta?: CtaLink;
+  cards: Array<{
+    icon?: FeatureIcon;
+    title: string;
+    body: string;
+  }>;
+}
+
+/**
+ * specSheet - a published technical data sheet: a tag, heading, intro, a set of
+ * spec rows (value chip + label + optional standard), and an optional figure
+ * image. Generic across products; never invent specs - every value comes from
+ * the JSON. `emphasis: "neon"` highlights the value chip; "plain" leaves it
+ * unfilled (mirrors the library's neon / plain rows).
+ */
+export interface SpecSheetSection {
+  _type: "specSheet";
+  tag?: string;
+  heading: string;
+  intro?: string;
+  rows: Array<{
+    value: string;
+    label: string;
+    standard?: string;
+    emphasis?: "neon" | "plain";
+  }>;
+  image?: ImageRef;
+  footnote?: string;
+}
+
+/**
+ * projectSpotlight - a real install spotlight (UGC / customer job): a media
+ * frame with a location badge, a pull quote, spec chips (application / climate /
+ * result), optional checkmark benefits, an author, and up to two CTAs. Generic
+ * across products; reuses the brand card styling.
+ */
+export interface ProjectSpotlightSection {
+  _type: "projectSpotlight";
+  heading?: string;
+  badge?: string;
+  location?: string;
+  image?: ImageRef;
+  quote: string;
+  specs?: Array<{ label: string; value: string }>;
+  benefits?: string[];
+  author?: { name: string; role?: string; initials?: string };
+  primaryCta?: CtaLink;
+  secondaryCta?: CtaLink;
+}
+
 export type LandingSection =
   | LandingHeroSection
   | ProblemSection
@@ -179,7 +244,10 @@ export type LandingSection =
   | InternalLinksSection
   | StepsSection
   | CalloutSection
-  | StatementBandSection;
+  | StatementBandSection
+  | BigTypeFeaturesSection
+  | SpecSheetSection
+  | ProjectSpotlightSection;
 
 export interface LandingPage {
   schemaVersion: "1.0.0";

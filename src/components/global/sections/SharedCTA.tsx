@@ -10,6 +10,13 @@ import { Badge, CTAButton } from "@/components/blog/ui/Badge";
  *
  * Defaults reproduce the original blog FinalCTA exactly (eyebrow "Find your
  * fabric", Calculator + Shop actions). Landing pages override copy + actions.
+ *
+ * `tone` selects the panel treatment:
+ *   - "default" (the original flat neon + corner glow) - unchanged for every
+ *     existing blog + landing CTA.
+ *   - "hardscape" - the brighter diagonal neon gradient used on XBAR / hardscape
+ *     landing pages. Adds the `.final-inner--hardscape` modifier; the base
+ *     markup and white badge / onneon buttons are identical.
  */
 export function SharedCTA({
   eyebrow = "Find your fabric",
@@ -19,6 +26,7 @@ export function SharedCTA({
   primaryLabel = "Use Our Calculator",
   secondaryHref = "/product-page/xbar-landscape-fabric",
   secondaryLabel = "Shop DOTDAY Products",
+  tone = "default",
 }: {
   eyebrow?: string;
   heading?: string;
@@ -27,10 +35,13 @@ export function SharedCTA({
   primaryLabel?: string;
   secondaryHref?: string;
   secondaryLabel?: string;
+  tone?: "default" | "hardscape";
 }) {
+  const innerCls =
+    tone === "hardscape" ? "final-inner final-inner--hardscape" : "final-inner";
   return (
     <section className="final">
-      <div className="final-inner">
+      <div className={innerCls}>
         <div className="final-glow" />
         <div className="final-c">
           <Badge white>{eyebrow}</Badge>

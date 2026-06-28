@@ -39,6 +39,7 @@ const APPROVED = new Set([
   "hero", "problem", "solution", "useCaseGrid", "productComparison",
   "calculatorEmbed", "faq", "reviews", "cta", "internalLinks",
   "steps", "callout", "statementBand",
+  "bigTypeFeatures", "specSheet", "projectSpotlight",
 ]);
 
 // Gather blog focus keywords to detect overlap.
