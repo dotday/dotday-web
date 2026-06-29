@@ -72,6 +72,23 @@ h3 {
   margin: 0;
 }
 
+/* Section-scoped H2: class-less section headings that live in .wrap.sec
+   (CalculatorEmbed "Plan your order", InternalLinks "Keep exploring", and the
+   bare <h2> headings across narrative/media/proof/product) never received a
+   section-title class, so they fell back to the base h2 rule above and missed
+   the unified _core heading spec. This brings every orphan onto that one spec.
+   Components that style their h2 inline (e.g. BigTypeFeatures) override this by
+   specificity, and inline margin props (ProjectSpotlight, SpecSheet) still win. */
+.wrap.sec h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--charcoal);
+  margin: 0 0 16px;
+}
+
 /* progress + nav */
 #progress {
   position: fixed;
@@ -762,28 +779,102 @@ tbody tr:nth-child(even) {
   max-width: 520px;
 }
 
-/* bulk / contractor cta */
+/* bulk / contractor cta - full tier-1 (calculator) match, minus the tool eyebrow */
 .bulk {
+  background: var(--blog-surface);
   border: 1px solid var(--grey2);
   border-radius: var(--card-radius);
-  padding: 24px 26px;
+  padding: 26px 28px;
   margin: 34px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
   align-items: center;
   justify-content: space-between;
 }
+.bulk .body {
+  max-width: 520px;
+}
 .bulk h3 {
   font-weight: 500;
-  font-size: 19px;
+  font-size: 20px;
   color: var(--ink);
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 }
 .bulk p {
-  font-size: 14.5px;
-  color: var(--muted);
+  font-size: 15px;
+  color: var(--ink2);
   margin: 0;
+  line-height: 1.55;
+}
+
+/* InternalLinks - "keep exploring" navigation grid.
+   .ilink-grid (default) = white surface + hairline cards (charcoal on hover).
+   .ilink-grid--neon     = neon-soft tiles (the ToolsBand look). One card design,
+   two tones; the data shape is identical, so content drives the choice. */
+.ilink-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 6px;
+}
+.ilink-card {
+  text-decoration: none;
+  background: var(--blog-surface);
+  border: 1px solid var(--grey2);
+  border-radius: var(--card-radius);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.ilink-card:hover {
+  border-color: var(--charcoal);
+  transform: translateY(-2px);
+}
+.ilink-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ilink-note {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.ilink-arrow {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 15px;
+  transition: transform 0.15s ease;
+}
+.ilink-card:hover .ilink-arrow {
+  transform: translateX(3px);
+}
+
+/* neon tone - mirrors the .tool-card treatment */
+.ilink-grid--neon .ilink-card {
+  background: var(--neon-soft);
+  border-color: var(--neon);
+}
+.ilink-grid--neon .ilink-card:hover {
+  border-color: var(--neon);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(143, 168, 0, 0.16);
+}
+.ilink-grid--neon .ilink-label {
+  color: var(--charcoal);
+}
+.ilink-grid--neon .ilink-note {
+  color: #3a4a00;
+}
+.ilink-grid--neon .ilink-arrow {
+  color: var(--charcoal);
 }
 
 /* product block */

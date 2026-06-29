@@ -133,6 +133,9 @@ export interface InternalLinksSection {
   _type: "internalLinks";
   heading?: string;
   links: Array<{ label: string; href: string; note?: string }>;
+  /** "neon" selects the neon-soft tile treatment (the ToolsBand look) for
+   *  warmer / hardscape pages. Omit or "default" keeps the white card grid. */
+  tone?: "default" | "neon";
 }
 
 // --- Custom-page sections (used by bespoke-layout pages in content/landing/custom) ---

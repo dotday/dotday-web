@@ -52,14 +52,14 @@ export function InlineCTA({ block }: { block: CtaBlock }) {
     );
   }
 
-  // contractor - outline "bulk" bar
+  // contractor - solid-neon "bulk" bar (full tier-1 / calculator match, no eyebrow)
   return (
     <div className="bulk">
-      <div>
+      <div className="body">
         <h3>{block.heading}</h3>
         {block.body && <p>{block.body}</p>}
       </div>
-      <CTAButton href={block.href} variant="ghost">
+      <CTAButton href={block.href} variant="primary">
         {block.cta}
       </CTAButton>
     </div>

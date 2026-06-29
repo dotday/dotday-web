@@ -1,31 +1,34 @@
-/**
- * Auto-extracted from the former components/landing/sections.tsx monolith.
- * One section per file; registered via the SectionRegistry.
- */
 import Link from "next/link";
-import { FeatureGlyph } from "@/components/sections/_core/glyphs";
 import type {
   InternalLinksSection,
 } from "@/lib/landing/types";
 
+/**
+ * InternalLinks - "keep exploring" navigation grid. Each link is a card with a
+ * prominent label, a muted note subtitle, and a nudging arrow. One card design,
+ * two tones (mirrors SharedCTA's tone switch):
+ *   - "default" (omitted): white surface + hairline border, charcoal on hover.
+ *   - "neon": neon-soft tiles (the ToolsBand look) for warmer / hardscape pages.
+ * The data shape is unchanged (label / href / note?), so existing pages render
+ * with no content edits.
+ */
 export function InternalLinks({ data }: { data: InternalLinksSection }) {
+  const gridCls =
+    data.tone === "neon" ? "ilink-grid ilink-grid--neon" : "ilink-grid";
   return (
     <div className="wrap sec">
       <h2>{data.heading || "Keep exploring"}</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 8 }}>
+      <div className={gridCls}>
         {data.links.map((l, i) => (
-          <Link key={i} href={l.href} style={{ color: "var(--ink)" }}>
-            <b>{l.label}</b>
-            {l.note ? <span className="rtime"> {l.note}</span> : null}
+          <Link className="ilink-card" key={i} href={l.href}>
+            <span className="ilink-label">
+              {l.label}
+              <span className="ilink-arrow" aria-hidden="true">→</span>
+            </span>
+            {l.note ? <span className="ilink-note">{l.note}</span> : null}
           </Link>
         ))}
       </div>
     </div>
   );
 }
-
-/**
- * FeatureGlyph - the fixed inline-SVG set used by bigTypeFeatures. Content picks
- * an icon by name; no arbitrary SVG markup ever lives in a content file. Stroke
- * inherits currentColor so the neon-on-charcoal chip styling applies for free.
- */
