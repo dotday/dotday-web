@@ -41,7 +41,7 @@ import to register, no CMS.
 | Existing-content index | `node scripts/list-content.mjs` (or `--json`) |
 | Scaffold a new post | `npm run new:blog -- <slug>` (writes a stub file) |
 | Local preview | `npm run dev` -> `/post/<slug>` or `/l/<slug>` |
-| Products (data) | `lib/content/products.ts` (SHIELD, XBAR, TERRA) |
+| Products (data) | `lib/products/products.ts` (SHIELD, XBAR, TERRA) |
 | Tools (code, fixed) | `/landscape-fabric-calculator`, `/fabric-finder` |
 
 **Before generating a new post, always run `scripts/list-content.mjs`** (or read
@@ -167,7 +167,7 @@ validator warns on keyword overlap (does not block).
 
 Page images are pulled from the DOTDAY brand Google Drive, optimized to WebP,
 and committed to `public/blog/<slug>/`. The folder/file IDs and the
-download->WebP workflow are in `src/lib/content/drive-images.ts` and
+download->WebP workflow are in `src/lib/products/drive-images.ts` and
 `scripts/fetch-drive-images.md`.
 
 - Reference images in JSON by **ref** (e.g. `"hero"`, `"og"`, `"pin"`, or a

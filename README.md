@@ -28,7 +28,7 @@ file becomes a new static page automatically. **No index to edit, no import to
 register, no other page touched.** You add a file, open a PR, Vercel builds a
 preview, you merge. Publishing never disturbs the pages already live.
 
-The same pattern drives products (`src/lib/content/products.ts`) - fixed template,
+The same pattern drives products (`src/lib/products/products.ts`) - fixed template,
 data-driven content.
 
 **Blog vs landing:** blog posts are ~80% uniform (a fixed hero + blocks + FAQ
@@ -203,7 +203,7 @@ identical on Vercel. Replace the WOFF2 files (same names) to update.
 
 Page imagery is sourced from the DOTDAY brand Google Drive, optimized to WebP,
 and committed into `/public`. The folder + file IDs are mapped in
-`src/lib/content/drive-images.ts`; the full download -> convert workflow is in
+`src/lib/products/drive-images.ts`; the full download -> convert workflow is in
 `scripts/fetch-drive-images.md`. Missing images fall back to branded
 placeholders, so the build never breaks while imagery is being sourced.
 

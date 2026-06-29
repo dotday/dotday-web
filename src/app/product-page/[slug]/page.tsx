@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PRODUCTS, getProduct } from "@/lib/content/products";
+import { PRODUCTS, getProduct } from "@/lib/products/products";
 import { Badge, CTAButton } from "@/components/primitives/Badge";
 import { Img } from "@/components/primitives/Img";
 import { FAQ } from "@/components/sections/editorial/FAQ";
@@ -9,7 +9,7 @@ import { ProductBlock } from "@/components/sections/product/ProductBlock";
 import { SITE_URL, site } from "@/lib/site";
 
 /**
- * /product-page/[slug] - product pages driven by lib/content/products data.
+ * /product-page/[slug] - product pages driven by lib/products/products data.
  * Fixed template, content per product. Emits Product + FAQPage JSON-LD. Buy
  * actions point at the Wix store (commerce stays on Wix).
  */

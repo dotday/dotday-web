@@ -2,7 +2,7 @@
 
 Every DOTDAY page uses **real images from the brand Google Drive**, optimized to
 WebP and committed into the repo. This doc is the repeatable process. The folder
-+ file IDs live in `src/lib/content/drive-images.ts`.
++ file IDs live in `src/lib/products/drive-images.ts`.
 
 ## The convention
 
@@ -26,7 +26,7 @@ exists (else a branded placeholder shows, so the build never breaks).
 When Claude builds a page it has the Google Drive connector. The loop is:
 
 1. **Pick the folder** for the product (`PRODUCT_FOLDER` in
-   `src/lib/content/drive-images.ts`): SHIELD -> shield folders, XBAR -> xbar
+   `src/lib/products/drive-images.ts`): SHIELD -> shield folders, XBAR -> xbar
    folders, TERRA -> terra folder, multi/none -> parent brand folder.
 2. **List candidates**: `Google Drive: search_files`
    `query: parentId = '<FOLDER_ID>' and mimeType contains 'image/'`.
@@ -94,5 +94,5 @@ not "image1".
 
 If you want to pull images without Claude, use `rclone` or the `gdrive` CLI
 authenticated to the DOTDAY Google account, download from the folder IDs in
-`src/lib/content/drive-images.ts`, then run the Pillow snippet above. There is no
+`src/lib/products/drive-images.ts`, then run the Pillow snippet above. There is no
 API key in the repo - auth stays in your local tool.

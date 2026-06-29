@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPublicPosts } from "@/lib/blog/loader";
 import { getPublicLandingPages } from "@/lib/landing/loader";
-import { PRODUCTS } from "@/lib/content/products";
+import { PRODUCTS } from "@/lib/products/products";
 import { SITE_URL } from "@/lib/site";
 
 /**

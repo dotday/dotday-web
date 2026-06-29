@@ -80,7 +80,7 @@ function readLandingPages() {
 }
 
 function readProducts() {
-  // products are data in src/lib/content/products.ts - parse the slugs/names out
+  // products are data in src/lib/products/products.ts - parse the slugs/names out
   const f = join(ROOT, "src", "lib", "content", "products.ts");
   if (!existsSync(f)) return [];
   const src = readFileSync(f, "utf8");
