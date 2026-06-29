@@ -12,6 +12,9 @@
  * Keep this in sync with schema/landingPage.schema.json.
  */
 
+// Schema-first sections: type generated from the section's own *.schema.json.
+import type { SpecSheetSection } from "@/components/sections/product/SpecSheet/SpecSheet.types";
+
 export type LandingStatus =
   | "planned"
   | "draft"
@@ -196,20 +199,12 @@ export interface BigTypeFeaturesSection {
  * the JSON. `emphasis: "neon"` highlights the value chip; "plain" leaves it
  * unfilled (mirrors the library's neon / plain rows).
  */
-export interface SpecSheetSection {
-  _type: "specSheet";
-  tag?: string;
-  heading: string;
-  intro?: string;
-  rows: Array<{
-    value: string;
-    label: string;
-    standard?: string;
-    emphasis?: "neon" | "plain";
-  }>;
-  image?: ImageRef;
-  footnote?: string;
-}
+// SpecSheetSection is SCHEMA-FIRST: its shape lives in
+// components/sections/product/SpecSheet/SpecSheet.schema.json and the type is
+// GENERATED from it (SpecSheet.types.ts). Re-exported here so the LandingSection
+// union and existing `@/lib/landing/types` importers are unchanged. This is the
+// reference pattern; remaining sections migrate the same way.
+export type { SpecSheetSection };
 
 /**
  * projectSpotlight - a real install spotlight (UGC / customer job): a media

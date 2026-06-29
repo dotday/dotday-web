@@ -1,11 +1,10 @@
 /**
- * Auto-extracted from the former components/landing/sections.tsx monolith.
- * One section per file; registered via the SectionRegistry.
+ * SpecSheet - schema-first reference section. Its shape is defined ONCE in
+ * SpecSheet.schema.json; SpecSheetSection is generated from that schema
+ * (SpecSheet.types.ts) - never hand-written, so it cannot drift.
  */
 import { Img } from "@/components/primitives/Img";
-import type {
-  SpecSheetSection,
-} from "@/lib/landing/types";
+import type { SpecSheetSection } from "./SpecSheet.types";
 
 export function SpecSheet({ data }: { data: SpecSheetSection }) {
   return (
@@ -143,8 +142,3 @@ export function SpecSheet({ data }: { data: SpecSheetSection }) {
   );
 }
 
-/**
- * ProjectSpotlight - a real UGC install card: media frame with a location badge,
- * a pull quote, spec chips, optional checkmark benefits, an author, and up to
- * two CTAs. Reuses the brand card look via CSS vars.
- */

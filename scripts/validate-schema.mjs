@@ -50,6 +50,20 @@ function loadSchema(rel) {
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);
 
+// Schema-first: register every co-located section schema (src/components/sections,
+// files ending .schema.json) so a doc schema's $ref to a section's $id resolves.
+// Drop a new section schema in and it is picked up automatically - no edit here.
+const SECTIONS_DIR = join(ROOT, "src", "components", "sections");
+for (const f of collectJson(SECTIONS_DIR)) {
+  if (!f.endsWith(".schema.json")) continue;
+  try {
+    ajv.addSchema(JSON.parse(readFileSync(f, "utf8")));
+  } catch (e) {
+    console.error(`✗ failed to register section schema ${relative(ROOT, f)}: ${e.message}`);
+    process.exit(1);
+  }
+}
+
 const validators = [
   {
     label: "blog",
