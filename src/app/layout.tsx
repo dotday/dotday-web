@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FontFace } from "@/components/site/FontFace";
 import { SITE_URL, site } from "@/lib/site";
-import { tokens } from "@/lib/blog/tokens";
+import { tokens } from "@/lib/tokens";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
