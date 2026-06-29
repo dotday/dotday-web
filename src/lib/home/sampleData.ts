@@ -166,7 +166,7 @@ export const SAMPLE_DATA: Record<string, unknown> = {
         title: "Woven vs non-woven landscape fabric",
         href: "/post/woven-vs-non-woven-landscape-fabric",
         excerpt: "Which build suits weed control, hardscape, or drainage.",
-        image: { ref: "/home/shield-card.webp", alt: "SHIELD woven fabric" },
+        image: { ref: "/products/shield-card.webp", alt: "SHIELD woven fabric" },
         category: "Comparisons",
         level: "Beginner",
         author: "DOTDAY",
