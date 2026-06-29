@@ -71,7 +71,9 @@ npm run start        # serve the production build locally
 
 ### A landing page
 1. **Write** `content/landing/<slug>.json` (mirror the seed example
-   `content/landing/landscape-fabric-for-gravel.json`). Assemble from approved
+   `content/landing/pages/landscape-fabric-for-gravel.json`). Files sit in
+   `pages/` (standard) or `custom/` (root-bound) but route by `slug` regardless.
+   Assemble from approved
    sections; `status: "draft"`.
 2. **Validate**: `node scripts/validate-landing.mjs content/landing/<slug>.json`
    (also runs in `npm run content:validate`). It checks SEO limits, the dash
@@ -102,44 +104,70 @@ src/
     post/[slug]/page.tsx           # canonical blog post route (/post/<slug>)
     l/[slug]/page.tsx              # landing page route (/l/<slug>)
     product-page/[slug]/page.tsx   # product pages (data-driven)
+    blocks/page.tsx                # section gallery (noindexed dev surface)
     landscape-fabric-calculator/   # the calculator tool page
     fabric-finder/                 # the product-quiz tool page
-    how-to-install-weed-barrier-fabric/  # install guide
+    how-to-install-weed-barrier-fabric/  # install guide (root-bound landing page)
+    my-qrzone/                     # QR-zone hub (root-bound landing page)
     contact-us/ , bulk-pricing/    # lead-capture pages
     privacy-policy/ , terms-of-service/  # legal
-    api/lead/route.ts              # form submission endpoint (Supabase + spam defense)
+    api/lead/route.ts              # form submission endpoint (Supabase-ready + spam defense)
     sitemap.ts , robots.ts , not-found.tsx
 
-  components/
-    site/        SiteHeader · SiteFooter · FontFace · LeadForm · ProListForm · LegalPage · Icon
-      home/      HomeHero · CompareTable · UseCases · ToolsBand · JobGallery · Testimonials · StatStrip
-    blog/        BlogLayout · BlogHero · QuickAnswer · BlockRenderer · RelatedArticles
-      blocks/    Prose · StatStrip · ComparisonTable · TrustStrip · Callout · Steps · ImageBlock · ProductBlock · FAQ
-      cta/       InlineCTA · FinalCTA
-      ui/        Img · Badge/CTAButton · ReadingProgress · ShareButtons · RichText
-    global/      sections (SharedFAQ · SharedComparisonTable · SharedCTA - shared by blog + landing)
-    landing/     SectionRenderer · sections (hero, problem, solution, useCaseGrid,
-                 productComparison, calculatorEmbed, faq, reviews, cta, internalLinks)
-    tools/       FabricCalculator · FabricFinder
+  components/                      # organized by ROLE, then by FAMILY (not by surface)
+    sections/                      # THE section library - the unit of growth
+      _core/       Prose · RichText · StatStrip · TrustStrip · Callout · Steps · glyphs
+                   (shared building blocks used by blog AND landing)
+      heroes/      BlogHero · HomeHero · LandingHero
+      narrative/   Problem · Solution · BigTypeFeatures · StatementBand/ (schema-first slice)
+      product/     UseCaseGrid · UseCases · ComparisonTable · CompareTable ·
+                   SharedComparisonTable · ProductBlock · ApplicationGallery ·
+                   SpecSheet/ (schema-first slice)
+      proof/       Reviews · Testimonials · ProjectSpotlight · QuoteBand ·
+                   JobGallery · RealJobs · HomeStatStrip
+      media/       EditorialCards · VideoFeature · VideoSection · VideoFacade ·
+                   HomeVideoFeature · ImageBlock · InstallShowcase · InstagramFeed
+      editorial/   FAQ · SharedFAQ · QuickAnswer · RelatedArticles · AuthorBio ·
+                   BlogExplorer · HubFaq · HubNewsletter · HubSections
+      conversion/  InlineCTA · FinalCTA · SharedCTA · CalculatorEmbed · InternalLinks · ToolsBand
+    renderers/                     # _type -> component dispatch (the only place that knows the map)
+      BlockRenderer.tsx            #   blog blocks
+      SectionRenderer.tsx          #   landing sections (registry-first, then adapted cases)
+      HomeSectionRenderer.tsx      #   home sections
+      registry/registry.ts + seed.ts  # registerSection() list for direct-render sections
+    primitives/   Img · Badge/CTAButton · ReadingProgress · ShareButtons · etc (low-level UI)
+    layouts/      BlogLayout (and other page shells)
+    forms/        LeadForm · ProListForm
+    widgets/      FabricCalculator · FabricFinder (the interactive tools)
+    site/         SiteHeader · SiteFooter · FontFace · LegalPage · Icon (chrome only)
 
   lib/
-    blog/        types · loader (memoized) · images · jsonld · tokens
-    landing/     types · loader (memoized) · jsonld
-    content/     products · drive-images
+    tokens.ts                      # design tokens (neutral home; mirrored to globals.css)
     site.ts                        # origin, nav, footer links
+    blog/        types · loader (memoized) · images · jsonld · hub · authors
+    landing/     types · loader (memoized) · jsonld · images · resolveSectionImages
+    home/        types · loader · sampleData
+    content/     products · drive-images
+    images/      resolve
 
   styles/
     globals.css                    # the full brand design system (CSS vars + classes)
 
 content/                           # data-as-code (read at build via process.cwd())
-  blog/        <slug>.json          # one file per post     -> /post/<slug>
-  landing/     <slug>.json          # one file per landing  -> /l/<slug>
+  blog/         <slug>.json         # one file per post     -> /post/<slug>
+  landing/
+    pages/      <slug>.json         # standard landing pages -> /l/<slug>
+    custom/     <slug>.json         # bespoke root-bound pages (my-qrzone, how-to-install)
+  home.json                         # homepage section data
 
 schema/
   blogPost.schema.json             # blog data contract (schemaVersion 1.0.0)
-  landingPage.schema.json          # landing data contract (schemaVersion 1.0.0)
+  landingPage.schema.json          # landing data contract; $refs co-located section schemas
 
 scripts/
+  gen-types.mjs                    # SCHEMA-FIRST: generates *.types.ts from each section's
+                                   #   *.schema.json; `--check` is the drift gate in content:validate
+  validate-schema.mjs              # structural gate (Ajv) - every content file vs its JSON Schema
   validate-post.mjs                # blog SEO/content gate
   validate-landing.mjs             # landing SEO/content gate (+ keyword-overlap warning)
   validate-content.mjs             # parses product/landing JSON in the build
@@ -147,15 +175,22 @@ scripts/
   list-content.mjs                 # lists existing slugs/keywords (collision check)
 
 public/
-  brand/       logo-neon.png · dd-circle.png · fonts/   # brand assets
+  brand/       logo · dd-circle · fonts/                # brand assets
   blog/<slug>/ hero.webp · og.webp · ...                # per-post images
+  products/ , blog/hub/ , home/                         # shared product cards + hub/home imagery
 ```
+
+> **Section families:** a section is a vertical slice. The newest ones
+> (`SpecSheet/`, `StatementBand/`) are **schema-first**: their shape lives in a
+> co-located `*.schema.json` (single source of truth), the TS type is generated
+> from it, and `schema/landingPage.schema.json` `$ref`s it - so the type can't
+> drift from the schema. See the schema-first migration runbook for the recipe.
 
 ---
 
 ## Design system
 
-Tokens live in `src/lib/blog/tokens.ts` and are mirrored as CSS variables in
+Tokens live in `src/lib/tokens.ts` and are mirrored as CSS variables in
 `src/styles/globals.css`. Palette: white-dominant, neon `#D8FF00` accent, soft-neon
 `#DFFF6A` panels, minimal charcoal `#101010`. Type is **Wix Madefor Text**
 (Apple-light headings: 400-500; CTAs + small labels bold).

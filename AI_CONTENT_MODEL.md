@@ -7,15 +7,18 @@ exactly. It is kept in the repo so it is always current - it changes in the same
 PRs as the code it describes. If anything elsewhere (a skill, an old note,
 training data) contradicts this file, **this file wins.**
 
-Last verified against the codebase: 2026-06.
+Last verified against the codebase: 2026-06-29. (Components are organized by
+role+family under `src/components/`; the newest sections are schema-first - shape
+defined in a co-located `*.schema.json`, type generated from it.)
 
 ---
 
 ## 1. How content works here (the one-sentence model)
 
 A blog post is **one JSON file** at `content/blog/<slug>.json`. It renders at
-`/blog/<slug>` automatically (the route reads the folder). Adding a post =
-adding one file. No index to edit, no import to register, no CMS.
+`/post/<slug>` automatically (the route reads the folder; `/blog/<slug>`
+301-redirects to it). Adding a post = adding one file. No index to edit, no
+import to register, no CMS.
 
 > The earlier `ai-content/` folder and any "Zod/Sanity" description are
 > **obsolete**. The real system is JSON Schema + a Node validator, described
@@ -87,8 +90,8 @@ ones - use `npm run new:blog`.)
 ## 4. The ONLY block types that render
 
 `blocks` is an ordered array. Each block has a `_type`. The renderer
-(`components/blog/BlockRenderer.tsx`) supports exactly these - anything else is
-dropped:
+(`components/renderers/BlockRenderer.tsx`) supports exactly these - anything else
+is dropped:
 
 | `_type` | Purpose | Key fields |
 |---|---|---|
@@ -103,7 +106,7 @@ dropped:
 | `cta` | Call-to-action band | `variant: "calculator" \| "enquiry" \| "contractor"`, `heading`, `body`, `cta`, `href` |
 
 > There is **no** `featureGrid`. Use `statStrip`, `comparisonTable`, or `steps`.
-> The exact field shapes are in `lib/blog/types.ts` - fetch it if unsure.
+> The exact field shapes are in `src/lib/blog/types.ts` - fetch it if unsure.
 
 ### Default block arc for a blog post
 `prose` (intro, focus keyword in first 100 words)
@@ -122,20 +125,33 @@ model as blogs, different shape: assembled from approved **sections** in any ord
 
 - **File:** `content/landing/<slug>.json` -> `/l/<slug>`
 - **Schema:** `schema/landingPage.schema.json` (schemaVersion **1.0.0**)
-- **Renderer:** `components/landing/SectionRenderer.tsx` (maps `section._type`)
+- **Renderer:** `components/renderers/SectionRenderer.tsx` (maps `section._type`)
 - **Validate:** `node scripts/validate-landing.mjs content/landing/<slug>.json`
 - **Status:** `"draft"` on generation; drafts excluded from sitemap + prerender.
-- **Seed/example:** `content/landing/landscape-fabric-for-gravel.json`
+- **Seed/example:** `content/landing/pages/landscape-fabric-for-gravel.json`
+  (files live in `pages/` or `custom/`; routing is by `slug`, not folder)
 
 Top-level: `schemaVersion, slug, title, focusKeyword, status, publishedAt, seo
 {metaTitle, metaDescription, canonical (absolute), ogImage{ref,alt}}, sections[]`.
 
-The ONLY sections that render (anything else is dropped):
-`hero`, `problem`, `solution` (has `product` SHIELD|XBAR|TERRA + `productHref`),
-`useCaseGrid`, `productComparison`, `calculatorEmbed`, `faq`, `reviews`, `cta`,
-`internalLinks`. Validator expects the first section to be `hero` and the page to
-include a `cta` and an `internalLinks` section. JSON-LD emitted: WebPage +
-FAQPage + BreadcrumbList.
+The ONLY sections that render (anything else is dropped). Authoritative list is
+`schema/landingPage.schema.json`; always fetch it. Current set:
+
+**Core flow:** `hero`, `problem`, `solution` (has `product` SHIELD|XBAR|TERRA +
+`productHref`), `useCaseGrid`, `productComparison`, `calculatorEmbed`, `faq`,
+`reviews`, `cta`, `internalLinks`.
+
+**Custom / brand-moment sections:** `steps` (numbered how-to list), `callout`
+(`variant` warning|proTip), `statementBand` (oversized-watermark positioning
+band), `bigTypeFeatures` (big statement + feature cards), `specSheet`
+(technical data sheet - never invent specs), `projectSpotlight` (real install /
+UGC spotlight), `editorialCards` ("editor's picks" card row), `videoFeature`
+(video player + rail).
+
+Validator expects the first section to be `hero` and the page to include a `cta`
+and an `internalLinks` section. JSON-LD emitted: WebPage + FAQPage +
+BreadcrumbList. `specSheet` and `statementBand` are **schema-first** (shape lives
+in their co-located `*.schema.json` under `components/sections/`).
 
 Recommended arc: `hero` -> `problem` -> `solution` -> `useCaseGrid` ->
 `productComparison` -> `calculatorEmbed`? -> `reviews`? -> `faq` -> `cta` ->
@@ -151,7 +167,7 @@ validator warns on keyword overlap (does not block).
 
 Page images are pulled from the DOTDAY brand Google Drive, optimized to WebP,
 and committed to `public/blog/<slug>/`. The folder/file IDs and the
-download->WebP workflow are in `lib/content/drive-images.ts` and
+download->WebP workflow are in `src/lib/content/drive-images.ts` and
 `scripts/fetch-drive-images.md`.
 
 - Reference images in JSON by **ref** (e.g. `"hero"`, `"og"`, `"pin"`, or a
@@ -209,7 +225,7 @@ download->WebP workflow are in `lib/content/drive-images.ts` and
 5. **Validate**: `node scripts/validate-post.mjs content/blog/<slug>.json` (and
    `npm run content:validate`). Fix anything it flags - a failing post is not
    shippable.
-6. **Preview** at `localhost:3000/blog/<slug>`.
+6. **Preview** at `localhost:3000/post/<slug>`.
 7. **Ship**: commit on a branch -> PR -> Vercel preview -> set
    `status: "published"` and merge to `main`.
 
