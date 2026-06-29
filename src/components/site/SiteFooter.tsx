@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/site/Icon";
-import { ProListForm } from "@/components/site/ProListForm";
+import { ProListForm } from "@/components/forms/ProListForm";
 import { footer, site } from "@/lib/site";
 
 /**

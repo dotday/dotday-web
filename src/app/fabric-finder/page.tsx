@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/blog/ui/Badge";
-import { FabricFinder } from "@/components/tools/FabricFinder";
-import { FinalCTA } from "@/components/blog/cta/FinalCTA";
+import { Badge } from "@/components/primitives/Badge";
+import { FabricFinder } from "@/components/widgets/FabricFinder";
+import { FinalCTA } from "@/components/sections/conversion/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Fabric Finder - Choose SHIELD, XBAR, or TERRA",

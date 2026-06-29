@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/blog/ui/Badge";
-import { FabricCalculator } from "@/components/tools/FabricCalculator";
-import { FinalCTA } from "@/components/blog/cta/FinalCTA";
+import { Badge } from "@/components/primitives/Badge";
+import { FabricCalculator } from "@/components/widgets/FabricCalculator";
+import { FinalCTA } from "@/components/sections/conversion/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Landscape Fabric Calculator",

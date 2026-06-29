@@ -1,7 +1,7 @@
 import "server-only";
 import fs from "node:fs";
 import path from "node:path";
-import type { HomeDoc } from "@/components/site/home/types";
+import type { HomeDoc } from "@/lib/home/types";
 
 /**
  * Home loader - reads content/home.json (the data-driven homepage). Same model

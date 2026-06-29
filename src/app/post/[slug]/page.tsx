@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug, isPublic } from "@/lib/blog/loader";
 import { buildJsonLd } from "@/lib/blog/jsonld";
 import { resolveImage } from "@/lib/blog/images";
-import { BlogLayout } from "@/components/blog/BlogLayout";
+import { BlogLayout } from "@/components/layouts/BlogLayout";
 import { SITE_URL } from "@/lib/site";
 
 /**

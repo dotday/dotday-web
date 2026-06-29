@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PRODUCTS, getProduct } from "@/lib/content/products";
-import { Badge, CTAButton } from "@/components/blog/ui/Badge";
-import { Img } from "@/components/blog/ui/Img";
-import { FAQ } from "@/components/blog/blocks/FAQ";
-import { FinalCTA } from "@/components/blog/cta/FinalCTA";
-import { ProductBlock } from "@/components/blog/blocks/ProductBlock";
+import { Badge, CTAButton } from "@/components/primitives/Badge";
+import { Img } from "@/components/primitives/Img";
+import { FAQ } from "@/components/sections/editorial/FAQ";
+import { FinalCTA } from "@/components/sections/conversion/FinalCTA";
+import { ProductBlock } from "@/components/sections/product/ProductBlock";
 import { SITE_URL, site } from "@/lib/site";
 
 /**

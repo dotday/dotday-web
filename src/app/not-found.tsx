@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Badge } from "@/components/blog/ui/Badge";
+import { Badge } from "@/components/primitives/Badge";
 
 export default function NotFound() {
   return (

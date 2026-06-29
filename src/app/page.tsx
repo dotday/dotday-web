@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublicPosts } from "@/lib/blog/loader";
 import { resolveImage } from "@/lib/blog/images";
-import { Img } from "@/components/blog/ui/Img";
-import { FinalCTA } from "@/components/blog/cta/FinalCTA";
-import { FAQ } from "@/components/blog/blocks/FAQ";
+import { Img } from "@/components/primitives/Img";
+import { FinalCTA } from "@/components/sections/conversion/FinalCTA";
+import { FAQ } from "@/components/sections/editorial/FAQ";
 import { SITE_URL, site } from "@/lib/site";
 import { getHomeDoc } from "@/lib/home/loader";
-import { HomeSectionRenderer } from "@/components/site/home/HomeSectionRenderer";
+import { HomeSectionRenderer } from "@/components/renderers/HomeSectionRenderer";
 
 export const metadata: Metadata = {
   title: "Landscape Fabric Built for the Job",

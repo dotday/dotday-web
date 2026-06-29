@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LeadForm } from "@/components/site/LeadForm";
+import { LeadForm } from "@/components/forms/LeadForm";
 
 export const metadata: Metadata = {
   title: "Contact DOTDAY",

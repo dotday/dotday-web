@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getLandingBySlug, isPublic } from "@/lib/landing/loader";
 import { buildLandingJsonLd } from "@/lib/landing/jsonld";
-import { SectionRenderer } from "@/components/landing/SectionRenderer";
+import { SectionRenderer } from "@/components/renderers/SectionRenderer";
 import { SITE_URL } from "@/lib/site";
 
 /**

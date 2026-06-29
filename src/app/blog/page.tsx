@@ -4,8 +4,8 @@ import { getPublicPosts } from "@/lib/blog/loader";
 import { resolveImage } from "@/lib/blog/images";
 import { getHubModel } from "@/lib/blog/hub";
 import { resolveAuthor } from "@/lib/blog/authors";
-import { Img } from "@/components/blog/ui/Img";
-import { HubFaq } from "@/components/blog/hub/HubFaq";
+import { Img } from "@/components/primitives/Img";
+import { HubFaq } from "@/components/sections/editorial/HubFaq";
 import { SITE_URL, site } from "@/lib/site";
 import {
   HubHero,
@@ -21,9 +21,9 @@ import {
   FieldQuote,
   ExpertReviews,
   MissionTeam,
-} from "@/components/blog/hub/HubSections";
-import { BlogExplorer } from "@/components/blog/hub/BlogExplorer";
-import { HubNewsletter } from "@/components/blog/hub/HubNewsletter";
+} from "@/components/sections/editorial/HubSections";
+import { BlogExplorer } from "@/components/sections/editorial/BlogExplorer";
+import { HubNewsletter } from "@/components/sections/editorial/HubNewsletter";
 
 export const metadata: Metadata = {
   title: "The Groundwork: Landscape Fabric Guides, Comparisons & How-Tos",

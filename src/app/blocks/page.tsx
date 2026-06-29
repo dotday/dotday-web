@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { allSections } from "@/components/landing/registry";
-import "@/components/landing/registry.seed"; // populate the registry (side effect)
-import { SAMPLE_DATA } from "@/components/site/_blocks/sampleData";
-import { ProductBlock } from "@/components/blog/blocks/ProductBlock";
+import { allSections } from "@/components/renderers/registry/registry";
+import "@/components/renderers/registry/seed"; // populate the registry (side effect)
+import { SAMPLE_DATA } from "@/lib/home/sampleData";
+import { ProductBlock } from "@/components/sections/product/ProductBlock";
 
 /**
  * /_blocks - the section gallery (showroom).
