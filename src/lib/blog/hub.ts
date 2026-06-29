@@ -35,14 +35,14 @@ function exists(p: string): boolean {
 // preferred. Each post claims the first unclaimed image whose "theme" matches
 // its product/topic; this guarantees uniqueness across the visible set.
 const PHOTO_POOL: { src: string; themes: string[] }[] = [
-  { src: "/home/hero-panel.webp", themes: ["multiple", "hero", "any"] },
+  { src: "/blog/hub/hero-panel.webp", themes: ["multiple", "hero", "any"] },
   { src: "/home/installs/shield-beds.webp", themes: ["shield", "beds", "any"] },
   { src: "/home/installs/xbar-walkway.webp", themes: ["xbar", "pavers", "hardscape", "any"] },
   { src: "/home/installs/terra-separation.webp", themes: ["terra", "drainage", "any"] },
   { src: "/home/gal-rollout.webp", themes: ["multiple", "comparison", "any"] },
-  { src: "/home/gal-cutting.webp", themes: ["howto", "install", "any"] },
-  { src: "/home/gal-planting.webp", themes: ["shield", "beds", "any"] },
-  { src: "/home/gal-guideline.webp", themes: ["buying", "thickness", "any"] },
+  { src: "/blog/hub/gal-cutting.webp", themes: ["howto", "install", "any"] },
+  { src: "/blog/hub/gal-planting.webp", themes: ["shield", "beds", "any"] },
+  { src: "/blog/hub/gal-guideline.webp", themes: ["buying", "thickness", "any"] },
   { src: "/home/realjobs/tile-gravel.webp", themes: ["xbar", "gravel", "any"] },
   { src: "/home/realjobs/poster-1.webp", themes: ["any"] },
   { src: "/home/realjobs/poster-2.webp", themes: ["buying", "any"] },

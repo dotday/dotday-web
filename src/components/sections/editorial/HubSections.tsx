@@ -514,7 +514,7 @@ export function FieldQuote() {
       <div className="wrap bfq">
         <div className="bfq-media">
           <Img
-            src="/home/realjobs/bri-chicken-coop.webp"
+            src="/blog/hub/bri-chicken-coop.webp"
             alt="Briana laying DOTDAY XBAR 5oz woven fabric along her chicken coop and farm beds in Oregon"
             ratio="r-54"
             sizes="(max-width: 920px) 100vw, 480px"
@@ -600,13 +600,13 @@ export function ExpertReviews() {
 
 export function MissionTeam() {
   // Placeholder team members. Roles per brand: Nikita = Founder, Rakshit =
-  // Co-Founder. Avatars are branded placeholder images in /home/team/;
+  // Co-Founder. Avatars are branded placeholder images in /blog/hub/;
   // swap for real headshots when available.
   const team = [
-    { name: "Nikita", role: "Founder", img: "/home/team/nikita.webp" },
-    { name: "Rakshit", role: "Co-Founder", img: "/home/team/rakshit.webp" },
-    { name: "Marcus Halvorsen", role: "Hardscape & Fabric Specialist", img: "/home/team/marcus.webp" },
-    { name: "Bri Talmage", role: "Field & Farm Projects", img: "/home/team/bri.webp" },
+    { name: "Nikita", role: "Founder", img: "/blog/hub/nikita.webp" },
+    { name: "Rakshit", role: "Co-Founder", img: "/blog/hub/rakshit.webp" },
+    { name: "Marcus Halvorsen", role: "Hardscape & Fabric Specialist", img: "/blog/hub/marcus.webp" },
+    { name: "Bri Talmage", role: "Field & Farm Projects", img: "/blog/hub/bri.webp" },
   ];
   return (
     <section className="bmt-wrap" aria-label="Our mission and team">
