@@ -11,8 +11,8 @@ import type { LandingPage } from "@/lib/landing/types";
  * Files are organised into subfolders by KIND, but the URL is always /l/<slug>
  * (or a root binding) regardless of which folder a file sits in - routing keys
  * off the `slug` field, never the path:
- *   content/landing/application/  - blog-like, application-specific pages
- *                                   (drainage, farms, driveways, ...) -> /l/<slug>
+ *   content/landing/pages/        - standard landing pages
+ *                                   (gravel, drainage, farms, driveways, ...) -> /l/<slug>
  *   content/landing/custom/       - bespoke-layout pages bound to a root URL
  *                                   (my-qrzone, how-to-install, pr, press-*)
  * Flat files left directly in content/landing/ are still picked up, so the
