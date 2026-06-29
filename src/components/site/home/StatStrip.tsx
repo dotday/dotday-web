@@ -1,32 +1,39 @@
 import { Icon } from "@/components/site/Icon";
+import type { HomeStatStripData } from "@/components/site/home/types";
 
 /**
- * StatStrip - the credibility band directly under the hero. Mirrors the Wix
- * homepage's stat row but tightened. Numbers are brand-confirmed marketing
- * figures; update copy here if the claims change.
+ * StatStrip (home) - the credibility band under the hero. Brand-confirmed
+ * marketing figures. Now data-driven; markup byte-identical (hstats-* / hstat
+ * classes). Registered as `homeStatStrip` to distinguish from the shared blog
+ * `statStrip` block. DEFAULT_HOME_STAT_STRIP holds today's content.
  */
 
-const STATS: { n: string; l: string; sub: string }[] = [
-  { n: "500K+", l: "Sq Ft Sold", sub: "Beds, farms, driveways, and drains nationwide" },
-  { n: "48", l: "States Shipped", sub: "Multiple US warehouses for fast delivery" },
-  { n: "5.0", l: "Rated on Amazon", sub: "Trusted by pros and serious DIYers" },
-  { n: "3", l: "Fabric Systems", sub: "One built for each ground condition" },
-];
+export const DEFAULT_HOME_STAT_STRIP: HomeStatStripData = {
+  _type: "homeStatStrip",
+  stats: [
+    { value: "500K+", label: "Sq Ft Sold", sub: "Beds, farms, driveways, and drains nationwide" },
+    { value: "48", label: "States Shipped", sub: "Multiple US warehouses for fast delivery" },
+    { value: "5.0", label: "Rated on Amazon", sub: "Trusted by pros and serious DIYers", star: true },
+    { value: "3", label: "Fabric Systems", sub: "One built for each ground condition" },
+  ],
+};
 
-export function StatStrip() {
+export function StatStrip({
+  data = DEFAULT_HOME_STAT_STRIP,
+}: {
+  data?: HomeStatStripData;
+}) {
   return (
     <section className="hstats" aria-label="DOTDAY by the numbers">
       <div className="wrap hstats-grid">
-        {STATS.map((s) => (
-          <div className="hstat" key={s.l}>
+        {data.stats.map((s) => (
+          <div className="hstat" key={s.label}>
             <div className="hstat-n">
-              {s.n}
-              {s.l === "Rated on Amazon" && (
-                <Icon name="star" size={18} className="hstat-star" />
-              )}
+              {s.value}
+              {s.star && <Icon name="star" size={18} className="hstat-star" />}
             </div>
-            <div className="hstat-l">{s.l}</div>
-            <div className="hstat-sub">{s.sub}</div>
+            <div className="hstat-l">{s.label}</div>
+            {s.sub && <div className="hstat-sub">{s.sub}</div>}
           </div>
         ))}
       </div>

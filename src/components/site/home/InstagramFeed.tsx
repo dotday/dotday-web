@@ -2,31 +2,24 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
+import type { InstagramFeedData } from "@/components/site/home/types";
 
 /**
- * InstagramFeed - "More from the DOTDAY community."
+ * InstagramFeed - "More from the DOTDAY community." Live Instagram wall built on
+ * Instagram's OFFICIAL embed system (embed.js + <blockquote class="instagram-
+ * media">). Each real permalink renders to a live post/reel card; empty slots
+ * render a branded placeholder tile. No API key, within TOS.
  *
- * Live Instagram wall built on Instagram's OFFICIAL embed system (embed.js +
- * <blockquote class="instagram-media">). Each real permalink renders to a live
- * post/reel card: Instagram serves current content (caption, media, inline reel
- * playback), so the wall stays in sync with no API key and stays within TOS.
+ * CLIENT BEHAVIOR PRESERVED EXACTLY: still a client component; the embed.js
+ * <Script>, the useEffect that re-runs window.instgrm.Embeds.process() on mount/
+ * navigation, and the window.instgrm global typing are all unchanged. Only the
+ * post permalinks + profile URL moved into `data` (POSTS/PROFILE_URL -> data.posts/
+ * data.profileUrl). Authoring the wall is now editing data, not the component.
  *
- * HOW TO POPULATE (you do this once with real posts):
- * Open a post or reel on instagram.com, copy its URL, and paste it into POSTS:
- *   https://www.instagram.com/p/SHORTCODE/      (photo / carousel)
- *   https://www.instagram.com/reel/SHORTCODE/   (reel)
- * Each filled slot becomes a real embed. Empty slots ("") render a branded
- * placeholder tile so the section looks right before the links are added.
- *
- * On a fully auto-updating "every new post" feed: that needs Instagram's Graph
- * API (access token + Facebook Business + app review). This embed route is the
- * no-token, compliant path; refresh the wall by updating POSTS.
+ * To populate: paste real post/reel permalinks into data.posts; leave "" for an
+ * unfilled slot. https://www.instagram.com/p/SHORTCODE/ (photo/carousel) or
+ * https://www.instagram.com/reel/SHORTCODE/ (reel).
  */
-
-const PROFILE_URL = "https://www.instagram.com/dotday_landscape_fabrics/";
-
-// Paste real post/reel permalinks here. Leave "" for an unfilled slot.
-const POSTS: string[] = ["", "", "", ""];
 
 declare global {
   interface Window {
@@ -38,7 +31,22 @@ function isPost(url: string) {
   return /instagram\.com\/(p|reel|tv)\//.test(url);
 }
 
-export function InstagramFeed() {
+export const DEFAULT_INSTAGRAM_FEED: InstagramFeedData = {
+  _type: "instagramFeed",
+  eyebrow: "@dotday_landscape_fabrics",
+  heading: "More from the DOTDAY community.",
+  sub: "Real installs, tips, and field stories from gardens, farms, and job sites. Follow along on Instagram for the latest.",
+  profileUrl: "https://www.instagram.com/dotday_landscape_fabrics/",
+  posts: ["", "", "", ""],
+};
+
+export function InstagramFeed({
+  data = DEFAULT_INSTAGRAM_FEED,
+}: {
+  data?: InstagramFeedData;
+}) {
+  const { eyebrow, heading, sub, profileUrl, posts } = data;
+
   // Re-run Instagram's parser after mount and on client navigation so any
   // blockquotes hydrate into real cards.
   useEffect(() => {
@@ -47,7 +55,7 @@ export function InstagramFeed() {
     }
   });
 
-  const hasRealPosts = POSTS.some(isPost);
+  const hasRealPosts = posts.some(isPost);
 
   return (
     <section className="igf" aria-label="DOTDAY on Instagram">
@@ -60,26 +68,16 @@ export function InstagramFeed() {
       )}
 
       <div className="wrap igf-head">
-        <span className="igf-eyebrow">@dotday_landscape_fabrics</span>
-        <h2 className="igf-title">
-          More from the <mark>DOTDAY</mark> community.
-        </h2>
-        <p className="igf-sub">
-          Real installs, tips, and field stories from gardens, farms, and job
-          sites. Follow along on Instagram for the latest.
-        </p>
-        <a
-          className="igf-follow"
-          href={PROFILE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        {eyebrow && <span className="igf-eyebrow">{eyebrow}</span>}
+        <h2 className="igf-title">{heading}</h2>
+        {sub && <p className="igf-sub">{sub}</p>}
+        <a className="igf-follow" href={profileUrl} target="_blank" rel="noopener noreferrer">
           Follow on Instagram
         </a>
       </div>
 
       <div className="wrap igf-grid">
-        {POSTS.map((url, i) =>
+        {posts.map((url, i) =>
           isPost(url) ? (
             <blockquote
               key={`${url}-${i}`}
@@ -95,7 +93,7 @@ export function InstagramFeed() {
             <a
               key={`ph-${i}`}
               className="igf-ph"
-              href={PROFILE_URL}
+              href={profileUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View DOTDAY on Instagram"

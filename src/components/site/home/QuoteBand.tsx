@@ -1,32 +1,36 @@
 import Link from "next/link";
+import type { QuoteBandData } from "@/components/site/home/types";
 
 /**
- * QuoteBand - solid-neon call-to-action band plus a moving "Build for success"
- * marquee strip beneath it.
- *
- * The band drives to the FabricFinder tool (the strongest next step for a
- * visitor sizing up a project) using approved CTA copy. The marquee is a
- * pure-CSS infinite scroll (no JS), with the track duplicated so the loop is
- * seamless; it respects prefers-reduced-motion.
+ * QuoteBand - solid-neon CTA band + a moving marquee strip beneath it. Now
+ * data-driven; markup byte-identical (qband-* / marq-* classes). The marquee is
+ * pure-CSS infinite scroll (track duplicated for a seamless loop), respecting
+ * prefers-reduced-motion. DEFAULT_QUOTE_BAND holds today's content.
  */
 
-const MARQUEE_WORD = "Build for success";
 const MARQUEE_REPEAT = 8;
 
-export function QuoteBand() {
+export const DEFAULT_QUOTE_BAND: QuoteBandData = {
+  _type: "quoteBand",
+  heading: "Plan the right fabric for your project",
+  sub: "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA, with the roll math done for you.",
+  ctaLabel: "Fabric Calculator",
+  ctaHref: "/fabric-finder",
+  marqueeWord: "Build for success",
+};
+
+export function QuoteBand({ data = DEFAULT_QUOTE_BAND }: { data?: QuoteBandData }) {
+  const word = data.marqueeWord || "Build for success";
   const items = Array.from({ length: MARQUEE_REPEAT });
 
   return (
     <>
       <section className="qband" aria-label="Plan your project">
         <div className="wrap qband-inner">
-          <h2 className="qband-title">Plan the right fabric for your project</h2>
-          <p className="qband-sub">
-            Answer a few questions about your ground condition and get matched to
-            SHIELD, XBAR, or TERRA, with the roll math done for you.
-          </p>
-          <Link className="qband-btn" href="/fabric-finder">
-            Fabric Calculator
+          <h2 className="qband-title">{data.heading}</h2>
+          {data.sub && <p className="qband-sub">{data.sub}</p>}
+          <Link className="qband-btn" href={data.ctaHref}>
+            {data.ctaLabel}
           </Link>
         </div>
       </section>
@@ -36,13 +40,13 @@ export function QuoteBand() {
           {items.map((_, i) => (
             <span className="marq-item" key={`a-${i}`}>
               <span className="marq-diamond">&#9670;</span>
-              {MARQUEE_WORD}
+              {word}
             </span>
           ))}
           {items.map((_, i) => (
             <span className="marq-item" key={`b-${i}`}>
               <span className="marq-diamond">&#9670;</span>
-              {MARQUEE_WORD}
+              {word}
             </span>
           ))}
         </div>

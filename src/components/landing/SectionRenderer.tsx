@@ -1,4 +1,7 @@
-import type { LandingSection } from "@/lib/landing/types";
+import type { LandingSection, LandingPage } from "@/lib/landing/types";
+import { resolveSectionImages } from "@/lib/landing/resolveSectionImages";
+import { getSection } from "@/components/landing/registry";
+import "@/components/landing/registry.seed"; // registers direct sections (side effect)
 import {
   LandingHero,
   Problem,
@@ -19,10 +22,12 @@ import {
 import { SharedFAQ } from "@/components/global/sections/SharedFAQ";
 import { SharedComparisonTable } from "@/components/global/sections/SharedComparisonTable";
 import { SharedCTA } from "@/components/global/sections/SharedCTA";
-// Step lists and callouts reuse the BLOG block components so a how-to renders
-// the identical numbered steps / neon-bordered callout on a landing page.
-import { Steps } from "@/components/blog/blocks/Steps";
-import { Callout } from "@/components/blog/blocks/Callout";
+// Step lists and callouts come from the SHARED section core, so a how-to renders
+// the identical numbered steps / neon-bordered callout on a landing page as in a
+// blog post. (Previously imported from blog/blocks; now both surfaces share one
+// implementation under components/sections.)
+import { Steps } from "@/components/sections/Steps";
+import { Callout } from "@/components/sections/Callout";
 
 /**
  * SectionRenderer - the landing-page dispatcher, mirroring the blog
@@ -32,11 +37,36 @@ import { Callout } from "@/components/blog/blocks/Callout";
  * FAQ, productComparison, and cta delegate to the GLOBAL shared components, so
  * they are byte-identical to what blog posts render. Improve a shared component
  * once and every blog AND landing page updates.
+ *
+ * IMAGE RESOLUTION: the renderer takes the page (for slug + images map) and runs
+ * resolveSectionImages on each section first, so every image `ref` is turned
+ * into a real /public URL before the section renders. This is what makes landing
+ * imagery resolve the same way blog imagery does. Callers that don't need
+ * resolution (or have no images) can omit `page`.
  */
-export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
+export function SectionRenderer({
+  sections,
+  page,
+}: {
+  sections: LandingSection[];
+  page?: Pick<LandingPage, "slug" | "images">;
+}) {
+  const ctx = page ?? { slug: "", images: {} };
   return (
     <>
-      {sections.map((section, i) => {
+      {sections.map((raw, i) => {
+        const section = resolveSectionImages(ctx, raw);
+
+        // Registry first: sections that render directly from their data with a
+        // uniform { data } prop are looked up here. Adding such a section needs
+        // no edit to this switch - just a registry entry. Sections needing
+        // bespoke wrappers/prop-adaptation fall through to the switch below.
+        const def = getSection(section._type);
+        if (def) {
+          const C = def.component;
+          return <C key={i} data={section} />;
+        }
+
         switch (section._type) {
           case "hero":
             return <LandingHero key={i} data={section} />;
@@ -91,7 +121,7 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
                 <div className="body-single">
                   <article>
                     <Steps
-                      block={{
+                      data={{
                         _type: "steps",
                         heading: section.heading,
                         steps: section.steps,
@@ -107,7 +137,7 @@ export function SectionRenderer({ sections }: { sections: LandingSection[] }) {
                 <div className="body-single">
                   <article>
                     <Callout
-                      block={{
+                      data={{
                         _type: section.variant,
                         heading: section.heading,
                         body: section.body,

@@ -3,20 +3,11 @@ import Link from "next/link";
 import { getPublicPosts } from "@/lib/blog/loader";
 import { resolveImage } from "@/lib/blog/images";
 import { Img } from "@/components/blog/ui/Img";
-import { ProductBlock } from "@/components/blog/blocks/ProductBlock";
 import { FinalCTA } from "@/components/blog/cta/FinalCTA";
 import { FAQ } from "@/components/blog/blocks/FAQ";
 import { SITE_URL, site } from "@/lib/site";
-import { HomeHero } from "@/components/site/home/HomeHero";
-import { UseCases } from "@/components/site/home/UseCases";
-import { ApplicationGallery } from "@/components/site/home/ApplicationGallery";
-import { RealJobs } from "@/components/site/home/RealJobs";
-import { VideoFeature } from "@/components/site/home/VideoFeature";
-import { InstallShowcase } from "@/components/site/home/InstallShowcase";
-import { ToolsBand } from "@/components/site/home/ToolsBand";
-import { Testimonials } from "@/components/site/home/Testimonials";
-import { InstagramFeed } from "@/components/site/home/InstagramFeed";
-import { QuoteBand } from "@/components/site/home/QuoteBand";
+import { getHomeDoc } from "@/lib/home/loader";
+import { HomeSectionRenderer } from "@/components/site/home/HomeSectionRenderer";
 
 export const metadata: Metadata = {
   title: "Landscape Fabric Built for the Job",
@@ -92,6 +83,7 @@ function buildHomeJsonLd() {
 export default function HomePage() {
   const latest = getPublicPosts().slice(0, 3);
   const jsonLd = buildHomeJsonLd();
+  const home = getHomeDoc();
 
   return (
     <>
@@ -103,38 +95,13 @@ export default function HomePage() {
         />
       ))}
 
-      <HomeHero />
+      {/* Data-driven sections from content/home.json, rendered via the shared
+          registry. The ordered list (splitHero, productBlock, groundConditionCards,
+          applicationGallery, realJobs, homeVideoFeature, installShowcase, toolsBand,
+          testimonials, instagramFeed, quoteBand) lives in the JSON now. */}
+      {home && <HomeSectionRenderer sections={home.sections} />}
 
-      {/* Three-fabric system */}
-      <div className="wrap">
-        <ProductBlock />
-      </div>
-
-      <UseCases />
-
-      {/* Built for every application - circular use-case gallery */}
-      <ApplicationGallery />
-
-      {/* Real jobs - horizontal media wall (photos + clips) */}
-      <RealJobs />
-
-      {/* Video feature - brief + embedded video */}
-      <VideoFeature />
-
-      {/* Real results - premium light showcase with linked product cards */}
-      <InstallShowcase />
-
-      <ToolsBand />
-
-      <Testimonials />
-
-      {/* Instagram - live official embeds + branded placeholders */}
-      <InstagramFeed />
-
-      {/* Neon conversion band + marquee */}
-      <QuoteBand />
-
-      {/* FAQ */}
+      {/* FAQ - kept in the route because it also emits FAQPage JSON-LD above. */}
       <section className="wrap section">
         <FAQ faq={HOME_FAQ} />
       </section>

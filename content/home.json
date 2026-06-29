@@ -1,0 +1,354 @@
+{
+  "schemaVersion": "1.0.0",
+  "sections": [
+    {
+      "_type": "splitHero",
+      "eyebrow": "Professional landscape fabric",
+      "headline": {
+        "lines": [
+          "Right fabric.",
+          "Right ground.",
+          "Every time."
+        ],
+        "highlightLine": 1
+      },
+      "subheading": "Weed barrier, hardscape fabric, and geotextile are not interchangeable. DOTDAY makes three fabrics built for three jobs, shipped from the USA so your install holds up.",
+      "ctas": [
+        {
+          "label": "Find Your Fabric",
+          "href": "/fabric-finder",
+          "variant": "primary"
+        },
+        {
+          "label": "Use the Fabric Calculator",
+          "href": "/landscape-fabric-calculator",
+          "variant": "ghost"
+        }
+      ],
+      "trust": [
+        {
+          "lead": "500K+ sq ft",
+          "rest": " sold"
+        },
+        {
+          "lead": "48 states",
+          "rest": " shipped"
+        },
+        {
+          "lead": "UV-stabilized",
+          "rest": " construction"
+        }
+      ],
+      "card": {
+        "tag": "XBAR on the job",
+        "image": "/home/gal-rollout.webp",
+        "imageAlt": "DOTDAY landscape fabric being installed on site",
+        "stats": [
+          {
+            "value": "500K+",
+            "label": "Sq ft sold"
+          },
+          {
+            "value": "48",
+            "label": "States"
+          },
+          {
+            "value": "5.0",
+            "star": true,
+            "label": "On Amazon"
+          }
+        ]
+      }
+    },
+    {
+      "_type": "productBlock"
+    },
+    {
+      "_type": "groundConditionCards",
+      "badge": "Built for every ground condition",
+      "heading": "Match the fabric to the ground, not the price tag.",
+      "intro": "The wrong weight fails months later as weed pressure, shifting gravel, or drainage problems. Here is the right call for each job.",
+      "cards": [
+        {
+          "eyebrow": "Gravel & Hardscape",
+          "title": "Stronger gravel installs",
+          "body": "Stabilize gravel and stop sinking, shifting, and weed growth under driveways, paths, and high-traffic hardscape.",
+          "pick": "Use XBAR 5oz",
+          "href": "/product-page/xbar-landscape-fabric",
+          "image": "/home/xbar-card.webp",
+          "alt": "DOTDAY XBAR 5oz dual-layer fabric for gravel driveways and hardscape"
+        },
+        {
+          "eyebrow": "Garden Beds & Farms",
+          "title": "Cleaner garden beds",
+          "body": "Control weeds while water, air, and nutrients reach the soil. Built for beds, raised planters, farm rows, and nurseries.",
+          "pick": "Use SHIELD 3.2oz",
+          "href": "/product-page/shield-landscape-fabric",
+          "image": "/home/shield-card.webp",
+          "alt": "DOTDAY SHIELD 3.2oz woven weed barrier fabric for garden beds and farm rows"
+        },
+        {
+          "eyebrow": "Drainage & Filtration",
+          "title": "Better water management",
+          "body": "Improve drainage and limit soil erosion with high-permeability geotextile for French drains, retaining walls, and wet ground.",
+          "pick": "Use TERRA 4 / 6 / 8oz",
+          "href": "/product-page/terra-geotextile-fabric",
+          "image": "/home/terra-card.webp",
+          "alt": "DOTDAY TERRA non-woven geotextile fabric for drainage and erosion control"
+        }
+      ]
+    },
+    {
+      "_type": "applicationGallery",
+      "eyebrow": "Where DOTDAY gets used",
+      "heading": "Built for every application",
+      "sub": "Explore common uses and find the right DOTDAY fabric for your project.",
+      "apps": [
+        {
+          "icon": "seedling",
+          "title": "Garden Beds",
+          "product": "SHIELD 3.2 oz",
+          "body": "Weed control with water and nutrient flow.",
+          "image": "/home/apps/garden-beds.webp",
+          "alt": "Seedlings planted through DOTDAY SHIELD fabric in a garden bed",
+          "href": "/product-page/shield-landscape-fabric"
+        },
+        {
+          "icon": "pottedPlant",
+          "title": "Raised Beds",
+          "product": "SHIELD 3.2 oz",
+          "body": "Protects soil quality and reduces weeds.",
+          "image": "/home/apps/raised-beds.webp",
+          "alt": "DOTDAY SHIELD weed barrier lining a raised planting bed",
+          "href": "/product-page/shield-landscape-fabric"
+        },
+        {
+          "icon": "greenhouse",
+          "title": "Nurseries",
+          "product": "SHIELD 3.2 oz",
+          "body": "Ideal for plant rows and greenhouse floors.",
+          "image": "/home/apps/nurseries.webp",
+          "alt": "DOTDAY SHIELD fabric laid across nursery plant rows",
+          "href": "/product-page/shield-landscape-fabric"
+        },
+        {
+          "icon": "car",
+          "title": "Driveways & Gravel",
+          "product": "XBAR 5 oz",
+          "body": "High strength for gravel, traffic, and stability.",
+          "image": "/home/apps/driveways.webp",
+          "alt": "Gravel driveway stabilized over DOTDAY XBAR fabric",
+          "href": "/product-page/xbar-landscape-fabric"
+        },
+        {
+          "icon": "footsteps",
+          "title": "Walkways & Pathways",
+          "product": "XBAR 5 oz",
+          "body": "Stable base under pavers, stone, or mulch.",
+          "image": "/home/apps/walkways.webp",
+          "alt": "DOTDAY XBAR fabric under a gravel walkway",
+          "href": "/product-page/xbar-landscape-fabric"
+        },
+        {
+          "icon": "droplet",
+          "title": "Drainage & Erosion",
+          "product": "TERRA 8 oz",
+          "body": "Allows water to flow while preventing soil washout.",
+          "image": "/home/apps/drainage.webp",
+          "alt": "DOTDAY TERRA non-woven geotextile installed for drainage",
+          "href": "/product-page/terra-geotextile-fabric"
+        }
+      ]
+    },
+    {
+      "_type": "realJobs",
+      "sub": "From gravel paths to farms to market gardens, here is DOTDAY fabric on the job across the US.",
+      "tiles": [
+        {
+          "kind": "image",
+          "src": "/home/realjobs/tile-gravel.webp",
+          "alt": "DOTDAY XBAR fabric laid under gravel along a side-yard path",
+          "tag": "XBAR",
+          "caption": "Gravel path, AZ"
+        },
+        {
+          "kind": "video",
+          "src": "/home/realjobs/clip-1.mp4",
+          "poster": "/home/realjobs/poster-1.webp",
+          "alt": "Watering seedlings planted through DOTDAY SHIELD weed barrier",
+          "span": "tall",
+          "tag": "SHIELD",
+          "caption": "Market garden"
+        },
+        {
+          "kind": "image",
+          "src": "/home/realjobs/tile-beds.webp",
+          "alt": "Seedlings planted in even rows through DOTDAY SHIELD fabric",
+          "tag": "SHIELD",
+          "caption": "Farm rows, OR"
+        },
+        {
+          "kind": "image",
+          "src": "/home/realjobs/tile-water.webp",
+          "alt": "Water draining through permeable DOTDAY SHIELD woven fabric",
+          "span": "wide",
+          "tag": "SHIELD",
+          "caption": "Permeability test"
+        },
+        {
+          "kind": "video",
+          "src": "/home/realjobs/clip-2.mp4",
+          "poster": "/home/realjobs/poster-2.webp",
+          "alt": "Rolling out DOTDAY woven fabric across a planting plot",
+          "span": "tall",
+          "tag": "XBAR",
+          "caption": "Roll out"
+        },
+        {
+          "kind": "image",
+          "src": "/home/realjobs/tile-terra.webp",
+          "alt": "Worker unrolling DOTDAY TERRA non-woven geotextile on a slope",
+          "tag": "TERRA",
+          "caption": "Slope separation"
+        }
+      ]
+    },
+    {
+      "_type": "homeVideoFeature",
+      "badge": "See it in action",
+      "heading": "Watch DOTDAY fabric on a real install.",
+      "body": "From roll-out to the finished surface, see how the right fabric goes down fast and lays flat. The same build pros rely on for beds, hardscape, and drainage, doing its job on site.",
+      "bullets": [
+        "Cuts clean without fraying at the seams.",
+        "Permeable build lets water and air reach the soil.",
+        "UV-stabilized to hold up under mulch, gravel, and sun."
+      ],
+      "ctaLabel": "Find Your Fabric",
+      "ctaHref": "/fabric-finder",
+      "video": {
+        "kind": "youtube",
+        "id": "sIYhfyyYJaA",
+        "title": "DOTDAY landscape fabric in action"
+      }
+    },
+    {
+      "_type": "installShowcase",
+      "badge": "Real results",
+      "heading": "Professional installations that perform.",
+      "intro": "SHIELD, XBAR, and TERRA deliver engineered performance across hardscapes, gardens, and drainage. The right fabric for the ground, so the install holds up.",
+      "feature": {
+        "eyebrow": "Hardscape · XBAR",
+        "title": "Pristine Walkways",
+        "body": "XBAR 5oz dual-layer fabric keeps gravel and hardscape weed-free and stable. The woven face with a non-woven backing resists punctures and handles high-traffic installs.",
+        "href": "/product-page/xbar-landscape-fabric",
+        "image": "/home/installs/xbar-walkway.webp",
+        "alt": "Finished gravel pathway stabilized with DOTDAY XBAR hardscape fabric"
+      },
+      "side": [
+        {
+          "eyebrow": "Gardens · SHIELD",
+          "title": "Organized Beds",
+          "body": "SHIELD woven fabric blocks weeds while water, air, and nutrients reach the soil. Built for beds, raised planters, and farm rows.",
+          "href": "/product-page/shield-landscape-fabric",
+          "image": "/home/installs/shield-beds.webp",
+          "alt": "Seedlings planted in even rows through DOTDAY SHIELD woven weed barrier"
+        },
+        {
+          "eyebrow": "Drainage · TERRA",
+          "title": "Soil Separation",
+          "body": "TERRA non-woven geotextile separates soil from aggregate and lets water through. Engineered for French drains, retaining walls, and base stabilization.",
+          "href": "/product-page/terra-geotextile-fabric",
+          "image": "/home/installs/terra-separation.webp",
+          "alt": "Worker rolling out DOTDAY TERRA non-woven geotextile fabric on a graded slope"
+        }
+      ],
+      "stats": [
+        {
+          "value": "62%",
+          "label": "Faster installs",
+          "sub": "Clean-cutting fabric and high-visibility guide lines speed up every layout."
+        },
+        {
+          "icon": true,
+          "label": "Healthier plants",
+          "sub": "Permeable construction keeps moisture and nutrients moving to the root zone."
+        },
+        {
+          "value": "15-25 yr",
+          "label": "Built to last",
+          "sub": "UV-stabilized fibers hold up under mulch, gravel, and full-sun exposure."
+        }
+      ]
+    },
+    {
+      "_type": "toolsBand",
+      "tools": [
+        {
+          "icon": "search",
+          "kicker": "60-second quiz",
+          "title": "FabricFinder™",
+          "body": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA.",
+          "cta": "Find Your Fabric",
+          "href": "/fabric-finder"
+        },
+        {
+          "icon": "qr",
+          "kicker": "Plan your order",
+          "title": "Fabric Calculator",
+          "body": "Enter your area and get the exact roll count, with a 10% overlap buffer added automatically.",
+          "cta": "Use the Fabric Calculator",
+          "href": "/landscape-fabric-calculator"
+        }
+      ]
+    },
+    {
+      "_type": "testimonials",
+      "badge": "From the field",
+      "heading": "Trusted on real projects.",
+      "quotes": [
+        {
+          "body": "Used SHIELD 3.2oz across my garden beds. Blocks weeds completely, easy to install, and holding up well after six months under mulch.",
+          "name": "Brooklyn",
+          "role": "DIY Home Gardener, OH",
+          "product": "SHIELD",
+          "avatar": "/home/avatars/brooklyn.png"
+        },
+        {
+          "body": "Installed SHIELD across our lavender rows. Controls weeds well, water flows through easily, and it held up through a full growing season.",
+          "name": "Trevor M.",
+          "role": "Farm Owner, OR",
+          "product": "SHIELD",
+          "avatar": "/home/avatars/trevor.png"
+        },
+        {
+          "body": "Using XBAR 5oz for gravel driveways and pathways. Strong, installs clean, and the base hasn't shifted at all.",
+          "name": "Mike",
+          "role": "Contractor, TX",
+          "product": "XBAR",
+          "avatar": "/home/avatars/mike.png"
+        }
+      ]
+    },
+    {
+      "_type": "instagramFeed",
+      "eyebrow": "@dotday_landscape_fabrics",
+      "heading": "More from the DOTDAY community.",
+      "sub": "Real installs, tips, and field stories from gardens, farms, and job sites. Follow along on Instagram for the latest.",
+      "profileUrl": "https://www.instagram.com/dotday_landscape_fabrics/",
+      "posts": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "_type": "quoteBand",
+      "heading": "Plan the right fabric for your project",
+      "sub": "Answer a few questions about your ground condition and get matched to SHIELD, XBAR, or TERRA, with the roll math done for you.",
+      "ctaLabel": "Fabric Calculator",
+      "ctaHref": "/fabric-finder",
+      "marqueeWord": "Build for success"
+    }
+  ]
+}

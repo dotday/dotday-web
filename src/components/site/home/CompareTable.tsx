@@ -1,42 +1,54 @@
 import { CTAButton } from "@/components/blog/ui/Badge";
 import { Icon } from "@/components/site/Icon";
+import type { FabricMatrixData, FabricMatrixHead } from "@/components/site/home/types";
 
 /**
- * CompareTable - at-a-glance spec comparison of the three fabrics. This is the
- * on-brand "right fabric for the right ground" payload: a scannable matrix that
- * helps a contractor or grower self-select. Product accuracy is load-bearing
- * here (XBAR = woven + non-woven backing / dual-layer, NOT needle-punched;
- * TERRA = non-woven; SHIELD = woven).
+ * CompareTable / fabricMatrix - at-a-glance spec comparison of the three fabrics.
+ * The on-brand "right fabric for the right ground" payload: a scannable matrix.
+ * Product accuracy is load-bearing (XBAR = dual-layer woven hybrid, NOT
+ * needle-punched; TERRA = non-woven; SHIELD = woven). Now data-driven; markup
+ * byte-identical (cmp-* classes). DEFAULT_FABRIC_MATRIX holds today's content.
  */
 
-type Row = { label: string; shield: string; xbar: string; terra: string };
-
-const ROWS: Row[] = [
-  { label: "Best for", shield: "Weed control", xbar: "Hardscape", terra: "Drainage" },
-  { label: "Construction", shield: "Woven PP", xbar: "Dual-layer woven hybrid", terra: "Non-woven geotextile" },
-  { label: "Weight", shield: "3.2 oz", xbar: "5 oz", terra: "4 / 6 / 8 oz" },
-  { label: "Where it goes", shield: "Beds, farms, under mulch", xbar: "Gravel, pavers, driveways", terra: "French drains, walls, road base" },
-  { label: "Water flow", shield: "Moderate", xbar: "Moderate", terra: "High" },
-  { label: "Foot / load traffic", shield: "Light", xbar: "Heavy", terra: "Heavy (sub-surface)" },
-];
-
-const HEADS: { key: string; name: string; sub: string; href: string; feat?: boolean }[] = [
+const DEFAULT_HEADS: FabricMatrixHead[] = [
   { key: "shield", name: "SHIELD", sub: "3.2oz Woven", href: "/product-page/shield-landscape-fabric" },
   { key: "xbar", name: "XBAR", sub: "5oz Dual-Layer", href: "/product-page/xbar-landscape-fabric", feat: true },
   { key: "terra", name: "TERRA", sub: "Non-Woven", href: "/product-page/terra-geotextile-fabric" },
 ];
 
-export function CompareTable() {
+export const DEFAULT_FABRIC_MATRIX: FabricMatrixData = {
+  _type: "fabricMatrix",
+  badge: "Compare fabric types",
+  heading: "Three fabrics, side by side.",
+  intro:
+    "Pick by the ground condition, not the price tag. Here is how SHIELD, XBAR, and TERRA line up across the specs that matter on the job.",
+  heads: DEFAULT_HEADS,
+  rows: [
+    { label: "Best for", shield: "Weed control", xbar: "Hardscape", terra: "Drainage" },
+    { label: "Construction", shield: "Woven PP", xbar: "Dual-layer woven hybrid", terra: "Non-woven geotextile" },
+    { label: "Weight", shield: "3.2 oz", xbar: "5 oz", terra: "4 / 6 / 8 oz" },
+    { label: "Where it goes", shield: "Beds, farms, under mulch", xbar: "Gravel, pavers, driveways", terra: "French drains, walls, road base" },
+    { label: "Water flow", shield: "Moderate", xbar: "Moderate", terra: "High" },
+    { label: "Foot / load traffic", shield: "Light", xbar: "Heavy", terra: "Heavy (sub-surface)" },
+  ],
+  footNote: "Still deciding? The 60-second quiz picks for you.",
+  footCtaLabel: "Find Your Fabric",
+  footCtaHref: "/fabric-finder",
+};
+
+export function CompareTable({
+  data = DEFAULT_FABRIC_MATRIX,
+}: {
+  data?: FabricMatrixData;
+}) {
+  const heads = data.heads || DEFAULT_HEADS;
   return (
     <section className="cmp">
       <div className="wrap">
         <div className="cmp-head">
-          <span className="badge">Compare fabric types</span>
-          <h2>Three fabrics, side by side.</h2>
-          <p>
-            Pick by the ground condition, not the price tag. Here is how SHIELD,
-            XBAR, and TERRA line up across the specs that matter on the job.
-          </p>
+          {data.badge && <span className="badge">{data.badge}</span>}
+          <h2>{data.heading}</h2>
+          {data.intro && <p>{data.intro}</p>}
         </div>
 
         <div className="cmp-scroll">
@@ -44,7 +56,7 @@ export function CompareTable() {
             <thead>
               <tr>
                 <th className="cmp-corner" aria-hidden="true"></th>
-                {HEADS.map((h) => (
+                {heads.map((h) => (
                   <th key={h.key} className={h.feat ? "cmp-col-feat" : ""}>
                     <span className="cmp-pname">{h.name}</span>
                     <span className="cmp-psub">{h.sub}</span>
@@ -54,7 +66,7 @@ export function CompareTable() {
               </tr>
             </thead>
             <tbody>
-              {ROWS.map((r) => (
+              {data.rows.map((r) => (
                 <tr key={r.label}>
                   <th scope="row">{r.label}</th>
                   <td>{r.shield}</td>
@@ -64,7 +76,7 @@ export function CompareTable() {
               ))}
               <tr className="cmp-cta-row">
                 <th scope="row" aria-hidden="true"></th>
-                {HEADS.map((h) => (
+                {heads.map((h) => (
                   <td key={h.key} className={h.feat ? "cmp-col-feat" : ""}>
                     <CTAButton href={h.href} variant={h.feat ? "primary" : "ghost"}>
                       View {h.name}
@@ -76,13 +88,17 @@ export function CompareTable() {
           </table>
         </div>
 
-        <div className="cmp-foot">
-          <Icon name="search" size={17} />
-          <span>Still deciding? The 60-second quiz picks for you.</span>
-          <CTAButton href="/fabric-finder" variant="ghost">
-            Find Your Fabric
-          </CTAButton>
-        </div>
+        {data.footNote && (
+          <div className="cmp-foot">
+            <Icon name="search" size={17} />
+            <span>{data.footNote}</span>
+            {data.footCtaLabel && data.footCtaHref && (
+              <CTAButton href={data.footCtaHref} variant="ghost">
+                {data.footCtaLabel}
+              </CTAButton>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

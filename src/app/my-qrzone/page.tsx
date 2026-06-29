@@ -63,7 +63,7 @@ export default function MyQrZoneRoute() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
-      <SectionRenderer sections={page.sections} />
+      <SectionRenderer sections={page.sections} page={page} />
     </>
   );
 }
