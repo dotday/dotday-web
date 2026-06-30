@@ -114,7 +114,28 @@ export interface FaqSection {
 export interface ReviewSection {
   _type: "reviews";
   heading?: string;
-  items: Array<{ quote: string; author: string; role?: string; rating?: number }>;
+  /** Layout. "grid" (default) and "cards" render all items; "spotlight" and
+   *  "centered" feature the first item only. */
+  variant?: "grid" | "cards" | "spotlight" | "centered";
+  /** spotlight only: the project photo beside the featured review. */
+  image?: ImageRef;
+  /** spotlight only: caption overlaid on the photo, e.g. "XBAR 5oz · Farm install". */
+  caption?: string;
+  /** spotlight / centered: optional CTAs under the featured review. */
+  primaryCta?: CtaLink;
+  secondaryCta?: CtaLink;
+  items: Array<{
+    quote: string;
+    author: string;
+    role?: string;
+    rating?: number;
+    /** cards only: avatar photo; if omitted, initials are shown instead. */
+    avatar?: string;
+    /** cards only: explicit avatar monogram override (else derived from author). */
+    monogram?: string;
+    /** cards only: product tag pill, e.g. "SHIELD". */
+    product?: string;
+  }>;
 }
 
 export interface CtaSection {

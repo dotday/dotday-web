@@ -1088,6 +1088,131 @@ tbody tr:nth-child(even) {
   color: var(--muted);
 }
 
+/* Reviews - shared + per-variant styling (see Reviews.tsx).
+   Stars are neon SVGs at a size the component sets; this just colors them. */
+.rev-stars {
+  display: flex;
+  color: var(--neon);
+}
+/* grid variant: bolder, darker author than the old muted .rtime */
+.rev-name {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+}
+.rev-role {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+/* cards variant: initials fallback circle (mirrors ProjectSpotlight author) */
+.tcard-mono {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: var(--charcoal);
+  color: var(--neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+/* spotlight variant: featured review beside a project photo */
+.rev-spot {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 40px;
+  align-items: center;
+}
+.rev-spot-media {
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+.rev-spot-cap {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  background: var(--charcoal);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 100px;
+}
+.rev-spot-quote {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  margin: 18px 0 22px;
+}
+.rev-spot-author {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+.rev-spot-meta {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.rev-spot-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+/* centered variant: featured review, no photo */
+.rev-center {
+  padding: 20px 0;
+  text-align: center;
+}
+.rev-center-stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.rev-center-quote {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(22px, 2.5vw, 30px);
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  margin: 0 0 22px;
+}
+.rev-center-meta {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+.rev-center-meta b {
+  color: var(--charcoal);
+  font-weight: 700;
+}
+.rev-center-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 760px) {
+  .rev-spot {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
 /* final cta */
 .final {
   padding: 60px 20px 0;
@@ -2907,6 +3032,7 @@ tbody tr:nth-child(even) {
   color: var(--charcoal);
   margin: 0 0 12px;
   max-width: 18ch;
+  text-align: center;
 }
 .qband-sub {
   font-size: 16.5px;
@@ -2914,6 +3040,7 @@ tbody tr:nth-child(even) {
   color: var(--ink2);
   margin: 0 0 26px;
   max-width: 56ch;
+  text-align: center;
 }
 .qband-btn {
   display: inline-block;
@@ -3035,8 +3162,8 @@ tbody tr:nth-child(even) {
 .rjobs-tile {
   position: relative;
   flex: 0 0 auto;
-  width: 300px;
-  height: 460px;
+  width: 280px;
+  aspect-ratio: 9 / 16;
   margin: 0;
   border-radius: var(--card-radius);
   overflow: hidden;
@@ -3044,12 +3171,13 @@ tbody tr:nth-child(even) {
   border: 1px solid var(--grey2);
   scroll-snap-align: start;
 }
-.rjobs-tile.is-wide {
-  width: 420px;
-}
+/* Uniform Instagram Reels 9:16 tiles. The span modifiers are intentionally
+   neutralized so a mix of "tall"/"wide" content data still renders a clean,
+   evenly-sized scroll row (the data field is now a harmless no-op). */
+.rjobs-tile.is-wide,
 .rjobs-tile.is-tall {
   width: 280px;
-  height: 500px;
+  aspect-ratio: 9 / 16;
 }
 .rjobs-media {
   position: absolute;

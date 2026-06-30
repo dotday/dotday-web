@@ -26,7 +26,7 @@ export const DEFAULT_JOB_GALLERY: JobGalleryData = {
 
 export function JobGallery({ data = DEFAULT_JOB_GALLERY }: { data?: JobGalleryData }) {
   return (
-    <section className="jobg jobg--dark">
+    <section className="jobg">
       <div className="wrap">
         <div className="jobg-head">
           <div>
