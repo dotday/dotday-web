@@ -69,8 +69,8 @@ export function SpecSheet({ data }: { data: SpecSheetSection }) {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      fontWeight: 800,
-                      fontSize: "clamp(20px, 2.6vw, 28px)",
+                      fontWeight: 600,
+                      fontSize: "clamp(20px, 2.4vw, 26px)",
                       letterSpacing: "-0.02em",
                       borderRadius: 12,
                       padding: "0 18px",
@@ -87,17 +87,21 @@ export function SpecSheet({ data }: { data: SpecSheetSection }) {
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
-                      background: neon ? "var(--charcoal)" : "var(--grey2)",
+                      background: neon ? "var(--white)" : "var(--grey2)",
+                      border: neon ? "1px solid var(--neon)" : "1px solid transparent",
+                      boxShadow: neon
+                        ? "0 0 0 3px rgba(216,255,0,0.28), 0 0 14px rgba(216,255,0,0.22)"
+                        : "none",
                     }}
                   >
                     <span
                       style={{
                         fontSize: 13.5,
-                        fontWeight: 800,
+                        fontWeight: 700,
                         letterSpacing: "0.04em",
                         textTransform: "uppercase",
                         lineHeight: 1.25,
-                        color: neon ? "var(--white)" : "var(--charcoal)",
+                        color: "var(--charcoal)",
                       }}
                     >
                       {r.label}
@@ -109,7 +113,7 @@ export function SpecSheet({ data }: { data: SpecSheetSection }) {
                           fontWeight: 600,
                           marginTop: 3,
                           letterSpacing: "0.02em",
-                          color: neon ? "var(--neon)" : "var(--muted)",
+                          color: "var(--muted)",
                         }}
                       >
                         {r.standard}

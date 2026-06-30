@@ -2212,6 +2212,12 @@ tbody tr:nth-child(even) {
 .ucard-foot .btn {
   padding: 10px 18px;
   font-size: 12px;
+  border-color: var(--neon);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+}
+.ucard-foot .btn:hover {
+  border-color: var(--neon);
+  box-shadow: 0 0 0 3px rgba(216, 255, 0, 0.3), 0 0 16px rgba(216, 255, 0, 0.4);
 }
 
 /* --- Job gallery --- */

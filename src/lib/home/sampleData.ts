@@ -139,7 +139,7 @@ export const SAMPLE_DATA: Record<string, unknown> = {
     rows: [
       { value: "5 oz", label: "Weight", standard: "ASTM D5261", emphasis: "neon" },
       { value: "Dual-layer", label: "Construction", standard: "Woven face + non-woven backing" },
-      { value: "High", label: "Puncture resistance", emphasis: "plain" },
+      { value: "High", label: "Puncture resistance", emphasis: "neon" },
     ],
   },
   projectSpotlight: {
