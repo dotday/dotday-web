@@ -3,11 +3,14 @@ import { Icon } from "@/components/site/Icon";
 import type { InstallShowcaseData } from "@/lib/home/types";
 
 /**
- * InstallShowcase - "Professional Installations That Perform." A large feature
- * card beside two stacked cards (each -> product), plus a three-up stat row. Now
- * data-driven; markup byte-identical (ishow-* classes). Honest fit preserved:
- * gravel/hardscape -> XBAR, beds -> SHIELD, drainage -> TERRA.
- * DEFAULT_INSTALL_SHOWCASE holds today's content.
+ * InstallShowcase - "Professional installations that perform." Three equal
+ * product cards (XBAR / SHIELD / TERRA), each an image with a floating neon
+ * category pill and a light scrim carrying the title, body, and a neon-outline
+ * CTA. Honest fit preserved: gravel/hardscape -> XBAR, beds -> SHIELD,
+ * drainage -> TERRA. DEFAULT_INSTALL_SHOWCASE holds today's content.
+ *
+ * The data still carries `feature` + `side` (combined here into one flat grid)
+ * and `stats` (no longer rendered); both shapes stay valid for existing pages.
  */
 
 export const DEFAULT_INSTALL_SHOWCASE: InstallShowcaseData = {
@@ -54,6 +57,8 @@ export function InstallShowcase({
 }: {
   data?: InstallShowcaseData;
 }) {
+  const cards = [data.feature, ...data.side];
+
   return (
     <section className="wrap section ishow">
       <div className="ishow-head">
@@ -62,63 +67,25 @@ export function InstallShowcase({
         {data.intro && <p>{data.intro}</p>}
       </div>
 
-      <div className="ishow-grid">
-        <Link className="ishow-feature" href={data.feature.href}>
-          <span
-            className="ishow-media"
-            style={{ backgroundImage: `url(${data.feature.image})` }}
-            role="img"
-            aria-label={data.feature.alt}
-          />
-          <span className="ishow-feature-body">
-            <span className="ishow-pill">{data.feature.eyebrow}</span>
-            <h3>{data.feature.title}</h3>
-            <p>{data.feature.body}</p>
-            <span className="ishow-link">
-              View XBAR
-              <Icon name="arrowRight" size={15} className="ishow-arrow" />
-            </span>
-          </span>
-        </Link>
-
-        <div className="ishow-side">
-          {data.side.map((c) => (
-            <Link className="ishow-card" href={c.href} key={c.title}>
-              <span
-                className="ishow-card-media"
-                style={{ backgroundImage: `url(${c.image})` }}
-                role="img"
-                aria-label={c.alt}
-              />
-              <span className="ishow-card-body">
-                <span className="ishow-pill">{c.eyebrow}</span>
-                <h3>{c.title}</h3>
-                <p>{c.body}</p>
-                <span className="ishow-link">
-                  View fabric
-                  <Icon name="arrowRight" size={14} className="ishow-arrow" />
-                </span>
+      <div className="ic-grid">
+        {cards.map((c) => (
+          <Link className="ic" href={c.href} key={c.title}>
+            <span
+              className="ic-media"
+              style={{ backgroundImage: `url(${c.image})` }}
+              role="img"
+              aria-label={c.alt}
+            />
+            <span className="ic-pill">{c.eyebrow}</span>
+            <span className="ic-body">
+              <h3>{c.title}</h3>
+              <p>{c.body}</p>
+              <span className="ic-link">
+                View fabric
+                <Icon name="arrowRight" size={14} className="ic-arrow" />
               </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <div className="ishow-stats">
-        {data.stats.map((s) => (
-          <div className="ishow-stat" key={s.label}>
-            <div className="ishow-stat-n">
-              {s.icon ? (
-                <span className="ishow-stat-ico">
-                  <Icon name="check" size={26} />
-                </span>
-              ) : (
-                s.value
-              )}
-            </div>
-            <div className="ishow-stat-l">{s.label}</div>
-            <div className="ishow-stat-sub">{s.sub}</div>
-          </div>
+            </span>
+          </Link>
         ))}
       </div>
     </section>

@@ -2820,16 +2820,20 @@ tbody tr:nth-child(even) {
   color: var(--muted);
   margin: 0;
 }
-.ishow-grid {
+/* Three equal product cards (XBAR / SHIELD / TERRA). Each is an image with a
+   floating neon category pill and a light scrim carrying the copy + a neon-
+   outline CTA (matches the product ucard button treatment). */
+.ic-grid {
   display: grid;
-  grid-template-columns: 1.18fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
-/* shared link-card reset */
-.ishow-feature,
-.ishow-card {
+.ic {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 420px;
   border-radius: var(--card-radius);
   overflow: hidden;
   border: 1px solid var(--grey2);
@@ -2838,90 +2842,22 @@ tbody tr:nth-child(even) {
   color: inherit;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
-.ishow-feature:hover,
-.ishow-card:hover {
+.ic:hover {
   transform: translateY(-3px);
   box-shadow: 0 18px 40px rgba(16, 16, 16, 0.1);
 }
-/* big feature: image fills, copy overlays on a light scrim at the bottom */
-.ishow-feature {
-  min-height: 440px;
-  align-items: flex-end;
-}
-.ishow-media,
-.ishow-card-media {
+.ic-media {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   display: block;
 }
-.ishow-feature-body {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 26px 26px 24px;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.97) 0%,
-    rgba(255, 255, 255, 0.92) 58%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-.ishow-feature-body h3 {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 30px;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  margin: 12px 0 8px;
-}
-.ishow-feature-body p {
-  font-size: 16.5px;
-  line-height: 1.55;
-  color: var(--ink2);
-  margin: 0 0 14px;
-  max-width: 52ch;
-}
-/* side stack */
-.ishow-side {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 18px;
-}
-.ishow-card {
-  min-height: 211px;
-  align-items: flex-end;
-}
-.ishow-card-body {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 18px 20px 18px;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.97) 0%,
-    rgba(255, 255, 255, 0.9) 62%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-.ishow-card-body h3 {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 21px;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  margin: 9px 0 6px;
-}
-.ishow-card-body p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--ink2);
-  margin: 0 0 12px;
-}
-/* neon category pill */
-.ishow-pill {
-  display: inline-block;
+.ic-pill {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
   font-family: var(--text);
   font-weight: 700;
   font-size: 11px;
@@ -2932,81 +2868,70 @@ tbody tr:nth-child(even) {
   padding: 5px 12px;
   border-radius: 999px;
 }
-.ishow-link {
+.ic-body {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 34px 22px 22px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.86) 50%,
+    rgba(255, 255, 255, 0) 92%
+  );
+}
+.ic-body h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 23px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 7px;
+}
+.ic-body p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink2);
+  margin: 0 0 14px;
+}
+/* neon-outline CTA - charcoal text + neon border, fills neon on hover (mirrors
+   the .ucard-foot button so the CTA language is consistent across the site) */
+.ic-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
   font-family: var(--text);
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  color: var(--charcoal);
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1.5px solid var(--neon);
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
-.ishow-arrow {
+.ic:hover .ic-link {
+  background: var(--neon);
+  box-shadow: 0 0 12px rgba(216, 255, 0, 0.35);
+}
+.ic-arrow {
   transition: transform 0.18s ease;
 }
-.ishow-feature:hover .ishow-arrow,
-.ishow-card:hover .ishow-arrow {
+.ic:hover .ic-arrow {
   transform: translateX(4px);
 }
-/* stat row */
-.ishow-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 20px;
-}
-.ishow-stat {
-  background: var(--grey1);
-  border: 1px solid var(--grey2);
-  border-radius: 6px;
-  padding: 26px 24px 24px;
-}
-.ishow-stat-n {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 42px;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: var(--charcoal);
-  text-shadow: 0 0 16px rgba(216, 255, 0, 0.85);
-  display: flex;
-  align-items: center;
-  min-height: 48px;
-}
-.ishow-stat-ico {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 6px;
-  background: var(--neon);
-  color: var(--ink);
-}
-.ishow-stat-l {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--ink);
-  margin: 14px 0 7px;
-}
-.ishow-stat-sub {
-  font-size: 14.5px;
-  line-height: 1.55;
-  color: var(--muted);
-  margin: 0;
-}
-
 @media (max-width: 900px) {
-  .ishow-grid {
+  .ic-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .ic-grid {
     grid-template-columns: 1fr;
   }
-  .ishow-feature {
+  .ic {
     min-height: 360px;
-  }
-  .ishow-stats {
-    grid-template-columns: 1fr;
   }
 }
 
