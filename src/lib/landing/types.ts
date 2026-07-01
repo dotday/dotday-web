@@ -60,6 +60,8 @@ export interface LandingHeroSection {
 export interface ProblemSection {
   _type: "problem";
   eyebrow?: string;
+  /** Optional emoji shown in a neon tile beside the eyebrow (rendered via Twemoji). */
+  emoji?: string;
   heading: string;
   body: string;
   bullets?: string[];
@@ -68,6 +70,8 @@ export interface ProblemSection {
 export interface SolutionSection {
   _type: "solution";
   eyebrow?: string;
+  /** Optional emoji shown in a neon tile beside the eyebrow (rendered via Twemoji). */
+  emoji?: string;
   heading: string;
   body: string;
   product: ProductKey;

@@ -242,6 +242,9 @@
         "eyebrow": {
           "type": "string"
         },
+        "emoji": {
+          "type": "string"
+        },
         "heading": {
           "type": "string"
         },
@@ -271,6 +274,9 @@
           "const": "solution"
         },
         "eyebrow": {
+          "type": "string"
+        },
+        "emoji": {
           "type": "string"
         },
         "heading": {
