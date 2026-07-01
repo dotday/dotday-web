@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/sizeSelector.json",
+  "title": "SizeSelectorSection",
+  "description": "Roll-size selector: a product pack image plus a grid of size tiles (dimensions + per-roll price + use-case note), a helper line, and CTAs. Lets a buyer match roll width to the job. This file is the SINGLE SOURCE OF TRUTH for the section's shape - the TS type is generated from it (SizeSelector.types.ts) and the landing-page doc schema $refs it.",
+  "type": "object",
+  "required": [
+    "_type",
+    "heading",
+    "sizes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_type": {
+      "const": "sizeSelector"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intro": {
+      "type": "string"
+    },
+    "image": {
+      "$ref": "#/$defs/imageRef"
+    },
+    "sizes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "dimensions",
+          "price",
+          "useCase"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "dimensions": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "useCase": {
+            "type": "string"
+          },
+          "featured": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "helper": {
+      "type": "string"
+    },
+    "primaryCta": {
+      "$ref": "#/$defs/cta"
+    },
+    "secondaryCta": {
+      "$ref": "#/$defs/cta"
+    },
+    "tertiaryCta": {
+      "$ref": "#/$defs/cta"
+    }
+  },
+  "$defs": {
+    "imageRef": {
+      "title": "ImageRef",
+      "type": "object",
+      "required": [
+        "ref",
+        "alt"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ref": {
+          "type": "string"
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 160
+        }
+      }
+    },
+    "cta": {
+      "title": "Cta",
+      "type": "object",
+      "required": [
+        "label",
+        "href"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -14,6 +14,9 @@
 
 // Schema-first sections: type generated from the section's own *.schema.json.
 import type { SpecSheetSection } from "@/components/sections/product/SpecSheet/SpecSheet.types";
+import type { SizeSelectorSection } from "@/components/sections/product/SizeSelector/SizeSelector.types";
+import type { DualBenefitSection } from "@/components/sections/narrative/DualBenefit/DualBenefit.types";
+import type { FeaturedGuideSection } from "@/components/sections/media/FeaturedGuide/FeaturedGuide.types";
 
 export type LandingStatus =
   | "planned"
@@ -240,6 +243,14 @@ export interface BigTypeFeaturesSection {
 // reference pattern; remaining sections migrate the same way.
 export type { SpecSheetSection };
 
+// SizeSelectorSection, DualBenefitSection, FeaturedGuideSection are SCHEMA-FIRST
+// (same pattern as SpecSheetSection): their shapes live in co-located
+// *.schema.json and the types are GENERATED. Re-exported so the LandingSection
+// union and `@/lib/landing/types` importers stay unchanged.
+export type { SizeSelectorSection };
+export type { DualBenefitSection };
+export type { FeaturedGuideSection };
+
 /**
  * projectSpotlight - a real install spotlight (UGC / customer job): a media
  * frame with a location badge, a pull quote, spec chips (application / climate /
@@ -320,6 +331,9 @@ export type LandingSection =
   | StatementBandSection
   | BigTypeFeaturesSection
   | SpecSheetSection
+  | SizeSelectorSection
+  | DualBenefitSection
+  | FeaturedGuideSection
   | ProjectSpotlightSection
   | EditorialCardsSection
   | VideoFeatureSection;

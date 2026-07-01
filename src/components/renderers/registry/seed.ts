@@ -6,6 +6,9 @@ import { StatementBand } from "@/components/sections/narrative/StatementBand";
 import { BigTypeFeatures } from "@/components/sections/narrative/BigTypeFeatures";
 import { UseCaseGrid } from "@/components/sections/product/UseCaseGrid";
 import { SpecSheet } from "@/components/sections/product/SpecSheet";
+import { SizeSelector } from "@/components/sections/product/SizeSelector";
+import { DualBenefit } from "@/components/sections/narrative/DualBenefit";
+import { FeaturedGuide } from "@/components/sections/media/FeaturedGuide";
 import { CalculatorEmbed } from "@/components/sections/conversion/CalculatorEmbed";
 import { Reviews } from "@/components/sections/proof/Reviews";
 import { ProjectSpotlight } from "@/components/sections/proof/ProjectSpotlight";
@@ -55,10 +58,12 @@ registerSection({ type: "problem", component: Problem, surfaces: ["landing"] });
 registerSection({ type: "solution", component: Solution, surfaces: ["landing"] });
 registerSection({ type: "statementBand", component: StatementBand, surfaces: ["landing"] });
 registerSection({ type: "bigTypeFeatures", component: BigTypeFeatures, surfaces: ["home", "landing"] });
+registerSection({ type: "dualBenefit", component: DualBenefit, surfaces: ["landing"] });
 
 // Product fit & comparison
 registerSection({ type: "useCaseGrid", component: UseCaseGrid, surfaces: ["landing"] });
 registerSection({ type: "specSheet", component: SpecSheet, surfaces: ["landing"] });
+registerSection({ type: "sizeSelector", component: SizeSelector, surfaces: ["landing"] });
 
 // Proof
 registerSection({ type: "reviews", component: Reviews, surfaces: ["landing"] });
@@ -66,6 +71,7 @@ registerSection({ type: "projectSpotlight", component: ProjectSpotlight, surface
 
 // Media
 registerSection({ type: "editorialCards", component: EditorialCards, surfaces: ["landing"] });
+registerSection({ type: "featuredGuide", component: FeaturedGuide, surfaces: ["landing"] });
 registerSection({ type: "videoFeature", component: VideoFeature, surfaces: ["home", "landing"] });
 
 // Conversion

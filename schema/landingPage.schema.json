@@ -186,6 +186,15 @@
           "$ref": "#/$defs/specSheet"
         },
         {
+          "$ref": "#/$defs/sizeSelector"
+        },
+        {
+          "$ref": "#/$defs/dualBenefit"
+        },
+        {
+          "$ref": "#/$defs/featuredGuide"
+        },
+        {
           "$ref": "#/$defs/projectSpotlight"
         },
         {
@@ -768,6 +777,15 @@
     },
     "specSheet": {
       "$ref": "https://thedotday.com/schema/sections/specSheet.json"
+    },
+    "sizeSelector": {
+      "$ref": "https://thedotday.com/schema/sections/sizeSelector.json"
+    },
+    "dualBenefit": {
+      "$ref": "https://thedotday.com/schema/sections/dualBenefit.json"
+    },
+    "featuredGuide": {
+      "$ref": "https://thedotday.com/schema/sections/featuredGuide.json"
     },
     "projectSpotlight": {
       "type": "object",

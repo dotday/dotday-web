@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/featuredGuide.json",
+  "title": "FeaturedGuideSection",
+  "description": "Featured guide teaser: a split section with a neon copy panel (eyebrow, headline, byline, excerpt, read link) beside a full-bleed photo. Promotes a single article or field guide. This file is the SINGLE SOURCE OF TRUTH for the section's shape - the TS type is generated from it (FeaturedGuide.types.ts) and the landing-page doc schema $refs it.",
+  "type": "object",
+  "required": [
+    "_type",
+    "heading",
+    "cta"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_type": {
+      "const": "featuredGuide"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "byline": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "image": {
+      "$ref": "#/$defs/imageRef"
+    },
+    "cta": {
+      "$ref": "#/$defs/cta"
+    }
+  },
+  "$defs": {
+    "imageRef": {
+      "title": "ImageRef",
+      "type": "object",
+      "required": [
+        "ref",
+        "alt"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ref": {
+          "type": "string"
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 160
+        }
+      }
+    },
+    "cta": {
+      "title": "Cta",
+      "type": "object",
+      "required": [
+        "label",
+        "href"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

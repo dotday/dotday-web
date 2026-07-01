@@ -41,6 +41,7 @@ const APPROVED = new Set([
   "steps", "callout", "statementBand",
   "bigTypeFeatures", "specSheet", "projectSpotlight",
   "editorialCards", "videoFeature",
+  "sizeSelector", "dualBenefit", "featuredGuide",
 ]);
 
 // Gather blog focus keywords to detect overlap.
