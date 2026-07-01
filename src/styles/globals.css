@@ -3998,10 +3998,8 @@ tbody tr:nth-child(even) {
 .link-arrow--strong { border-bottom: 2px solid var(--neon); padding-bottom: 3px; font-size: 14.5px; }
 
 .rainbow-text {
-  background: linear-gradient(95deg, #7c3aed 0%, #db2777 45%, #f97316 100%);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: #db2777;
-  font-style: italic;
+  color: var(--charcoal);
+  font-weight: 700;
   /* paint-order + decoration off prevents gradient bleeding on mobile webkit */
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
@@ -4169,15 +4167,13 @@ tbody tr:nth-child(even) {
 /* ============================================================ QUOTE ====== */
 .bquote {
   margin: var(--bsec-gap) 0;
-  background: linear-gradient(160deg, #faf6ff 0%, #fff6f0 100%);
+  background: var(--grey1);
   border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
 }
 .bquote-inner { max-width: 860px; text-align: center; padding: clamp(50px, 8vw, 80px) 20px; }
 .bquote-mark {
-  display: block; font-family: Georgia, serif; font-size: 72px; line-height: 0.4; height: 40px;
-  background: linear-gradient(95deg, #db2777, #f97316);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: #db2777;
+  display: block; font-family: var(--text); font-weight: 800; font-size: 72px; line-height: 0.4; height: 40px;
+  color: var(--neon);
 }
 .bquote-text {
   font-weight: 700; font-size: clamp(22px, 3.4vw, 36px); line-height: 1.34;
@@ -4418,7 +4414,7 @@ tbody tr:nth-child(even) {
 .bnews-input::placeholder { color: #777; }
 .bnews-input:focus { border-color: var(--neon); }
 .bnews-btn { padding: 14px 28px; border-radius: 6px; font-size: 15px; }
-.bnews-err { display: block; color: #ff9090; font-size: 13.5px; margin-top: 12px; }
+.bnews-err { display: block; color: #d92d20; font-size: 13.5px; margin-top: 12px; }
 .bnews-done { color: var(--neon); font-weight: 700; font-size: 17px; }
 .bnews-fine { font-size: 13px; color: #888; margin-top: 18px; }
 .bnews-fine-link { color: #c4c4c4; text-decoration: underline; }
@@ -4573,12 +4569,10 @@ tbody tr:nth-child(even) {
 .bsus-media { border-radius: 6px; overflow: hidden; box-shadow: 0 20px 48px rgba(0,0,0,0.12); }
 .bsus-media .img-frame, .bsus-media .imgph { border-radius: 6px; }
 .bsus-title {
-  font-family: var(--display); font-weight: 400;
+  font-family: var(--text); font-weight: 600;
   font-size: clamp(28px, 4vw, 42px); line-height: 1.08; letter-spacing: -0.025em;
   margin-bottom: 16px;
-  background: linear-gradient(95deg, #2563eb 0%, #7c3aed 55%, #9333ea 100%);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: #7c3aed;
+  color: var(--charcoal);
 }
 .bsus-lead { font-size: 16.5px; line-height: 1.62; color: var(--ink-soft); margin: 0 0 24px; }
 .bsus-stats { display: flex; flex-direction: column; gap: 18px; margin-bottom: 22px; }
@@ -4674,7 +4668,7 @@ tbody tr:nth-child(even) {
 .bmt-water--1 { top: -18px; left: -10px; }
 .bmt-water--2 { bottom: -24px; right: -10px; color: rgba(216,255,0,0.16); }
 .bmt-mission-inner { position: relative; z-index: 1; }
-.bmt-leaf { color: #2f8f2f; margin-bottom: 16px; display: inline-flex; }
+.bmt-leaf { color: var(--charcoal); margin-bottom: 16px; display: inline-flex; }
 .bmt-mission-kicker { display: block; color: var(--ink2); margin-bottom: 14px; }
 .bmt-statement {
   font-family: var(--display); font-weight: 400;
@@ -4756,7 +4750,7 @@ tbody tr:nth-child(even) {
 /* ===================================================== HUB FAQ ACCORDION ===
    The hub FAQ uses .bfaq-* classes (the article page uses .faq-*). These were
    missing, which left the hub FAQ rendering unstyled. Polished accordion that
-   matches the rest of the hub: serif heading, neon +/- toggle, clean rows. == */
+   matches the rest of the hub: Wix Madefor heading, neon +/- toggle, clean rows. == */
 
 .hub-section { margin-top: var(--bsec-gap); }
 
