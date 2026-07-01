@@ -60,7 +60,7 @@ export function FabricFinder() {
           <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
             <span
               style={{
-                fontFamily: "var(--display)",
+                fontFamily: "var(--text)",
                 fontWeight: 500,
                 fontSize: 32,
                 color: "var(--charcoal)",

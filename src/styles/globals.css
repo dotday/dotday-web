@@ -22,7 +22,8 @@
      rhythm bands on the homepage/header/footer to white; section separation now
      relies on the --grey2 hairline borders. --blog-surface stays white too. */
   --blog-surface: #ffffff;
-  --display: var(--font-madefor), "Wix Madefor Text", "Inter", system-ui, sans-serif;
+  /* Wix Madefor Text is the only brand font. (There is no Wix Madefor Display:
+     the earlier --display token was retired and all usages now use --text.) */
   --text: var(--font-madefor), "Wix Madefor Text", "Inter", system-ui, sans-serif;
   --maxw: 1200px;
   --article: 860px;
@@ -80,7 +81,7 @@ h3 {
    Components that style their h2 inline (e.g. BigTypeFeatures) override this by
    specificity, and inline margin props (ProjectSpotlight, SpecSheet) still win. */
 .wrap.sec h2 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -177,7 +178,7 @@ h3 {
   padding: 28px 0 40px;
 }
 h1 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(30px, 5vw, 46px);
   line-height: 1.08;
@@ -558,7 +559,7 @@ article {
   }
 }
 article h2 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -656,7 +657,7 @@ article li {
   padding: 22px 18px;
 }
 .stat .n {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: 30px;
   color: var(--charcoal);
@@ -674,7 +675,7 @@ article li {
    Default carries the neon glow; --plain opts out for dense strips;
    --neon is for dark surfaces (neon number + lighter sub-label). */
 .dd-stat {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1;
@@ -810,7 +811,7 @@ tbody tr:nth-child(even) {
   border-radius: 6px;
   display: grid;
   place-items: center;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 800;
   font-size: 16px;
 }
@@ -1021,7 +1022,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 30px;
 }
 .products .head h2 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(24px, 3.6vw, 32px);
   letter-spacing: -0.02em;
@@ -1072,7 +1073,7 @@ tbody tr:nth-child(even) {
   font-size: 10px;
 }
 .pcard h3 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: 24px;
   color: var(--ink);
@@ -1180,7 +1181,7 @@ tbody tr:nth-child(even) {
 /* related */
 .related-head h2 {
   line-height: 1.06;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em;
@@ -1286,7 +1287,7 @@ tbody tr:nth-child(even) {
   border-radius: 100px;
 }
 .rev-spot-quote {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: clamp(22px, 2.4vw, 30px);
   line-height: 1.28;
@@ -1321,7 +1322,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 22px;
 }
 .rev-center-quote {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: clamp(22px, 2.5vw, 30px);
   line-height: 1.32;
@@ -1384,7 +1385,7 @@ tbody tr:nth-child(even) {
   position: relative;
 }
 .final h2 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.6vw, 42px);
   line-height: 1.1;
@@ -2504,7 +2505,7 @@ tbody tr:nth-child(even) {
   border-right: none;
 }
 .hstat-n {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1;
@@ -2543,7 +2544,7 @@ tbody tr:nth-child(even) {
 }
 .ucase-head h2 {
   line-height: 1.06;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em;
@@ -2588,7 +2589,7 @@ tbody tr:nth-child(even) {
   color: var(--muted);
 }
 .ucard-body h3 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: 21px;
   color: var(--ink);
@@ -2642,7 +2643,7 @@ tbody tr:nth-child(even) {
 }
 .jobg-head h2 {
   line-height: 1.06;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em;
@@ -2725,7 +2726,7 @@ tbody tr:nth-child(even) {
   text-shadow: 0 0 10px rgba(216, 255, 0, 0.95), 0 0 18px rgba(216, 255, 0, 0.55);
 }
 .tool-card h3 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 500;
   font-size: 22px;
   color: var(--ink);
@@ -2762,7 +2763,7 @@ tbody tr:nth-child(even) {
 }
 .tmon-head h2 {
   line-height: 1.06;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em;
@@ -2899,7 +2900,7 @@ tbody tr:nth-child(even) {
 }
 .cmp-head h2 {
   line-height: 1.06;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em;
@@ -2945,7 +2946,7 @@ tbody tr:nth-child(even) {
 }
 .cmp-pname {
   display: block;
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 800;
   font-size: 20px;
   letter-spacing: -0.02em;
@@ -3086,7 +3087,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 26px;
 }
 .ishow-head h2 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -3161,7 +3162,7 @@ tbody tr:nth-child(even) {
   );
 }
 .ic-body h3 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 600;
   font-size: 23px;
   letter-spacing: -0.01em;
@@ -3229,7 +3230,7 @@ tbody tr:nth-child(even) {
   align-items: center;
 }
 .qband-title {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -3324,7 +3325,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 28px;
 }
 .rjobs-title {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -3517,7 +3518,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 10px;
 }
 .apps-title {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -3609,7 +3610,7 @@ tbody tr:nth-child(even) {
   justify-content: center;
 }
 .apps-name {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.01em;
@@ -3703,7 +3704,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 8px;
 }
 .igf-title {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -3828,7 +3829,7 @@ tbody tr:nth-child(even) {
   align-items: center;
 }
 .vfeat-copy h2 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px);
   line-height: 1.06;
@@ -3953,7 +3954,7 @@ tbody tr:nth-child(even) {
   margin-bottom: 10px;
 }
 .bsec-title {
-  font-family: var(--display); font-weight: 400;
+  font-family: var(--text); font-weight: 400;
   font-size: clamp(28px, 4.4vw, 44px); line-height: 1.06; letter-spacing: -0.03em;
   color: var(--charcoal); display: flex; align-items: center; gap: 11px;
 }
@@ -3971,11 +3972,8 @@ tbody tr:nth-child(even) {
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal);
   text-shadow: 0 0 10px rgba(216, 255, 0, 0.95), 0 0 18px rgba(216, 255, 0, 0.55);
 }
-.kicker--comparisons { color: #0a7d6b; }
-.kicker--buyingguides { color: #6b7f00; }
-.kicker--howtoinstallation { color: #b85c00; }
-.kicker--productfocused { color: #7a3ea8; }
-.kicker--landscapefabric { color: #1f6feb; }
+/* Category kickers share the base charcoal + neon-glow style; the label text
+   distinguishes them (per-category rainbow colors were off-brand and removed). */
 .kicker--onmedia {
   position: absolute; top: 12px; left: 12px; z-index: 2;
   background: var(--neon); color: var(--ink);
@@ -4072,7 +4070,7 @@ tbody tr:nth-child(even) {
   color: var(--neon);
 }
 .bhero-card-title {
-  font-family: var(--display); font-weight: 400; color: #fff;
+  font-family: var(--text); font-weight: 400; color: #fff;
   font-size: clamp(20px, 2.4vw, 28px); line-height: 1.18; letter-spacing: -0.01em;
 }
 .bhero-card-cta {
@@ -4091,7 +4089,7 @@ tbody tr:nth-child(even) {
 }
 .bhero-stat { display: flex; align-items: baseline; gap: 11px; }
 .bhero-stat-n {
-  font-family: var(--display); font-weight: 700;
+  font-family: var(--text); font-weight: 700;
   font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1;
 }
 .bhero-stat-l { font-size: 13.5px; font-weight: 600; color: #2c3500; max-width: 180px; }
@@ -4117,7 +4115,7 @@ tbody tr:nth-child(even) {
 .btrend-media .pill--onmedia { top: auto; bottom: 12px; left: 12px; }
 .btrend-rank {
   position: absolute; top: 12px; right: 12px; z-index: 2;
-  font-family: var(--display); font-weight: 700; font-size: 15px;
+  font-family: var(--text); font-weight: 700; font-size: 15px;
   color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 .btrend-body { padding: 15px 16px 18px; }
@@ -4139,7 +4137,7 @@ tbody tr:nth-child(even) {
 .bfeat-lead-media { position: relative; }
 .bfeat-lead-body { padding: clamp(20px, 2.6vw, 30px); }
 .bfeat-lead-body h3 {
-  font-family: var(--display); font-weight: 400;
+  font-family: var(--text); font-weight: 400;
   font-size: clamp(22px, 2.8vw, 30px); line-height: 1.16; letter-spacing: -0.02em;
   color: var(--charcoal); margin-bottom: 12px;
 }
@@ -4206,7 +4204,7 @@ tbody tr:nth-child(even) {
 }
 .bpick-author-name { font-weight: 700; font-size: 13.5px; color: var(--ink); }
 .bpick-body h3 {
-  font-family: var(--display); font-weight: 400; font-size: 21px; line-height: 1.22;
+  font-family: var(--text); font-weight: 400; font-size: 21px; line-height: 1.22;
   letter-spacing: -0.015em; color: var(--charcoal); margin: 0 0 9px; transition: color 0.14s ease;
 }
 .bpick-body a:hover h3 { color: var(--olive); }
@@ -4224,7 +4222,7 @@ tbody tr:nth-child(even) {
   padding: clamp(32px, 5vw, 56px);
 }
 .bdyk-h2 {
-  font-family: var(--display); font-weight: 400;
+  font-family: var(--text); font-weight: 400;
   font-size: clamp(24px, 3.2vw, 34px); line-height: 1.14; letter-spacing: -0.02em;
   color: var(--charcoal); margin-bottom: 14px;
 }
@@ -4238,7 +4236,7 @@ tbody tr:nth-child(even) {
   box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 .bdyk-card-n {
-  display: block; font-family: var(--display); font-weight: 700; font-size: 76px;
+  display: block; font-family: var(--text); font-weight: 700; font-size: 76px;
   line-height: 0.85; letter-spacing: -0.03em; color: var(--charcoal); text-shadow: 0 0 16px rgba(216, 255, 0, 0.85);
 }
 .bdyk-card-l { display: block; font-weight: 700; font-size: 16.5px; margin-top: 14px; color: var(--charcoal); }
@@ -4278,7 +4276,7 @@ tbody tr:nth-child(even) {
 .blatest-body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; }
 .blatest-meta-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 9px; }
 .blatest-body h3 {
-  font-family: var(--display); font-weight: 400; font-size: 20px; line-height: 1.22;
+  font-family: var(--text); font-weight: 400; font-size: 20px; line-height: 1.22;
   letter-spacing: -0.015em; color: var(--charcoal); margin: 0 0 9px;
 }
 .blatest-body p {
@@ -4295,7 +4293,7 @@ tbody tr:nth-child(even) {
 }
 .bvid-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(28px, 4vw, 48px); align-items: center; }
 .bvid-copy h2 {
-  font-family: var(--display); font-weight: 400; font-size: clamp(24px, 3.4vw, 34px);
+  font-family: var(--text); font-weight: 400; font-size: clamp(24px, 3.4vw, 34px);
   line-height: 1.16; letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 14px;
 }
 .bvid-copy p { font-size: 16px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 20px; }
@@ -4329,7 +4327,7 @@ tbody tr:nth-child(even) {
 .bdiff-head { text-align: center; max-width: 660px; margin: 0 auto clamp(30px, 4vw, 40px); }
 .bdiff-head h2 {
   line-height: 1.06;
-  font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.4vw, 44px);
+  font-family: var(--text); font-weight: 400; font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em; color: var(--charcoal);
 }
 .bdiff-head p { font-size: 16px; line-height: 1.55; color: #2c3500; margin: 12px 0 0; }
@@ -4339,7 +4337,7 @@ tbody tr:nth-child(even) {
   text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 .bdiff-n {
-  display: block; font-family: var(--display); font-weight: 700;
+  display: block; font-family: var(--text); font-weight: 700;
   font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1;
 }
 .bdiff-l { display: block; font-weight: 700; font-size: 15px; color: var(--ink); margin-top: 10px; }
@@ -4385,7 +4383,7 @@ tbody tr:nth-child(even) {
 .bhx-card-media { position: relative; }
 .bhx-card-body { padding: 16px 18px 20px; display: flex; flex-direction: column; flex: 1; }
 .bhx-card-body h3 {
-  font-family: var(--display); font-weight: 400; font-size: 19px; line-height: 1.24;
+  font-family: var(--text); font-weight: 400; font-size: 19px; line-height: 1.24;
   letter-spacing: -0.015em; color: var(--charcoal); margin: 8px 0 8px;
 }
 .bhx-card-body p {
@@ -4403,7 +4401,7 @@ tbody tr:nth-child(even) {
 }
 .bnews-inner { max-width: 680px; text-align: center; }
 .bnews-title {
-  font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.4vw, 46px);
+  font-family: var(--text); font-weight: 400; font-size: clamp(28px, 4.4vw, 46px);
   letter-spacing: -0.025em; color: #fff;
 }
 .bnews-sub { font-size: 16px; line-height: 1.6; color: #c4c4c4; margin: 14px auto 28px; max-width: 580px; }
@@ -4561,7 +4559,7 @@ tbody tr:nth-child(even) {
 }
 .bwatch-card:hover .bwatch-play, .bwatch-card.is-active .bwatch-play { background: var(--neon); }
 .bwatch-title {
-  font-family: var(--display); font-weight: 400; font-size: 15px; line-height: 1.3;
+  font-family: var(--text); font-weight: 400; font-size: 15px; line-height: 1.3;
   color: var(--ink2); letter-spacing: -0.01em;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
@@ -4585,7 +4583,7 @@ tbody tr:nth-child(even) {
 .bsus-stats { display: flex; flex-direction: column; gap: 18px; margin-bottom: 22px; }
 .bsus-stat { display: flex; align-items: center; gap: 16px; }
 .bsus-stat-n {
-  font-family: var(--display); font-weight: 700; font-size: 40px; line-height: 1;
+  font-family: var(--text); font-weight: 700; font-size: 40px; line-height: 1;
   color: var(--charcoal); text-shadow: 0 0 16px rgba(216, 255, 0, 0.85); min-width: 64px; letter-spacing: -0.02em;
 }
 .bsus-stat-n--arrow {
@@ -4600,7 +4598,7 @@ tbody tr:nth-child(even) {
   padding: 22px 24px; text-align: center; margin-bottom: 22px;
 }
 .bsus-cobenefit-n {
-  display: block; font-family: var(--display); font-weight: 700; font-size: 34px;
+  display: block; font-family: var(--text); font-weight: 700; font-size: 34px;
   color: var(--charcoal); text-shadow: 0 0 16px rgba(216, 255, 0, 0.85); letter-spacing: -0.02em;
 }
 .bsus-cobenefit-l { display: block; font-size: 14px; color: var(--ink2); margin-top: 6px; }
@@ -4626,7 +4624,7 @@ tbody tr:nth-child(even) {
 .bfq-stars { display: flex; gap: 3px; color: var(--neon); margin-bottom: 18px; }
 .bfq-stars svg { filter: drop-shadow(0 1px 1px rgba(0,0,0,0.12)); }
 .bfq-quote {
-  font-family: var(--display); font-weight: 400;
+  font-family: var(--text); font-weight: 400;
   font-size: clamp(22px, 3vw, 32px); line-height: 1.32; letter-spacing: -0.015em;
   color: var(--charcoal); margin: 0 0 22px;
 }
@@ -4668,7 +4666,7 @@ tbody tr:nth-child(even) {
 /* LEFT: mission with faded oversized watermark words */
 .bmt-mission { position: relative; overflow: hidden; padding: 10px 4px; }
 .bmt-water {
-  position: absolute; font-family: var(--display); font-weight: 700;
+  position: absolute; font-family: var(--text); font-weight: 700;
   font-size: clamp(72px, 11vw, 150px); line-height: 1; letter-spacing: -0.04em;
   color: rgba(16,16,16,0.04); user-select: none; white-space: nowrap; pointer-events: none; z-index: 0;
 }
@@ -4678,14 +4676,14 @@ tbody tr:nth-child(even) {
 .bmt-leaf { color: var(--charcoal); margin-bottom: 16px; display: inline-flex; }
 .bmt-mission-kicker { display: block; color: var(--ink2); margin-bottom: 14px; }
 .bmt-statement {
-  font-family: var(--display); font-weight: 400;
+  font-family: var(--text); font-weight: 400;
   font-size: clamp(24px, 3vw, 34px); line-height: 1.24; letter-spacing: -0.02em;
   color: var(--charcoal); margin: 0 0 16px;
 }
 .bmt-tagline { margin: 0; }
 .bmt-tagline mark {
   background: var(--neon); color: var(--ink);
-  font-family: var(--display); font-weight: 400; font-size: clamp(19px, 2.3vw, 26px);
+  font-family: var(--text); font-weight: 400; font-size: clamp(19px, 2.3vw, 26px);
   letter-spacing: -0.01em; padding: 2px 11px; border-radius: 4px;
   box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
@@ -4701,7 +4699,7 @@ tbody tr:nth-child(even) {
 .bmt-team-title {
   position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
   background: #fff; padding: 0 22px; white-space: nowrap;
-  font-family: var(--display); font-weight: 400; font-size: clamp(24px, 2.8vw, 32px);
+  font-family: var(--text); font-weight: 400; font-size: clamp(24px, 2.8vw, 32px);
   letter-spacing: -0.02em; color: var(--charcoal);
 }
 .bmt-team-sub {
@@ -4718,7 +4716,7 @@ tbody tr:nth-child(even) {
 }
 .bmt-photo .img-frame, .bmt-photo .imgph { border-radius: 50%; width: 100%; height: 100%; }
 .bmt-name {
-  font-family: var(--display); font-weight: 400; font-size: 17px;
+  font-family: var(--text); font-weight: 400; font-size: 17px;
   color: var(--charcoal); line-height: 1.18; letter-spacing: -0.01em;
 }
 .bmt-role {
@@ -4795,7 +4793,7 @@ tbody tr:nth-child(even) {
   color: var(--neon);
 }
 .leadsplit-headline {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 800;
   font-size: clamp(34px, 4.4vw, 56px);
   line-height: 1.02;
@@ -4865,7 +4863,7 @@ tbody tr:nth-child(even) {
   box-shadow: 0 18px 50px -28px rgba(16, 16, 16, 0.32);
 }
 .leadcard-title {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 800;
   font-size: 26px;
   letter-spacing: -0.01em;
@@ -5005,7 +5003,7 @@ tbody tr:nth-child(even) {
   padding: 8px 2px;
 }
 .leadcard-done h3 {
-  font-family: var(--display);
+  font-family: var(--text);
   font-weight: 800;
   font-size: 24px;
   color: var(--charcoal);

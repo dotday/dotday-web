@@ -236,5 +236,6 @@ download->WebP workflow are in `src/lib/products/drive-images.ts` and
 Next.js 14 App Router (static/SSG-first) - Vercel (auto-deploy from GitHub, PR
 previews) - content is data-as-code JSON in this repo (no CMS) - Wix hosts
 commerce at `store.thedotday.com` - lead capture posts to `/api/lead`
-(Supabase-ready). Font: Wix Madefor Text, self-hosted. Brand: white +
+(Supabase-ready). Font: Wix Madefor Text only (no Wix Madefor Display),
+self-hosted. Brand: white +
 neon `#D8FF00` + charcoal `#101010`.

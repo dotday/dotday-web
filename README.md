@@ -192,8 +192,12 @@ public/
 
 Tokens live in `src/lib/tokens.ts` and are mirrored as CSS variables in
 `src/styles/globals.css`. Palette: white-dominant, neon `#D8FF00` accent, soft-neon
-`#DFFF6A` panels, minimal charcoal `#101010`. Type is **Wix Madefor Text**
-(Apple-light headings: 400-500; CTAs + small labels bold).
+`#DFFF6A` panels, minimal charcoal `#101010`. Type is **Wix Madefor Text** and
+only Wix Madefor Text - there is no Wix Madefor Display in this project (headings,
+hero, and body all use `var(--text)`; the old `--display` token was retired). CSS
+uses `var(--text)` everywhere; a `brand-guard` step in `content:validate` warns if
+`--display`, a serif font, or an off-brand color reappears. (Apple-light headings:
+400-500; CTAs + small labels bold.)
 
 **Font:** self-hosted - real WOFF2 files in `public/brand/fonts/` (weights
 400-800), loaded by `src/components/site/FontFace.tsx`. No network call at build;
