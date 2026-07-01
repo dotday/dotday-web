@@ -291,6 +291,9 @@ h1 {
 .r-169 {
   aspect-ratio: 16/9;
 }
+.r-1611 {
+  aspect-ratio: 16/11;
+}
 /* next/image wrapper keeps the same rounded frame */
 .img-frame {
   position: relative;
@@ -2357,6 +2360,124 @@ tbody tr:nth-child(even) {
   }
 }
 
+/* ============================================================
+   LandingHero (splitHero for landing pages) - 50/50 copy + photo.
+   Charcoal+glow eyebrow, Text headline with an optional neon highlight,
+   wide 16:11 photo with a caption chip, trust line under the CTAs.
+   ============================================================ */
+.lhs {
+  position: relative;
+  background: var(--white);
+  padding: clamp(36px, 4.5vw, 64px) 0;
+  overflow: hidden;
+}
+.lhs::before {
+  content: "";
+  position: absolute;
+  top: -12%;
+  right: -6%;
+  width: min(680px, 52%);
+  height: min(520px, 84%);
+  background: radial-gradient(circle at 70% 30%, rgba(216, 255, 0, 0.14), rgba(216, 255, 0, 0) 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+.lhs-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 4.5vw, 64px);
+  align-items: center;
+}
+.lhs-ey {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--charcoal);
+  text-shadow: 0 0 10px rgba(216, 255, 0, 0.95), 0 0 18px rgba(216, 255, 0, 0.55);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.lhs-h1 {
+  font-family: var(--text);
+  font-weight: 600;
+  font-size: clamp(40px, 4.6vw, 62px);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  color: var(--charcoal);
+  margin: 0 0 20px;
+}
+.lhs-h1 mark {
+  background: var(--neon);
+  color: var(--charcoal);
+  padding: 0 0.1em;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.lhs-sub {
+  font-size: 17px;
+  line-height: 1.62;
+  color: var(--ink2);
+  max-width: 52ch;
+  margin: 0 0 28px;
+}
+.lhs-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.lhs-trust {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0;
+}
+.lhs-media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 26px 60px rgba(16, 16, 16, 0.16);
+}
+.lhs-media .img-frame,
+.lhs-media .imgph {
+  border-radius: 16px;
+}
+.lhs-cap {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  background: var(--charcoal);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 100px;
+}
+.lhs-cap b {
+  color: var(--neon);
+  font-weight: 700;
+}
+@media (max-width: 860px) {
+  .lhs-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .lhs-media {
+    order: -1;
+  }
+  .lhs::before {
+    width: 70%;
+    height: 40%;
+    opacity: 0.8;
+  }
+}
+
 /* --- Stat strip --- */
 .hstats {
   background: var(--white);
@@ -4340,6 +4461,22 @@ tbody tr:nth-child(even) {
   display: grid; place-items: center;
   background: var(--neon); color: var(--ink);
   font-family: var(--text); font-weight: 800; font-size: 14px; letter-spacing: 0.02em;
+}
+/* DOTDAY brand mark in the byline (generic/org-authored posts) */
+.avatar-mark {
+  width: 40px; height: 40px; border-radius: 50%; flex: none;
+  display: block; object-fit: cover;
+}
+/* Blog hero headline - Wix Madefor Text (the only brand font), weight 600,
+   a touch tighter since blog titles run long. */
+.bhero-h1 {
+  font-family: var(--text);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--charcoal);
+  margin: 14px 0 0;
 }
 
 /* end-of-article author bio card (matches the brand monogram style) */

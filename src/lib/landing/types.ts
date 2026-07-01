@@ -51,8 +51,14 @@ export interface LandingHeroSection {
   _type: "hero";
   eyebrow?: string;
   heading: string;
+  /** Optional word/phrase within `heading` to wrap in a neon highlight. */
+  highlight?: string;
   subheading?: string;
   image?: ImageRef;
+  /** Optional caption chip on the image: bold neon label + muted context. */
+  caption?: { label: string; context?: string };
+  /** Optional trust line under the CTAs, e.g. ["Free shipping over $50", ...]. */
+  trust?: string[];
   primaryCta?: CtaLink;
   secondaryCta?: CtaLink;
 }

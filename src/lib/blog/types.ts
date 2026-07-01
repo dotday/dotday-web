@@ -37,6 +37,9 @@ export interface ImageRef {
   ref: string; // images.json key / Drive file ID / /public path key
   alt: string;
   caption?: string;
+  /** CSS object-position for cropping, e.g. "center", "top", "60% 40%".
+   *  Lets a hero photo keep its subject in frame when the aspect differs. */
+  focalPoint?: string;
 }
 
 export interface Social {

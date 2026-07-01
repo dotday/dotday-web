@@ -27,6 +27,9 @@ export function BlogHero({ post }: { post: BlogPost }) {
   const dateLabel = fmtDate(post.dateModified || post.publishedAt);
   const read = post.readTimeMinutes ? `${post.readTimeMinutes} min read` : "";
   const author = resolveAuthor(post.authorRef, post.author);
+  // Byline avatar: a real person shows their photo, else their initials; a
+  // generic DOTDAY/org post shows the DOTDAY brand mark instead of a text chip.
+  const isOrg = author.type === "Organization";
 
   return (
     <header className="hero">
@@ -37,7 +40,7 @@ export function BlogHero({ post }: { post: BlogPost }) {
         <div className="hero-grid">
           <div>
             <Badge>{post.hero.badge || post.category}</Badge>
-            <h1>{post.title}</h1>
+            <h1 className="bhero-h1">{post.title}</h1>
             <p className="excerpt">{post.hero.excerpt}</p>
             <div className="meta-row">
               <div className="author">
@@ -46,6 +49,14 @@ export function BlogHero({ post }: { post: BlogPost }) {
                     className="avatar-img"
                     src={author.avatar}
                     alt={author.name}
+                    width={40}
+                    height={40}
+                  />
+                ) : isOrg ? (
+                  <Image
+                    className="avatar-mark"
+                    src="/brand/dd-circle.png"
+                    alt="DOTDAY"
                     width={40}
                     height={40}
                   />
@@ -76,8 +87,9 @@ export function BlogHero({ post }: { post: BlogPost }) {
           <Img
             src={heroSrc}
             alt={post.hero.image.alt}
-            ratio="r-54"
+            ratio="r-43"
             priority
+            focalPoint={post.hero.image.focalPoint}
             placeholderLabel={post.hero.image.alt}
             sizes="(max-width: 980px) 100vw, 540px"
           />

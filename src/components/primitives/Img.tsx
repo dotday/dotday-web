@@ -16,13 +16,15 @@ export function Img({
   ratio = "r-43",
   priority = false,
   placeholderLabel,
+  focalPoint,
   sizes = "(max-width: 980px) 100vw, 860px",
 }: {
   src?: string;
   alt: string;
-  ratio?: "r-54" | "r-43" | "r-169" | "r-11";
+  ratio?: "r-54" | "r-43" | "r-169" | "r-11" | "r-1611";
   priority?: boolean;
   placeholderLabel?: string;
+  focalPoint?: string;
   sizes?: string;
 }) {
   if (!src) {
@@ -40,7 +42,7 @@ export function Img({
         fill
         priority={priority}
         sizes={sizes}
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "cover", objectPosition: focalPoint || "center" }}
       />
     </div>
   );

@@ -213,11 +213,35 @@
         "heading": {
           "type": "string"
         },
+        "highlight": {
+          "type": "string"
+        },
         "subheading": {
           "type": "string"
         },
         "image": {
           "$ref": "#/$defs/imageRef"
+        },
+        "caption": {
+          "type": "object",
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "context": {
+              "type": "string"
+            }
+          }
+        },
+        "trust": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "primaryCta": {
           "$ref": "#/$defs/cta"
