@@ -1117,6 +1117,13 @@ tbody tr:nth-child(even) {
 }
 
 /* faq */
+.faq-lead {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 24px;
+  max-width: 620px;
+}
 .faq-item {
   border-bottom: 1px solid var(--grey2);
 }
@@ -4747,72 +4754,10 @@ tbody tr:nth-child(even) {
   .bwatch-rail { grid-auto-columns: minmax(160px, 1fr); }
 }
 
-/* ===================================================== HUB FAQ ACCORDION ===
-   The hub FAQ uses .bfaq-* classes (the article page uses .faq-*). These were
-   missing, which left the hub FAQ rendering unstyled. Polished accordion that
-   matches the rest of the hub: Wix Madefor heading, neon +/- toggle, clean rows. == */
-
+/* .hub-section - spacing for hub page blocks. (The hub FAQ now uses the shared
+   .faq-* accordion via the FAQ adapter; the old .bfaq-* accordion was removed to
+   keep a single FAQ implementation across the site.) */
 .hub-section { margin-top: var(--bsec-gap); }
-
-.bfaq { max-width: 820px; margin: 0 auto; }
-.bfaq-eyebrow {
-  font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--charcoal);
-  text-shadow: 0 0 10px rgba(216, 255, 0, 0.95), 0 0 18px rgba(216, 255, 0, 0.55); margin: 0 0 12px; display: inline-block;
-  border-bottom: 2px solid var(--neon); padding-bottom: 4px;
-}
-.bfaq h2 {
-  font-family: var(--display); font-weight: 400;
-  font-size: clamp(28px, 4vw, 42px); line-height: 1.06; letter-spacing: -0.025em;
-  color: var(--charcoal); margin: 0 0 12px;
-}
-.bfaq-lead {
-  font-size: 16.5px; line-height: 1.6; color: var(--ink-soft);
-  margin: 0 0 36px; max-width: 620px;
-}
-
-.bfaq-item { border-bottom: 1px solid var(--hair); }
-.bfaq-item:first-of-type { border-top: 1px solid var(--hair); }
-
-.bfaq-q {
-  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  background: transparent; border: 0; cursor: pointer; text-align: left;
-  padding: 24px 4px; font: inherit;
-  transition: color 0.15s ease;
-}
-.bfaq-q:hover { color: var(--olive); }
-.bfaq-q > span:first-child {
-  font-family: var(--display); font-weight: 400;
-  font-size: clamp(17px, 1.9vw, 21px); line-height: 1.3; letter-spacing: -0.01em;
-  color: var(--charcoal);
-}
-.bfaq-q:hover > span:first-child { color: var(--olive); }
-
-.bfaq-tog {
-  flex: none; width: 34px; height: 34px; border-radius: 6px;
-  display: grid; place-items: center;
-  background: var(--grey1); color: var(--ink2);
-  font-size: 22px; font-weight: 400; line-height: 1;
-  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
-}
-.bfaq-item.open .bfaq-tog {
-  background: var(--neon); color: var(--ink); transform: rotate(0deg);
-}
-
-/* answer animates open via max-height (content is raw text in .bfaq-a) */
-.bfaq-a {
-  max-height: 0; overflow: hidden; padding: 0 4px;
-  font-size: 16px; line-height: 1.66; color: var(--ink2);
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-.bfaq-item.open .bfaq-a {
-  max-height: 600px; padding: 0 4px 26px;
-}
-
-@media (max-width: 560px) {
-  .bfaq-q { padding: 20px 2px; gap: 14px; }
-  .bfaq-tog { width: 30px; height: 30px; font-size: 20px; }
-}
 
 /* ============================================================
    LeadForm split layout (contact / bulk-pricing)

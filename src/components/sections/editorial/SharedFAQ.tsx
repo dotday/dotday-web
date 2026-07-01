@@ -21,10 +21,12 @@ export interface FaqItem {
 export function SharedFAQ({
   heading = "Frequently asked questions",
   eyebrow = "Questions",
+  lead,
   items,
 }: {
   heading?: string;
   eyebrow?: string;
+  lead?: string;
   items: FaqItem[];
 }) {
   const [open, setOpen] = useState(0);
@@ -34,6 +36,7 @@ export function SharedFAQ({
         <b>{eyebrow}</b>
       </div>
       <h2 id="faq">{heading}</h2>
+      {lead && <p className="faq-lead">{lead}</p>}
       <div>
         {items.map((item, i) => {
           const isOpen = open === i;

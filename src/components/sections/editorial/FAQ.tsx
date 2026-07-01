@@ -7,10 +7,11 @@ import { SharedFAQ } from "@/components/sections/editorial/SharedFAQ";
  * blogs and landing pages. Improve SharedFAQ once, both update. FAQPage JSON-LD
  * is still emitted by the page (lib/blog/jsonld), not here.
  */
-export function FAQ({ faq }: { faq: Faq }) {
+export function FAQ({ faq, lead }: { faq: Faq; lead?: string }) {
   return (
     <SharedFAQ
       heading={faq.heading || "Frequently asked questions"}
+      lead={lead}
       items={faq.items}
     />
   );

@@ -5,7 +5,7 @@ import { resolveImage } from "@/lib/blog/images";
 import { getHubModel } from "@/lib/blog/hub";
 import { resolveAuthor } from "@/lib/blog/authors";
 import { Img } from "@/components/primitives/Img";
-import { HubFaq } from "@/components/sections/editorial/HubFaq";
+import { FAQ } from "@/components/sections/editorial/FAQ";
 import { SITE_URL, site } from "@/lib/site";
 import {
   HubHero,
@@ -345,7 +345,10 @@ export default function BlogIndex({
       <DifferenceBand />
 
       <section className="wrap hub-section">
-        <HubFaq faq={HUB_FAQ} />
+        <FAQ
+          faq={HUB_FAQ}
+          lead="Expert answers on landscape fabric selection, installation, and performance."
+        />
       </section>
 
       <HubNewsletter />
