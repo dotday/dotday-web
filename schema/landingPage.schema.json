@@ -202,6 +202,42 @@
         },
         {
           "$ref": "#/$defs/videoFeature"
+        },
+        {
+          "$ref": "#/$defs/applicationGallery"
+        },
+        {
+          "$ref": "#/$defs/fabricMatrix"
+        },
+        {
+          "$ref": "#/$defs/groundConditionCards"
+        },
+        {
+          "$ref": "#/$defs/homeStatStrip"
+        },
+        {
+          "$ref": "#/$defs/homeVideoFeature"
+        },
+        {
+          "$ref": "#/$defs/installShowcase"
+        },
+        {
+          "$ref": "#/$defs/jobGallery"
+        },
+        {
+          "$ref": "#/$defs/quoteBand"
+        },
+        {
+          "$ref": "#/$defs/realJobs"
+        },
+        {
+          "$ref": "#/$defs/splitHero"
+        },
+        {
+          "$ref": "#/$defs/testimonials"
+        },
+        {
+          "$ref": "#/$defs/toolsBand"
         }
       ]
     },
@@ -952,6 +988,42 @@
           "type": "string"
         }
       }
+    },
+    "applicationGallery": {
+      "$ref": "https://thedotday.com/schema/sections/applicationGallery.json"
+    },
+    "fabricMatrix": {
+      "$ref": "https://thedotday.com/schema/sections/fabricMatrix.json"
+    },
+    "groundConditionCards": {
+      "$ref": "https://thedotday.com/schema/sections/groundConditionCards.json"
+    },
+    "homeStatStrip": {
+      "$ref": "https://thedotday.com/schema/sections/homeStatStrip.json"
+    },
+    "homeVideoFeature": {
+      "$ref": "https://thedotday.com/schema/sections/homeVideoFeature.json"
+    },
+    "installShowcase": {
+      "$ref": "https://thedotday.com/schema/sections/installShowcase.json"
+    },
+    "jobGallery": {
+      "$ref": "https://thedotday.com/schema/sections/jobGallery.json"
+    },
+    "quoteBand": {
+      "$ref": "https://thedotday.com/schema/sections/quoteBand.json"
+    },
+    "realJobs": {
+      "$ref": "https://thedotday.com/schema/sections/realJobs.json"
+    },
+    "splitHero": {
+      "$ref": "https://thedotday.com/schema/sections/splitHero.json"
+    },
+    "testimonials": {
+      "$ref": "https://thedotday.com/schema/sections/testimonials.json"
+    },
+    "toolsBand": {
+      "$ref": "https://thedotday.com/schema/sections/toolsBand.json"
     }
   }
 }

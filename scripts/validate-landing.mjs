@@ -42,6 +42,12 @@ const APPROVED = new Set([
   "bigTypeFeatures", "specSheet", "projectSpotlight",
   "editorialCards", "videoFeature",
   "sizeSelector", "dualBenefit", "featuredGuide",
+  // Home-origin sections now also valid on landing pages (schemas derived from
+  // their home/types.ts shapes; see co-located *.schema.json).
+  "applicationGallery", "fabricMatrix", "groundConditionCards",
+  "homeStatStrip", "homeVideoFeature", "installShowcase",
+  "jobGallery", "quoteBand", "realJobs", "splitHero",
+  "testimonials", "toolsBand",
 ]);
 
 // Gather blog focus keywords to detect overlap.

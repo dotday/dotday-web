@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/quoteBand.json",
+  "title": "QuoteBandSection",
+  "description": "Schema for the quoteBand section (component QuoteBand). Derived from its home/types.ts data shape so this section can be used and validated on landing pages. SINGLE SOURCE OF TRUTH for landing usage of quoteBand.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "_type",
+    "heading",
+    "ctaLabel",
+    "ctaHref"
+  ],
+  "properties": {
+    "_type": {
+      "const": "quoteBand"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sub": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    },
+    "marqueeWord": {
+      "type": "string"
+    }
+  }
+}

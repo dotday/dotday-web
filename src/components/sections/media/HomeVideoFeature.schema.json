@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/homeVideoFeature.json",
+  "title": "HomeVideoFeatureSection",
+  "description": "Schema for the homeVideoFeature section (component HomeVideoFeature). Derived from its home/types.ts data shape so this section can be used and validated on landing pages. SINGLE SOURCE OF TRUTH for landing usage of homeVideoFeature.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "_type",
+    "heading",
+    "video"
+  ],
+  "properties": {
+    "_type": {
+      "const": "homeVideoFeature"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "body": {
+      "type": "string"
+    },
+    "bullets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    },
+    "video": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "id",
+            "title"
+          ],
+          "properties": {
+            "kind": {
+              "const": "youtube"
+            },
+            "id": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "src",
+            "title"
+          ],
+          "properties": {
+            "kind": {
+              "const": "mp4"
+            },
+            "src": {
+              "type": "string"
+            },
+            "poster": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/jobGallery.json",
+  "title": "JobGallerySection",
+  "description": "Schema for the jobGallery section (component JobGallery). Derived from its home/types.ts data shape so this section can be used and validated on landing pages. SINGLE SOURCE OF TRUTH for landing usage of jobGallery.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "_type",
+    "heading",
+    "shots"
+  ],
+  "properties": {
+    "_type": {
+      "const": "jobGallery"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intro": {
+      "type": "string"
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "src",
+          "alt"
+        ],
+        "properties": {
+          "src": {
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
+          },
+          "cap": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    }
+  }
+}
