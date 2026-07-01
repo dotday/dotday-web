@@ -4476,6 +4476,11 @@ tbody tr:nth-child(even) {
   color: var(--charcoal);
   margin: 14px 0 0;
 }
+/* Blog hero: separate the light headline from the intro. Scoped to .hero so
+   the shared .excerpt (landing hero, etc.) keeps its own top spacing. */
+.hero .excerpt {
+  margin-top: 14px;
+}
 
 /* end-of-article author bio card (matches the brand monogram style) */
 .authorbio {
