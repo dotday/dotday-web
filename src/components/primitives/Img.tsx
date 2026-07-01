@@ -17,6 +17,7 @@ export function Img({
   priority = false,
   placeholderLabel,
   focalPoint,
+  intrinsic = false,
   sizes = "(max-width: 980px) 100vw, 860px",
 }: {
   src?: string;
@@ -25,13 +26,40 @@ export function Img({
   priority?: boolean;
   placeholderLabel?: string;
   focalPoint?: string;
+  /**
+   * intrinsic: render the image at its own natural aspect ratio instead of
+   * cropping it into a fixed `ratio` frame. Used by the blog hero so a tall or
+   * odd-shaped photo fits fully (no crop, no letterbox) - the container simply
+   * takes the image's height. Falls back to the ratio placeholder when there's
+   * no src yet.
+   */
+  intrinsic?: boolean;
   sizes?: string;
 }) {
   if (!src) {
     return (
-      <div className={`imgph ${ratio}`} role="img" aria-label={alt}>
+      <div
+        className={intrinsic ? "imgph imgph-intrinsic" : `imgph ${ratio}`}
+        role="img"
+        aria-label={alt}
+      >
         <span>{placeholderLabel || alt}</span>
       </div>
+    );
+  }
+  if (intrinsic) {
+    // Natural-aspect render: a plain img with height:auto so the frame fits the
+    // image exactly. next/image's fill/ratio path is for fixed-ratio crops; a
+    // fit-to-image hero needs the intrinsic dimensions the browser derives here.
+    // eslint-disable-next-line @next/next/no-img-element
+    return (
+      <img
+        className="img-intrinsic"
+        src={src}
+        alt={alt}
+        loading={priority ? "eager" : "lazy"}
+        style={{ objectPosition: focalPoint || "center" }}
+      />
     );
   }
   return (

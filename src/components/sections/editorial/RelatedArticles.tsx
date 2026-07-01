@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Img } from "@/components/primitives/Img";
 import type { RelatedPost } from "@/lib/blog/types";
 
 export function RelatedArticles({ posts }: { posts: RelatedPost[] }) {
@@ -13,8 +14,15 @@ export function RelatedArticles({ posts }: { posts: RelatedPost[] }) {
         {posts.map((p, i) => {
           const card = (
             <>
-              <div className="imgph r-169">
-                <span>{p.category}</span>
+              <div className="rcard-media r-169">
+                <Img
+                  src={p.image?.src}
+                  alt={p.image?.alt || p.title}
+                  ratio="r-169"
+                  focalPoint={p.image?.focalPoint}
+                  placeholderLabel={p.category}
+                  sizes="(max-width: 900px) 100vw, 380px"
+                />
               </div>
               <div className="pad">
                 <span className="badge">{p.category}</span>

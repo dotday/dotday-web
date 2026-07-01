@@ -154,6 +154,13 @@ export interface RelatedPost {
   title: string;
   url: string;
   category: Category;
+  /**
+   * Optional resolved thumbnail. Populated automatically in BlogLayout by
+   * looking up the related post by slug and pulling its own hero image (already
+   * resolved to a URL), so "Keep reading" cards show a real photo instead of the
+   * category placeholder. Authors don't set this.
+   */
+  image?: { src?: string; alt: string; focalPoint?: string };
 }
 
 export interface InternalLink {

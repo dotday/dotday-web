@@ -1011,10 +1011,10 @@ tbody tr:nth-child(even) {
 
 /* product block */
 .products {
-  background: var(--blog-surface);
-  border: 1px solid var(--grey2);
-  border-radius: var(--card-radius);
-  padding: 40px 28px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   margin: 44px 0;
 }
 .products .head {
@@ -1055,14 +1055,14 @@ tbody tr:nth-child(even) {
 }
 .ptag {
   font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 12.5px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink2);
   margin: 16px 0 6px;
 }
 .pcard.feat .ptag {
-  color: var(--olive);
+  color: var(--charcoal);
 }
 .pop {
   margin-left: 8px;
@@ -1080,12 +1080,13 @@ tbody tr:nth-child(even) {
   margin: 0 0 2px;
 }
 .pweight {
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink2);
   margin-bottom: 12px;
 }
 .pcard.feat .pweight {
-  color: var(--olive);
+  color: var(--charcoal);
 }
 .pdesc {
   font-size: 16.5px;
@@ -1104,12 +1105,12 @@ tbody tr:nth-child(even) {
   margin-bottom: 16px;
 }
 .puse {
-  font-size: 12px;
-  color: var(--ink2);
+  font-size: 13.5px;
+  color: var(--charcoal);
   background: transparent;
   border: 1px solid var(--grey2);
-  padding: 4px 9px;
-  border-radius: 4px;
+  padding: 5px 11px;
+  border-radius: 5px;
 }
 .pcard.feat .puse {
   color: #ededed;
@@ -1146,8 +1147,8 @@ tbody tr:nth-child(even) {
 }
 .faq-q span {
   font-weight: 500;
-  font-size: 16.5px;
-  color: var(--ink2);
+  font-size: 17px;
+  color: var(--charcoal);
   line-height: 1.4;
 }
 .faq-tog {
@@ -1217,13 +1218,13 @@ tbody tr:nth-child(even) {
 }
 .rcard h3 {
   font-weight: 500;
-  font-size: 17px;
-  line-height: 1.4;
-  color: var(--ink2);
+  font-size: 19px;
+  line-height: 1.32;
+  color: var(--charcoal);
   margin: 12px 0 10px;
 }
 .rtime {
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--muted);
 }
 
@@ -2932,7 +2933,7 @@ tbody tr:nth-child(even) {
 .cmp-table td {
   padding: 16px 18px;
   text-align: left;
-  font-size: 16.5px;
+  font-size: 16px;
   vertical-align: middle;
 }
 .cmp-table thead th {
@@ -2976,9 +2977,9 @@ tbody tr:nth-child(even) {
 }
 .cmp-table tbody th[scope="row"] {
   font-weight: 700;
-  color: var(--ink2);
-  background: #fbfbfb;
-  border-right: 1px solid var(--grey2);
+  font-size: 14.5px;
+  color: var(--charcoal);
+  background: transparent;
   white-space: nowrap;
 }
 .cmp-table tbody td {
@@ -2989,11 +2990,11 @@ tbody tr:nth-child(even) {
   border-bottom: 1px solid var(--grey2);
 }
 .cmp-col-feat {
-  background: rgba(216, 255, 0, 0.07);
+  background: transparent;
 }
 .cmp-table thead th.cmp-col-feat {
-  background: rgba(216, 255, 0, 0.12);
-  border-bottom-color: var(--neon);
+  background: transparent;
+  border-bottom-color: var(--grey2);
 }
 .cmp-cta-row td {
   border-bottom: none !important;
@@ -5471,4 +5472,57 @@ tbody tr:nth-child(even) {
   .sz-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   Intrinsic image mode (Img intrinsic) + related-card media.
+   ============================================================ */
+
+/* Fit-to-image: the blog hero renders its photo at natural aspect (no crop, no
+   letterbox) - the element sizes to the image's own dimensions. */
+.img-intrinsic {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Placeholder shown before the hero image is sourced, in intrinsic mode: keep a
+   sensible 4:3 so the layout isn't collapsed while there's no image yet. */
+.imgph-intrinsic {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    135deg,
+    #ffffff,
+    #ffffff 14px,
+    #f1f1f1 14px,
+    #f1f1f1 28px
+  );
+}
+.imgph-intrinsic span {
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* "Keep reading" card media wrapper - fixed 16:9 window for the auto-pulled
+   hero thumbnail, so cards stay uniform even though each source hero differs. */
+.rcard-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.rcard-media .img-frame,
+.rcard-media .imgph {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  border-radius: 0;
 }

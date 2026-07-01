@@ -1,4 +1,4 @@
-import type { BlogPost } from "@/lib/blog/types";
+import type { BlogPost, RelatedPost } from "@/lib/blog/types";
 import { ReadingProgress } from "@/components/primitives/ReadingProgress";
 import { BlogHero } from "@/components/sections/heroes/BlogHero";
 import { QuickAnswer } from "@/components/sections/editorial/QuickAnswer";
@@ -8,6 +8,32 @@ import { FAQ } from "@/components/sections/editorial/FAQ";
 import { RelatedArticles } from "@/components/sections/editorial/RelatedArticles";
 import { AuthorBio } from "@/components/sections/editorial/AuthorBio";
 import { FinalCTA } from "@/components/sections/conversion/FinalCTA";
+import { getPostBySlug } from "@/lib/blog/loader";
+import { resolveImage } from "@/lib/blog/images";
+
+/**
+ * Enrich each related post with its own hero image (resolved to a URL) so the
+ * "Keep reading" cards show a real photo. The related link is `/post/<slug>`;
+ * we look the post up and pull its hero. If the post or image can't be found,
+ * the card falls back to the category placeholder (image stays undefined).
+ */
+function withRelatedImages(related: RelatedPost[]): RelatedPost[] {
+  return related.map((r) => {
+    const slug = r.url.replace(/^\/post\//, "").replace(/\/$/, "");
+    const target = getPostBySlug(slug);
+    if (!target?.hero?.image) return r;
+    const src = resolveImage(target, target.hero.image.ref);
+    if (!src) return r;
+    return {
+      ...r,
+      image: {
+        src,
+        alt: target.hero.image.alt,
+        focalPoint: target.hero.image.focalPoint,
+      },
+    };
+  });
+}
 
 /**
  * BlogLayout - the fixed section arc for every post. Order is intentional and
@@ -47,7 +73,7 @@ export function BlogLayout({ post }: { post: BlogPost }) {
         </div>
       </div>
 
-      <RelatedArticles posts={post.relatedPosts} />
+      <RelatedArticles posts={withRelatedImages(post.relatedPosts)} />
       <FinalCTA />
     </>
   );

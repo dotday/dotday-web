@@ -87,7 +87,7 @@ export function BlogHero({ post }: { post: BlogPost }) {
           <Img
             src={heroSrc}
             alt={post.hero.image.alt}
-            ratio="r-43"
+            intrinsic
             priority
             focalPoint={post.hero.image.focalPoint}
             placeholderLabel={post.hero.image.alt}
