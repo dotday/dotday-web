@@ -11,7 +11,10 @@
     "content:schema": "node scripts/validate-schema.mjs",
     "content:validate": "node scripts/gen-types.mjs --check && node scripts/validate-schema.mjs && node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs && node scripts/validate-landing.mjs content/landing && node scripts/brand-guard.mjs",
     "new:blog": "node scripts/new-blog.mjs",
-    "content:types": "node scripts/gen-types.mjs"
+    "content:types": "node scripts/gen-types.mjs",
+    "preview:landing": "node scripts/preview-page.mjs landing",
+    "preview:blog": "node scripts/preview-page.mjs blog",
+    "preview:gallery": "node scripts/preview-gallery.mjs"
   },
   "dependencies": {
     "next": "^14.2.33",
@@ -24,6 +27,7 @@
     "@types/react-dom": "18.3.0",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
+    "esbuild": "^0.24.0",
     "json-schema-to-typescript": "^15.0.4",
     "typescript": "5.5.3"
   },

@@ -150,7 +150,7 @@ const html = \`<!DOCTYPE html><html lang="en"><head>
 <script>\${clientBundle}</script>
 </body></html>\`;
 
-writeFileSync(${JSON.stringify(join(OUTDIR, `${slug}-PREVIEW.html`))}, html);
+writeFileSync(${JSON.stringify(join(OUTDIR, `${slug.replace(/\//g, "--")}-PREVIEW.html`))}, html);
 console.log("wrote", ${JSON.stringify(join("preview", `${slug}-PREVIEW.html`))}, Math.round(html.length/1024/1024*10)/10, "MB");
 `;
 
