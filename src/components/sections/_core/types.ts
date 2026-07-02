@@ -18,6 +18,17 @@ export interface StepsData {
   _type: "steps";
   heading?: string;
   steps: Array<{ title: string; body: string }>;
+  /** Layout. "list" (default) is the classic numbered ol; "cards" renders the
+   *  my-qr-zone white step-card grid (own full-width band, eyebrow + lead,
+   *  optional wide image under the grid). All fields below are cards-only and
+   *  optional, so every existing blog/landing steps block stays byte-valid. */
+  variant?: "list" | "cards";
+  /** cards only: neon-outline pill above the heading, e.g. "Start here". */
+  eyebrow?: string;
+  /** cards only: intro copy under the heading; [label](href) renders as inlinks. */
+  lead?: string;
+  /** cards only: wide image under the step grid. */
+  image?: { ref?: string; alt: string };
 }
 
 export interface CalloutData {

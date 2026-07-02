@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/productChooser.json",
+  "title": "ProductChooserSection",
+  "description": "Post-purchase product identification grid ('Which DOTDAY fabric do you have?'): eyebrow + heading + lead (supports [label](href) inline links) over centered roll cards, each with a square product photo, neon tag, title, body, and a text link to its product page. Semantically distinct from groundConditionCards (pre-purchase condition -> fabric). This file is the SINGLE SOURCE OF TRUTH for the section's shape - the TS type is generated from it (ProductChooser.types.ts) and the landing-page doc schema $refs it.",
+  "type": "object",
+  "required": ["_type", "heading", "cards"],
+  "additionalProperties": false,
+  "properties": {
+    "_type": { "const": "productChooser" },
+    "eyebrow": { "type": "string", "description": "Neon-outline pill above the heading, e.g. 'Know your roll'." },
+    "heading": { "type": "string", "minLength": 1 },
+    "lead": {
+      "type": "string",
+      "description": "Intro copy. Inline links use [label](href) and render as neon-underline inlinks."
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["tag", "title", "body", "link"],
+        "additionalProperties": false,
+        "properties": {
+          "tag": { "type": "string", "description": "Neon product chip, e.g. 'SHIELD \u00b7 3.2oz'." },
+          "title": { "type": "string", "minLength": 1 },
+          "body": { "type": "string", "minLength": 1 },
+          "link": {
+            "type": "object",
+            "required": ["label", "href"],
+            "additionalProperties": false,
+            "properties": {
+              "label": { "type": "string" },
+              "href": { "type": "string" }
+            }
+          },
+          "image": {
+            "type": "object",
+            "required": ["alt"],
+            "additionalProperties": false,
+            "properties": {
+              "ref": { "type": "string", "description": "Square product photo under /public." },
+              "alt": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

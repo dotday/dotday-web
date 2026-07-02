@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/sections/qrHero.json",
+  "title": "QrHeroSection",
+  "description": "QR activation hero: dark scan-themed hero with animated grid, neon scan beam, corner reticles, a pulsing status tag, a two-line uppercase H1 (line 2 in neon), lead copy, and up to two CTAs. Built for post-purchase QR landing pages (/l/my-qr-zone). This file is the SINGLE SOURCE OF TRUTH for the section's shape - the TS type is generated from it (QrHero.types.ts) and the landing-page doc schema $refs it.",
+  "type": "object",
+  "required": ["_type", "headline"],
+  "additionalProperties": false,
+  "properties": {
+    "_type": { "const": "qrHero" },
+    "tag": {
+      "type": "string",
+      "description": "Pulsing status pill above the H1, e.g. 'Post-Purchase Activation Hub'."
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 1,
+      "description": "H1 line one, e.g. 'You scanned it.'"
+    },
+    "headlineAccent": {
+      "type": "string",
+      "description": "H1 line two, rendered in neon on its own line, e.g. \"Let's grow.\""
+    },
+    "lead": {
+      "type": "string",
+      "description": "Supporting copy under the H1."
+    },
+    "primaryCta": {
+      "type": "object",
+      "required": ["label", "href"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string" },
+        "href": { "type": "string" }
+      },
+      "description": "Neon button. Label from the approved CTA library, ALL-CAPS applied by CSS."
+    },
+    "secondaryCta": {
+      "type": "object",
+      "required": ["label", "href"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string" },
+        "href": { "type": "string" }
+      },
+      "description": "Ghost (light outline) button."
+    }
+  }
+}

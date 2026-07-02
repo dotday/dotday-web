@@ -17,6 +17,10 @@ import type { SpecSheetSection } from "@/components/sections/product/SpecSheet/S
 import type { SizeSelectorSection } from "@/components/sections/product/SizeSelector/SizeSelector.types";
 import type { DualBenefitSection } from "@/components/sections/narrative/DualBenefit/DualBenefit.types";
 import type { FeaturedGuideSection } from "@/components/sections/media/FeaturedGuide/FeaturedGuide.types";
+import type { QrHeroSection } from "@/components/sections/heroes/QrHero/QrHero.types";
+import type { VideoPlaylistSection } from "@/components/sections/media/VideoPlaylist/VideoPlaylist.types";
+import type { ProductChooserSection } from "@/components/sections/product/ProductChooser/ProductChooser.types";
+import type { LeadFormSplitSection } from "@/components/sections/conversion/LeadFormSplit/LeadFormSplit.types";
 
 export type LandingStatus =
   | "planned"
@@ -127,9 +131,9 @@ export interface FaqSection {
 export interface ReviewSection {
   _type: "reviews";
   heading?: string;
-  /** Layout. "grid" (default) and "cards" render all items; "spotlight" and
-   *  "centered" feature the first item only. */
-  variant?: "grid" | "cards" | "spotlight" | "centered";
+  /** Layout. "grid" (default), "cards", and "rail" render all items;
+   *  "spotlight" and "centered" feature the first item only. */
+  variant?: "grid" | "cards" | "spotlight" | "centered" | "rail";
   /** spotlight only: the project photo beside the featured review. */
   image?: ImageRef;
   /** spotlight only: caption overlaid on the photo, e.g. "XBAR 5oz · Farm install". */
@@ -146,8 +150,12 @@ export interface ReviewSection {
     avatar?: string;
     /** cards only: explicit avatar monogram override (else derived from author). */
     monogram?: string;
-    /** cards only: product tag pill, e.g. "SHIELD". */
+    /** cards / rail: product tag pill, e.g. "SHIELD". */
     product?: string;
+    /** rail only: the customer project photo beside the quote. */
+    image?: ImageRef;
+    /** rail only: show the "Verified" badge next to the author. */
+    verified?: boolean;
   }>;
 }
 
@@ -182,6 +190,15 @@ export interface StepsSection {
   _type: "steps";
   heading?: string;
   steps: Array<{ title: string; body: string }>;
+  /** Layout. "list" (default) is the classic numbered ol; "cards" renders the
+   *  my-qr-zone white step-card grid as its own full-width band. */
+  variant?: "list" | "cards";
+  /** cards only: neon-outline pill above the heading. */
+  eyebrow?: string;
+  /** cards only: intro copy; [label](href) renders as inlinks. */
+  lead?: string;
+  /** cards only: wide image under the step grid. */
+  image?: ImageRef;
 }
 
 /**
@@ -207,6 +224,13 @@ export interface StatementBandSection {
   statement: string;
   highlight?: string;
   leafMark?: boolean;
+  /** "ghost" renders the my-qr-zone V3 treatment: light-grey band, oversized
+   *  lowercase ghost words, optional animated mark image, weight-400 statement.
+   *  Omit for the original white watermark band. */
+  variant?: "ghost";
+  /** ghost only: the mark above the statement (e.g. /brand/heart-loop.gif).
+   *  Replaces the default leaf mark; leafMark is ignored on ghost. */
+  markImage?: ImageRef;
 }
 
 /**
@@ -250,6 +274,15 @@ export type { SpecSheetSection };
 export type { SizeSelectorSection };
 export type { DualBenefitSection };
 export type { FeaturedGuideSection };
+
+// QrHeroSection, VideoPlaylistSection, ProductChooserSection, LeadFormSplitSection
+// are SCHEMA-FIRST (the my-qr-zone promotion, same pattern): shapes live in
+// co-located *.schema.json and the types are GENERATED. Re-exported so the
+// LandingSection union and `@/lib/landing/types` importers stay unchanged.
+export type { QrHeroSection };
+export type { VideoPlaylistSection };
+export type { ProductChooserSection };
+export type { LeadFormSplitSection };
 
 /**
  * projectSpotlight - a real install spotlight (UGC / customer job): a media
@@ -334,6 +367,10 @@ export type LandingSection =
   | SizeSelectorSection
   | DualBenefitSection
   | FeaturedGuideSection
+  | QrHeroSection
+  | VideoPlaylistSection
+  | ProductChooserSection
+  | LeadFormSplitSection
   | ProjectSpotlightSection
   | EditorialCardsSection
   | VideoFeatureSection;

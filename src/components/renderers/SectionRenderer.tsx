@@ -114,6 +114,11 @@ export function SectionRenderer({
           case "internalLinks":
             return <InternalLinks key={i} data={section} />;
           case "steps":
+            // cards variant carries its own full-width band + wrapper; the
+            // classic list keeps the article-column adaptation below.
+            if (section.variant === "cards") {
+              return <Steps key={i} data={section} />;
+            }
             return (
               <div className="wrap page" key={i}>
                 <div className="body-single">

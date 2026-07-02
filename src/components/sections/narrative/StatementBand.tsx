@@ -13,6 +13,85 @@ export function StatementBand({ data }: { data: StatementBandSection }) {
     fontSize: "clamp(56px, 12vw, 168px)",
     whiteSpace: "nowrap",
   };
+
+  // --- ghost: the my-qr-zone V3 "Love Growing Green" treatment. Light-grey
+  // band, three oversized lowercase ghost words pinned to the corners/center,
+  // an optional animated mark image (the neon heart GIF), and a lighter-weight
+  // statement. Default variant below is byte-identical to before.
+  if (data.variant === "ghost") {
+    const ghostBase: React.CSSProperties = {
+      position: "absolute",
+      fontWeight: 400,
+      color: "var(--dark-grey, #e9e9e9)",
+      letterSpacing: "-0.045em",
+      lineHeight: 0.78,
+      userSelect: "none",
+      pointerEvents: "none",
+      textTransform: "lowercase",
+      whiteSpace: "nowrap",
+    };
+    return (
+      <section
+        aria-label="DOTDAY positioning"
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          background: "var(--paper2)",
+          padding: "clamp(90px, 12vw, 150px) 0",
+          textAlign: "center",
+        }}
+      >
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}>
+          <span style={{ ...ghostBase, top: "7%", left: "-1.5%", fontSize: "clamp(96px, 18vw, 290px)" }}>{w1}</span>
+          <span style={{ ...ghostBase, top: "31%", left: "50%", transform: "translateX(-50%)", fontSize: "clamp(110px, 20vw, 320px)" }}>{w2}</span>
+          <span style={{ ...ghostBase, bottom: "1%", right: "-1.5%", fontSize: "clamp(96px, 18vw, 290px)" }}>{w3}</span>
+        </div>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 1040, margin: "0 auto", padding: "0 24px" }}>
+          {data.markImage?.ref && (
+            <img
+              src={data.markImage.ref}
+              alt={data.markImage.alt || ""}
+              width={156}
+              height={140}
+              loading="lazy"
+              style={{ width: "auto", height: 78, margin: "0 auto 26px", display: "block" }}
+            />
+          )}
+          <p
+            style={{
+              fontWeight: 400,
+              fontSize: "clamp(26px, 4.2vw, 52px)",
+              lineHeight: 1.18,
+              letterSpacing: "-0.02em",
+              color: "var(--charcoal)",
+              margin: 0,
+            }}
+          >
+            {data.statement}
+            {data.highlight && (
+              <>
+                {" "}
+                <span
+                  style={{
+                    background: "var(--neon)",
+                    color: "var(--ink)",
+                    padding: "0.05em 0.28em",
+                    borderRadius: 3,
+                    WebkitBoxDecorationBreak: "clone",
+                    boxDecorationBreak: "clone",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {data.highlight}
+                </span>
+              </>
+            )}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       aria-label="DOTDAY positioning"

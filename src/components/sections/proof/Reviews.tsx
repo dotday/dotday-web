@@ -91,6 +91,46 @@ export function Reviews({ data }: { data: ReviewSection }) {
     );
   }
 
+  // --- rail: horizontal photo-card rail (my-qr-zone V3). Every card is a
+  // customer project photo beside the quote, with a Verified badge, neon
+  // stars, and a product chip. Scroll-snapped; photo becomes a top banner and
+  // the card goes near full-bleed under 700px (rrl-* classes in globals.css,
+  // figure margin reset included - the V3 proof's "empty gap" bug). ---
+  if (variant === "rail") {
+    return (
+      <section className="sec" style={{ background: "var(--paper2)" }} aria-label={heading}>
+        <div className="wrap">
+          <div className="rrl-head"><h2>{heading}</h2></div>
+          <div className="rrl-rail">
+            {data.items.map((r, i) => (
+              <figure className="rrl-card" key={i}>
+                <div className="rrl-photo">
+                  <Img src={r.image?.ref} alt={r.image?.alt || `Customer project by ${r.author}`} ratio="r-11" placeholderLabel={r.product} />
+                </div>
+                <figcaption className="rrl-body">
+                  <div className="rrl-top">
+                    <div className="rrl-namerow">
+                      <span className="rrl-name">{r.author}</span>
+                      {r.verified && <span className="rrl-vbadge">{"\u2713"} Verified</span>}
+                    </div>
+                    <Stars size={17} gap={3} />
+                  </div>
+                  <p className="rrl-text">{r.quote}</p>
+                  {r.product && (
+                    <span className="rrl-prod">
+                      Used <b>{r.product}</b>
+                    </span>
+                  )}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="rrl-hint">Drag or scroll to see more reviews {"\u2192"}</p>
+        </div>
+      </section>
+    );
+  }
+
   // --- cards: Testimonials look (avatar / initials + product tag) ---
   if (variant === "cards") {
     return (
