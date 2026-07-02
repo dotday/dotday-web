@@ -28,6 +28,10 @@ import { VideoFeature as HomeVideoFeature } from "@/components/sections/media/Ho
 import { ApplicationGallery } from "@/components/sections/product/ApplicationGallery";
 import { RealJobs } from "@/components/sections/proof/RealJobs";
 import { InstagramFeed } from "@/components/sections/media/InstagramFeed";
+import { QrHero } from "@/components/sections/heroes/QrHero";
+import { VideoPlaylist } from "@/components/sections/media/VideoPlaylist";
+import { ProductChooser } from "@/components/sections/product/ProductChooser";
+import { LeadFormSplit } from "@/components/sections/conversion/LeadFormSplit";
 
 /**
  * Registry seed - registers every section that renders directly from its data
@@ -67,6 +71,12 @@ registerSection({ type: "sizeSelector", component: SizeSelector, surfaces: ["lan
 
 // Proof
 registerSection({ type: "reviews", component: Reviews, surfaces: ["landing"] });
+
+// QR activation hub (my-qr-zone promotion) - landing-only slices
+registerSection({ type: "qrHero", component: QrHero, surfaces: ["landing"] });
+registerSection({ type: "videoPlaylist", component: VideoPlaylist, surfaces: ["landing"] });
+registerSection({ type: "productChooser", component: ProductChooser, surfaces: ["landing"] });
+registerSection({ type: "leadFormSplit", component: LeadFormSplit, surfaces: ["landing"] });
 registerSection({ type: "projectSpotlight", component: ProjectSpotlight, surfaces: ["landing", "profile"] });
 
 // Media

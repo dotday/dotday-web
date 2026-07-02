@@ -5,7 +5,7 @@ Derived from the registry seed, SectionRenderer, validate-landing APPROVED set,
 the LandingSection union, the landing doc schema, and co-located section schemas.
 "Use when" notes come from `scripts/catalog-meta.json`.
 
-Sections: **34** (29 registry, 5 adapted) | Landing-approved: **33** | Blog blocks: **9**
+Sections: **38** (33 registry, 5 adapted) | Landing-approved: **37** | Blog blocks: **9**
 
 ## Page sections (landing / home / profile)
 
@@ -29,9 +29,12 @@ Sections: **34** (29 registry, 5 adapted) | Landing-approved: **33** | Blog bloc
 | `installShowcase` | InstallShowcase | media | registry | home, landing | yes | no | yes | yes | Installation walkthrough with imagery. Use when showing the install builds buying confidence. |
 | `internalLinks` | InternalLinks | conversion | registry | landing, blog, profile | yes | yes | yes | no | Related links block. Use near the page end to route to products, tools, and guides. |
 | `jobGallery` | JobGallery | proof | registry | home, landing | yes | no | yes | yes | Photo gallery of installs. Use when images carry the proof and captions can stay short. |
+| `leadFormSplit` | LeadFormSplit | conversion | registry | landing | yes | yes | yes | yes | Light-grey lead capture band: centered eyebrow + heading over the shared LeadForm split (rail + trust badges + form card). Copy props flow to LeadForm; logic stays in the form. |
 | `problem` | Problem | narrative | registry | landing | yes | yes | yes | no | Names the ground-condition problem before selling anything. Use early on application pages, right after the hero. |
+| `productChooser` | ProductChooser | product | registry | landing | yes | yes | yes | yes | Post-purchase roll identification cards (Which DOTDAY fabric do you have?): square product photo, neon tag, title, body, product-page link per card. |
 | `productComparison` | (renderer switch) | _core (adapted) | adapted | landing | yes | yes | yes | no | Two or three products compared on shared attributes. Use on comparison and vs pages. |
 | `projectSpotlight` | ProjectSpotlight | proof | registry | landing, profile | yes | yes | yes | no | One real job told as a story. Use on application and profile pages with strong photos. |
+| `qrHero` | QrHero | heroes | registry | landing | yes | yes | yes | yes | Dark scan-themed QR activation hero: animated grid, neon scan beam, reticles, pulsing tag, two-line uppercase H1, up to two CTAs. Post-purchase hub pages. |
 | `quoteBand` | QuoteBand | proof | registry | home, landing | yes | no | yes | yes | Single large customer quote on a band. Use for one standout quote, max once per page. |
 | `realJobs` | RealJobs | proof | registry | home, landing | yes | no | yes | yes | Grid of real installation jobs. Use when several jobs prove the application at a glance. |
 | `reviews` | Reviews | proof | registry | landing | yes | yes | yes | no | Customer review cards. Use as social proof after the product case is made. |
@@ -45,6 +48,7 @@ Sections: **34** (29 registry, 5 adapted) | Landing-approved: **33** | Blog bloc
 | `toolsBand` | ToolsBand | conversion | registry | home, landing | yes | no | yes | yes | Band promoting the site tools: Calculator, Finder Quiz, Comparison Engine. Use once, mid or late page. |
 | `useCaseGrid` | UseCaseGrid | product | registry | landing | yes | yes | yes | no | Grid of applications a fabric serves. Use to route readers to their own use case. |
 | `videoFeature` | VideoFeature | media | registry | home, landing | yes | yes | yes | no | Single video with supporting copy. Use when footage explains the fabric better than stills. |
+| `videoPlaylist` | VideoPlaylist | media | registry | landing | yes | yes | yes | yes | Featured video player + Watch-more selector rail with in-box click-to-load playback (YouTube nocookie or self-hosted MP4). Data-driven multi-video counterpart to videoFeature. |
 
 ## Blog body blocks
 

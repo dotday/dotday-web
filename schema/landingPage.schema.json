@@ -243,6 +243,18 @@
         },
         {
           "$ref": "#/$defs/toolsBand"
+        },
+        {
+          "$ref": "#/$defs/qrHero"
+        },
+        {
+          "$ref": "#/$defs/videoPlaylist"
+        },
+        {
+          "$ref": "#/$defs/productChooser"
+        },
+        {
+          "$ref": "#/$defs/leadFormSplit"
         }
       ]
     },
@@ -539,7 +551,8 @@
             "grid",
             "cards",
             "spotlight",
-            "centered"
+            "centered",
+            "rail"
           ]
         },
         "image": {
@@ -587,6 +600,12 @@
               },
               "product": {
                 "type": "string"
+              },
+              "image": {
+                "$ref": "#/$defs/imageRef"
+              },
+              "verified": {
+                "type": "boolean"
               }
             }
           }
@@ -704,6 +723,21 @@
               }
             }
           }
+        },
+        "variant": {
+          "enum": [
+            "list",
+            "cards"
+          ]
+        },
+        "eyebrow": {
+          "type": "string"
+        },
+        "lead": {
+          "type": "string"
+        },
+        "image": {
+          "$ref": "#/$defs/imageRef"
         }
       }
     },
@@ -761,6 +795,14 @@
         },
         "leafMark": {
           "type": "boolean"
+        },
+        "variant": {
+          "enum": [
+            "ghost"
+          ]
+        },
+        "markImage": {
+          "$ref": "#/$defs/imageRef"
         }
       }
     },
@@ -1029,6 +1071,18 @@
     },
     "toolsBand": {
       "$ref": "https://thedotday.com/schema/sections/toolsBand.json"
+    },
+    "qrHero": {
+      "$ref": "https://thedotday.com/schema/sections/qrHero.json"
+    },
+    "videoPlaylist": {
+      "$ref": "https://thedotday.com/schema/sections/videoPlaylist.json"
+    },
+    "productChooser": {
+      "$ref": "https://thedotday.com/schema/sections/productChooser.json"
+    },
+    "leadFormSplit": {
+      "$ref": "https://thedotday.com/schema/sections/leadFormSplit.json"
     }
   }
 }

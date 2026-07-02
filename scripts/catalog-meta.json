@@ -34,7 +34,11 @@
     "internalLinks": "Related links block. Use near the page end to route to products, tools, and guides.",
     "toolsBand": "Band promoting the site tools: Calculator, Finder Quiz, Comparison Engine. Use once, mid or late page.",
     "cta": "Closing call to action with approved labels only. Every landing page ends with one.",
-    "instagramFeed": "Live Instagram embed, third-party script (isAction). Home only; confirm before any new surface."
+    "instagramFeed": "Live Instagram embed, third-party script (isAction). Home only; confirm before any new surface.",
+    "qrHero": "Dark scan-themed QR activation hero: animated grid, neon scan beam, reticles, pulsing tag, two-line uppercase H1, up to two CTAs. Post-purchase hub pages.",
+    "videoPlaylist": "Featured video player + Watch-more selector rail with in-box click-to-load playback (YouTube nocookie or self-hosted MP4). Data-driven multi-video counterpart to videoFeature.",
+    "productChooser": "Post-purchase roll identification cards (Which DOTDAY fabric do you have?): square product photo, neon tag, title, body, product-page link per card.",
+    "leadFormSplit": "Light-grey lead capture band: centered eyebrow + heading over the shared LeadForm split (rail + trust badges + form card). Copy props flow to LeadForm; logic stays in the form."
   },
   "blogBlocks": {
     "prose": "Body copy with optional H2 heading. The default block; posts open with it.",

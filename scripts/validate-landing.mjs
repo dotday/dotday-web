@@ -44,6 +44,8 @@ const APPROVED = new Set([
   "sizeSelector", "dualBenefit", "featuredGuide",
   // Home-origin sections now also valid on landing pages (schemas derived from
   // their home/types.ts shapes; see co-located *.schema.json).
+  // QR activation hub slices (my-qr-zone promotion).
+  "qrHero", "videoPlaylist", "productChooser", "leadFormSplit",
   "applicationGallery", "fabricMatrix", "groundConditionCards",
   "homeStatStrip", "homeVideoFeature", "installShowcase",
   "jobGallery", "quoteBand", "realJobs", "splitHero",
