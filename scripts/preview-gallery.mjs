@@ -113,14 +113,25 @@ const entries = [...picked.entries()].sort((a, b) => {
 });
 
 const gallerySections = [];
+// Sections with prop-driven layout variants: render EVERY variant, not just the
+// live one, so the catalog shows the full design space. The live example's data
+// is cloned per variant (variants only change layout, not the data contract).
+const VARIANTS = {
+  reviews: ["grid", "spotlight", "centered", "cards"],
+  callout: ["note", "warning"],
+};
 for (const [t, e] of entries) {
-  gallerySections.push({
-    _type: "callout",
-    variant: "note",
-    heading: `Section: ${t}`,
-    body: `Family: ${FAMILY[t] || "adapter"} - live example from ${e.source.file}`,
-  });
-  gallerySections.push(rebaseRefs(e.section, e));
+  const variants = VARIANTS[t] || [null];
+  for (const v of variants) {
+    gallerySections.push({
+      _type: "callout",
+      variant: "note",
+      heading: v ? `Section: ${t} - variant: "${v}"` : `Section: ${t}`,
+      body: `Family: ${FAMILY[t] || "adapter"} - live example from ${e.source.file}${v ? ` (variant forced to ${v})` : ""}`,
+    });
+    const sec = rebaseRefs(e.section, e);
+    gallerySections.push(v ? { ...sec, variant: v } : sec);
+  }
 }
 
 const galleryPage = {
