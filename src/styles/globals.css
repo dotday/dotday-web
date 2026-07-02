@@ -9,7 +9,6 @@
 :root {
   --neon: #d8ff00;
   --neon-soft: #dfff6a;
-  --olive: #5b6e00;
   --charcoal: #101010;
   --ink: #1a1a1a;
   --ink2: #333333;
@@ -1075,7 +1074,7 @@ tbody tr:nth-child(even) {
 .pcard h3 {
   font-family: var(--text);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   color: var(--ink);
   margin: 0 0 2px;
 }
@@ -1581,7 +1580,7 @@ tbody tr:nth-child(even) {
   white-space: nowrap;
 }
 .hdr-toplnk:hover {
-  color: var(--olive);
+  color: var(--charcoal);
 }
 
 .hdr-divider {
@@ -1612,7 +1611,7 @@ tbody tr:nth-child(even) {
   white-space: nowrap;
 }
 .hdr-util:hover {
-  color: var(--olive);
+  color: var(--charcoal);
 }
 .hdr-icon {
   display: grid;
@@ -1894,7 +1893,7 @@ tbody tr:nth-child(even) {
 }
 .prolist-done {
   font-size: 14px;
-  color: var(--olive);
+  color: var(--charcoal);
   font-weight: 500;
   margin: 0;
 }
@@ -2103,7 +2102,7 @@ tbody tr:nth-child(even) {
 }
 .feature h3 {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--charcoal);
   margin: 0 0 8px;
 }
@@ -2158,7 +2157,7 @@ tbody tr:nth-child(even) {
 .hashrow {
   margin: 26px 0 10px;
   font-size: 14px;
-  color: var(--olive);
+  color: var(--charcoal);
   font-weight: 600;
 }
 
@@ -2969,7 +2968,7 @@ tbody tr:nth-child(even) {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--olive);
+  color: var(--charcoal);
   background: var(--neon-soft);
   border: 1px solid var(--neon);
   padding: 3px 7px;
@@ -3020,7 +3019,7 @@ tbody tr:nth-child(even) {
   font-weight: 500;
 }
 .cmp-foot svg {
-  color: var(--olive);
+  color: var(--charcoal);
 }
 
 /* --- Charcoal gallery moment (overrides .jobg for the dark variant) --- */
@@ -3165,7 +3164,7 @@ tbody tr:nth-child(even) {
 .ic-body h3 {
   font-family: var(--text);
   font-weight: 600;
-  font-size: 23px;
+  font-size: 22px;
   letter-spacing: -0.01em;
   color: var(--ink);
   margin: 0 0 7px;
@@ -4093,11 +4092,11 @@ tbody tr:nth-child(even) {
   font-family: var(--text); font-weight: 700;
   font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1;
 }
-.bhero-stat-l { font-size: 13.5px; font-weight: 600; color: #2c3500; max-width: 180px; }
+.bhero-stat-l { font-size: 13.5px; font-weight: 600; color: var(--charcoal); max-width: 180px; }
 .bhero-stat-div { width: 1px; height: 34px; background: rgba(0,0,0,0.18); }
 
 /* ============================================================ TRENDING === */
-.btrend-spark { color: var(--olive); }
+.btrend-spark { color: var(--charcoal); }
 .btrend-rail {
   display: grid; grid-auto-flow: column; grid-auto-columns: minmax(248px, 1fr);
   gap: 18px; overflow-x: auto; padding-bottom: 10px;
@@ -4121,7 +4120,7 @@ tbody tr:nth-child(even) {
 }
 .btrend-body { padding: 15px 16px 18px; }
 .btrend-body h3 {
-  font-weight: 600; font-size: 16px; line-height: 1.32; color: var(--ink2);
+  font-weight: 500; font-size: 16px; line-height: 1.32; color: var(--ink2);
   margin: 9px 0 10px;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
@@ -4203,12 +4202,12 @@ tbody tr:nth-child(even) {
   width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
   background: var(--neon); color: var(--ink); font-weight: 800; font-size: 13px;
 }
-.bpick-author-name { font-weight: 700; font-size: 13.5px; color: var(--ink); }
+.bpick-author-name { font-weight: 600; font-size: 13.5px; color: var(--ink); }
 .bpick-body h3 {
   font-family: var(--text); font-weight: 400; font-size: 21px; line-height: 1.22;
   letter-spacing: -0.015em; color: var(--charcoal); margin: 0 0 9px; transition: color 0.14s ease;
 }
-.bpick-body a:hover h3 { color: var(--olive); }
+.bpick-body a:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
 .bpick-body p {
   font-size: 14.5px; line-height: 1.55; color: var(--muted); margin: 0 0 14px;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
@@ -4230,7 +4229,7 @@ tbody tr:nth-child(even) {
 .bdyk-copy > p { font-size: 16px; line-height: 1.62; color: var(--ink-soft); margin: 0 0 20px; }
 .bdyk-list { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 11px; }
 .bdyk-list li { display: flex; align-items: center; gap: 11px; font-size: 15px; color: var(--ink2); }
-.bdyk-check { color: var(--olive); flex: none; }
+.bdyk-check { color: var(--charcoal); flex: none; }
 .bdyk-card {
   background: #fff; color: var(--ink); border: 1px solid var(--hair); border-radius: var(--card-radius);
   padding: clamp(28px, 3.5vw, 40px) clamp(24px, 3vw, 32px); text-align: center;
@@ -4331,7 +4330,7 @@ tbody tr:nth-child(even) {
   font-family: var(--text); font-weight: 400; font-size: clamp(28px, 4.4vw, 44px);
   letter-spacing: -0.03em; color: var(--charcoal);
 }
-.bdiff-head p { font-size: 16px; line-height: 1.55; color: #2c3500; margin: 12px 0 0; }
+.bdiff-head p { font-size: 16px; line-height: 1.55; color: var(--charcoal); margin: 12px 0 0; }
 .bdiff-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .bdiff-card {
   background: #fff; border-radius: var(--card-radius); padding: clamp(24px, 3vw, 32px) 18px;
@@ -4575,7 +4574,7 @@ tbody tr:nth-child(even) {
 .bsus-media { border-radius: 6px; overflow: hidden; box-shadow: 0 20px 48px rgba(0,0,0,0.12); }
 .bsus-media .img-frame, .bsus-media .imgph { border-radius: 6px; }
 .bsus-title {
-  font-family: var(--text); font-weight: 600;
+  font-family: var(--text); font-weight: 400;
   font-size: clamp(28px, 4vw, 42px); line-height: 1.08; letter-spacing: -0.025em;
   margin-bottom: 16px;
   color: var(--charcoal);
@@ -4590,7 +4589,7 @@ tbody tr:nth-child(even) {
 .bsus-stat-n--arrow {
   display: inline-flex; align-items: center; gap: 2px; font-size: 30px; min-width: 130px;
 }
-.bsus-stat-n--arrow svg { color: var(--olive); }
+.bsus-stat-n--arrow svg { color: var(--charcoal); }
 .bsus-stat-body { display: flex; flex-direction: column; }
 .bsus-stat-l { font-weight: 700; font-size: 16px; color: var(--charcoal); }
 .bsus-stat-sub { font-size: 14px; color: var(--muted); margin-top: 2px; }
@@ -4865,8 +4864,8 @@ tbody tr:nth-child(even) {
 }
 .leadcard-title {
   font-family: var(--text);
-  font-weight: 800;
-  font-size: 26px;
+  font-weight: 600;
+  font-size: 22px;
   letter-spacing: -0.01em;
   color: var(--charcoal);
   text-transform: uppercase;
@@ -4898,7 +4897,7 @@ tbody tr:nth-child(even) {
   color: var(--ink2);
 }
 .lf-req {
-  color: var(--olive);
+  color: var(--charcoal);
 }
 .lf-field input,
 .lf-field textarea,
@@ -5005,8 +5004,8 @@ tbody tr:nth-child(even) {
 }
 .leadcard-done h3 {
   font-family: var(--text);
-  font-weight: 800;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 22px;
   color: var(--charcoal);
   text-transform: uppercase;
   margin: 0 0 10px;

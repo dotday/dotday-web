@@ -135,6 +135,41 @@ for (const [hex, ln] of seen) {
   findings++;
 }
 
+// --- olive is retired ------------------------------------------------------
+// The --olive token (#5b6e00 / #5c6b00, plus the dark-olive text shade #2c3500)
+// was removed from the palette; readable accents use charcoal. Note: the
+// neon-family heuristic above intentionally does NOT protect these - they are
+// flagged explicitly here so they can never sneak back in.
+lines.forEach((line, i) => {
+  if (/var\(--olive\)|--olive\s*:|#5b6e00|#5c6b00|#2c3500/i.test(line)) {
+    warn(`line ${i + 1}: olive is retired - use var(--charcoal) for readable accents`);
+    findings++;
+  }
+});
+
+// --- heading weight contract ------------------------------------------------
+// Heroes are 600; every other H1/H2/H3 + card/section title is 400-600, never
+// 700/800 (those are reserved for display elements: BigType statement titles,
+// watermark spans, spec-value numerals, neon chips). Parses rule blocks and
+// flags any heading-ish selector that declares font-weight >= 700.
+const HEAVY_OK = new Set([".bigfeat-title", ".bigfeat-card-title"]);
+const ruleRe = /([^{}]+)\{([^{}]*)\}/g;
+let m;
+while ((m = ruleRe.exec(css))) {
+  const selector = m[1].trim().split("\n").pop().trim();
+  const body = m[2];
+  const w = body.match(/font-weight:\s*([78]00)/);
+  if (!w) continue;
+  const headingish = /(^|[\s.,>+~])h[123]\b|-h[123]\b|title\b/.test(selector);
+  if (!headingish) continue;
+  if ([...HEAVY_OK].some((ok) => selector.includes(ok))) continue;
+  const ln = css.slice(0, m.index).split("\n").length;
+  warn(
+    `line ${ln}: "${selector}" sets font-weight ${w[1]} - headings/titles are 400 (600 for heroes + conversion cards); 700/800 is display-only`
+  );
+  findings++;
+}
+
 // --- summary --------------------------------------------------------------
 if (findings === 0) {
   console.log(
