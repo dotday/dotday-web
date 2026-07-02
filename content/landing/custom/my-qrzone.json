@@ -15,7 +15,8 @@
     "ogImage": {
       "ref": "og-qr-zone",
       "alt": "DOTDAY landscape fabric being installed over prepared ground"
-    }
+    },
+    "noindex": true
   },
   "sections": [
     {

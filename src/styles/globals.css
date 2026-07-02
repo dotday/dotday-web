@@ -24,6 +24,9 @@
   /* Wix Madefor Text is the only brand font. (There is no Wix Madefor Display:
      the earlier --display token was retired and all usages now use --text.) */
   --text: var(--font-madefor), "Wix Madefor Text", "Inter", system-ui, sans-serif;
+  /* unified vertical rhythm: every full-width section band uses one of these */
+  --sec-pad: clamp(48px, 6vw, 76px);
+  --sec-pad-lg: clamp(64px, 8vw, 112px);
   --maxw: 1200px;
   --article: 860px;
 }
@@ -70,6 +73,22 @@ h2,
 h3 {
   font-family: var(--text);
   margin: 0;
+}
+/* Base heading contract: any h2/h3 without a covering contextual rule lands on
+   the unified spec instead of browser-default bold (the source of the mixed
+   thick/thin headings). Contextual class rules still override by specificity;
+   heroes set 600 via their own classes. */
+h2 {
+  font-weight: 400;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--charcoal);
+}
+h3 {
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--charcoal);
 }
 
 /* Section-scoped H2: class-less section headings that live in .wrap.sec
@@ -1361,7 +1380,7 @@ tbody tr:nth-child(even) {
   margin: 0 auto;
   background: var(--neon);
   border-radius: var(--card-radius);
-  padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 56px);
+  padding: var(--sec-pad) clamp(24px, 5vw, 56px);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -2177,7 +2196,7 @@ tbody tr:nth-child(even) {
 /* --- Hero (Option C, white): copy + photo card with stat overlay --- */
 .chero {
   background: var(--white);
-  padding: clamp(44px, 6vw, 84px) 0;
+  padding: var(--sec-pad) 0;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--grey2);
@@ -2376,7 +2395,7 @@ tbody tr:nth-child(even) {
 .lhs {
   position: relative;
   background: var(--white);
-  padding: clamp(36px, 4.5vw, 64px) 0;
+  padding: var(--sec-pad) 0;
   overflow: hidden;
 }
 .lhs::before {
@@ -2891,7 +2910,7 @@ tbody tr:nth-child(even) {
   background: var(--grey1);
   border-top: 1px solid var(--grey2);
   border-bottom: 1px solid var(--grey2);
-  padding: clamp(48px, 6vw, 76px) 0;
+  padding: var(--sec-pad) 0;
 }
 .cmp-head {
   text-align: center;
@@ -3056,7 +3075,7 @@ tbody tr:nth-child(even) {
   background: var(--grey1);
   border-top: 1px solid var(--grey2);
   border-bottom: 1px solid var(--grey2);
-  padding: clamp(44px, 5vw, 64px) 0;
+  padding: var(--sec-pad) 0;
 }
 .tmon .tmon-head {
   margin-bottom: 28px;
@@ -4019,7 +4038,7 @@ tbody tr:nth-child(even) {
 .bhero-grid {
   display: grid; grid-template-columns: 1fr 1.08fr;
   gap: clamp(32px, 5vw, 64px); align-items: center;
-  padding: clamp(36px, 6vw, 72px) 0 clamp(40px, 6vw, 68px);
+  padding: var(--sec-pad) 0;
 }
 .bhero-eyebrow {
   display: inline-flex; align-items: center; gap: 9px;
@@ -4170,7 +4189,7 @@ tbody tr:nth-child(even) {
   background: var(--grey1);
   border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
 }
-.bquote-inner { max-width: 860px; text-align: center; padding: clamp(50px, 8vw, 80px) 20px; }
+.bquote-inner { max-width: 860px; text-align: center; padding: var(--sec-pad) 20px; }
 .bquote-mark {
   display: block; font-family: var(--text); font-weight: 800; font-size: 72px; line-height: 0.4; height: 40px;
   color: var(--neon);
@@ -4322,7 +4341,7 @@ tbody tr:nth-child(even) {
 .bdiff {
   margin-top: var(--bsec-gap);
   background: radial-gradient(120% 150% at 0% 0%, #e9ff63 0%, var(--neon) 45%, #c4ea00 100%);
-  padding: clamp(48px, 7vw, 72px) 0;
+  padding: var(--sec-pad) 0;
 }
 .bdiff-head { text-align: center; max-width: 660px; margin: 0 auto clamp(30px, 4vw, 40px); }
 .bdiff-head h2 {
@@ -4397,7 +4416,7 @@ tbody tr:nth-child(even) {
 .bnews {
   margin-top: var(--bsec-gap);
   background: radial-gradient(150% 130% at 100% 0%, #1d2408 0%, #0b0b0b 55%);
-  border-top: 3px solid var(--neon); padding: clamp(56px, 8vw, 80px) 0;
+  border-top: 3px solid var(--neon); padding: var(--sec-pad) 0;
 }
 .bnews-inner { max-width: 680px; text-align: center; }
 .bnews-title {
@@ -4605,7 +4624,7 @@ tbody tr:nth-child(even) {
 
 /* ---- Field quote (Briana) ---- */
 .bfq-wrap {
-  margin: var(--bsec-gap) 0; padding: clamp(40px, 6vw, 64px) 0;
+  margin: var(--bsec-gap) 0; padding: var(--sec-pad) 0;
   background: var(--grey1); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
 }
 .bfq {

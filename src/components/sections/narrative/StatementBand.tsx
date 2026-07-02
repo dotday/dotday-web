@@ -20,7 +20,7 @@ export function StatementBand({ data }: { data: StatementBandSection }) {
         position: "relative",
         background: "#ffffff",
         overflow: "hidden",
-        padding: "clamp(72px, 9vw, 120px) 20px",
+        padding: "var(--sec-pad-lg) 20px",
         textAlign: "center",
       }}
     >
