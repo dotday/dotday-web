@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://thedotday.com/schema/archetype.json",
+  "title": "DOTDAY page archetype manifest",
+  "description": "A frozen, versioned recipe for one page style. Content files opt in by declaring archetype: '<id>@<version>'; validate-archetype.mjs then enforces this manifest against the page. Two enforcement modes, usable together: 'sequence' (an ordered list of slots the page's sections must match - for landing archetypes where the structure is the design) and 'rules' (order-light constraints on the block/section list - for editorial surfaces like blog where the body varies within rules).",
+  "type": "object",
+  "required": ["id", "version", "name", "surface", "description"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Stable archetype id, kebab-case, e.g. 'application-landing'."
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Frozen once published. A redesign is a new version; existing pages keep validating against the version they declare."
+    },
+    "name": { "type": "string" },
+    "surface": {
+      "enum": ["landing", "blog"],
+      "description": "Which content collection this archetype governs. Landing archetypes constrain page.sections; blog archetypes constrain post.blocks."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "description": "What this page style is for and when to reach for it."
+    },
+    "reference": {
+      "type": "string",
+      "description": "Slug of the approved reference implementation this archetype was frozen from."
+    },
+    "sequence": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Ordered slot recipe. The page's section list is matched against these slots in order: each slot consumes min..max consecutive sections whose _type is in the slot's types. Unmatched sections and unfilled required slots are errors.",
+      "items": {
+        "type": "object",
+        "required": ["slot", "types"],
+        "additionalProperties": false,
+        "properties": {
+          "slot": {
+            "type": "string",
+            "pattern": "^[a-z][a-zA-Z0-9]*$",
+            "description": "Human name for the slot, e.g. 'opener', 'proof', 'closer'."
+          },
+          "types": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" },
+            "description": "Section _type values allowed to fill this slot."
+          },
+          "min": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 1,
+            "description": "Minimum sections this slot must consume. 0 makes the slot optional."
+          },
+          "max": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1,
+            "description": "Maximum sections this slot may consume."
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Order-light constraints on the section/block list.",
+      "properties": {
+        "allowedTypes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "If present, every _type on the page must be in this list."
+        },
+        "startsWith": { "type": "string", "description": "_type the list must open with." },
+        "endsWith": { "type": "string", "description": "_type the list must close with." },
+        "minCount": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 },
+          "description": "Per-_type minimum occurrences, e.g. { \"cta\": 2 }."
+        },
+        "maxCount": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 },
+          "description": "Per-_type maximum occurrences, e.g. { \"statementBand\": 1 }."
+        }
+      }
+    }
+  },
+  "anyOf": [
+    { "required": ["sequence"] },
+    { "required": ["rules"] }
+  ]
+}

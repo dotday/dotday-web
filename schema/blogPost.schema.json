@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://thedotday.com/schema/blogPost.schema.json",
   "title": "DOTDAY Blog Post",
-  "description": "The frozen data contract for a DOTDAY blog post. Claude generates against this; the validator checks against this; the Next.js build reads files that pass this. One source of truth — change here, regenerate types, everything follows.",
+  "description": "The frozen data contract for a DOTDAY blog post. Claude generates against this; the validator checks against this; the Next.js build reads files that pass this. One source of truth \u2014 change here, regenerate types, everything follows.",
   "type": "object",
   "required": [
     "schemaVersion",
@@ -26,6 +26,11 @@
       "type": "string",
       "const": "1.0.0",
       "description": "Schema version this file targets. Validator rejects mismatches."
+    },
+    "archetype": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*@[0-9]+$",
+      "description": "Optional page archetype this content conforms to, as '<id>@<version>' (see content/archetypes/). Enforced by scripts/validate-archetype.mjs (gate 7)."
     },
     "slug": {
       "type": "string",
@@ -186,7 +191,7 @@
             },
             "pinterestImage": {
               "$ref": "#/$defs/imageRef",
-              "description": "Vertical 2:3 (e.g. 1000x1500). Falls back to hero if absent — flag for a proper pin image."
+              "description": "Vertical 2:3 (e.g. 1000x1500). Falls back to hero if absent \u2014 flag for a proper pin image."
             },
             "shareButtons": {
               "type": "array",
@@ -245,7 +250,7 @@
     },
     "quickAnswer": {
       "type": "object",
-      "description": "'What you'll learn' — featured-snippet bait.",
+      "description": "'What you'll learn' \u2014 featured-snippet bait.",
       "required": [
         "heading",
         "items"

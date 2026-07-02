@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "content:schema": "node scripts/validate-schema.mjs",
-    "content:validate": "node scripts/gen-types.mjs --check && node scripts/gen-catalog.mjs --check && node scripts/validate-schema.mjs && node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs && node scripts/validate-landing.mjs content/landing && node scripts/brand-guard.mjs",
+    "content:validate": "node scripts/gen-types.mjs --check && node scripts/gen-catalog.mjs --check && node scripts/validate-schema.mjs && node scripts/validate-post.mjs content/blog && node scripts/validate-content.mjs && node scripts/validate-landing.mjs content/landing && node scripts/brand-guard.mjs && node scripts/validate-archetype.mjs",
     "new:blog": "node scripts/new-blog.mjs",
     "content:types": "node scripts/gen-types.mjs",
     "preview:landing": "node scripts/preview-page.mjs landing",
