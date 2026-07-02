@@ -1,0 +1,521 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "landscape-fabric-for-nurseries",
+  "title": "Landscape Fabric for Nurseries",
+  "focusKeyword": "landscape fabric for nurseries",
+  "status": "draft",
+  "author": "DOTDAY",
+  "publishedAt": "2026-07-02",
+  "dateModified": "2026-07-02",
+  "seo": {
+    "metaTitle": "Landscape Fabric for Nurseries | DOTDAY SHIELD",
+    "metaDescription": "SHIELD 3.2oz woven landscape fabric for nurseries: chemical-free weed control that stays permeable so pots drain, built for container yards and pathways.",
+    "canonical": "https://www.thedotday.com/l/landscape-fabric-for-nurseries",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogImage": {
+      "ref": "og",
+      "alt": "Landscape fabric for nurseries: DOTDAY SHIELD 3.2oz woven ground cover in a container yard"
+    }
+  },
+  "images": {
+    "hero": "/landing/landscape-fabric-for-nurseries/hero.webp",
+    "og": "/landing/landscape-fabric-for-nurseries/og.webp",
+    "solution": "/landing/landscape-fabric-for-nurseries/solution.webp",
+    "dual-weeds": "/landing/landscape-fabric-for-nurseries/dual-weeds.webp",
+    "dual-drainage": "/landing/landscape-fabric-for-nurseries/dual-drainage.webp",
+    "spec": "/landing/landscape-fabric-for-nurseries/spec.webp",
+    "guide": "/landing/landscape-fabric-for-nurseries/guide.webp",
+    "project-frootfarms": "/landing/landscape-fabric-for-nurseries/project-frootfarms.webp",
+    "pack": "/landing/landscape-fabric-for-nurseries/pack.webp"
+  },
+  "sections": [
+    {
+      "_type": "hero",
+      "eyebrow": "Engineered for nurseries",
+      "heading": "Landscape Fabric for Nurseries",
+      "highlight": "for Nurseries",
+      "subheading": "SHIELD is the 3.2oz woven ground cover built for nursery container yards, pot pads, and pathways. It blocks weeds without chemicals, stays permeable so pots drain instead of sitting in water, and gives a clean, stable surface that holds up to cart and foot traffic across a full-sun yard.",
+      "image": {
+        "ref": "hero",
+        "alt": "Landscape fabric for nurseries: SHIELD 3.2oz woven ground cover laid across a container yard"
+      },
+      "caption": {
+        "label": "SHIELD 3.2oz in a container yard",
+        "context": "Drains so pots stay out of standing water"
+      },
+      "trust": [
+        "Free shipping over $50",
+        "Professional-grade",
+        "Safe around stock"
+      ],
+      "primaryCta": {
+        "label": "Shop SHIELD 3.2oz",
+        "href": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+      },
+      "secondaryCta": {
+        "label": "Request Bulk Pricing",
+        "href": "/bulk-pricing"
+      }
+    },
+    {
+      "_type": "problem",
+      "eyebrow": "The problem",
+      "heading": "Why a container yard gets weedy, muddy, and slow",
+      "body": "In a nursery, the ground between and under your pots is working ground, and bare soil or loose gravel costs you. Weeds come up between containers and someone has to pull them. Poor-draining ground leaves pots sitting in water and roots suffering. And cheap fabric frays at the cut and breaks down after a season of full sun and cart traffic, so you are relaying it before the stock turns over.",
+      "bullets": [
+        "Weeds between pots. Constant hand-weeding across the whole yard.",
+        "Standing water. Pots in poor-draining ground stress roots and stock.",
+        "Mud and instability. Bare ground ruts and shifts under carts and foot traffic.",
+        "Cheap fabric. Frays and degrades under UV before the season is out."
+      ]
+    },
+    {
+      "_type": "solution",
+      "eyebrow": "The fix",
+      "heading": "SHIELD is breathable weed control built for a working yard",
+      "body": "SHIELD is 100% woven virgin polypropylene at 3.2oz. The tight weave blocks the light weeds need while staying permeable, so water drains through and pots never sit in standing water. It is substantial enough to take cart wheels, foot traffic, and a full season of sun, the heat-sealed edges cut clean without fraying, and the printed 12-inch guides make it easy to lay out straight, even rows of pots and blocks.",
+      "product": "SHIELD",
+      "productHref": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric",
+      "image": {
+        "ref": "solution",
+        "alt": "SHIELD landscape fabric for nurseries with printed 12-inch guides for straight rows"
+      },
+      "cta": {
+        "label": "Shop SHIELD 3.2oz",
+        "href": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+      }
+    },
+    {
+      "_type": "dualBenefit",
+      "eyebrow": "Two jobs, one fabric",
+      "heading": "One woven fabric that does two jobs at once",
+      "intro": "SHIELD's tight woven face blocks the light weeds need, while the same weave stays open enough for water and air to pass through, weed control and free drainage from a single ground cover.",
+      "cards": [
+        {
+          "tag": "Weed control",
+          "title": "Woven face blocks light",
+          "body": "The tight polypropylene weave stops sunlight reaching the soil, so weeds can't establish between or under your pots. Printed 12-inch guides keep rows of stock straight and evenly spaced.",
+          "image": {
+            "ref": "dual-weeds",
+            "alt": "Tight woven SHIELD fabric blocking light to stop weeds in a nursery"
+          }
+        },
+        {
+          "tag": "Free drainage",
+          "title": "Permeable weave drains",
+          "body": "Unlike plastic or poor-draining ground, the weave lets water move straight through, so pots drain freely and never sit in standing water, and the soil below keeps breathing.",
+          "image": {
+            "ref": "dual-drainage",
+            "alt": "Water draining through permeable SHIELD landscape fabric under nursery pots"
+          }
+        }
+      ]
+    },
+    {
+      "_type": "steps",
+      "heading": "SHIELD goes down in three steps",
+      "steps": [
+        {
+          "title": "Roll it out",
+          "body": "Lightweight woven cover unrolls fast across beds, pads, and pathways. Line the printed 12-inch guides up for straight rows."
+        },
+        {
+          "title": "Cut to fit",
+          "body": "Trims clean with scissors or a knife, and the heat-sealed edges do not fray. Notch around pots and posts as needed."
+        },
+        {
+          "title": "Secure and done",
+          "body": "Pin the edges and seams, set your stock back on top, and the surface stays clean, stable, and free-draining all season."
+        }
+      ]
+    },
+    {
+      "_type": "specSheet",
+      "tag": "DOTDAY Lab",
+      "heading": "SHIELD Spec Sheet",
+      "intro": "Real, ASTM-tested attributes, not vague marketing claims. These are what matter on a nursery floor.",
+      "rows": [
+        {
+          "value": "3.2 oz",
+          "label": "Fabric weight",
+          "standard": "Woven virgin polypropylene",
+          "emphasis": "neon"
+        },
+        {
+          "value": "100%",
+          "label": "Woven polypropylene",
+          "standard": "Tight weave, blocks light"
+        },
+        {
+          "value": "High",
+          "label": "Permeability",
+          "standard": "Water passes straight through"
+        },
+        {
+          "value": "UV-stabilized",
+          "label": "Outdoor life",
+          "standard": "Built for full-sun yards"
+        },
+        {
+          "value": "12 in",
+          "label": "Printed layout guides",
+          "standard": "Straight, evenly spaced rows"
+        },
+        {
+          "value": "Heat-sealed",
+          "label": "Cut edges",
+          "standard": "Do not fray"
+        },
+        {
+          "value": "3 to 8 ft",
+          "label": "Fabric size range",
+          "standard": "Multiple roll widths"
+        },
+        {
+          "value": "Chemical-free",
+          "label": "Weed control",
+          "standard": "Safe around plants and stock"
+        }
+      ],
+      "footnote": "Engineered to ASTM standards. SHIELD provides chemical-free weed control and is safe around plants and stock. Fabric size range 3 ft up to 8 ft."
+    },
+    {
+      "_type": "bigTypeFeatures",
+      "heading": "Cleaner yards. Healthier stock. Less labor.",
+      "cards": [
+        {
+          "icon": "shield",
+          "title": "Blocks weeds without chemicals",
+          "body": "The tight weave starves weeds of light, so the yard stays clean between pots, no spraying, no constant hand-weeding."
+        },
+        {
+          "icon": "drop",
+          "title": "Drains so pots never sit in water",
+          "body": "Permeable woven structure lets water through, keeping roots healthy and the surface stable."
+        },
+        {
+          "icon": "sun",
+          "title": "Built for full-sun, high-traffic yards",
+          "body": "UV-stabilized and substantial enough to take cart wheels and foot traffic, season after season."
+        }
+      ],
+      "cta": {
+        "label": "Request Bulk Pricing",
+        "href": "/bulk-pricing"
+      }
+    },
+    {
+      "_type": "useCaseGrid",
+      "eyebrow": "Where it works",
+      "heading": "Where SHIELD works in a nursery",
+      "intro": "Anywhere you're growing or holding stock at scale and need weed pressure controlled without chemicals.",
+      "cards": [
+        {
+          "title": "Container yards and pot pads",
+          "body": "Keeps weeds down and gives a clean, stable, free-draining surface under potted stock."
+        },
+        {
+          "title": "Retail and display areas",
+          "body": "A tidy, professional ground cover that holds up to customer foot traffic and looks the part."
+        },
+        {
+          "title": "Propagation and hoop houses",
+          "body": "Breathable weed control under benches and in poly tunnels, where the soil still needs to breathe."
+        },
+        {
+          "title": "Pathways between beds",
+          "body": "Stops mud and weeds on the routes carts and crew use all day."
+        }
+      ]
+    },
+    {
+      "_type": "productComparison",
+      "heading": "SHIELD vs the alternatives for a container yard",
+      "columns": [
+        "Property",
+        "Bare ground / gravel",
+        "DOTDAY SHIELD 3.2oz",
+        "Black plastic sheeting"
+      ],
+      "featuredColumn": 2,
+      "rows": [
+        [
+          "Built for",
+          "Nothing, it just gets weedy",
+          "Breathable weed control under stock",
+          "Cheap short-term cover"
+        ],
+        [
+          "Under pots",
+          "Weeds, mud, instability",
+          "Clean, stable, free-draining surface",
+          "Pools water, suffocates soil"
+        ],
+        [
+          "Drainage",
+          "Uneven, puddles",
+          "High, water passes through",
+          "None, water sits"
+        ],
+        [
+          "Weed control",
+          "None",
+          "Chemical-free, season-long",
+          "Blocks light but degrades fast"
+        ],
+        [
+          "Durability in sun and traffic",
+          "n/a",
+          "UV-stabilized, takes cart traffic",
+          "Tears and breaks down"
+        ],
+        [
+          "Right job",
+          "Temporary only",
+          "Container yards, pads, pathways",
+          "Throwaway tarp"
+        ]
+      ]
+    },
+    {
+      "_type": "reviews",
+      "heading": "What growers say about SHIELD",
+      "variant": "spotlight",
+      "primaryCta": {
+        "label": "Shop SHIELD",
+        "href": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+      },
+      "secondaryCta": {
+        "label": "See More Real Projects",
+        "href": "/blog"
+      },
+      "items": [
+        {
+          "quote": "This stuff is really impressive, I should have tried this years ago. The plants have been in the ground for just under a month and the only weeds are at the outer edges, with the entire covered area absolutely weed free. Watering is a breeze: the water sits briefly on the surface but drains through to the dirt within a couple of minutes.",
+          "author": "Patrick Quinn",
+          "role": "Verified Amazon Vine Review",
+          "rating": 5,
+          "monogram": "PQ",
+          "product": "SHIELD 3.2oz (4ft x 100ft)"
+        }
+      ]
+    },
+    {
+      "_type": "featuredGuide",
+      "eyebrow": "DOTDAY Field Guide",
+      "heading": "Greenhouse Flooring Made Easy with Weed Fabric",
+      "byline": "DOTDAY Field Guide",
+      "excerpt": "How a breathable woven ground cover keeps a greenhouse or nursery floor clean, dry, and weed-free, and why plastic is the wrong call.",
+      "image": {
+        "ref": "guide",
+        "alt": "Greenhouse floor kept clean and weed-free with SHIELD woven landscape fabric"
+      },
+      "cta": {
+        "label": "Read the field guide",
+        "href": "/post/greenhouse-flooring-made-easy-with-weed-fabric"
+      }
+    },
+    {
+      "_type": "projectSpotlight",
+      "heading": "Real projects on SHIELD",
+      "badge": "Real Project",
+      "location": "Florida",
+      "image": {
+        "ref": "project-frootfarms",
+        "alt": "SHIELD 3.2oz woven landscape fabric laid across field rows at Froot Farms, Florida"
+      },
+      "quote": "Laid SHIELD across the field rows, clean ground, weeds down, water still gets through.",
+      "specs": [
+        {
+          "label": "Fabric",
+          "value": "SHIELD 3.2oz woven"
+        },
+        {
+          "label": "Application",
+          "value": "Field rows / growing ground"
+        },
+        {
+          "label": "Climate",
+          "value": "Florida full sun"
+        }
+      ],
+      "benefits": [
+        "Chemical-free weed suppression between rows",
+        "Permeable, water reaches the soil",
+        "UV-stable in full sun",
+        "Clean, straight growing rows"
+      ],
+      "author": {
+        "name": "Froot Farms",
+        "role": "Grower, Florida",
+        "initials": "FF"
+      },
+      "primaryCta": {
+        "label": "Shop SHIELD",
+        "href": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+      },
+      "secondaryCta": {
+        "label": "Talk to the Team",
+        "href": "/contact-us"
+      }
+    },
+    {
+      "_type": "sizeSelector",
+      "badge": "Pick your size",
+      "heading": "Pick your SHIELD roll size",
+      "intro": "Match width to the bed, block, or pad. Wider rolls mean fewer seams across a yard, a cleaner, faster lay-down. Prices shown per roll; free shipping over $50.",
+      "image": {
+        "ref": "pack",
+        "alt": "DOTDAY SHIELD 3.2oz landscape fabric roll for nurseries"
+      },
+      "sizes": [
+        {
+          "dimensions": "3 ft x 300 ft",
+          "price": "$79.99",
+          "useCase": "Narrow rows, long beds"
+        },
+        {
+          "dimensions": "4 ft x 100 ft",
+          "price": "$59.98",
+          "useCase": "Standard beds, first roll",
+          "featured": true
+        },
+        {
+          "dimensions": "4 ft x 300 ft",
+          "price": "$99.98",
+          "useCase": "Standard rows, bulk length"
+        },
+        {
+          "dimensions": "6 ft x 300 ft",
+          "price": "$142.99",
+          "useCase": "Wide pads and blocks, fewest seams"
+        },
+        {
+          "dimensions": "8 ft x 100 ft",
+          "price": "$89.98",
+          "useCase": "Widest coverage, container yards"
+        },
+        {
+          "dimensions": "3 ft x 10 ft (Sample)",
+          "price": "$10.99",
+          "useCase": "Test before you scale"
+        }
+      ],
+      "helper": "Not sure which width? The Pro team will spec the exact size and quantity for your yard, free. The $10.99 sample is the easy way to test SHIELD before you scale.",
+      "primaryCta": {
+        "label": "View SHIELD & Buy",
+        "href": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric"
+      },
+      "secondaryCta": {
+        "label": "Use the Fabric Calculator",
+        "href": "/landscape-fabric-calculator"
+      }
+    },
+    {
+      "_type": "calculatorEmbed",
+      "heading": "Landscape Fabric Calculator",
+      "intro": "Tell us the bed, block, or pad dimensions and the calculator recommends the right DOTDAY fabric, SHIELD, XBAR, or TERRA, plus exactly how many rolls you need, with overlap and waste built in."
+    },
+    {
+      "_type": "faq",
+      "heading": "Nursery fabric questions",
+      "items": [
+        {
+          "q": "What is the best landscape fabric for a nursery?",
+          "a": "A breathable woven ground cover that blocks weeds while letting water drain. SHIELD is a 3.2oz woven polypropylene fabric built for nursery container yards, pot pads, and pathways, with 12-inch guides for straight rows."
+        },
+        {
+          "q": "Will SHIELD let my pots drain?",
+          "a": "Yes. The woven structure stays permeable, so water passes straight through and pots never sit in standing water, which keeps roots healthy."
+        },
+        {
+          "q": "Does SHIELD hold up to cart and foot traffic?",
+          "a": "Yes. At 3.2oz it is substantial enough to take cart wheels and daily foot traffic across a container yard, and the heat-sealed edges cut clean without fraying."
+        },
+        {
+          "q": "Is SHIELD safe around plants and stock?",
+          "a": "Yes. It provides chemical-free weed control and is safe around plants, vegetables, and crops while letting air, water, and nutrients through."
+        },
+        {
+          "q": "How long does SHIELD last in a full-sun yard?",
+          "a": "It is UV-stabilized for long outdoor life and typically lasts 5 to 10 years under moderate conditions, longer when shaded or covered."
+        },
+        {
+          "q": "SHIELD vs black plastic for a container yard, which is better?",
+          "a": "SHIELD. Plastic pools water and suffocates the ground, while SHIELD blocks weeds and stays breathable, so pots drain and the surface stays stable."
+        },
+        {
+          "q": "How much does ground cover fabric for a nursery cost?",
+          "a": "SHIELD rolls run from $59.98, with a $10.99 sample to test first and free shipping over $50. Nurseries can request bulk pricing and custom widths for whole-yard quantities."
+        },
+        {
+          "q": "Do you offer bulk pricing and custom widths for nurseries?",
+          "a": "Yes. We supply nurseries direct, with custom widths for bulk orders. Request a quote with your yard size and we will spec it."
+        }
+      ]
+    },
+    {
+      "_type": "cta",
+      "eyebrow": "Talk to us",
+      "heading": "Building or re-laying a nursery yard?",
+      "body": "Tell us the area, the stock, and the traffic, and we'll recommend the right SHIELD width and the exact quantity. Request a quote or talk to us, practical answers from people who supply growing operations.",
+      "primaryCta": {
+        "label": "Request Bulk Pricing",
+        "href": "/bulk-pricing"
+      },
+      "secondaryCta": {
+        "label": "Talk to the DOTDAY Team",
+        "href": "/contact-us"
+      },
+      "tone": "default"
+    },
+    {
+      "_type": "internalLinks",
+      "heading": "Keep reading",
+      "tone": "neon",
+      "links": [
+        {
+          "label": "Greenhouse Flooring Made Easy with Weed Fabric",
+          "href": "/post/greenhouse-flooring-made-easy-with-weed-fabric",
+          "note": "Field guide"
+        },
+        {
+          "label": "3.2oz vs 5oz Weed Barrier Fabric",
+          "href": "/post/32-oz-vs-5-oz-weed-barrier-fabric-which-option-suits-your-gardening-needs-best",
+          "note": "Which weight you need"
+        },
+        {
+          "label": "Woven vs Non-Woven Landscape Fabric",
+          "href": "/post/woven-vs-non-woven-landscape-fabric",
+          "note": "Comparison"
+        },
+        {
+          "label": "What Landscape Fabric Lasts the Longest?",
+          "href": "/post/what-landscape-fabric-lasts-the-longest",
+          "note": "Lifespan guide"
+        },
+        {
+          "label": "SHIELD 3.2oz Weed Barrier",
+          "href": "/product-page/dotday-shield-weed-barrier-fabric-heavy-duty-3-2oz-landscape-fabric",
+          "note": "The product"
+        },
+        {
+          "label": "Fabric Calculator",
+          "href": "/landscape-fabric-calculator",
+          "note": "Size your rolls"
+        },
+        {
+          "label": "FabricFinder Quiz",
+          "href": "/fabric-finder",
+          "note": "Find your fabric"
+        },
+        {
+          "label": "Bulk & Pro Pricing",
+          "href": "/bulk-pricing",
+          "note": "For nurseries and growers"
+        }
+      ]
+    }
+  ]
+}
