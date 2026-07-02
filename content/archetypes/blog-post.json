@@ -1,0 +1,26 @@
+{
+  "id": "blog-post",
+  "version": 1,
+  "name": "Blog post",
+  "surface": "blog",
+  "description": "The canonical DOTDAY blog post. The fixed envelope (hero, quickAnswer, faq, relatedPosts, internalLinks, closingHashtags) is enforced by blogPost.schema.json and validate-post.mjs; this archetype governs the variable body: posts open with prose, close with a cta, carry at least two prose blocks and two ctas (one mid-body, one closing), and draw only from the approved block set. Rules are derived from and verified against all 19 live posts. Image and internal-link richness for NEW posts is governed by the dotday-blog-template skill; v1 rules stay at what every existing post satisfies.",
+  "rules": {
+    "allowedTypes": [
+      "prose",
+      "image",
+      "comparisonTable",
+      "steps",
+      "proTip",
+      "warning",
+      "statStrip",
+      "trustStrip",
+      "cta"
+    ],
+    "startsWith": "prose",
+    "endsWith": "cta",
+    "minCount": {
+      "prose": 2,
+      "cta": 2
+    }
+  }
+}
