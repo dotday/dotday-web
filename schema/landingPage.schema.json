@@ -122,7 +122,7 @@
         }
       }
     },
-    "cta": {
+    "ctaButton": {
       "type": "object",
       "required": [
         "label",
@@ -165,7 +165,7 @@
           "$ref": "#/$defs/reviews"
         },
         {
-          "$ref": "#/$defs/cta_section"
+          "$ref": "#/$defs/cta"
         },
         {
           "$ref": "#/$defs/internalLinks"
@@ -289,10 +289,10 @@
           }
         },
         "primaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "secondaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         }
       }
     },
@@ -368,7 +368,7 @@
           "$ref": "#/$defs/imageRef"
         },
         "cta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         }
       }
     },
@@ -544,10 +544,10 @@
           "type": "string"
         },
         "primaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "secondaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "items": {
           "type": "array",
@@ -588,7 +588,7 @@
         }
       }
     },
-    "cta_section": {
+    "cta": {
       "type": "object",
       "required": [
         "_type"
@@ -608,10 +608,10 @@
           "type": "string"
         },
         "primaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "secondaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "tone": {
           "enum": [
@@ -776,7 +776,7 @@
           "minLength": 1
         },
         "cta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "cards": {
           "type": "array",
@@ -894,10 +894,10 @@
           }
         },
         "primaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         },
         "secondaryCta": {
-          "$ref": "#/$defs/cta"
+          "$ref": "#/$defs/ctaButton"
         }
       }
     },
